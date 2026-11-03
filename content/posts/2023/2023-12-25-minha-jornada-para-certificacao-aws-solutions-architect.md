@@ -22,18 +22,18 @@ começando a mexer com AWS.
 
 ## Sobre a prova 
 
-A prova é constituída 65 perguntas de múltipla escolha ou com várias
+A prova é composta de 65 perguntas de múltipla escolha ou com várias
 respostas certas em um tempo de 130 minutos para a prova em português.
 No meu caso eu fiz a prova em inglês e tive um acréscimo de mais 30
 minutos por não ter o inglês como língua nativa.
 
-A prova custa USD 150 ou caso você já tenha tirado outra certificação
-AWS é possivel ter um voucher de 50% de desconto. Atualmente a prova
+A prova custa USD 150, mas, caso você já tenha outra certificação AWS, é
+possível ter um voucher de 50% de desconto. Atualmente a prova
 pode ser realizada pela Pearson VUE presencialmente ou remotamente. No
-meu caso eu resolvi fazer em um centro de testes credenciado pela
-Pearson VUE em Campinas -- SP na cidade onde eu moro.
+meu caso, resolvi fazer em um centro de testes credenciado pela Pearson
+VUE em Campinas (SP), a cidade onde moro.
 
-Abaixo segue os domínios que são exigidos na prova:
+Abaixo seguem os domínios que são exigidos na prova:
 
 -   Domínio 1: Criação de arquiteturas seguras (30% do conteúdo
     pontuado)
@@ -53,7 +53,7 @@ Minha principal fonte de estudo foi o curso da Udemy do Stephane Maarek
 onde procurei colocar em prática todos os exemplos de labs que o
 Stephane executa durante o curso. Nesse
 [link](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/)
-você encontra mais informações do curso dele
+você encontra mais informações sobre o curso.
 
 Abaixo alguns tópicos e serviços que vale destacar que poderão ser
 cobrados no exame:
@@ -63,24 +63,24 @@ cobrados no exame:
 -   Quando usar o RDS Aurora
 -   Entender quando usar EKS ou ECS
 -   Entender quando utilizar uma IAM Role
--   Saber analisar uma IAM Policy e identificar o que essa politica faz
+-   Saber analisar uma IAM Policy e identificar o que essa política faz
 -   Entender quando usar os diferentes tipos de Kinesis
--   Entender a difrença entre o serviço CloudTrail e AWS Config
--   Entender quando e porque utilizar um Elistcache na sua aplicação
+-   Entender a diferença entre o serviço CloudTrail e AWS Config
+-   Entender quando e por que utilizar o ElastiCache na sua aplicação
 -   Entender a utilidade do serviço Athena
 -   Entender os diferentes serviços de banco de dados da AWS
 -   Entender sobre os principais serviços de Analytics da AWS
 -   Entender quando utilizar CloudFront
--   Entender a difrença entre security group e NACL
+-   Entender a diferença entre security group e NACL
 -   Entender sobre os principais serviços de containers da AWS
 
 ## Simulados 
 
-O principal simulado que utilizei foi da Whizlabs que na minha opinião é
+O principal simulado que utilizei foi o da Whizlabs, que na minha opinião é
 o simulado mais parecido com o exame. Para mais informações acesse esse
 [link](https://www.whizlabs.com/learn/course/aws-solutions-architect-associate/153).
 
-Outro simulado que recomendo para sua preparação e esse
+Outro simulado que recomendo para a sua preparação é esse
 [simulado](https://www.udemy.com/course/practice-exams-aws-certified-solutions-architect-associate/).
 
 ## Conclusão

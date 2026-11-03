@@ -18,7 +18,7 @@ showTableOfContents: true
 > detalhes na
 > [página da certificação](https://aws.amazon.com/certification/certified-cloudops-engineer-associate/).
 
-No último dia 2 de Maio fui aprovado na certificação AWS Certified
+No último dia 2 de maio fui aprovado na certificação AWS Certified
 SysOps Administrator Associate (SOA-C02) e com isso resolvi compartilhar
 sobre minha jornada de estudos e os materiais que usei durante esse 1
 mês de preparação até conseguir a aprovação.
@@ -28,18 +28,18 @@ Administrator Associate já que havia prestado essa prova em 2021.
 
 ## Sobre a prova 
 
-A prova é constituída 65 perguntas de múltipla escolha ou com várias
+A prova é composta de 65 perguntas de múltipla escolha ou com várias
 respostas certas em um tempo de 130 minutos para a prova em português.
 No meu caso eu fiz a prova em inglês e tive um acréscimo de 30 minutos
 por não ter o inglês como língua nativa.
 
-A prova custa USD 150 ou caso você já tenha tirado outra certificação
-AWS é possivel ter um voucher de 50% de desconto. Atualmente a prova
+A prova custa USD 150, mas, caso você já tenha outra certificação AWS, é
+possível ter um voucher de 50% de desconto. Atualmente a prova
 pode ser realizada pela Pearson VUE presencialmente ou remotamente. No
-meu caso eu resolvi fazer em um centro de testes credenciado pela
-Pearson VUE em Campinas -- SP na cidade onde eu moro.
+meu caso, resolvi fazer em um centro de testes credenciado pela Pearson
+VUE em Campinas (SP), a cidade onde moro.
 
-Abaixo segue os domínios que são exigidos na prova:
+Abaixo seguem os domínios que são exigidos na prova:
 
 -   Domain 1: Monitoring, Logging, and Remediation (20% do conteúdo
     pontuado)
@@ -61,7 +61,7 @@ Minha principal fonte de estudo foi o curso da Udemy do Stephane Maarek
 onde procurei colocar em prática todos os exemplos de labs que o
 Stephane executa durante o curso.
 Nesse [link](https://www.udemy.com/course/ultimate-aws-certified-sysops-administrator-associate) você
-encontra mais informações do curso dele
+encontra mais informações sobre o curso.
 
 Abaixo alguns tópicos e serviços que vale destacar que poderão ser
 cobrados no exame:
@@ -74,17 +74,17 @@ cobrados no exame:
 -   Entender sobre os conceitos básicos de rede na AWS
 -   Entender o que é um Elastic IP e quando utilizar
 -   Entender quando utilizar uma IAM Role e como fazer essa configuração
--   Saber analisar uma IAM Policy e identificar o que essa politica faz
+-   Saber analisar uma IAM Policy e identificar o que essa política faz
 -   Entender sobre o serviço CloudTrail
 -   Entender sobre AWS Config e como utilizar
--   Ententer sobre AWS System Manager
--   Entender como fazer a escalibilidade do seu cluster Elasticache
+-   Entender sobre AWS Systems Manager
+-   Entender como escalar um cluster ElastiCache
 -   Entender a diferença entre RDS (MySQL) e Aurora
 -   Entender quando utilizar o CloudFront e suas configurações
--   Entender a difrença entre security group e NACL
+-   Entender a diferença entre security group e NACL
 -   Entender como executar um workload Windows usando EC2
--   Entender sobre a criação e configuração de alertas no Cloudwatch
--   Quando é necessário a instalação do cloudwatch agent para coleta de
+-   Entender sobre a criação e configuração de alertas no CloudWatch
+-   Quando é necessária a instalação do CloudWatch Agent para coleta de
     métricas ou logs
 -   Conhecimentos avançados nas configurações de um Load Balancer
 -   Entender quando utilizar um ALB ou um NLB
@@ -92,11 +92,11 @@ cobrados no exame:
 
 ## Simulados 
 
-O principal simulado que utilizei foi da Whizlabs que na minha opinião é
+O principal simulado que utilizei foi o da Whizlabs, que na minha opinião é
 o simulado mais parecido com o exame. Para mais informações acesse
 esse [link](https://www.whizlabs.com/aws-sysops-administrator-associate/).
 
-Outro simulado que recomendo para sua preparação e
+Outro simulado que recomendo para a sua preparação é
 esse [simulado](https://www.udemy.com/course/aws-certified-sysops-administrator-associate-practice-exams-soa-c02/).
 
 ## Conclusão 

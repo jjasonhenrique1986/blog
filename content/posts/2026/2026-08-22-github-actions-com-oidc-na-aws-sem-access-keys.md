@@ -19,7 +19,7 @@ Eu já mostrei a mesma ideia com o GitLab no artigo
 [Configurando OpenID Connect entre AWS e GitLab](/posts/2023/2023-07-22-configurando-openid-connect-entre-aws-e-gitlab/).
 Agora vamos fazer o mesmo no GitHub.
 
-## Pré Requisitos
+## Pré-requisitos
 
 -   Uma conta AWS e o AWS CLI v2 configurado com permissão para criar
     recursos no IAM.

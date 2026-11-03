@@ -11,20 +11,20 @@ showTableOfContents: true
 
 ![Criando uma policy do tipo Mutation com o kyverno](/images/kyverno.png)
 
-O objectivo dese artigo e a criação de um policy do tipo Mutation no
-kyverno. Esse artigo é uma continuação do primeiro artigo onde falei
+O objetivo deste artigo é a criação de uma policy do tipo Mutation no
+Kyverno. Esse artigo é uma continuação do primeiro artigo onde falei
 como instalar o kyverno e criei uma policy do tipo validation no
 kyverno. Para ver o primeiro artigo basta clicar nesse
 [link](/posts/2023/2023-10-29-conhecendo-um-pouco-sobre-o-kyverno/).
 
-## Pré Requisitos 
+## Pré-requisitos 
 
 Para conseguir criar uma policy do tipo Mutation no kyverno você
-necessitará dos seguintes pré requisitos:
+necessitará dos seguintes pré-requisitos:
 
 -   Ter um cluster kubernetes
 -   Ter o kubectl instalado
--   Ter o kyverno ja instalado no seu cluster
+-   Ter o Kyverno já instalado no seu cluster
 
 Para a instalação do kyverno você também pode consultar o primeiro
 artigo que falei sobre o kyverno.
@@ -108,8 +108,7 @@ o comando abaixo:
 kubectl apply -f nginx.yaml
 ```
 
-Para visualizar se a label foi aplicada você pode executar os comando
-abaixos:
+Para visualizar se a label foi aplicada você pode executar os comandos abaixo:
 
 ``` bash
 kubectl get deploy -o jsonpath='{.items[0].metadata.labels}' -n app
@@ -127,7 +126,7 @@ Deve retornar as labels conforme abaixo:
 
 ## Conclusão 
 
-O objectivo desse artigo foi demonstrar a utilizacao de uma policy
-mutation no kyverno. Existem outras policies que podem ser criadas
+O objetivo desse artigo foi demonstrar a utilização de uma policy do
+tipo Mutation no Kyverno. Existem outras policies que podem ser criadas
 consultando a documentação do kyverno através desse
 [link](https://kyverno.io/policies/).

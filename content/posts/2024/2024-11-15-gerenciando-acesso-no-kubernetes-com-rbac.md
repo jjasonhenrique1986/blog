@@ -18,16 +18,15 @@ permissões necessárias para interagir com o cluster. Para gerenciar
 essas permissões, o Kubernetes utiliza um sistema baseado em **RBAC
 (Role-Based Access Control)**.
 
-Dando continuidade no meu post anterior, vamos explorar alguns outros
-objetos do kubernetes que tem como principal função fazer esse controle
+Neste post vamos explorar os objetos do Kubernetes que têm como
+principal função fazer esse controle
 de acesso.
 
-## Pré Requisitos
+## Pré-requisitos
 
-Para conseguir acompanhar esse artigo será necessário os seguintes pré
-requisitos abaixo:
+Para acompanhar esse artigo, são necessários os seguintes pré-requisitos:
 
--   Ter um cluster kubernetes no nosso caso utilizaremos o kind. Para
+-   Ter um cluster Kubernetes; no nosso caso, utilizaremos o kind. Para
     criar um, veja [como criar um cluster local com o kind](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/).
 -   Ter o kubectl instalado.
 
@@ -126,8 +125,8 @@ rules:
   verbs: ["get", "list", "watch"]
 ```
 
-Neste exemplo, a role `pod-reader` permite que a Service Account veja
-(`get`, `list`, `watch`) nos pods e nos deployments dentro do namespace
+Neste exemplo, a role `pod-reader` dá permissão de leitura
+(`get`, `list`, `watch`) em pods e deployments dentro do namespace
 app.
 
 Para aplicar o exemplo acima executar o comando abaixo:
@@ -188,7 +187,7 @@ Para visualizar as clusterroles no cluster executar o comando abaixo:
 kubectl get clusterrole
 ```
 
-Será mostrado todas as clusterroles do cluster. Para visualizar
+Serão mostradas todas as ClusterRoles do cluster. Para visualizar
 informações da clusterrole que criamos podemos executar o comando
 abaixo:
 
@@ -318,11 +317,11 @@ seguinte comando abaixo:
 sudo kubectl auth can-i list pods --as=system:serviceaccount:app:my-service-account -n app
 ```
 
-Se o resultado da sua consulta for yes sua serviceaccount tem acesso a
-fazer determinada ação.
+Se o resultado for yes, a sua ServiceAccount tem permissão para fazer
+aquela ação.
 
-Você pode executar o comando abaixo para validar que sua serviceaccount
-não tem acesso a fazer essa ação:
+Você pode executar o comando abaixo para validar que a sua
+ServiceAccount não tem permissão para fazer outra ação:
 
 ``` bash
 sudo kubectl auth can-i delete deployments --as=system:serviceaccount:app:my-service-account -n app
@@ -331,7 +330,7 @@ sudo kubectl auth can-i delete deployments --as=system:serviceaccount:app:my-ser
 ## Associando nossa ServiceAccount
 
 Agora que sabemos tudo sobre RBAC chegou a hora de criarmos nosso
-deployment com a nossa nova serviceaccount garantido assim mais
+deployment com a nossa nova ServiceAccount, garantindo assim mais
 segurança ao nosso cluster kubernetes.
 
 Abaixo segue um exemplo de deployment usando a serviceaccount que
@@ -363,15 +362,15 @@ spec:
         - containerPort: 80
 ```
 
-Deve ser criado um arquivo chamado deploy.yaml com o conteúdo acima e
-executado o comando abaixo:
+Crie um arquivo chamado deploy.yaml com o conteúdo acima e execute o
+comando abaixo:
 
 ``` bash
 kubectl apply -f deploy.yaml
 ```
 
-Para visualizar se realmente foi feito vinculo da serviceaccont com o
-deploy executar o comando abaixo:
+Para confirmar o vínculo da ServiceAccount com o deploy, execute o
+comando abaixo:
 
 ``` bash
 kubectl get deploy -n app -o yaml | grep serviceAccount
@@ -380,7 +379,7 @@ kubectl get deploy -n app -o yaml | grep serviceAccount
 
 ## Conclusão 
 
-O Objetivo desse post foi demonstrar a utilização do RBAC no seu
+O objetivo desse post foi demonstrar a utilização do RBAC no seu
 cluster, garantindo que os usuários e processos tenham acesso controlado
 e seguro aos recursos de que precisam, ajudando a prevenir acessos
 indesejados e falhas de segurança.

@@ -18,27 +18,25 @@ showTableOfContents: true
 > o [Headlamp](https://github.com/kubernetes-sigs/headlamp), projeto do
 > kubernetes-sigs, ou o [k9s](https://github.com/derailed/k9s), no terminal.
 
-A ferramenta Octant é um projeto Open Source que permite a visulização
-via interface gráfica do seu cluster Kubernetes podendo assim fazer todo
-o gerenciamento do seu cluster kurbenetes e aplicações através dessa
-ferramenta.
+A ferramenta Octant é um projeto Open Source que permite a visualização
+via interface gráfica do seu cluster Kubernetes, permitindo fazer todo o
+gerenciamento do cluster e das aplicações por meio dela.
 
-A ferramenta Octant é mantida pela VMWare abaixo segue links com mais
-informações:
+A ferramenta Octant era mantida pela VMware. Abaixo, links com mais informações:
 
 - https://octant.dev/
 - https://github.com/vmware-tanzu/octant
 
-## Pré-Requisitos 
+## Pré-requisitos 
 
 Para testar essa ferramenta é necessário ter um cluster kubernetes
-local. Pode ser usado o kind ou o rancher desktop para teste. Abaixo
-segue links com mais informações:
+local. Pode ser usado o kind ou o rancher desktop para teste. Abaixo,
+links com mais informações:
 
 - https://kind.sigs.k8s.io/ (veja também [como criar um cluster local com o kind](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/))
 - https://rancherdesktop.io/
 
-Também é necessário que o kubeconfig esteja configurado pois a
+Também é necessário que o kubeconfig esteja configurado, pois a
 ferramenta coleta informações desse arquivo conforme imagem abaixo:
 
 ![Tela de preferências do Octant mostrando o caminho do kubeconfig em uso](/images/octant-2.webp)
@@ -49,14 +47,14 @@ esse [link](https://kubernetes.io/pt-br/docs/concepts/configuration/organize-cl
 
 ## Instalação 
 
-Para utilização é necessário a instalação de um cliente na sua máquina
-local. O mesmo suporta Windows, Linux e Mac.
+Para utilizar, é necessário instalar um cliente na sua máquina local,
+que suporta Windows, Linux e Mac.
 
 Para fazer o download basta acessar o link abaixo:
 
 -  https://github.com/vmware-tanzu/octant/releases/tag/v0.25.1
 
-No momento que escrevo esse post essa é a ultima versão da ferramenta.
+No momento em que escrevo este post, essa é a última versão da ferramenta.
 
 ## Overview 
 
@@ -75,7 +73,7 @@ Memória para cada workload.
 Acima outros exemplos de visualizações.
 
 Permite a visualização dos objetos do kubernetes que determinado
-workload está utilizando. Segue abaixo alguns exemplos:
+workload está utilizando. Abaixo, alguns exemplos:
 
 ![Overview do namespace kubecost no Octant com a lista de deployments e pods](/images/octant-6.webp)
 
@@ -101,7 +99,7 @@ Visualização de logs e conexão ao pod através da ferramenta
 
 ![Aba Terminal de um pod do kubecost-cost-analyzer no Octant, com um shell aberto no container](/images/octant-13.webp)
 
-É possível visualização de eventos conforme imagem abaixo:
+É possível visualizar os eventos, conforme a imagem abaixo:
 
 ![Tela de eventos de um namespace no Octant](/images/octant-14.webp)
 
@@ -116,9 +114,9 @@ abaixo:
 
 ## Conclusão 
 
-O objetivo desse post foi demostrar a utilização da ferramenta Octant e
-como pode ajudar no gerenciamento de um cluster kubernetes via interface
-gráfica ajudando assim na sua produtividade.
+O objetivo desse post foi demonstrar a utilização da ferramenta Octant e
+como ela pode ajudar no gerenciamento de um cluster Kubernetes via
+interface gráfica, aumentando a sua produtividade.
 
 Existem ferramentas similares como o Kubernetes-Dashboard e o Lens.
 Abaixo links com mais informações:

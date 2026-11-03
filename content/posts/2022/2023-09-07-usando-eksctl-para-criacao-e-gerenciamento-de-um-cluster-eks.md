@@ -15,22 +15,23 @@ showTableOfContents: true
 > [eksctl-io/eksctl](https://github.com/eksctl-io/eksctl). O comando de
 > instalação no Linux foi atualizado para o que está na documentação atual.
 
-Nesse artigo irei demostrar a utilização da ferramenta de linha de
-comando chamada eksctl feita em Golang e criada pela empresa Weaveworks
-para criação e gerenciamento de um cluster EKS.
+Nesse artigo irei demonstrar a utilização da ferramenta de linha de
+comando chamada eksctl, feita em Golang e criada pela empresa
+Weaveworks, para criação e gerenciamento de um cluster EKS.
 
 Com essa ferramenta de linha de comando é possível criar um cluster EKS
-e também gerenciar seus node groups que não foram criados com o eksctl
-por exemplo um cluster que foi provisionado através do terraform.
+e também gerenciar seus node groups, mesmo que o cluster não tenha sido
+criado com o eksctl (por exemplo, um cluster provisionado pelo
+Terraform).
 
-**Lembrando que o EKS não está na oferta de free tier da AWS então caso**
+**Lembrando que o EKS não está na oferta de free tier da AWS. Então, caso**
 **prossiga com esse lab você será cobrado pelo tempo de utilização do**
 **cluster EKS**
 
 ## Instalação 
 
 O eksctl pode ser instalado em máquinas que utilizam Windows, Linux e
-MAC ou também ser executado através do Docker.
+Mac, ou ser executado através do Docker.
 
 ### Para Linux
 
@@ -47,9 +48,9 @@ tar -xzf eksctl_$PLATFORM.tar.gz -C /tmp && rm eksctl_$PLATFORM.tar.gz
 sudo install -m 0755 /tmp/eksctl /usr/local/bin && rm /tmp/eksctl
 ```
 
-### Para MAC
+### Para Mac
 
-Também pode ser utilizado a seguinte linha de comando para usuários Mac:
+Também pode ser utilizada a seguinte linha de comando para usuários Mac:
 
 ``` bash
 brew tap weaveworks/tap
@@ -62,10 +63,10 @@ brew install weaveworks/tap/eksctl
 chocolatey install eksctl
 ```
 
-No windows também pode ser utilizado o PowerShell.
+No Windows também pode ser utilizado o PowerShell.
 
 No meu caso eu utilizei uma máquina Linux. Para verificar se a
-instalação foi bem sucedida basta executar o comando abaixo:
+instalação foi bem-sucedida, basta executar o comando abaixo:
 
 ``` bash
 eksctl version
@@ -77,14 +78,16 @@ Ou digitando apenas eksctl deve retornar a saída abaixo:
 
 Para mais detalhes sobre a instalação pode consultar esse [link](https://eksctl.io/introduction/#installation)
 
-## Pré-Requisitos 
+## Pré-requisitos 
 
 - Usuário AWS com as permissões abaixo:
 
 ![Tabela com as permissões mínimas do eksctl por serviço: CloudFormation, EC2, EC2 Auto Scaling, EKS, IAM e Systems Manager](/images/eksctl-3.webp)
 
 Para mais informações sobre as permissões necessárias para o eksctl
-funcionar acesse esse [link](https://eksctl.io/usage/minimum-iam-policies/). Abaixo segue como ficou as minhas políticas no IAM:
+funcionar acesse
+esse [link](https://eksctl.io/usage/minimum-iam-policies/). Abaixo, como
+ficaram as minhas políticas no IAM:
 
 ![Console do IAM com as quatro policies anexadas ao usuário: AmazonEC2FullAccess, AWSCloudFormationFullAccess, IamLimitedAccess e EksAllAccess](/images/eksctl-4.webp)
 
@@ -111,16 +114,16 @@ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stabl
 
 Para mais informações sobre a instalação do kubectl consulte esse [link](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/).
 
-# Criando seu primeiro cluster EKS com eksctl 
+## Criando seu primeiro cluster EKS com eksctl 
 
 Após a instalação dos pré-requisitos da seção anterior você está pronto
 para a criação do seu primeiro cluster. O eksctl é uma forma mais
-simples de subir um cluster EKS em background o eksctl provisiona todos
-os recursos de infraestrutura utilizando **Cloudformation**.
+simples de subir um cluster EKS: em background, ele provisiona todos
+os recursos de infraestrutura utilizando **CloudFormation**.
 
-Por padrão o eksctl sobe instâncias do tipo m5.large para economizar
-dinheiro optei pela criação do cluster utilizando o arquivo abaixo
-setando o tipo de instância para utilizar t3.medium.
+Por padrão o eksctl sobe instâncias do tipo m5.large. Para economizar,
+optei por criar o cluster com o arquivo abaixo, que define o tipo de
+instância t3.medium.
 
 ``` bash
 apiVersion: eksctl.io/v1alpha5
@@ -153,8 +156,7 @@ Na saída abaixo é mostrado o provisionamento dos dois Nodegroups
 
 ![Fim da saída do eksctl create cluster com os nodegroups ng-1 e ng-2 prontos e o cluster cluster-demoeksctl criado](/images/eksctl-6.webp)
 
-Criado os dois Nodegroups com um node por nodegroup conforme imagens
-abaixo.
+Foram criados os dois nodegroups, com um node cada, conforme as imagens abaixo.
 
 ![Saída do kubectl get nodes com os dois nodes do cluster no status Ready](/images/eksctl-7.png)
 
@@ -169,10 +171,10 @@ pelo eksctl. Algumas tarefas que conseguimos executar com o eksctl:
 - Criação de um Fargate Profile;
 - Update de versão do cluster;
 
-Para mais informações podem consultar a documentação oficial do eksctl
+Para mais informações, consulte a documentação oficial do eksctl
 que vou deixar na seção de referências.
 
-No meu caso irei demonstar a criação de um novo nodegroup no cluster EKS
+No meu caso irei demonstrar a criação de um novo nodegroup no cluster EKS
 criado anteriormente. Novamente vou fazer a criação de forma declarativa
 usando o arquivo abaixo:
 
@@ -224,7 +226,7 @@ eksctl delete cluster -f eksctl.yml
 
 ## Referências 
 
-- [Github eksctl](https://github.com/eksctl-io/eksctl)
+- [GitHub eksctl](https://github.com/eksctl-io/eksctl)
 - [Documentação Oficial](https://eksctl.io/)
 - [Documentação Oficial EKS](https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html)
 - [Exemplos de utilização do eksctl](https://github.com/eksctl-io/eksctl/tree/main/examples)

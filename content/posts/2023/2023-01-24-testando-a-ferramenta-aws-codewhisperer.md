@@ -15,10 +15,10 @@ showTableOfContents: true
 > incorporado ao **Amazon Q Developer**, e o nome CodeWhisperer deixou de
 > ser usado. As listas de linguagens e IDEs abaixo são as da época do post.
 
-O objetivo desse post é demonstrar a utilização do serviço AWS
-CodeWhisperer que é uma ferramenta que sugere códigos para um
+O objetivo desse post é demonstrar a utilização do AWS CodeWhisperer,
+uma ferramenta que sugere código para um
 desenvolvedor usando Machine Learning e Inteligência Artificial. Essa
-ferramenta é similar ao Github Copilot.
+ferramenta é similar ao GitHub Copilot.
 
 Essa ferramenta suporta as seguintes linguagens:
 
@@ -30,7 +30,7 @@ Essa ferramenta suporta as seguintes linguagens:
 
 E se integra com as seguintes IDEs:
 
--   Intellij IDEA
+-   IntelliJ IDEA
 -   PyCharm
 -   VS Code
 -   AWS Cloud9
@@ -42,7 +42,7 @@ sobre esse serviço da AWS acessar esse
 
 O serviço também permite fazer um scan de segurança do seu código.
 
-## Pré-Requisitos 
+## Pré-requisitos 
 
 Para testar esse serviço da AWS você deve ter os seguintes
 pré-requisitos:
@@ -55,8 +55,8 @@ pré-requisitos:
 
 ## Instalação e Configuração 
 
-Apos a instalação da extensão da AWS Toolkit irá aparecer um ícone da
-aws no lado esquerdo similar a imagem abaixo:
+Após a instalação da extensão AWS Toolkit, aparecerá um ícone da AWS no
+lado esquerdo, similar à imagem abaixo:
 
 ![Painel Developer Tools do AWS Toolkit conectado com AWS Builder ID e as opções do CodeWhisperer](/images/codewhisperer-3.png)
 
@@ -64,17 +64,17 @@ Para ativar a utilização do serviço AWS CodeWhisperer será necessário
 configurar a conexão com a AWS.
 
 Eu utilizei a opção **"Use a personal email to sign up and sign in with
-AWS Builder ID "** assim que clicar nessa opção você será redirecionada
-para uma página web para efetuar a criação do seu AWS Builder ID.
+AWS Builder ID"**. Ao clicar nessa opção, uma página web é aberta para
+efetuar a criação do seu AWS Builder ID.
 
 ![Opções de conexão do AWS Toolkit: AWS Builder ID, IAM Identity Center ou credenciais IAM](/images/codewhisperer-4.png)
 
 ## Demonstração 
 
 Para a demonstração eu criei um arquivo com a extensão .py e adicionei
-um comentário sobre o que gostaria de criar por exemplo "Create simple
-API with fastAPI" com isso ele vai dando sugestões de código conforme
-imagem abaixo:
+um comentário sobre o que gostaria de criar, por exemplo "Create simple
+API with fastAPI". Com isso, ele vai dando sugestões de código, conforme
+a imagem abaixo:
 
 ![VS Code com o CodeWhisperer sugerindo o código de uma API FastAPI a partir de um comentário](/images/codewhisperer-5.webp)
 
@@ -84,5 +84,5 @@ Esse foi o resultado final apresentado pelo AWS CodeWhisperer
 
 ## Conclusão 
 
-Achei bem legal esse serviço da AWS pode ser uma alternativa bem
-interessante ao Github Copilot.
+Achei bem legal esse serviço da AWS. Ele pode ser uma alternativa bem
+interessante ao GitHub Copilot.

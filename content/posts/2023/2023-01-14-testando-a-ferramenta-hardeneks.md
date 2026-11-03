@@ -11,30 +11,30 @@ showTableOfContents: true
 
 ![Testando a ferramenta HardenEKS](/images/hardeneks.png)
 
-HardenEKS é uma ferramenta de linha de comando desenvolvido por [Doruk
+HardenEKS é uma ferramenta de linha de comando desenvolvida por [Doruk
 Ozturk](https://github.com/dorukozturk) que atualmente trabalha na AWS. Essa ferramenta tem o
-objetivo de fazer checagens em um cluster Kubernetes baseado em um guia
-de boas práticas que foi criada pela AWS. Para consultar esse guia de
+objetivo de fazer checagens em um cluster Kubernetes com base em um guia
+de boas práticas criado pela AWS. Para consultar esse guia de
 boas práticas basta acessar
 esse [link](https://aws.github.io/aws-eks-best-practices/).
 
-Mais informações do HardenEKS acesse
+Para mais informações sobre o HardenEKS, acesse
 esse [link](https://github.com/aws-samples/hardeneks) também.
 
-## Pré-Requisitos 
+## Pré-requisitos 
 
 Como pré-requisito para a execução da ferramenta é necessário já ter
-acesso a um cluster Kubernetes configurado através do arquivo kubeconfig
-para informações sobre esse arquivo consultar
+acesso a um cluster Kubernetes configurado através do arquivo
+kubeconfig. Para informações sobre esse arquivo, consulte
 esse [link](https://kubernetes.io/pt-br/docs/concepts/configuration/organize-cluster-access-kubeconfig/).
 
-Nessa demonstração irei utilizar um cluster criado apartir do rancher
-desktop. Para mais informações acessar
+Nessa demonstração irei utilizar um cluster criado a partir do Rancher
+Desktop. Para mais informações acessar
 esse [link](https://rancherdesktop.io/).
 
 Para a execução da ferramenta em um cluster EKS é necessário que algumas
-permissões mínimas sejam atendidas. Tanto dentro da AWS (IAM Policy)
-como dentro do cluster EKS (RBAC).
+permissões mínimas sejam atendidas, tanto na AWS (IAM Policy) quanto
+dentro do cluster EKS (RBAC).
 
 Abaixo as permissões mínimas necessárias para a IAM Policy:
 
@@ -107,14 +107,14 @@ rules:
 ## Instalação 
 
 Para a instalação da ferramenta eu vou utilizar uma máquina Windows.
-Para **Windows** será necessário a instalação do python através do link
+Para **Windows** será necessário instalar o Python através do link
 abaixo:
 
 [Link para download do
 Python](https://www.python.org/downloads/)
 
-Para **Linux** a maioria das distribuições já possuem o python
-nativamente mas caso necessário utilizar
+Para **Linux** a maioria das distribuições já possuem o Python
+nativamente, mas, caso necessário, utilize
 esse [link](https://python.org.br/instalacao-linux/) para fazer a instalação.
 
 Para a instalação da ferramenta executar o seguinte comando abaixo:
@@ -144,13 +144,12 @@ Abaixo alguns prints da saída da ferramenta
 
 ![Resultado do hardeneks no namespace opencost com recomendações como definir requests e limits para cada container](/images/hardeneks-5.webp)
 
-No fim de cada checagem que a ferramenta faz ele informa um link para o
+No fim de cada checagem, a ferramenta informa um link para o
 guia de boas práticas.
 
-Existe a possibilidade de informar o arquivo de configuração do
-hardeneks com isso é possível desabilitar algumas checagens da
-ferramenta. Abaixo segue um arquivo de configuração onde pode ser
-desabilitado algumas checagens:
+Também é possível informar um arquivo de configuração do hardeneks para
+desabilitar algumas checagens. Abaixo, um arquivo de configuração em que
+algumas checagens podem ser desabilitadas:
 
 ``` bash
 ---
@@ -242,5 +241,5 @@ uma pipeline de CI/CD.
 ## Conclusão 
 
 A ideia desse post foi demonstrar a utilização da ferramenta hardeneks
-para efetuar uma checagens de boas práticas na utilização do kubernetes.
+para checar as boas práticas na utilização do Kubernetes.
 

@@ -17,7 +17,7 @@ gerenciar chaves SSH e o acesso é controlado por permissões do IAM.
 Além disso, cada sessão fica registrada no CloudTrail, e é possível
 gravar o conteúdo das sessões em um bucket S3 ou no CloudWatch Logs.
 
-## Pré Requisitos
+## Pré-requisitos
 
 -   Uma conta AWS e o AWS CLI v2 configurado. Se precisar, veja como
     [criar e configurar um usuário IAM](/posts/2024/2024-01-07-criando-e-configurando-um-usuario-iam/)

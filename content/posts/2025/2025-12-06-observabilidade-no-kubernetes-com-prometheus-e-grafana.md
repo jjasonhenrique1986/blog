@@ -31,7 +31,7 @@ são divididos em três pilares:
 Nesse artigo vamos focar em **métricas**, que normalmente são o primeiro
 passo e a base para os alertas.
 
-## Pré Requisitos
+## Pré-requisitos
 
 -   Um cluster kubernetes. Para testes, um cluster local com o kind
     funciona bem; veja como criar nesse
