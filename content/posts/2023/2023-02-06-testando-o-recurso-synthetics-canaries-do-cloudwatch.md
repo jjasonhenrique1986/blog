@@ -18,16 +18,16 @@ retornando status de sucesso (HTTP 200), com uma checagem a cada minuto,
 por exemplo. Esse recurso existe em outras ferramentas de
 observabilidade com que já trabalhei, como Dynatrace e Datadog.
 
-Para mais informações sobre esse serviço consulte esse
-[link](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries.html).
+Para mais informações, consulte a [documentação do CloudWatch
+Synthetics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries.html).
 
 ## Pré-requisitos
 
 Para testar esse serviço da AWS, foi criada uma API em Python usando o
 FastAPI. Para saber mais informações sobre o que é o FastAPI e como
-criar uma API usando FastAPI pode consultar esse
-[link](https://pythonacademy.com.br/blog/como-usar-o-fastapi-para-construir-apis-no-python). E também o
-[link](https://fastapi.tiangolo.com/) da documentação oficial.
+criar uma API usando FastAPI veja o [tutorial de FastAPI da Python
+Academy](https://pythonacademy.com.br/blog/como-usar-o-fastapi-para-construir-apis-no-python)
+e a [documentação oficial do FastAPI](https://fastapi.tiangolo.com/).
 
 Para a instalação do FastAPI utilizarei uma EC2 com as seguintes
 configurações abaixo:
@@ -151,9 +151,9 @@ conforme imagem abaixo:
 
 ![Canary helloworld com status Failed depois que a API deixou de responder](/images/synthetic-14.webp)
 
-Também é possível criar o Synthetics Canaries através do Terraform
-conforme informado nesse
-[link](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/synthetics_canary).
+Também é possível criar o Synthetics Canaries pelo Terraform, com o
+recurso
+[aws_synthetics_canary](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/synthetics_canary).
 
 ## Conclusão
 

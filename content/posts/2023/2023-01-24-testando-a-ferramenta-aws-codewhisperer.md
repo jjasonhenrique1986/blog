@@ -36,9 +36,9 @@ E se integra com as seguintes IDEs:
 -   AWS Cloud9
 -   AWS Lambda
 
-Para essa demonstração irei utilizar o VS Code. Para mais informações
-sobre esse serviço da AWS acessar esse
-[link](https://aws.amazon.com/pt/codewhisperer/).
+Para essa demonstração irei utilizar o VS Code. Para mais informações,
+veja a [página do CodeWhisperer na
+AWS](https://aws.amazon.com/pt/codewhisperer/).
 
 O serviço também permite fazer um scan de segurança do seu código.
 
@@ -47,8 +47,8 @@ O serviço também permite fazer um scan de segurança do seu código.
 Para testar esse serviço da AWS você deve ter os seguintes
 pré-requisitos:
 
--   VS Code instalado. Para fazer o download acessar esse
-    [link](https://code.visualstudio.com/download).
+-   VS Code instalado. Faça o download na [página de download do VS
+    Code](https://code.visualstudio.com/download).
 -   Instalar a extensão AWS Toolkit no VS Code conforme imagem abaixo:
 
 ![Extensão AWS Toolkit no marketplace do VS Code](/images/codewhisperer-2.webp)

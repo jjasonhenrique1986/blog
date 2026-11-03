@@ -33,9 +33,8 @@ necessários os seguintes pré-requisitos abaixo:
 Nesse primeiro passo vamos fazer a criação de um usuário IAM para usar
 nos arquivos de configurações do terraform.
 
-Para fazer a criação do usuário IAM seguir esse outro
-[artigo](/posts/2024/2024-01-07-criando-e-configurando-um-usuario-iam/)
-que escrevi há algum tempo.
+Para criar o usuário IAM, siga o post [Criando e configurando um usuário
+IAM](/posts/2024/2024-01-07-criando-e-configurando-um-usuario-iam/).
 
 Para a nossa configuração vamos anexar a policy **AdministratorAccess** no
 nosso usuário **blog** conforme imagem abaixo:
@@ -74,9 +73,9 @@ arquivos de configurações do terraform conforme abaixo:
 
 ![Criação do repositório no GitHub com o template de .gitignore do Terraform](/images/terraform-6.webp)
 
-Na opção Add .gitignore adicionar o template do Terraform. Segue o link
-do [repositório](https://github.com/jjasonhenrique/terraform-blog-jason)
-criado.
+Na opção Add .gitignore adicionar o template do Terraform. O repositório
+criado é o
+[terraform-blog-jason](https://github.com/jjasonhenrique/terraform-blog-jason).
 
 Agora vamos fazer um clone desse repositório usando o comando abaixo:
 

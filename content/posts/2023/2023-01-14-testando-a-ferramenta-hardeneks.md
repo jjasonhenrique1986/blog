@@ -14,23 +14,22 @@ showTableOfContents: true
 HardenEKS é uma ferramenta de linha de comando desenvolvida por [Doruk
 Ozturk](https://github.com/dorukozturk) que atualmente trabalha na AWS. Essa ferramenta tem o
 objetivo de fazer checagens em um cluster Kubernetes com base em um guia
-de boas práticas criado pela AWS. Para consultar esse guia de
-boas práticas basta acessar
-esse [link](https://aws.github.io/aws-eks-best-practices/).
+de boas práticas criado pela AWS. O guia está em [EKS Best Practices
+Guides](https://aws.github.io/aws-eks-best-practices/).
 
-Para mais informações sobre o HardenEKS, acesse
-esse [link](https://github.com/aws-samples/hardeneks) também.
+Para mais informações, veja o [repositório do HardenEKS no
+GitHub](https://github.com/aws-samples/hardeneks).
 
 ## Pré-requisitos 
 
 Como pré-requisito para a execução da ferramenta é necessário já ter
 acesso a um cluster Kubernetes configurado através do arquivo
-kubeconfig. Para informações sobre esse arquivo, consulte
-esse [link](https://kubernetes.io/pt-br/docs/concepts/configuration/organize-cluster-access-kubeconfig/).
+kubeconfig. Para informações sobre esse arquivo, veja a [documentação do
+kubeconfig](https://kubernetes.io/pt-br/docs/concepts/configuration/organize-cluster-access-kubeconfig/).
 
 Nessa demonstração irei utilizar um cluster criado a partir do Rancher
-Desktop. Para mais informações acessar
-esse [link](https://rancherdesktop.io/).
+Desktop. Para mais informações, veja o [site oficial do Rancher
+Desktop](https://rancherdesktop.io/).
 
 Para a execução da ferramenta em um cluster EKS é necessário que algumas
 permissões mínimas sejam atendidas, tanto na AWS (IAM Policy) quanto
@@ -114,8 +113,8 @@ abaixo:
 Python](https://www.python.org/downloads/)
 
 Para **Linux** a maioria das distribuições já possuem o Python
-nativamente, mas, caso necessário, utilize
-esse [link](https://python.org.br/instalacao-linux/) para fazer a instalação.
+nativamente, mas, caso necessário, siga o [guia de instalação do Python
+no Linux](https://python.org.br/instalacao-linux/).
 
 Para a instalação da ferramenta executar o seguinte comando abaixo:
 

@@ -14,9 +14,9 @@ showTableOfContents: true
 O objetivo desse artigo é criar um tutorial demonstrando como criar e
 configurar uma role IAM na AWS para que você possa interagir de forma
 programática com a AWS. Usar uma role IAM é mais seguro do que usar
-diretamente um usuário IAM, conforme demonstrei
-nesse
-[post](/posts/2024/2024-01-07-criando-e-configurando-um-usuario-iam/).
+diretamente um usuário IAM, como mostrei em [Criando e configurando um
+usuário
+IAM](/posts/2024/2024-01-07-criando-e-configurando-um-usuario-iam/).
 
 ## Pré-requisitos 
 
@@ -46,9 +46,8 @@ permissão será concedida pela role IAM, por meio de uma política IAM.
 Depois disso clicar na opção **Create User** e seu usuário será criado.
 
 Para saber como gerar o **Access Key** e o **Secret Access Key** e como
-configurar você pode consultar esse outro
-[post](/posts/2024/2024-01-07-criando-e-configurando-um-usuario-iam/)
-que escrevi.
+configurar veja o [post sobre o usuário
+IAM](/posts/2024/2024-01-07-criando-e-configurando-um-usuario-iam/).
 
 ## Criando uma Role IAM
 
@@ -229,8 +228,9 @@ aws ec2 start-instances --region sa-east-1 --instance-ids  i-0085922c8e050b223 -
 O objetivo desse artigo foi demonstrar a criação de uma role e efetuar
 testes usando as roles em vez de utilizar o usuário IAM. Nesse artigo
 demonstrei a utilização de uma role usando apenas uma conta AWS porém é
-possível utilizar múltiplas contas conforme essa
-[documentação](https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html)
+possível utilizar múltiplas contas, conforme o [tutorial de acesso entre
+contas com
+roles](https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html)
 da AWS.
 
 Para ir além das roles assumidas a partir de um usuário IAM, veja como

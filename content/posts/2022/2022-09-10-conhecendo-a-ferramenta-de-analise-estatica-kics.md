@@ -16,8 +16,9 @@ análise estática em códigos de Infraestrutura
 como Código, como Terraform, CloudFormation e outros.
 
 O kics é uma ferramenta Open Source desenvolvida em Golang usando OPA
-(Open Policy Agent). Para mais informações sobre OPA consulte
-esse [link](https://www.openpolicyagent.org/docs/latest/#overview). O OPA permite você aplicar políticas para seus
+(Open Policy Agent). Para mais informações, veja a [documentação do
+OPA](https://www.openpolicyagent.org/docs/latest/#overview). O OPA
+permite você aplicar políticas para seus
 microsserviços, kubernetes, pipelines de CI/CD, API Gateways e muitas
 outras opções.
 
@@ -29,8 +30,8 @@ artigo as seguintes ferramentas abaixo são suportadas:
 ![Logos das ferramentas suportadas pelo KICS, como Terraform, Kubernetes, Docker, Ansible, CloudFormation, Helm, OpenAPI, AWS CDK e gRPC](/images/kics-2.webp)
 
 Através do kics você pode criar novas queries conforme a necessidade do
-seu ambiente. Mais informações
-nesse [link](https://docs.kics.io/latest/creating-queries/).
+seu ambiente. Veja como na [documentação de criação de queries do
+kics](https://docs.kics.io/latest/creating-queries/).
 
 ## Instalação 
 
@@ -44,13 +45,14 @@ caso vou utilizar uma imagem docker.
 docker pull checkmarx/kics:latestdocker run -t -v "{path_to_host_folder_to_scan}":/path checkmarx/kics scan -p "/path" -o "/path/"
 ```
 
-Para mais informações sobre a instalação pode consultar
-esse [link](https://docs.kics.io/latest/getting-started/).
+Para mais detalhes, consulte o [guia de instalação do
+kics](https://docs.kics.io/latest/getting-started/).
 
 ## Demonstração 
 
-Para essa demonstração irei utilizar o
-seguinte [repositório](https://github.com/addamstj/tfcourse). Por padrão
+Para essa demonstração irei utilizar o repositório
+[addamstj/tfcourse](https://github.com/addamstj/tfcourse), com exemplos
+de Terraform. Por padrão
 o kics gera um arquivo JSON; para melhorar a visualização, vamos gerar
 um arquivo HTML.
 
@@ -87,8 +89,8 @@ seguem alguns prints desse relatório.
 
 Com o kics você consegue integrar com várias ferramentas de CI/CD e
 também existe um plugin para vscode.
-Nesse [link](https://docs.kics.io/latest/integrations/) você consegue verificar todas as integrações
-disponíveis.
+Todas as integrações disponíveis estão na [documentação de integrações
+do kics](https://docs.kics.io/latest/integrations/).
 
 Para scan de vulnerabilidades em imagens de container, que complementa a
 análise de IaC, veja o post sobre o [Trivy](/posts/2023/2023-11-05-conhecendo-a-ferramenta-trivy/).

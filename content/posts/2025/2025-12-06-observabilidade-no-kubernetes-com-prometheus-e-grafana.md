@@ -34,8 +34,8 @@ passo e a base para os alertas.
 ## Pré-requisitos
 
 -   Um cluster kubernetes. Para testes, um cluster local com o kind
-    funciona bem; veja como criar nesse
-    [link](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/).
+    funciona bem; veja [como criar um cluster local com o
+    kind](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/).
 -   kubectl e Helm 3 instalados.
 
 ## O que o kube-prometheus-stack instala

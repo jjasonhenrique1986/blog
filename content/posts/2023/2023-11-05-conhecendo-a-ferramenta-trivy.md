@@ -44,9 +44,9 @@ o trivy como um container do Docker.
 
 ### Instalação no Linux 
 
-No meu caso vou demonstrar a instalação em uma máquina Linux. Para
-verificar a última versão do trivy consultar esse
-[link](https://github.com/aquasecurity/trivy/releases). Abaixo os
+No meu caso vou demonstrar a instalação em uma máquina Linux. A última
+versão está nas [releases do Trivy no
+GitHub](https://github.com/aquasecurity/trivy/releases). Abaixo os
 comandos que você deve executar para fazer o download e a instalação:
 
 ``` bash
@@ -104,8 +104,8 @@ para essas vulnerabilidades.
 
 ## Scan de repositório 
 
-Agora vamos fazer um scan de vulnerabilidades no seguinte
-[repositório](https://github.com/prometheus/prometheus) executando o
+Agora vamos fazer um scan de vulnerabilidades no repositório do
+[Prometheus](https://github.com/prometheus/prometheus), executando o
 comando abaixo filtrando apenas as vulnerabilidades com severidade HIGH.
 
 ``` bash
@@ -124,8 +124,8 @@ versão em que a vulnerabilidade foi corrigida.
 
 O Trivy se integra com diversas ferramentas que permitem adicionar
 segurança ao workflow da sua aplicação, como ferramentas de CI/CD e
-IDEs. Para mais informações sobre essas integrações, consulte esse
-[link](https://aquasecurity.github.io/trivy/v0.46/ecosystem/).
+IDEs. Veja todas as integrações na [documentação do ecossistema do
+Trivy](https://aquasecurity.github.io/trivy/v0.46/ecosystem/).
 
 ## Conclusão 
 

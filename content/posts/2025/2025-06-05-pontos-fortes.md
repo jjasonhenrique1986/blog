@@ -58,5 +58,6 @@ Gosto de refletir. Pensar sobre como algo poderia ser feito melhor, por que um i
 
 Fazer o CliftonStrengths foi mais do que um exercício de autoconhecimento — foi uma forma de validar coisas que já estavam presentes no meu jeito de trabalhar. E mais importante: me ajudou a planejar como usar esses pontos de forma mais intencional na minha vida profissional e pessoal.
 
-Para fazer o teste você precisa comprar o livro nesse
-[link](https://www.amazon.com.br/Descubra-seus-pontos-fortes-2-0/dp/854310775X).
+Para fazer o teste, você precisa comprar o livro [Descubra seus pontos
+fortes
+2.0](https://www.amazon.com.br/Descubra-seus-pontos-fortes-2-0/dp/854310775X).

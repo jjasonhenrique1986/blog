@@ -17,8 +17,8 @@ imagem do container: a mesma imagem pode rodar em desenvolvimento e em
 produção mudando apenas a configuração.
 
 Para os testes vamos usar um cluster local com o kind. Se precisar, veja
-como criar um nesse
-[link](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/).
+[como criar um cluster local com o
+kind](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/).
 
 ## Pré-requisitos
 

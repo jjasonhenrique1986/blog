@@ -21,8 +21,9 @@ Para fazer as demonstrações desse post, são necessários os seguintes
 pré-requisitos:
 
 -   Ter o kubectl instalado.
--   Ter um cluster local usando o kind. Para isso, siga esse
-    [post](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/).
+-   Ter um cluster local usando o kind. Para isso, siga o post [Criando
+    um cluster local de kubernetes com o
+    kind](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/).
 
 ## Conceitos 
 

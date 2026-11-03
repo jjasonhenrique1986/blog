@@ -14,8 +14,8 @@ showTableOfContents: true
 O objetivo deste artigo é a criação de uma policy do tipo Mutation no
 Kyverno. Esse artigo é uma continuação do primeiro artigo onde falei
 como instalar o kyverno e criei uma policy do tipo validation no
-kyverno. Para ver o primeiro artigo basta clicar nesse
-[link](/posts/2023/2023-10-29-conhecendo-um-pouco-sobre-o-kyverno/).
+kyverno. O primeiro artigo é o [Conhecendo um pouco sobre o
+kyverno](/posts/2023/2023-10-29-conhecendo-um-pouco-sobre-o-kyverno/).
 
 ## Pré-requisitos 
 
@@ -128,5 +128,4 @@ Deve retornar as labels conforme abaixo:
 
 O objetivo desse artigo foi demonstrar a utilização de uma policy do
 tipo Mutation no Kyverno. Existem outras policies que podem ser criadas
-consultando a documentação do kyverno através desse
-[link](https://kyverno.io/policies/).
+na [biblioteca de policies do Kyverno](https://kyverno.io/policies/).

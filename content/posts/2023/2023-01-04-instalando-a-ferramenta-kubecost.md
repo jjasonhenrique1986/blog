@@ -39,13 +39,12 @@ Como pré-requisito é necessário ter um cluster de kubernetes para a
 instalação do kubecost. Para essa demonstração pode ser utilizado o kind
 ou o rancher desktop.
 
-Para mais informações sobre a instalação e criação de um cluster usando
-kind utilizar
-esse [link](https://kind.sigs.k8s.io/) ou o meu passo a passo de
+Para criar um cluster com o kind, veja o [site oficial do
+kind](https://kind.sigs.k8s.io/) ou o meu passo a passo de
 [como criar um cluster local com o kind](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/).
 
-Para informações sobre o rancher desktop acesse
-esse [link](https://rancherdesktop.io/).
+Para o Rancher Desktop, veja o [site oficial do Rancher
+Desktop](https://rancherdesktop.io/).
 
 ## Instalação 
 

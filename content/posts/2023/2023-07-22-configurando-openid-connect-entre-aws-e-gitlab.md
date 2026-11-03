@@ -32,8 +32,7 @@ Para prosseguir com esse tutorial é necessário ter os seguintes
 pré-requisitos:
 
 -   Conta na AWS;
--   Conta no GitLab SaaS utilizando esse
-    [link](https://about.gitlab.com/);
+-   Conta no [GitLab.com](https://about.gitlab.com/) (SaaS);
 
 ## Configuração OIDC
 
@@ -169,7 +168,7 @@ conta AWS.
 
 O objetivo desse post foi demonstrar a configuração do OpenID Connect
 entre AWS e GitLab. Esse mesmo procedimento pode ser feito com o GitHub,
-conforme esse
-[link](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services),
+conforme a [documentação do GitHub sobre OIDC na
+AWS](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services),
 e mostrei o passo a passo em
 [GitHub Actions com OpenID Connect na AWS, sem access keys](/posts/2026/2026-08-22-github-actions-com-oidc-na-aws-sem-access-keys/).

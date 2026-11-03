@@ -16,8 +16,9 @@ DaemonSet, Deployment e StatefulSet no Kubernetes, a principal
 ferramenta de orquestração de containers. Para os testes iremos utilizar
 um cluster Kubernetes local usando o kind.
 
-Para a criação do seu cluster local usando kind você pode seguir esse
-[link](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/).
+Para criar o seu cluster local com o kind, siga o post [Criando um
+cluster local de kubernetes com o
+kind](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/).
 Nesse cluster será criado um nó como ControlPlane e outros dois nós como
 DataPlane.
 

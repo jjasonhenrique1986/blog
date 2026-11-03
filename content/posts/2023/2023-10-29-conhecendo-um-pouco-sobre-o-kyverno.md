@@ -28,10 +28,8 @@ Para testar o Kyverno, seguem abaixo os pré-requisitos:
 -   Ter um cluster Kubernetes. Para isso, você pode usar o
     [kind](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/) ou [rancher
     desktop](https://rancherdesktop.io/).
--   Ter o kubectl instalado. Mais informações nesse
-    [link](https://kubernetes.io/docs/tasks/tools/).
--   Ter o Helm instalado. Mais informações nesse
-    [link](https://helm.sh/docs/intro/install/).
+-   Ter o [kubectl instalado](https://kubernetes.io/docs/tasks/tools/).
+-   Ter o [Helm instalado](https://helm.sh/docs/intro/install/).
 
 ## Instalação 
 

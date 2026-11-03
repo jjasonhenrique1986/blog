@@ -24,8 +24,8 @@ Abaixo, os pré-requisitos para acompanhar esse artigo:
 -   Ter o cli do terraform instalado.
 -   Ter uma conta no GitHub.
 -   Já ter um repositório no GitHub configurado para usar o terraform.
-    Pode usar como exemplo esse
-    [repositório](https://github.com/jjasonhenrique/terraform-blog-jason).
+    Pode usar como exemplo o repositório
+    [terraform-blog-jason](https://github.com/jjasonhenrique/terraform-blog-jason).
 
 ## O que é for_each ? 
 

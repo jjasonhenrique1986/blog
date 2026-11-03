@@ -114,9 +114,9 @@ kind delete clusters nome-do-cluster
 ## Instalação Helm 
 
 Agora vamos instalar o Helm, que é um gerenciador de pacotes do
-Kubernetes para instalar aplicações. Primeiramente deve ser
-feito o download do pacote da última release do helm usando esse
-[link](https://github.com/helm/helm/releases).
+Kubernetes para instalar aplicações. Primeiramente, faça o download do
+pacote da última versão nas [releases do Helm no
+GitHub](https://github.com/helm/helm/releases).
 
 Depois executar os comandos abaixo:
 
