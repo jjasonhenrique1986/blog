@@ -11,6 +11,13 @@ showTableOfContents: true
 
 ![Minha Jornada para certificação AWS SysOps Administrator](/images/soa.png)
 
+> **Atualização (novembro de 2026):** a AWS renomeou essa certificação para
+> **AWS Certified CloudOps Engineer – Associate**, com uma nova versão do
+> exame (SOA-C03). Quem tirou a SysOps antes da mudança continua com o nome
+> antigo. Domínios, materiais e simulados abaixo são os da SOA-C02. Mais
+> detalhes na
+> [página da certificação](https://aws.amazon.com/certification/certified-cloudops-engineer-associate/).
+
 No último dia 2 de Maio fui aprovado na certificação AWS Certified
 SysOps Administrator Associate (SOA-C02) e com isso resolvi compartilhar
 sobre minha jornada de estudos e os materiais que usei durante esse 1
@@ -87,10 +94,10 @@ cobrados no exame:
 
 O principal simulado que utilizei foi da Whizlabs que na minha opinião é
 o simulado mais parecido com o exame. Para mais informações acesse
-esse [link](https://www.whizlabs.com/learn/course/aws-solutions-architect-associate/153).
+esse [link](https://www.whizlabs.com/aws-sysops-administrator-associate/).
 
 Outro simulado que recomendo para sua preparação e
-esse [simulado](https://www.udemy.com/course/aws-certified-sysops-administrator-associate-practice-exams-soa-c02/?couponCode=ACCAGE0923).
+esse [simulado](https://www.udemy.com/course/aws-certified-sysops-administrator-associate-practice-exams-soa-c02/).
 
 ## Conclusão 
 

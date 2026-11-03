@@ -283,7 +283,7 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-Neste exemplo, o ClusterRoleBinding `teste-clusterrole``-binding`
+Neste exemplo, o ClusterRoleBinding `teste-clusterrole-binding`
 associa a ClusterRole `teste-clusterrole` à `ServiceAccount`
 `my-service-account`, dando à conta de serviço permissões de leitura de
 pods e nodes em todo o cluster.

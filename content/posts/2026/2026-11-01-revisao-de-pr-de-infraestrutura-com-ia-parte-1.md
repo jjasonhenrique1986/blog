@@ -14,8 +14,8 @@ Revisar Pull Request de infraestrutura cansa. Um `cidr_blocks = ["0.0.0.0/0"]`
 ou um container sem limite de memória passam fácil no meio de um diff grande.
 
 Nesta série vou montar um **revisor de PR com IA**: a cada Pull Request, um
-workflow do GitHub Actions pega o diff de Terraform e Kubernetes, passa pelo
-**checkov** e pede para um modelo no **Amazon Bedrock** explicar os riscos num
+workflow do GitHub Actions pega o diff de Terraform e Kubernetes, passa por
+quatro scanners (**checkov**, **Trivy**, **kube-linter** e **kubeconform**) e pede para um modelo no **Amazon Bedrock** explicar os riscos num
 comentário. O padrão é o **Claude**, mas o projeto também aceita o **gpt-oss**,
 da OpenAI, e foi com ele que fiz os testes desta série (explico o motivo abaixo).
 
@@ -32,14 +32,14 @@ criar um workflow que chama a action. O código completo está em
 ## Como funciona
 
 1. Um PR altera arquivos `.tf` ou `.yaml`.
-2. O workflow roda o **checkov**, que faz as checagens **determinísticas**.
+2. O workflow roda os scanners, que fazem as checagens **determinísticas**.
 3. O workflow assume uma role IAM via **OIDC** e chama o modelo no Bedrock com o
-   diff e a saída do checkov.
+   diff e a saída dos scanners.
 4. O modelo devolve uma revisão em JSON (resumo, risco geral e lista de achados).
 5. O workflow publica a revisão como comentário no PR.
 
-A divisão de trabalho é importante: **o checkov encontra, a IA explica**. O
-checkov não alucina, mas a saída dele é longa e genérica. O modelo prioriza o
+A divisão de trabalho é importante: **os scanners encontram, a IA explica**. Os
+scanners não alucinam, mas a saída deles é longa e genérica. O modelo prioriza o
 que importa nas linhas alteradas e explica em português. A IA **não aprova nem
 bloqueia** o PR: ela é uma segunda leitura, não a revisão humana.
 

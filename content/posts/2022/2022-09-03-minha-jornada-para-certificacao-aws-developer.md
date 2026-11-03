@@ -11,7 +11,7 @@ showTableOfContents: true
 ![image-1](/images/dca.jpg)
 
 Recentemente tirei a certificação **AWS Certified Developer Associate**
-(DCA-C01) e resolvi compartilhar sobre minha jornada de estudos e os
+(DVA-C01) e resolvi compartilhar sobre minha jornada de estudos e os
 materiais que usei durante esses 4 meses de preparação até conseguir a
 aprovação.
 

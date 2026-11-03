@@ -186,9 +186,9 @@ veja o log do job. O passo **Quem sou eu?** deve mostrar um ARN do tipo
     do usuário e do repositório.
 -   **`Credentials could not be loaded`** ou erro pedindo o token: falta
     a permissão `id-token: write` no workflow ou no job.
--   **Workflows vindos de forks**: pull requests de forks não recebem o
-    token OIDC com permissão de escrita, por segurança. Não tente
-    contornar isso.
+-   **Workflows vindos de forks**: em pull requests de forks o GitHub
+    não libera o token OIDC, por segurança, então o passo de credenciais
+    falha. Não tente contornar isso.
 
 ## Conclusão
 
