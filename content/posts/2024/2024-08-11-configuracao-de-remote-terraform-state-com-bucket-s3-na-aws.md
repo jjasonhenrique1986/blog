@@ -210,7 +210,7 @@ O state locking impede que duas execuções alterem o mesmo state ao mesmo
 tempo: quem roda primeiro pega um lock, e a segunda execução espera ou
 falha. Antigamente isso exigia uma tabela no DynamoDB
 (`dynamodb_table`). A partir do Terraform 1.11 o backend S3 faz o lock
-direto no bucket (a opção surgiu como experimental no 1.10), criando um
+direto no bucket (a opção chegou no 1.10 e ficou estável no 1.11), criando um
 arquivo `.tflock` ao lado do state, e a opção com DynamoDB passou a ser
 considerada obsoleta.
 
@@ -233,8 +233,9 @@ terraform {
 
 Depois de alterar o backend, rode `terraform init -reconfigure` para o
 Terraform aplicar a nova configuração. A identidade que roda o Terraform
-precisa de permissão para criar e apagar o objeto
-`terraform.tfstate.tflock` no bucket (`s3:PutObject` e `s3:DeleteObject`),
+precisa de permissão para ler, criar e apagar o objeto
+`terraform.tfstate.tflock` no bucket (`s3:GetObject`, `s3:PutObject` e
+`s3:DeleteObject`),
 além das permissões que já usava para o state.
 
 Também vale habilitar o **versionamento** no bucket: se um state for

@@ -103,6 +103,21 @@ Alguns formatos úteis do `sub`:
 | Job com environment do GitHub | `repo:meu-usuario/meu-repo:environment:producao` |
 | Pull requests | `repo:meu-usuario/meu-repo:pull_request` |
 
+> **Atualização (novembro de 2026):** repositórios criados a partir de 15 de
+> julho de 2026 usam um formato **imutável** do `sub`, que inclui os IDs
+> numéricos do dono e do repositório, por exemplo
+> `repo:meu-usuario@123456/meu-repo@456789:ref:refs/heads/main`. Repositórios
+> mais antigos mantêm o formato acima, a não ser que você ative o formato
+> novo. Para ver o prefixo que o seu repositório usa:
+>
+> ```bash
+> gh api repos/OWNER/REPO/actions/oidc/customization/sub --jq .sub_claim_prefix
+> ```
+>
+> Se a trust policy usar o formato errado, o `AssumeRoleWithWebIdentity`
+> falha. Mais detalhes na
+> [documentação do GitHub](https://docs.github.com/en/actions/reference/security/oidc#immutable-subject-claims).
+
 Agora crie a role. Para o exemplo vamos dar permissão de leitura no S3:
 
 ```bash
