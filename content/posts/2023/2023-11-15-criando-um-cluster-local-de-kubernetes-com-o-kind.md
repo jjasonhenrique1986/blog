@@ -11,17 +11,16 @@ showTableOfContents: true
 
 ![Criando um cluster local de kubernetes com o kind](/images/kind.png)
 
-O objetivo desse artigo é fazer um passo-a-passo de como subir um
-cluster kubernetes localmente com o kind para que você possa fazer algum
-teste ou estudar sobre kubernetes.
+O objetivo desse artigo é fazer um passo a passo de como subir um
+cluster Kubernetes localmente com o kind, para que você possa fazer
+testes ou estudar Kubernetes.
 
 Lembrando que esse tutorial está focado na criação de um cluster
-kubernetes local executando em uma máquina Linux (No meu caso uma
-distrubuição Debian rs).
+Kubernetes local em uma máquina Linux (no meu caso, uma distribuição Debian).
 
-## Instalção Docker 
+## Instalação Docker 
 
-Primeiro passo é a instalação do Docker para conseguir subir o kind.
+O primeiro passo é a instalação do Docker para conseguir subir o kind.
 Para efetuar a instalação do Docker devemos executar o comando abaixo:
 
 ``` bash
@@ -39,7 +38,7 @@ docker
 
 Devemos fazer a instalação do utilitário de linha de comando kubectl
 para conseguir administrar o cluster kubernetes via linha de comando.
-Abaixo segue os comandos que devem ser executados:
+Abaixo, os comandos que devem ser executados:
 
 ``` bash
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
@@ -87,8 +86,8 @@ nodes:
 - role: worker
 ```
 
-Pegar o conteúdo acima criar um arquivo chamado **create_cluster.yaml**
-e executar o comando abaixo:
+Crie um arquivo chamado **create_cluster.yaml**
+com o conteúdo acima e execute o comando abaixo:
 
 ``` bash
 kind create cluster --config create_cluster.yaml
@@ -114,8 +113,8 @@ kind delete clusters nome-do-cluster
 
 ## Instalação Helm 
 
-Agora vamos instalar o helm que é um gerenciador de pacotes para o
-kubernetes para a instalação de aplicativos. Primeiramente deve ser
+Agora vamos instalar o Helm, que é um gerenciador de pacotes do
+Kubernetes para instalar aplicações. Primeiramente deve ser
 feito o download do pacote da última release do helm usando esse
 [link](https://github.com/helm/helm/releases).
 

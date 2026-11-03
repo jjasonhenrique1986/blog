@@ -1,5 +1,5 @@
 ---
-title: Como usar a expressão for_each para criar subnets na aws com terraform
+title: "Como usar a expressão for_each para criar subnets na AWS com Terraform"
 description: "Como usar a expressão for_each no Terraform para reduzir código ao criar subnets na AWS."
 image: "/images/terraform.png"
 author: Jason
@@ -11,19 +11,19 @@ showTableOfContents: true
 
 ![Como usar a expressão for_each para criar subnets na aws com terraform](/images/terraform.png)
 
-O Objetivo desse artigo é demonstrar a utilizacão da expressão for_each
-com o intuito de reduzir a quantidade de código para a criacão de sua
+O objetivo desse artigo é demonstrar a utilização da expressão for_each
+com o intuito de reduzir a quantidade de código para a criação de sua
 infraestrutura no terraform. No nosso exemplo vamos otimizar a criação
-de subntes na AWS.
+de subnets na AWS.
 
-## Pré Requisitos 
+## Pré-requisitos 
 
-Abaixo segue os pré requisitos para acompnhar esse artigo:
+Abaixo, os pré-requisitos para acompanhar esse artigo:
 
 -   Ter uma conta na AWS.
 -   Ter o cli do terraform instalado.
--   Ter uma conta no github.
--   Já ter um repositório no github configurado para usar o terraform.
+-   Ter uma conta no GitHub.
+-   Já ter um repositório no GitHub configurado para usar o terraform.
     Pode usar como exemplo esse
     [repositório](https://github.com/jjasonhenrique/terraform-blog-jason).
 
@@ -32,12 +32,12 @@ Abaixo segue os pré requisitos para acompnhar esse artigo:
 O **`for_each`** é uma expressão que permite iterar sobre uma coleção de
 itens para criar recursos no Terraform. Ele é útil quando você precisa
 criar múltiplos recursos que compartilham uma estrutura comum, mas que
-possuem algumas variações por exemplo o endereço cidr de cada subnet e a
+possuem algumas variações, por exemplo o bloco CIDR de cada subnet e a
 zona de disponibilidade (AZ).
 
 ## Criação de uma VPC 
 
-Para a criação das subnets é necessário a criaçºao de uma VPC na AWS.
+Para criar as subnets, é necessário ter uma VPC na AWS.
 Você deverá criar um arquivo chamado **vpc.tf** com o código abaixo:
 
 ``` 
@@ -66,7 +66,7 @@ variable "subnets" {
 }
 ```
 
-Agora vamos fazer a declaracao da variável no arquivo
+Agora vamos fazer a declaração da variável no arquivo
 **terraform.tfvars** conforme abaixo:
 
 ``` 
@@ -86,7 +86,7 @@ subnets = {
 }
 ```
 
-Agora vamos criar o recurso aws_subnet usando a expressao for_each para
+Agora vamos criar o recurso aws_subnet usando a expressão for_each para
 que possamos iterar no map que foi declarado acima. Deve ser criado um
 arquivo chamado **subnets.tf** com o código abaixo:
 
@@ -108,10 +108,10 @@ Usamos o `for_each` para iterar sobre o mapa `subnets`. Para cada item
 no mapa uma subnet é criada na VPC. Cada subnet recebe um CIDR e é
 atribuída a uma zona de disponibilidade.
 
-Usamos o each.key para fazer a iteração na criação no nome da subnet.
+Usamos o each.key para definir o nome de cada subnet.
 
-Com isso não precisamos repetir o código para cada subnet que vamos
-criar na AWS tornando assim o gerenciamento dos recursos mais eficiente.
+Com isso, não precisamos repetir o código para cada subnet, tornando
+assim o gerenciamento dos recursos mais eficiente.
 
 ## Validação 
 
@@ -148,7 +148,7 @@ for_each:
 ## Conclusão 
 
 O objetivo desse artigo foi demonstrar a utilização do for_each na
-criação de subnets porém pode ser usado para a criação de outros
+criação de subnets, mas ele pode ser usado para a criação de outros
 recursos na AWS.
 
 Para guardar o state desse código em um bucket S3, com state locking,

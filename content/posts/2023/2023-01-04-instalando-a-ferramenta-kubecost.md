@@ -19,9 +19,10 @@ showTableOfContents: true
 > não está mais disponível: siga a instalação com Helm da documentação
 > oficial. Telas e comandos deste post são da versão da época.
 
-O intuito deste post é demostrar a instalação do kubecost uma ferramenta
-de monitoramento e gerenciamento de custos para um ambiente kubernetes e
-também para cloud suportando os principais cloud providers (AWS, Azure e
+O intuito deste post é demonstrar a instalação do Kubecost, uma ferramenta
+de monitoramento e gerenciamento de custos para um ambiente Kubernetes e
+também para cloud, com suporte aos principais cloud providers (AWS,
+Azure e
 GCP).
 
 O kubecost possui dois tipos de licença (free e paga). Na versão free as
@@ -32,7 +33,7 @@ Para mais informações sobre kubecost acessar os links abaixo:
 - https://docs.kubecost.com/
 - https://github.com/kubecost/cost-analyzer-helm-chart
 
-## Pré-Requisitos 
+## Pré-requisitos 
 
 Como pré-requisito é necessário ter um cluster de kubernetes para a
 instalação do kubecost. Para essa demonstração pode ser utilizado o kind
@@ -48,45 +49,45 @@ esse [link](https://rancherdesktop.io/).
 
 ## Instalação 
 
-No meu cenário como é um ambiente de teste vou fazer a instalação
-utilizando o kubectl mas a instalação também pode ser feita via helm.
+No meu cenário, como é um ambiente de teste, vou fazer a instalação
+utilizando o kubectl, mas ela também pode ser feita via helm.
 
-Criar um namespace chamado kubecost onde será deployado a aplicação.
-Segue abaixo comando:
+Crie um namespace chamado kubecost, onde a aplicação será implantada,
+com o comando abaixo:
 
 ``` bash
 kucebctl create ns kubecost
 ```
 
-Executar o comando abaixo para instalação:
+Execute o comando abaixo para a instalação:
 
 ``` bash
 kubectl apply -f https://raw.githubusercontent.com/kubecost/cost-analyzer-helm-chart/master/kubecost.yaml -n kubecost
 ```
 
-Será deployado os seguintes objetos conforme imagem abaixo:
+Serão criados os seguintes objetos, conforme a imagem abaixo:
 
 ![Saída do kubectl apply criando os objetos do Kubecost no namespace kubecost](/images/kubecost-2.webp)
 
-Abaixo overview dos objetos deployados pelo kubecost
+Abaixo, um overview dos objetos criados pelo Kubecost:
 
 ![Saída do kubectl get all no namespace kubecost com pods, services, daemonset e deployments em execução](/images/kubecost-3.webp)
 
-Na instalação default é efetuado a instalação de um deploy do
-prometheus-server que será responsável por coletar as informações do
-cluster. É possivel utilizar seu próprio servidor do prometheus porém é
-recomendavel a utilização desse prometheus apartado.
+A instalação padrão inclui um prometheus-server, que é responsável por
+coletar as informações do cluster. É possível utilizar o seu próprio
+servidor do Prometheus, porém é recomendável usar esse Prometheus
+separado.
 
 ## Acessando a console do kubecost 
 
 Para acessar a console do kubecost será utilizado o comando kubectl
-port-forward para testar localmente. Segue abaixo comando:
+port-forward para testar localmente. Segue abaixo o comando:
 
 ``` bash
  kubectl port-forward service/kubecost-cost-analyzer 9090:9090 -n kubecost
 ```
 
-Abaixo alguns prints da console do kubecost
+Abaixo, alguns prints da console do Kubecost:
 
 ![Tela Overview do Kubecost com custos do cluster, economia possível e gráfico de tendência de custo](/images/kubecost-4.webp)
 
@@ -95,5 +96,5 @@ Abaixo alguns prints da console do kubecost
 ## Conclusão 
 
 O intuito desse post foi demonstrar a instalação do kubecost. No próximo
-post estarei mostrando as principais funcionalidades da console do
+post mostro as principais funcionalidades da console do
 kubecost: [Overview da ferramenta kubecost](/posts/2023/2023-01-07-overview-da-ferramenta-kubecost/).

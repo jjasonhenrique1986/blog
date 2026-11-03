@@ -13,14 +13,14 @@ showTableOfContents: true
 
 O objetivo desse artigo é criar um tutorial demonstrando como criar e
 configurar uma role IAM na AWS para que você possa interagir de forma
-programatica com a console de administração da AWS. Usando uma role IAM
-é uma forma mais segura do que usando um usuário IAM conforme demonstrei
+programática com a AWS. Usar uma role IAM é mais seguro do que usar
+diretamente um usuário IAM, conforme demonstrei
 nesse
 [post](/posts/2024/2024-01-07-criando-e-configurando-um-usuario-iam/).
 
-## Pré Requisitos 
+## Pré-requisitos 
 
-Abaixo os pré requisitos para seguir esse tutorial:
+Abaixo os pré-requisitos para seguir esse tutorial:
 
 -   Conta AWS
 -   Uma máquina Linux
@@ -30,24 +30,22 @@ Abaixo os pré requisitos para seguir esse tutorial:
 ## Criação usuário IAM 
 
 Como primeiro passo você deve acessar sua conta AWS e acessar o serviço
-**IAM** e ir na opção **Users** e depois clicar na opção **Create User**
-será apresentado a seguinte tela abaixo:
+**IAM** e ir na opção **Users** e depois clicar na opção **Create
+User**. Será apresentada a tela abaixo:
 
 ![Tela Specify user details da criação do usuário IAM blog](/images/iam-14.webp)
 
-Não deve ser habiltado a opção **Provide user access to the AWS
-Management Console** pois será habilitado acesso a console de
-administração da AWS.
+Não habilite a opção **Provide user access to the AWS Management
+Console**, pois ela libera o acesso à console de administração da AWS.
 
-Deve ser inserido um nome para nosso usuário IAM e clicar em **Next**.
+Insira um nome para o usuário IAM e clicar em **Next**.
 
-Na próxima tela não deve ser inserido nenhuma permissão a esse usuário
-IAM a permissão será concedida através da Role IAM usando uma política
-IAM.
+Na próxima tela, não adicione nenhuma permissão a esse usuário IAM: a
+permissão será concedida pela role IAM, por meio de uma política IAM.
 
 Depois disso clicar na opção **Create User** e seu usuário será criado.
 
-Para como gerar o **Access Key** e o **Secret Access Key** e como
+Para saber como gerar o **Access Key** e o **Secret Access Key** e como
 configurar você pode consultar esse outro
 [post](/posts/2024/2024-01-07-criando-e-configurando-um-usuario-iam/)
 que escrevi.
@@ -58,16 +56,14 @@ Para demonstrar a utilização de uma Role iremos criar duas Roles IAM
 conforme abaixo:
 
 -   Uma Role IAM com permissão de listar buckets no S3
--   Uma Role IAM com permissão para parar, inicializar e reiniciar uma
-    instancia EC2
+-   Uma Role IAM com permissão para parar, iniciar e reiniciar uma instância EC2
 
-Antes de criar as roles vamos criar duas politicas no IAM para as roles
-IAM acima.
+Antes de criar as roles vamos criar duas políticas no IAM, uma para cada role.
 
-Para efetuar a criação você deve acessar a console de administração da
-AWS ir no serviço **IAM** e depois em **Políticas** e então clicar no
-botão **Criar política**. Apos clicar no botão **Criar política** será
-apresentado a tela abaixo:
+Para isso, acesse a console de administração da AWS, vá no serviço
+**IAM** e depois em **Políticas** e então clicar no
+botão **Criar política**. Após clicar no botão **Criar política**, será
+apresentada a tela abaixo:
 
 ![Editor de políticas do IAM para criar uma policy](/images/iam-15.webp)
 
@@ -88,11 +84,11 @@ conteúdo conforme abaixo:
 }
 ```
 
-Clicar no botão Próximo e criar um nome para a política no meu caso irei
-colocar o nome de **s3-list** e depois clicar no botão **Criar
+Clique no botão Próximo e dê um nome para a política. No meu caso, o
+nome será **s3-list** e depois clicar no botão **Criar
 política**.
 
-Deverá ser criado outra política com o conteúdo abaixo com o nome de
+Deverá ser criada outra política com o conteúdo abaixo com o nome de
 **ec2-reboot**.
 
 ``` bash
@@ -113,7 +109,7 @@ Deverá ser criado outra política com o conteúdo abaixo com o nome de
 }
 ```
 
-Agora vamos criar duas roles uma para cada política criada. Para isso
+Agora vamos criar duas roles, uma para cada política criada. Para isso
 você deve ir no serviço **IAM** e depois na opção **Funções** e então
 clicar no botão **Criar perfil**. Deverá aparecer a tela abaixo:
 
@@ -121,11 +117,11 @@ clicar no botão **Criar perfil**. Deverá aparecer a tela abaixo:
 
 Você deve selecionar a opção **Conta da AWS** e clicar em Próximo. Após
 isso selecionar a policy **s3-list** criada anteriormente e clicar em
-Próximo. Será apresentado a tela abaixo:
+Próximo. Será apresentada a tela abaixo:
 
 ![Tela Nomear, revisar e criar da role s3 com a política de confiança para sts:AssumeRole](/images/iam-17.webp)
 
-Deve ser inserido o nome do perfil como **s3** e clicar no botão **Criar
+Insira o nome do perfil como **s3** e clicar no botão **Criar
 perfil**. Agora vamos precisar editar o conteúdo da política de
 confiança do perfil criado na tela abaixo:
 
@@ -156,12 +152,11 @@ role **ec2** e inserir a política **ec2-reboot** nessa role.
 
 ## Configurando as roles na CLI 
 
-Como pré-requisitio o usuário criado deve estar configurado na sua
+Como pré-requisito o usuário criado deve estar configurado na sua
 máquina usando o aws cli. Lembrando que esse usuário não pode ter nenhum tipo de acesso na AWS.
 
 Agora vamos configurar o acesso desse usuário nas roles **s3** e
-**ec2**. Deverá ser adicionado no arquivo .aws/config os seguintes
-profiles abaixo:
+**ec2**. Devem ser adicionados ao arquivo .aws/config os seguintes profiles:
 
 ``` bash
 [profile s3]
@@ -177,21 +172,20 @@ Onde id_conta é o número da sua conta da AWS.
 
 ## Testando as roles 
 
-Agora vamos testar as roles criadas. Para esses testes criei um bucket
-s3 e uma instância ec2. Primeiramente vamos verificar se o usuário
-criado tem alguma permissão no meu caso o nome do usuário IAM criado se
-chama blog.
+Agora vamos testar as roles criadas. Para esses testes, criei um bucket
+S3 e uma instância EC2. Primeiramente, vamos verificar se o usuário
+criado tem alguma permissão. No meu caso, o usuário IAM se chama blog.
 
 ![Erros de acesso negado ao tentar parar uma instância EC2 e listar buckets S3 com o usuário blog, com o ID da conta censurado](/images/iam-19.webp)
 
-Deve ser apresentado os erros acima para o usuário blog. Agora vamos
+Devem ser apresentados os erros acima para o usuário blog. Agora vamos
 testar a role s3 usando o comando abaixo:
 
 ``` bash
 aws s3 ls --profile s3
 ```
 
-Deve ser apresentado a tela abaixo listando um bucket s3:
+Deve ser apresentada a tela abaixo, listando um bucket S3:
 
 ![Saída do aws s3 ls --profile s3 listando o bucket teste-blog com a role assumida](/images/iam-20.webp)
 
@@ -215,14 +209,13 @@ aws ec2 start-instances --region sa-east-1 --instance-ids  i-0085922c8e050b223 -
 ```
 
 Você também pode testar o desligamento da instância ec2 executando o
-comando abaixo. Será apresentado uma tela de erro pois essa role não tem
-essa permissão.
+comando abaixo. Será apresentado um erro, pois essa role não tem essa permissão.
 
 ``` bash
 aws ec2 terminate-instances --region sa-east-1 --instance-ids  i-0085922c8e050b223 --profile ec2
 ```
 
-Por fim para garantir que a role s3 não consegue iniciar e parar uma
+Por fim, para garantir que a role s3 não consegue iniciar e parar uma
 instância ec2 executar um dos comandos abaixo:
 
 ``` bash
@@ -233,10 +226,10 @@ aws ec2 start-instances --region sa-east-1 --instance-ids  i-0085922c8e050b223 -
 
 ## Conclusão 
 
-O objetivo desse artigo foi demonstar a criação de uma role e efetuar
+O objetivo desse artigo foi demonstrar a criação de uma role e efetuar
 testes usando as roles em vez de utilizar o usuário IAM. Nesse artigo
 demonstrei a utilização de uma role usando apenas uma conta AWS porém é
-possível utilizar multiplas contas conforme essa
+possível utilizar múltiplas contas conforme essa
 [documentação](https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html)
 da AWS.
 

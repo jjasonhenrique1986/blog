@@ -1,5 +1,5 @@
 ---
-title: "Conhecendo a ferramenta de analise estática kics"
+title: "Conhecendo a ferramenta de análise estática kics"
 description: "Como usar o KICS para fazer análise estática de código de Infraestrutura como Código, como Terraform e CloudFormation."
 image: "/images/kics.png"
 author: Jason
@@ -10,10 +10,10 @@ showTableOfContents: true
 ---
 ![Conhecendo a ferramenta de analise estática kics](/images/kics.png)
 
-Nesse artigo irei demonstrar a utilização de um ferramenta
-chamada **kics** ou **keeping infrastructure as code secure** tem a
-função de executar uma analise estática em códigos de Infraestrutura
-como Código como por exemplo Terraform, Cloudformation e outros.
+Nesse artigo irei demonstrar a utilização de uma ferramenta chamada
+**kics** (**keeping infrastructure as code secure**), que executa uma
+análise estática em códigos de Infraestrutura
+como Código, como Terraform, CloudFormation e outros.
 
 O kics é uma ferramenta Open Source desenvolvida em Golang usando OPA
 (Open Policy Agent). Para mais informações sobre OPA consulte
@@ -21,7 +21,7 @@ esse [link](https://www.openpolicyagent.org/docs/latest/#overview). O OPA permi
 microsserviços, kubernetes, pipelines de CI/CD, API Gateways e muitas
 outras opções.
 
-O kics faz uma analise estática procurando por vulnerabilidades de
+O kics faz uma análise estática procurando por vulnerabilidades de
 segurança, questões de compliance e erros de configurações em suas
 ferramentas de Infraestrutura como Código. No momento que escrevo esse
 artigo as seguintes ferramentas abaixo são suportadas:
@@ -34,8 +34,8 @@ nesse [link](https://docs.kics.io/latest/creating-queries/).
 
 ## Instalação 
 
-Para a utilização do kics você tem duas opções instalar através do
-código fonte ou utilizar o kics através de uma imagem docker. No meu
+Para a utilização do kics você tem duas opções: instalar através do
+código-fonte ou utilizar o kics através de uma imagem docker. No meu
 caso vou utilizar uma imagem docker.
 
 ### Docker 
@@ -50,10 +50,11 @@ esse [link](https://docs.kics.io/latest/getting-started/).
 ## Demonstração 
 
 Para essa demonstração irei utilizar o
-seguinte [repositório](https://github.com/addamstj/tfcourse). Por padrão o kics gera um arquivo json para melhorar
-a visualização vamos gerar um arquivo html.
+seguinte [repositório](https://github.com/addamstj/tfcourse). Por padrão
+o kics gera um arquivo JSON; para melhorar a visualização, vamos gerar
+um arquivo HTML.
 
-Para executar basta executar o comando abaixo:
+Para isso, basta executar o comando abaixo:
 
 ``` bash
 nerdctl run -it -v "C:\Users\jhmrj\Documents\tfcourse":/tmp checkmarx/kics scan -p "/tmp/" -o "/tmp/results" --report-formats "html"
@@ -75,8 +76,8 @@ Abaixo algumas das regras identificadas pelo kics:
 
 ![Resumo do scan do KICS: 10 achados HIGH, 19 MEDIUM, 11 LOW e 64 INFO, com o relatório salvo em /tmp/results/results.html](/images/kics-7.png)
 
-Foi gerado um arquivo html no caminho /tmp/results/results.html. Abaixo
-segue alguns prints desse report.
+Foi gerado um arquivo HTML no caminho /tmp/results/results.html. Abaixo
+seguem alguns prints desse relatório.
 
 ![Relatório HTML do KICS com o total de vulnerabilidades por severidade e o achado DB Instance Storage Not Encrypted](/images/kics-8.webp)
 
@@ -94,5 +95,5 @@ análise de IaC, veja o post sobre o [Trivy](/posts/2023/2023-11-05-conhecendo-a
 
 ## Referências 
 
-- [Github Kics](https://github.com/Checkmarx/kics)
+- [GitHub Kics](https://github.com/Checkmarx/kics)
 - [Documentação Oficial](https://docs.kics.io/latest/getting-started/)

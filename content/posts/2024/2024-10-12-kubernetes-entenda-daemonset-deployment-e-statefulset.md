@@ -11,22 +11,21 @@ showTableOfContents: true
 
 ![Kubernetes: Entenda DaemonSet, Deployment e StatefulSet](/images/kubernetes.png)
 
-O objetivo desse artigo é explicar e demonstrar sobre os objectos
+O objetivo desse artigo é explicar e demonstrar os objetos
 DaemonSet, Deployment e StatefulSet no Kubernetes, a principal
 ferramenta de orquestração de containers. Para os testes iremos utilizar
-um cluster kubernetes local usando o kind.
+um cluster Kubernetes local usando o kind.
 
 Para a criação do seu cluster local usando kind você pode seguir esse
 [link](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/).
 Nesse cluster será criado um nó como ControlPlane e outros dois nós como
 DataPlane.
 
-## Pré Requisitos 
+## Pré-requisitos 
 
-Para conseguir acompanhar esse artigo será necessário os seguintes pré
-requisitos abaixo:
+Para acompanhar esse artigo, são necessários os seguintes pré-requisitos:
 
--   Ter um cluster kubernetes no nossso caso utilizaremos o kind.
+-   Ter um cluster Kubernetes; no nosso caso, utilizaremos o kind.
 -   Ter o kubectl instalado.
 
 Para os exemplos iremos criar um namespace onde serão feitos nossos
@@ -51,7 +50,7 @@ sistemas de rede.
 -   **Monitoramento e Logging**: Se você precisa coletar logs ou
     métricas de todos os nós, o DaemonSet é ideal.
 -   **Networking**: Usado para implantar ferramentas de rede, como
-    CNI(Container Network Interface) por exemplo o weave-net, que devem
+    CNI (Container Network Interface), por exemplo o weave-net, que devem
     estar presentes em todos os nós.
 
 ### Exemplo de uso: 
@@ -91,7 +90,7 @@ kubectl apply -f daemonset.yaml
 
 Neste exemplo, o DaemonSet implementa um agente do fluent-bit para
 coletar logs de cada nó do cluster. Esse exemplo é apenas para mostrar o
-funcionamento do daemonset não pretendemos fazer testes com o agente do
+funcionamento do DaemonSet; não pretendemos fazer testes com o agente do
 fluent-bit.
 
 Para verificar o funcionamento dos pods executar o comando abaixo:
@@ -100,13 +99,13 @@ Para verificar o funcionamento dos pods executar o comando abaixo:
 kubectl get pods -n app
 ```
 
-Deverá retornar uma saída similar a imagem abaixo:
+Deverá retornar uma saída similar à imagem abaixo:
 
 ![Pods do DaemonSet fluent-bit em execução](/images/deploy-2.webp)
 
 Como temos apenas dois nós que executam como DataPlane foram criados
-apenas dois pods do fluent-bit. Para retornar o nome dos nós que os pods
-estão executando adicionar a flag -o wide conforme imagem abaixo:
+apenas dois pods do fluent-bit. Para ver em quais nós os pods estão
+executando, adicione a flag -o wide, conforme imagem abaixo:
 
 ![Pods do fluent-bit distribuídos, um em cada node worker](/images/deploy-3.webp)
 
@@ -197,20 +196,20 @@ kubectl get deployment -n app
 ### O que é? 
 
 O **StatefulSet** é semelhante ao Deployment, mas é utilizado para
-gerenciar aplicações stateful, onde a persistência dos dados são
-importantes. O StatefulSet garante que os Pods sejam implantados e
+gerenciar aplicações stateful, em que a persistência dos dados é
+importante. O StatefulSet garante que os Pods sejam implantados e
 escalonados de maneira previsível.
 
 ### Quando usar? 
 
 -   **Bancos de Dados**: Ideal para bancos de dados distribuídos, como
-    MySQL, Postgress ou qualquer aplicação que exija persistência de
-    dados entre os pods. Também utilizado para aplicações que necessitam
-    de um sequência lógica.
+    MySQL, PostgreSQL ou qualquer aplicação que exija persistência de
+    dados entre os pods. Também é utilizado para aplicações que precisam
+    de uma sequência lógica.
 
 ### Exemplo de uso: 
 
-Nesse terceiro exmeplo vamos criar um arquivo chamado statefulset.yaml
+Nesse terceiro exemplo vamos criar um arquivo chamado statefulset.yaml
 com o conteúdo abaixo:
 
 ```bash
@@ -261,8 +260,8 @@ kubectl get pods -n app
 ![Pods web-0, web-1 e web-2 do StatefulSet criados em ordem](/images/deploy-8.webp)
 
 Outro ponto que podemos verificar é a sequência lógica na subida dos
-pods sendo que o primeiro pods foi o web-0, o segundo web-1 e o terceiro
-web-2 isso pode ser uma premissa para alguma aplicação.
+pods: o primeiro foi o web-0, o segundo o web-1 e o terceiro o web-2.
+Isso pode ser uma premissa para alguma aplicação.
 
 O comando abaixo mostra informações do statefulset:
 
@@ -272,8 +271,8 @@ kubectl get statefulset -n app
 
 ## Bônus: Replicaset 
 
-O **ReplicaSet** é um objecto que tem como responsabilidade manter um
-número especifico de réplicas num deployment. Ele é criado
+O **ReplicaSet** é um objeto responsável por manter um número específico
+de réplicas de um deployment. Ele é criado
 automaticamente quando criamos um deployment. Abaixo o comando para
 verificar o replicaset:
 
@@ -283,9 +282,9 @@ kubectl get replicaset -n app
 
 ![Saída do kubectl get rs com o replicaset do nginx e 10 réplicas](/images/deploy-9.webp)
 
-Outro ponto do replicaset é que sempre que é feito um novo deploy sempre
-será criado um novo replicaset e as replicas estarão disponiveis no novo
-replicaset. Abaixo vamos similar um novo deployment executando o comando
+Outro ponto do ReplicaSet é que, a cada novo deploy, é criado um novo
+ReplicaSet e as réplicas estarão disponíveis no novo
+replicaset. Abaixo vamos simular um novo deployment executando o comando
 abaixo:
 
 ```bash
@@ -300,8 +299,7 @@ pods do deployment foram transferidos para esse novo replicaset.
 ## Conclusão 
 
 O principal objetivo desse artigo foi demonstrar o que é e como utilizar
-os seguintes objectos deployment, daemonset, stateful e replicaset no
-kubernetes.
+os objetos Deployment, DaemonSet, StatefulSet e ReplicaSet no Kubernetes.
 
 Espero que esse artigo tenha sido útil pra você que mexe há pouco ou
 muito tempo com Kubernetes.

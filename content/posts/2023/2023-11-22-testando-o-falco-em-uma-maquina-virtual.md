@@ -19,9 +19,9 @@ Para ler meu primeiro artigo sobre o falco basta acessar esse
 [link](/posts/2023/2023-11-16-instalando-e-testando-a-ferramenta-falco/).
 Nesse artigo eu instalei o falco no Kubernetes.
 
-## Pré Requisitos 
+## Pré-requisitos 
 
-Abaixo os pré requisitos necessários para seguir esse artigo:
+Abaixo os pré-requisitos necessários para seguir esse artigo:
 
 -   Conta AWS.
 -   Uma máquina virtual na AWS (EC2).
@@ -30,10 +30,10 @@ Abaixo os pré requisitos necessários para seguir esse artigo:
 
 ## Instalação 
 
-Para a instalação irei executar uma EC2 rodando Ubuntu 22.04. Abaixo
-segue os comandos utilizados para a instalação do falco:
+Para a instalação irei executar uma EC2 rodando Ubuntu 22.04. Abaixo, os
+comandos utilizados para a instalação do falco:
 
-Adicionar a chave repositório do Falco
+Adicionar a chave do repositório do Falco
 
 ``` bash
     curl -fsSL https://falco.org/repo/falcosecurity-packages.asc | \
@@ -52,7 +52,7 @@ Fazer o update do SO executando o comando abaixo:
 apt-get update -y
 ```
 
-Após finalizar o update instalar alguns pacotes obrigatórios para a
+Após finalizar o update, instale alguns pacotes obrigatórios para a
 instalação:
 
 ``` bash
@@ -65,12 +65,11 @@ Agora sim vamos fazer a instalação do falco usando o comando abaixo:
 apt-get install -y falco
 ```
 
-Deve ser escolhido a opção eBPF conforme abaixo:
+Deve ser escolhida a opção eBPF conforme abaixo:
 
 ![Tela de instalação do Falco para escolher o driver, com a opção eBPF selecionada](/images/falco-4.webp)
 
-Para verificar se o falco foi instalado com sucesso deve ser executado o
-comando abaixo:
+Para verificar se o Falco foi instalado com sucesso, execute o comando abaixo:
 
 ``` bash
 systemctl status falco-bpf
@@ -101,12 +100,12 @@ Deve apresentar a seguinte saída:
 
 ## Alteração regra do Falco 
 
-Para verificar todas as regras que existem por default no falco você
-deve acessar o seguinte arquivo /etc/falco/falco_rules.yaml. Vamos
+Para verificar todas as regras padrão do Falco, acesse o arquivo
+/etc/falco/falco_rules.yaml. Vamos
 alterar o output da regra Read sensitive file untrusted de Sensitive
 file opened for reading by non-trusted program para ACESSO INDEVIDO.
 
-Primeiramente vamos copiar o conteudo abaixo da linha 396 ate 431 para o
+Primeiramente, vamos copiar o conteúdo abaixo, da linha 396 até a 431, para o
 arquivo /etc/falco/falco_rules.local.yaml, que o Falco carrega depois das regras padrão. É uma boa prática colocar as regras
 customizadas nesse arquivo.
 
@@ -116,7 +115,7 @@ A seção output deve ser alterada conforme abaixo:
 
 ![Linha output da regra alterada para exibir a mensagem ACESSO INDEVIDO](/images/falco-8.webp)
 
-Depois devemos salavar o arquivo **/etc/falco/falco_rules.local.yaml**, parar e
+Depois devemos salvar o arquivo **/etc/falco/falco_rules.local.yaml**, parar e
 iniciar o serviço do falco usando os comandos abaixo:
 
 ``` bash
@@ -130,8 +129,8 @@ Para verificar se o falco está funcionando executar o comando abaixo:
 systemctl status falco-bpf
 ```
 
-Agora vamos executar o comando cat /etc/shadow porem o grep deve ser
-modificado:
+Agora vamos executar o comando cat /etc/shadow novamente, mas o grep
+deve ser modificado:
 
 ``` bash
 grep ACESSO /var/log/syslog
@@ -143,8 +142,8 @@ Por fim deve apresentar uma saída conforme abaixo:
 
 ## Conclusão 
 
-O objectivo desse artigo era fazer a instalação do falco em uma máquina
+O objetivo desse artigo era fazer a instalação do falco em uma máquina
 virtual e também a alteração de uma regra do falco.
 
-Para saber mais informações sobre as rEgras default do falco acessar
-esse [link](https://falco.org/docs/rules/).
+Para mais informações sobre as regras padrão do Falco, acesse esse
+[link](https://falco.org/docs/rules/).
