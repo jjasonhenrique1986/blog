@@ -1,7 +1,7 @@
 ---
 title: "Testando a ferramenta HardenEKS"
 description: "Testando o HardenEKS, ferramenta de linha de comando que verifica um cluster Kubernetes com base no guia de boas práticas de EKS da AWS."
-image: "/images/hardeneks.jpg"
+image: "/images/hardeneks.png"
 author: Jason
 date: 2023-01-14
 tags: [ "AWS", "Kubernetes", "EKS", "Containers" ]
@@ -9,7 +9,7 @@ type: post
 showTableOfContents: true
 ---
 
-![Testando a ferramenta HardenEKS](/images/hardeneks.jpg)
+![Testando a ferramenta HardenEKS](/images/hardeneks.png)
 
 HardenEKS é uma ferramenta de linha de comando desenvolvido por [Doruk
 Ozturk](https://github.com/dorukozturk) que atualmente trabalha na AWS. Essa ferramenta tem o
@@ -126,7 +126,7 @@ pip3 install hardeneks
 Para verificar se o pacote foi instalado com sucesso executar o comando
 abaixo:
 
-![Saída do pip3 show hardeneks mostrando a versão 0.7.2 instalada](/images/hardeneks-2.jpg)
+![Saída do pip3 show hardeneks mostrando a versão 0.7.2 instalada](/images/hardeneks-2.webp)
 
 ## Overview 
 
@@ -138,11 +138,11 @@ hardeneks
 
 Abaixo alguns prints da saída da ferramenta
 
-![Execução do hardeneks no namespace kubecost com as regras de cluster que falharam, como ClusterRoles com curinga](/images/hardeneks-3.jpg)
+![Execução do hardeneks no namespace kubecost com as regras de cluster que falharam, como ClusterRoles com curinga](/images/hardeneks-3.webp)
 
-![Resultado do hardeneks no namespace opencost com recomendações como root file system somente leitura, certificado SSL e HPA](/images/hardeneks-4.jpg)
+![Resultado do hardeneks no namespace opencost com recomendações como root file system somente leitura, certificado SSL e HPA](/images/hardeneks-4.webp)
 
-![Resultado do hardeneks no namespace opencost com recomendações como definir requests e limits para cada container](/images/hardeneks-5.jpg)
+![Resultado do hardeneks no namespace opencost com recomendações como definir requests e limits para cada container](/images/hardeneks-5.webp)
 
 No fim de cada checagem que a ferramenta faz ele informa um link para o
 guia de boas práticas.

@@ -1,12 +1,12 @@
 <head>
-    {{/* Cópia do head.html do tema Gokarna com: og:type article e metadados de artigo nos posts, JSON-LD BlogPosting e link do RSS. */}}
+    {{/* Cópia do head.html do tema Gokarna (da475a9) trocando og:type para article nos posts e adicionando os metadados article:*. O JSON-LD e o link do RSS vêm do próprio tema. */}}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
         :root {
             --accent-color: {{ .Site.Params.AccentColor | default "#FF4D4D" }};
-            --font-size: {{ .Site.Params.FontSize | default "17.5px" }};
+            --font-size: {{ .Site.Params.FontSize | default "1.1rem" }};
         }
     </style>
 
@@ -47,36 +47,12 @@
     <meta property="twitter:domain" content="{{ .Permalink }}">
     <meta property="twitter:url" content="{{ .Permalink }}">
     <meta name="twitter:image" content="{{ absURL $image }}">
+    <meta id="theme-color" name="theme-color" content="#22272e">
 
     <!-- SEO canonicals: helps Google understand your site better when using marketing campaign tagging etc -->
     <link rel="canonical" href="{{ .Permalink }}">
 
-    {{ range .AlternativeOutputFormats }}
-    {{ printf "<link rel=%q type=%q href=%q title=%q>" .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-    {{ end }}
-
-    {{ if $isPost }}
-    <script type="application/ld+json">
-    {{ dict
-        "@context" "https://schema.org"
-        "@type" "BlogPosting"
-        "headline" (.Title | plainify)
-        "description" $description
-        "image" (absURL $image)
-        "url" .Permalink
-        "mainEntityOfPage" .Permalink
-        "datePublished" (.Date.Format "2006-01-02T15:04:05-07:00")
-        "dateModified" (.Lastmod.Format "2006-01-02T15:04:05-07:00")
-        "inLanguage" "pt-BR"
-        "keywords" (delimit (.Params.tags | default (slice)) ", ")
-        "author" (dict "@type" "Person" "name" "Jason Henrique" "url" (absURL "/"))
-        "publisher" (dict "@type" "Person" "name" "Jason Henrique")
-      | jsonify | safeJS }}
-    </script>
-    {{ end }}
-
-    {{ $cssNormalize := resources.Get "css/normalize.min.css" }}
-    <link rel="stylesheet" type="text/css" href="{{ $cssNormalize.RelPermalink }}" media="print">
+    {{ partial "json-ld.html" . }}
 
     {{ $cssMain := resources.Get "css/main.css" | minify }}
     <link rel="stylesheet" type="text/css" href="{{ $cssMain.RelPermalink }}">
@@ -87,7 +63,15 @@
     {{ $jsBundle := resources.Match "js/**.js" | resources.Concat "js/bundle.js" | minify | resources.Fingerprint "sha256" }}
     <script src="{{ $jsBundle.RelPermalink }}" integrity="{{ $jsBundle.Data.Integrity }}"></script>
 
-    <!-- Option for user to inject custom html -->
+    {{ range .AlternativeOutputFormats }}
+    {{ printf "<link rel=%q type=%q href=%q title=%q>" .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end }}
+
+    <!-- Favicon -->
+    {{- partialCached "favicon.html" . -}}
+
+    <!-- Options for user to inject custom html -->
+    {{- partial "custom-head.html" . -}}
     {{ if .Site.Params.CustomHeadHTML }}
     {{ .Site.Params.CustomHeadHTML | safeHTML }}
     {{ end }}

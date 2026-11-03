@@ -1,7 +1,7 @@
 ---
 title: Conhecendo a ferramenta trivy
 description: "Conheça o Trivy, scanner de segurança da Aqua Security e tópico cobrado no exame CKS (Certified Kubernetes Security Specialist)."
-image: "/images/trivy.jpg"
+image: "/images/trivy.png"
 author: Jason
 date: 2023-11-05
 tags: [ "Kubernetes", "Segurança", "Containers", "CI/CD" ]
@@ -9,7 +9,7 @@ type: post
 showTableOfContents: true
 ---
 
-![Conhecendo a ferramenta trivy](/images/trivy.jpg)
+![Conhecendo a ferramenta trivy](/images/trivy.png)
 
 O trivy é uma ferramenta desenvolvido pela empresa Aqua security e
 tambem é um dos topicos cobrados no exame da CKS (Certified Kubernetes
@@ -85,7 +85,7 @@ Onde **nginx** é o nome da imagem de container
 
 Deverá aparecer uma saída similar abaixo:
 
-![Resultado do trivy image nginx com a tabela de vulnerabilidades por biblioteca e severidade](/images/trivy-2.jpg)
+![Resultado do trivy image nginx com a tabela de vulnerabilidades por biblioteca e severidade](/images/trivy-2.webp)
 
 Você pode filtar por severidade HIGH e CRITICAL usando o comando abaixo:
 
@@ -96,7 +96,7 @@ trivy image nginx --severity=HIGH --severity=CRITICAL
 Agora deverá aparecer somente as vulnerabilidades com a severidade HIGH
 e CRITICAL conforme imagem abaixo:
 
-![Resultado do trivy image nginx filtrado pelas severidades HIGH e CRITICAL](/images/trivy-3.jpg)
+![Resultado do trivy image nginx filtrado pelas severidades HIGH e CRITICAL](/images/trivy-3.webp)
 
 Na coluna **status** podemos verificar que o status esta como
 **affected** isso quer dizer que não existe uma solução para essas
@@ -114,7 +114,7 @@ trivy repository https://github.com/prometheus/prometheus --severity=HIGH
 
 Abaixo segue a saída do comando:
 
-![Resultado do trivy repository no repositório do Prometheus com as vulnerabilidades de severidade HIGH](/images/trivy-4.jpg)
+![Resultado do trivy repository no repositório do Prometheus com as vulnerabilidades de severidade HIGH](/images/trivy-4.webp)
 
 Nesse caso a coluna **status** esta com o status **fixed** isso quer
 dizer que já existe uma solução para a vulnerabilidade. Na coluna

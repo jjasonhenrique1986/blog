@@ -1,7 +1,7 @@
 ---
 title: "Configurando permissão somente leitura em um cluster EKS"
 description: "Como configurar uma role da AWS com permissão somente leitura em um cluster EKS usando o kubectl."
-image: "/images/eks.jpg"
+image: "/images/eks.png"
 author: Jason
 date: 2023-11-11
 tags: [ "Kubernetes", "AWS", "Containers", "EKS" ]
@@ -9,7 +9,7 @@ type: post
 showTableOfContents: true
 ---
 
-![Configurando permissão somente leitura em um cluster EKS](/images/eks.jpg)
+![Configurando permissão somente leitura em um cluster EKS](/images/eks.png)
 
 > **Atualização (novembro de 2026):** este post usa o ConfigMap `aws-auth`,
 > que a AWS considera obsoleto. Hoje o caminho recomendado são as **EKS
@@ -266,12 +266,12 @@ kubectl create secret generic teste --from-literal=user=jason
 
 Deve ser apresentado o seguinte erro conforme imagem abaixo:
 
-![Erro de permissão ao tentar criar um secret usando a role somente leitura](/images/eks-2.jpg)
+![Erro de permissão ao tentar criar um secret usando a role somente leitura](/images/eks-2.webp)
 
 Depois tentamos listar todos os pods executando no cluster e obtivemos
 sucesso conforme imagem abaixo:
 
-![Listagem dos pods do cluster funcionando com a role somente leitura](/images/eks-3.jpg)
+![Listagem dos pods do cluster funcionando com a role somente leitura](/images/eks-3.webp)
 
 Com isso garantimos que o acesso está somente leitura aos objectos do
 Kubernetes.

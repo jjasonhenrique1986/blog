@@ -1,7 +1,7 @@
 ---
 title: "Instalando e Testando a ferramenta Falco"
 description: "Instalando e testando o Falco, ferramenta da Sysdig que detecta ameaças em near real time em Kubernetes, containers e cloud."
-image: "/images/falco.jpg"
+image: "/images/falco.png"
 author: Jason
 date: 2023-11-16
 tags: [ "Kubernetes", "Segurança", "Containers" ]
@@ -9,7 +9,7 @@ type: post
 showTableOfContents: true
 ---
 
-![Instalando e Testando a ferramenta Falco](/images/falco.jpg)
+![Instalando e Testando a ferramenta Falco](/images/falco.png)
 
 O falco é uma ferramenta desenvolvida pela empresa sysdig e tem a função
 de detectar ameaças em near real time na cloud, em workloads executando
@@ -76,7 +76,7 @@ kubectl get pods -n falco
 
 Deverá apresentar uma saída conforme a imagem abaixo:
 
-![Saída do kubectl get pods com os três pods do Falco em execução](/images/falco-2.jpg)
+![Saída do kubectl get pods com os três pods do Falco em execução](/images/falco-2.webp)
 
 Será criado um daemonset do falco com isso será executado um pod em cada
 node do seu cluster no meu caso há 3 pods do falco. Para verificar
@@ -95,7 +95,7 @@ kubectl logs -f daemonset/falco -n falco
 
 Deverá aparecer uma saída similar a abaixo:
 
-![Logs do pod do Falco mostrando a versão 0.36.2 e o carregamento das regras](/images/falco-3.jpg)
+![Logs do pod do Falco mostrando a versão 0.36.2 e o carregamento das regras](/images/falco-3.webp)
 
 ## Demonstração 
 

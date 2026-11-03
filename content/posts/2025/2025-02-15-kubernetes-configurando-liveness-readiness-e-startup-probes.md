@@ -1,7 +1,7 @@
 ---
 title: "Kubernetes: configurando Liveness, Readiness e Startup Probes"
 description: "Entenda a diferença entre Liveness, Readiness e Startup Probes no Kubernetes e veja exemplos práticos de cada uma em um cluster local com kind."
-image: "/images/kubernetes.jpg"
+image: "/images/kubernetes.png"
 author: Jason
 date: 2025-02-15
 tags: [ "Kubernetes", "Containers" ]
@@ -9,7 +9,7 @@ type: post
 showTableOfContents: true
 ---
 
-![Kubernetes: configurando Liveness, Readiness e Startup Probes](/images/kubernetes.jpg)
+![Kubernetes: configurando Liveness, Readiness e Startup Probes](/images/kubernetes.png)
 
 O objetivo desse artigo é explicar e demonstrar as **probes** do
 Kubernetes: Liveness, Readiness e Startup. Elas são a forma que o
