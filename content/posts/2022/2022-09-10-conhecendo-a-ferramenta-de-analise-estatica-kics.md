@@ -26,7 +26,7 @@ segurança, questões de compliance e erros de configurações em suas
 ferramentas de Infraestrutura como Código. No momento que escrevo esse
 artigo as seguintes ferramentas abaixo são suportadas:
 
-![kics-2](/images/kics-2.jpg)
+![Logos das ferramentas suportadas pelo KICS, como Terraform, Kubernetes, Docker, Ansible, CloudFormation, Helm, OpenAPI, AWS CDK e gRPC](/images/kics-2.jpg)
 
 Através do kics você pode criar novas queries conforme a necessidade do
 seu ambiente. Mais informações
@@ -63,24 +63,24 @@ nerdctl run -it -v "C:\Users\jhmrj\Documents\tfcourse":/tmp checkmarx/kics scan 
 máquina estou executando o containerd. No docker irá funcionar da mesma
 forma.
 
-![kics-3](/images/kics-3.jpg)
+![Terminal executando o KICS em container com nerdctl e o resumo do scan: 21 arquivos analisados e 1040 queries carregadas](/images/kics-3.jpg)
 
 Abaixo algumas das regras identificadas pelo kics:
 
-![kics-4](/images/kics-4.jpg)
+![Resultado do KICS apontando a regra Variable Without Description em variáveis do Terraform](/images/kics-4.jpg)
 
-![kics-5](/images/kics-5.jpg)
+![Resultado do KICS apontando a regra RDS With Backup Disabled, de severidade média](/images/kics-5.jpg)
 
-![kics-6](/images/kics-6.jpg)
+![Resultado do KICS apontando a regra EC2 Instance Has Public IP, de severidade alta, em recursos aws_instance](/images/kics-6.jpg)
 
-![kics-7](/images/kics-7.jpg)
+![Resumo do scan do KICS: 10 achados HIGH, 19 MEDIUM, 11 LOW e 64 INFO, com o relatório salvo em /tmp/results/results.html](/images/kics-7.jpg)
 
 Foi gerado um arquivo html no caminho /tmp/results/results.html. Abaixo
 segue alguns prints desse report.
 
-![kics-8](/images/kics-8.jpg)
+![Relatório HTML do KICS com o total de vulnerabilidades por severidade e o achado DB Instance Storage Not Encrypted](/images/kics-8.jpg)
 
-![kics-9](/images/kics-9.jpg)
+![Detalhe do relatório HTML do KICS para o achado EC2 Instance Has Public IP, com os arquivos e linhas afetados](/images/kics-9.jpg)
 
 ## Integração 
 

@@ -28,7 +28,7 @@ pela Pearson VUE e PSI presencialmente ou remotamente.
 
 Abaixo segue os domínios que são exigidos na prova:
 
-![conteudo-dca](/images/conteudo-dca.jpg)
+![Tabela com os domínios do exame AWS Developer Associate e o peso de cada um: Implantação 22%, Segurança 26%, Desenvolvimento 30%, Refatoração 10% e Monitoramento 12%](/images/conteudo-dca.jpg)
 
 ## Minha Preparação
 

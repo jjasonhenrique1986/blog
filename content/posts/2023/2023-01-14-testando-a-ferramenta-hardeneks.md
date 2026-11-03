@@ -126,7 +126,7 @@ pip3 install hardeneks
 Para verificar se o pacote foi instalado com sucesso executar o comando
 abaixo:
 
-![hardeneks-2](/images/hardeneks-2.jpg)
+![Saída do pip3 show hardeneks mostrando a versão 0.7.2 instalada](/images/hardeneks-2.jpg)
 
 ## Overview 
 
@@ -138,11 +138,11 @@ hardeneks
 
 Abaixo alguns prints da saída da ferramenta
 
-![hardeneks-3](/images/hardeneks-3.jpg)
+![Execução do hardeneks no namespace kubecost com as regras de cluster que falharam, como ClusterRoles com curinga](/images/hardeneks-3.jpg)
 
-![hardeneks-4](/images/hardeneks-4.jpg)
+![Resultado do hardeneks no namespace opencost com recomendações como root file system somente leitura, certificado SSL e HPA](/images/hardeneks-4.jpg)
 
-![hardeneks-5](/images/hardeneks-5.jpg)
+![Resultado do hardeneks no namespace opencost com recomendações como definir requests e limits para cada container](/images/hardeneks-5.jpg)
 
 No fim de cada checagem que a ferramenta faz ele informa um link para o
 guia de boas práticas.

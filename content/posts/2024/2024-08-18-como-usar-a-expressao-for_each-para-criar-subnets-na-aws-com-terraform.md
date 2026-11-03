@@ -125,11 +125,11 @@ terraform apply plano
 
 Deve aparecer uma imagem conforme abaixo:
 
-![terraform-11](/images/terraform-11.jpg)
+![Saída do terraform apply criando a VPC e as três subnets com for_each](/images/terraform-11.jpg)
 
 Você também pode validar na console da AWS conforme imagem abaixo:
 
-![terraform-12](/images/terraform-12.jpg)
+![Console da VPC com as subnets subnet1, subnet2 e subnet3 criadas em zonas de disponibilidade diferentes](/images/terraform-12.jpg)
 
 ## Vantagens de usar o for_each 
 

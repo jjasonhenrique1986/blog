@@ -142,7 +142,7 @@ kubectl get clusterpolicy
 
 Deve apresentar uma saída similar com a imagem abaixo:
 
-![kyverno-2](/images/kyverno-2.jpg)
+![Saída do kubectl mostrando a policy require-labels em modo Audit e com status Ready](/images/kyverno-2.jpg)
 
 Para testar vamos criar um arquivo de deployment sem as labels owner e
 environment conforme o arquivo abaixo:
@@ -190,7 +190,7 @@ kubectl get events -n app
 Onde **app** e o namespace onde o deployment foi aplicado. Nos eventos
 devera aparecer uma saída similar com a imagem abaixo:
 
-![kyverno-3](/images/kyverno-3.jpg)
+![Eventos PolicyViolation gerados pelo Kyverno porque o deployment e o pod não têm as labels owner e environment](/images/kyverno-3.jpg)
 
 Agora vamos alterar a clusterpolicy para que seja obrigatório a presença
 das labels owner e environment. Caso essas labels não estejam presentes
@@ -222,7 +222,7 @@ Após isso tentar aplicar o deployment novamente usando o comando
 kubectl. Deverá aparecer a seguinte mensagem de erro conforme imagem
 abaixo:
 
-![kyverno-4](/images/kyverno-4.jpg)
+![Erro do admission webhook do Kyverno bloqueando a criação do deployment sem as labels owner e environment](/images/kyverno-4.jpg)
 
 Para resolver essa mensagem de erro deve ser inserido as labels owner e
 environment conforme abaixo:

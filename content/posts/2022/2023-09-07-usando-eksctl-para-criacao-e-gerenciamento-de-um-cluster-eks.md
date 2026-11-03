@@ -73,7 +73,7 @@ eksctl version
 
 Ou digitando apenas eksctl deve retornar a saída abaixo:
 
-![eksctl-2](/images/eksctl-2.jpg)
+![Saída do comando eksctl sem argumentos, listando os subcomandos disponíveis](/images/eksctl-2.jpg)
 
 Para mais detalhes sobre a instalação pode consultar esse [link](https://eksctl.io/introduction/#installation)
 
@@ -81,12 +81,12 @@ Para mais detalhes sobre a instalação pode consultar esse [link](https://eksc
 
 - Usuário AWS com as permissões abaixo:
 
-![eksctl-3](/images/eksctl-3.jpg)
+![Tabela com as permissões mínimas do eksctl por serviço: CloudFormation, EC2, EC2 Auto Scaling, EKS, IAM e Systems Manager](/images/eksctl-3.jpg)
 
 Para mais informações sobre as permissões necessárias para o eksctl
 funcionar acesse esse [link](https://eksctl.io/usage/minimum-iam-policies/). Abaixo segue como ficou as minhas políticas no IAM:
 
-![eksctl-4](/images/eksctl-4.jpg)
+![Console do IAM com as quatro policies anexadas ao usuário: AmazonEC2FullAccess, AWSCloudFormationFullAccess, IamLimitedAccess e EksAllAccess](/images/eksctl-4.jpg)
 
 Para instruções de como criar um usuário na AWS consulte este [link](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html).
 
@@ -147,18 +147,18 @@ eksctl create cluster -f eksctl.yml
 
 Abaixo a execução do comando e a saída para criação do cluster.
 
-![eksctl-5](/images/eksctl-5.jpg)
+![Início da saída do eksctl create cluster criando as stacks do CloudFormation do cluster cluster-demoeksctl](/images/eksctl-5.jpg)
 
 Na saída abaixo é mostrado o provisionamento dos dois Nodegroups
 
-![eksctl-6](/images/eksctl-6.jpg)
+![Fim da saída do eksctl create cluster com os nodegroups ng-1 e ng-2 prontos e o cluster cluster-demoeksctl criado](/images/eksctl-6.jpg)
 
 Criado os dois Nodegroups com um node por nodegroup conforme imagens
 abaixo.
 
-![eksctl-7](/images/eksctl-7.jpg)
+![Saída do kubectl get nodes com os dois nodes do cluster no status Ready](/images/eksctl-7.jpg)
 
-![eksctl-8](/images/eksctl-8.jpg)
+![Console do EKS mostrando os node groups ng-1 e ng-2 ativos, com um node cada](/images/eksctl-8.jpg)
 
 ## Criando um novo Nodegroup com eksctl 
 
@@ -196,9 +196,9 @@ o comando abaixo:
 eksctl create nodegroup -f nodegroup.yml
 ```
 
-![eksctl-9](/images/eksctl-9.jpg)
+![Saída do eksctl create nodegroup criando o nodegroup ng3 com dois nodes](/images/eksctl-9.jpg)
 
-![eksctl-10](/images/eksctl-10.jpg)
+![Saída do kubectl get nodes com quatro nodes Ready depois da criação do nodegroup ng3](/images/eksctl-10.jpg)
 
 ## Deletando os Nodegroups e o cluster EKS
 
@@ -208,11 +208,11 @@ Para deletar apenas o nodegroup basta executar o comando abaixo:
 eksctl delete nodegroup -f nodegroup.yml --approve
 ```
 
-![eksctl-11](/images/eksctl-11.jpg)
+![Saída do eksctl delete nodegroup drenando e removendo o nodegroup ng3](/images/eksctl-11.jpg)
 
 Podemos perceber na imagem abaixo que temos apenas 2 nodes que foram criados juntamente com o cluster.
 
-![eksctl-12](/images/eksctl-12.jpg)
+![Saída do kubectl get nodes com apenas os dois nodes originais depois de remover o nodegroup ng3](/images/eksctl-12.jpg)
 
 Agora para deletar o cluster EKS criado basta executar o comando abaixo:
 
@@ -220,7 +220,7 @@ Agora para deletar o cluster EKS criado basta executar o comando abaixo:
 eksctl delete cluster -f eksctl.yml
 ```
 
-![eksctl-13](/images/eksctl-13.jpg)
+![Saída do eksctl delete cluster removendo os nodegroups e o cluster cluster-demoeksctl](/images/eksctl-13.jpg)
 
 ## Referências 
 

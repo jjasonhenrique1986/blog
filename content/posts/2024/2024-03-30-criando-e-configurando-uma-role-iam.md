@@ -33,7 +33,7 @@ Como primeiro passo você deve acessar sua conta AWS e acessar o serviço
 **IAM** e ir na opção **Users** e depois clicar na opção **Create User**
 será apresentado a seguinte tela abaixo:
 
-![iam-14](/images/iam-14.jpg)
+![Tela Specify user details da criação do usuário IAM blog](/images/iam-14.jpg)
 
 Não deve ser habiltado a opção **Provide user access to the AWS
 Management Console** pois será habilitado acesso a console de
@@ -69,7 +69,7 @@ AWS ir no serviço **IAM** e depois em **Políticas** e então clicar no
 botão **Criar política**. Apos clicar no botão **Criar política** será
 apresentado a tela abaixo:
 
-![iam-15](/images/iam-15.jpg)
+![Editor de políticas do IAM para criar uma policy](/images/iam-15.jpg)
 
 Do lado direito da tela acima clicar na opção JSON e substituir o
 conteúdo conforme abaixo:
@@ -117,19 +117,19 @@ Agora vamos criar duas roles uma para cada política criada. Para isso
 você deve ir no serviço **IAM** e depois na opção **Funções** e então
 clicar no botão **Criar perfil**. Deverá aparecer a tela abaixo:
 
-![iam-16](/images/iam-16.jpg)
+![Criação da role com o tipo de entidade confiável Conta da AWS, usando esta conta](/images/iam-16.jpg)
 
 Você deve selecionar a opção **Conta da AWS** e clicar em Próximo. Após
 isso selecionar a policy **s3-list** criada anteriormente e clicar em
 Próximo. Será apresentado a tela abaixo:
 
-![iam-17](/images/iam-17.jpg)
+![Tela Nomear, revisar e criar da role s3 com a política de confiança para sts:AssumeRole](/images/iam-17.jpg)
 
 Deve ser inserido o nome do perfil como **s3** e clicar no botão **Criar
 perfil**. Agora vamos precisar editar o conteúdo da política de
 confiança do perfil criado na tela abaixo:
 
-![iam-18](/images/iam-18.jpg)
+![Resumo da role s3 com a política de confiança que permite ao usuário blog assumir a role](/images/iam-18.jpg)
 
 Agora vamos substituir o conteúdo da política de confiança conforme
 abaixo:
@@ -182,7 +182,7 @@ s3 e uma instância ec2. Primeiramente vamos verificar se o usuário
 criado tem alguma permissão no meu caso o nome do usuário IAM criado se
 chama blog.
 
-![iam-19](/images/iam-19.jpg)
+![Erros de acesso negado ao tentar parar uma instância EC2 e listar buckets S3 com o usuário blog, com o ID da conta censurado](/images/iam-19.png)
 
 Deve ser apresentado os erros acima para o usuário blog. Agora vamos
 testar a role s3 usando o comando abaixo:
@@ -193,7 +193,7 @@ aws s3 ls --profile s3
 
 Deve ser apresentado a tela abaixo listando um bucket s3:
 
-![iam-20](/images/iam-20.jpg)
+![Saída do aws s3 ls --profile s3 listando o bucket teste-blog com a role assumida](/images/iam-20.jpg)
 
 Agora vamos para o segundo teste onde vamos parar uma instância ec2
 usando a role ec2. Para isso vamos executar o comando abaixo:
@@ -205,7 +205,7 @@ aws ec2 stop-instances --region sa-east-1 --instance-ids  i-0085922c8e050b223 --
 Executando esse comando acima aparecerá uma tela de mudança de estado da
 instância ec2 de running para stopping conforme imagem abaixo:
 
-![iam-21](/images/iam-21.jpg)
+![Saída do aws ec2 stop-instances com a instância passando de running para stopping](/images/iam-21.jpg)
 
 Assim que a instância parar você pode executar o comando abaixo para
 inicializar a mesma instância ec2.

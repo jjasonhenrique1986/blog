@@ -41,7 +41,7 @@ segue links com mais informações:
 Também é necessário que o kubeconfig esteja configurado pois a
 ferramenta coleta informações desse arquivo conforme imagem abaixo:
 
-![octant-2](/images/octant-2.jpg)
+![Tela de preferências do Octant mostrando o caminho do kubeconfig em uso](/images/octant-2.jpg)
 
 Para mais informações sobre a configuração do arquivo kubeconfig
 consultar
@@ -62,52 +62,52 @@ No momento que escrevo esse post essa é a ultima versão da ferramenta.
 
 Nessa seção será apresentado um overview da ferramenta.
 
-![octant-3](/images/octant-3.jpg)
+![Tela Workloads do Octant com os deployments do Kubecost e o uso de memória e CPU de cada um](/images/octant-3.jpg)
 
 Na imagem acima conseguimos ter a visualização de todos os workloads que
 estão rodando em determinado namespace. Assim como o uso de CPU e
 Memória para cada workload.
 
-![octant-4](/images/octant-4.jpg)
+![Octant mostrando o deployment kubecost-cost-analyzer e o grafo dos recursos relacionados](/images/octant-4.jpg)
 
-![octant-5](/images/octant-5.jpg)
+![Aba Resource Viewer do Octant com o grafo do deployment kubecost-cost-analyzer, replicaset, pods e configmaps](/images/octant-5.jpg)
 
 Acima outros exemplos de visualizações.
 
 Permite a visualização dos objetos do kubernetes que determinado
 workload está utilizando. Segue abaixo alguns exemplos:
 
-![octant-6](/images/octant-6.jpg)
+![Overview do namespace kubecost no Octant com a lista de deployments e pods](/images/octant-6.jpg)
 
-![octant-7](/images/octant-7.jpg)
+![Lista de services do namespace kubecost no Octant, com tipo, IP e portas](/images/octant-7.jpg)
 
-![octant-8](/images/octant-8.jpg)
+![Aba Summary do deployment kubecost-cost-analyzer no Octant com configuração, status e pods](/images/octant-8.jpg)
 
 É possível fazer um port-forward com apenas um clique
 
-![octant-9](/images/octant-9.jpg)
+![Pod template do deployment no Octant com o container cost-model e os botões de port forward das portas 9003 e 9090](/images/octant-9.jpg)
 
 Permite visualizar as variáveis de ambiente
 
-![octant-10](/images/octant-10.jpg)
+![Variáveis de ambiente do container listadas no Octant, abaixo das portas com port forward](/images/octant-10.jpg)
 
 Visualização do yaml utilizado pelo Deploy
 
-![octant-11](/images/octant-11.jpg)
+![Aba YAML do deployment kubecost-cost-analyzer no Octant](/images/octant-11.jpg)
 
 Visualização de logs e conexão ao pod através da ferramenta
 
-![octant-12](/images/octant-12.jpg)
+![Aba Logs de um pod do kubecost-cost-analyzer no Octant](/images/octant-12.jpg)
 
-![octant-13](/images/octant-13.jpg)
+![Aba Terminal de um pod do kubecost-cost-analyzer no Octant, com um shell aberto no container](/images/octant-13.jpg)
 
 É possível visualização de eventos conforme imagem abaixo:
 
-![octant-14](/images/octant-14.jpg)
+![Tela de eventos de um namespace no Octant](/images/octant-14.jpg)
 
 Permite aplicar um yaml através da ferramenta
 
-![octant-15](/images/octant-15.jpg)
+![Janela Apply YAML do Octant para aplicar manifestos no cluster](/images/octant-15.jpg)
 
 Também é possível integrar a ferramenta com outros plugins conforme link
 abaixo:

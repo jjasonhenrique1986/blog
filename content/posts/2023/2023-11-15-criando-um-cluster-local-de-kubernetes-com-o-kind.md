@@ -96,7 +96,7 @@ kind create cluster --config create_cluster.yaml
 
 Deve aparecer uma saída conforme abaixo:
 
-![kind-2](/images/kind-2.jpg)
+![Saída do kind create cluster criando o cluster cluster-jason e configurando o contexto do kubectl](/images/kind-2.jpg)
 
 Para verificar se o cluster foi criado corretamente executar os comandos
 abaixo:

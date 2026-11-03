@@ -40,18 +40,18 @@ No primeiro passo vamos configurar o OIDC na AWS mas especificamente no
 IAM. Você deve ir no serviço **IAM** e ir na opção **Identity
 providers** deve mostrar a tela abaixo:
 
-![gitlab-2](/images/gitlab-2.jpg)
+![Tela Identity providers do IAM ainda sem nenhum provedor cadastrado](/images/gitlab-2.jpg)
 
 Clicando na opção **Add provider** será informado a tela abaixo onde
 vamos iniciar a configuração do OIDC:
 
-![gitlab-3](/images/gitlab-3.jpg)
+![Tela Add an Identity provider do IAM com as opções SAML e OpenID Connect](/images/gitlab-3.jpg)
 
 Deve ser selecionado a opção OpenID Connect. Nos campos **Provider URL**
 e **Audience** devem ser configurado a URL <https://gitlab.com> conforme
 imagem abaixo:
 
-![gitlab-4](/images/gitlab-4.jpg)
+![Cadastro do provedor OpenID Connect com a URL e o audience https://gitlab.com](/images/gitlab-4.jpg)
 
 Você deve clicar na opção **Get thumbprint** onde será gerado um
 certificado thumbprint que irá validar a CA do OIDC Provider no nosso
@@ -59,7 +59,7 @@ caso do GitLab e depois clicar na opção **Add provider** e com isso
 finalizamos a configuração do OIDC. Será criado um provider conforme
 imagem abaixo:
 
-![gitlab-5](/images/gitlab-5.jpg)
+![Provedor gitlab.com do tipo OpenID Connect criado na lista de Identity providers do IAM](/images/gitlab-5.jpg)
 
 ## Criação Role AWS
 
@@ -67,12 +67,12 @@ No segundo passo vamos criar uma role na AWS indo na opção **IAM** e
 depois **Roles** (Funções em Português)e depois na opção **Create Role**
 deverá mostrar uma tela similar a abaixo:
 
-![gitlab-6](/images/gitlab-6.jpg)
+![Tela Select trusted entity da criação de role no IAM](/images/gitlab-6.jpg)
 
 Deverá selecionar a opção **Web Identity** e selecionar o **Identity
 provider** e o **Audience** criado no passo anterior conforme abaixo:
 
-![gitlab-7](/images/gitlab-7.jpg)
+![Criação da role com o tipo Web identity, o provedor gitlab.com e o audience https://gitlab.com](/images/gitlab-7.jpg)
 
 Depois vamos para o step 2 onde vamos selecionar as permissões dessa
 role. Nesse caso vamos usar a politica
@@ -121,7 +121,7 @@ Criar um repositório no gitlab e adicionar a seguinte variável de
 ambiente indo na opção Settings \>\> CI/CD \>\> Variables. Deverá
 mostrar uma tela similar a abaixo:
 
-![gitlab-8](/images/gitlab-8.jpg)
+![Variável ROLE_ARN cadastrada como mascarada nas variáveis de CI/CD do GitLab](/images/gitlab-8.jpg)
 
 onde:
 
