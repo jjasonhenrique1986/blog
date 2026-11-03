@@ -11,9 +11,9 @@ showTableOfContents: true
 
 ![Conhecendo a ferramenta trivy](/images/trivy.png)
 
-O trivy é uma ferramenta desenvolvido pela empresa Aqua security e
-tambem é um dos topicos cobrados no exame da CKS (Certified Kubernetes
-Security Specialist) para quem pretende tirar. Abaixo alguns links com
+O Trivy é uma ferramenta desenvolvida pela empresa Aqua Security e
+também é um dos tópicos cobrados no exame CKS (Certified Kubernetes
+Security Specialist). Abaixo, alguns links com
 mais informações do trivy:
 
 -   <https://github.com/aquasecurity/trivy>
@@ -34,7 +34,7 @@ Com o trivy você consegue fazer as seguintes verificações:
 -   Clusters Kubernetes
 -   Contas AWS
 
-O objectivo desse artigo é demonstrar o scan de vulnerabilidades em uma
+O objetivo desse artigo é demonstrar o scan de vulnerabilidades em uma
 imagem de container e em um repositório do github usando o Trivy.
 
 ## Instalação 
@@ -63,8 +63,8 @@ trivy version
 ### Docker 
 
 Para utilizar o trivy usando um container basta usar a imagem
-**aquasec/trivy:latest**. Por exemplo para verificar qual a versão do
-Trivy executar o comando abaixo:
+**aquasec/trivy:latest**. Por exemplo, para verificar a versão do Trivy,
+execute o comando abaixo:
 
 ``` bash
 docker run aquasec/trivy:latest version
@@ -73,7 +73,7 @@ docker run aquasec/trivy:latest version
 ## Scan de Imagem de Container 
 
 Para executar um scan de vulnerabilidades em alguma imagem de container
-basta executar o comando abaixo
+basta executar o comando abaixo:
 
 ``` bash
 trivy image nginx
@@ -83,24 +83,24 @@ docker run aquasec/trivy:latest image nginx
 
 Onde **nginx** é o nome da imagem de container
 
-Deverá aparecer uma saída similar abaixo:
+Deverá aparecer uma saída similar à abaixo:
 
 ![Resultado do trivy image nginx com a tabela de vulnerabilidades por biblioteca e severidade](/images/trivy-2.webp)
 
-Você pode filtar por severidade HIGH e CRITICAL usando o comando abaixo:
+Você pode filtrar por severidade HIGH e CRITICAL usando o comando abaixo:
 
 ``` bash
 trivy image nginx --severity=HIGH --severity=CRITICAL
 ```
 
-Agora deverá aparecer somente as vulnerabilidades com a severidade HIGH
+Agora deverão aparecer somente as vulnerabilidades com a severidade HIGH
 e CRITICAL conforme imagem abaixo:
 
 ![Resultado do trivy image nginx filtrado pelas severidades HIGH e CRITICAL](/images/trivy-3.webp)
 
-Na coluna **status** podemos verificar que o status esta como
-**affected** isso quer dizer que não existe uma solução para essas
-vulnerabilidades ainda.
+Na coluna **status**, podemos verificar que o status está como
+**affected**: isso quer dizer que ainda não existe uma versão corrigida
+para essas vulnerabilidades.
 
 ## Scan de repositório 
 
@@ -116,16 +116,15 @@ Abaixo segue a saída do comando:
 
 ![Resultado do trivy repository no repositório do Prometheus com as vulnerabilidades de severidade HIGH](/images/trivy-4.webp)
 
-Nesse caso a coluna **status** esta com o status **fixed** isso quer
-dizer que já existe uma solução para a vulnerabilidade. Na coluna
-**Fixed Version** está a versão que a vulnerabilidade foi corrigida.
+Nesse caso, a coluna **status** está como **fixed**: isso quer dizer que
+já existe uma versão corrigida. Na coluna **Fixed Version** está a
+versão em que a vulnerabilidade foi corrigida.
 
 ## Integração 
 
-O trivy faz integração com diversas alicações e ferramentas que permitem
-adicionar segurança ao workflow da sua aplicação como por exemplo
-ferramentas de CI/CD e com IDEs. Para mais informações sobre essas
-integrações consultar esse
+O Trivy se integra com diversas ferramentas que permitem adicionar
+segurança ao workflow da sua aplicação, como ferramentas de CI/CD e
+IDEs. Para mais informações sobre essas integrações, consulte esse
 [link](https://aquasecurity.github.io/trivy/v0.46/ecosystem/).
 
 ## Conclusão 

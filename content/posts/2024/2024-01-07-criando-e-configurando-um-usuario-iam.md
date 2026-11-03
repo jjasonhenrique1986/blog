@@ -22,14 +22,14 @@ showTableOfContents: true
 
 O objetivo desse artigo é criar um tutorial demonstrando como criar e
 configurar um usuário IAM na AWS para que você possa interagir de forma
-programatica usando um **Access Key** e um **Secret Access Key**.
+programática usando um **Access Key** e um **Secret Access Key**.
 
-Também será demosntrado a instalação do awscli para o gereciamento dos
+Também será demonstrada a instalação do AWS CLI para o gerenciamento dos
 seus serviços na AWS.
 
-## Pré Requisitos 
+## Pré-requisitos 
 
-Abaixo os pré requisitos para seguir esse tutorial:
+Abaixo os pré-requisitos para seguir esse tutorial:
 
 -   Conta AWS
 -   Uma máquina Linux
@@ -37,16 +37,15 @@ Abaixo os pré requisitos para seguir esse tutorial:
 ## Criação usuário IAM 
 
 Como primeiro passo você deve acessar sua conta AWS e acessar o serviço
-**IAM** e ir na opção **Users** e depois clicar na opção **Create User**
-será apresentado a seguinte tela abaixo:
+**IAM** e ir na opção **Users** e depois clicar na opção **Create
+User**. Será apresentada a tela abaixo:
 
 ![Tela Specify user details da criação do usuário IAM blog, sem acesso ao console](/images/iam-2.webp)
 
-Não deve ser habiltado a opção **Provide user access to the AWS
-Management Console** pois será habilitado acesso a console de
-administração da AWS.
+Não habilite a opção **Provide user access to the AWS Management
+Console**, pois ela libera o acesso à console de administração da AWS.
 
-Deve ser inserido um nome para nosso usuário IAM e clicar em **Next**.
+Insira um nome para o usuário IAM e clicar em **Next**.
 
 Na próxima tela vamos inserir as permissões para esse usuário IAM. No
 meu caso vou inserir uma policy com permissão total no S3 conforme tela
@@ -62,19 +61,20 @@ criação do seu usuário conforme abaixo:
 ![Tela Review and create do usuário blog com a policy AmazonS3FullAccess](/images/iam-4.webp)
 
 Depois disso clicar na opção **Create User** e seu usuário será
-criado.Seu usuário deve ser apresentado conforme tela abaixo:
+criado. Ele deve ser apresentado conforme tela abaixo:
 
 ![Mensagem de usuário criado com sucesso e o usuário blog na lista do IAM](/images/iam-5.webp)
 
-## Criando a Acess Key do seu usuário 
+## Criando a Access Key do seu usuário 
 
-Agora vamos criar clicando sobre seu usuário IAM indo na opção Security
-credentials e depois clicando em Create access key conforme imagem
+Agora vamos criar a access key: clique sobre o seu usuário IAM, vá na
+opção Security credentials e clique em Create access key, conforme
+imagem
 abaixo:
 
 ![Aba Security credentials do usuário com a seção Access keys ainda vazia](/images/iam-6.webp)
 
-Depois da tela você deve escolher a primeira opção **Command Line
+Na tela seguinte, escolha a primeira opção **Command Line
 Interface (CLI)** e habilitar a opção **I understand the above
 recommendation and want to proceed to create an access key** e clicar em
 Next conforme imagem abaixo:
@@ -86,15 +86,15 @@ depois clicar em **Create access key** conforme imagem abaixo:
 
 ![Tag de descrição da access key preenchida com Para post no blog](/images/iam-8.webp)
 
-Apos clicar no botão **Create access key** será gerado o **Acces key** e
-o **Secret access key** conforme imagem abaixo:
+Após clicar no botão **Create access key**, serão gerados o **Access
+key** e o **Secret access key**, conforme imagem abaixo:
 
 ![Tela Retrieve access keys com a access key criada, com o ID censurado](/images/iam-9.webp)
 
-Lembrando que o **Secret access key** só estará disponivel nesse
-momento. É recomendavel fazer o download do arquivo cvs com os valores
+Lembrando que o **Secret access key** só estará disponível nesse
+momento. É recomendável fazer o download do arquivo CSV com os valores
 do **Access key** e do **Secret access key** e depois clicar em **Done**
-e retornará para a tela inicial conforme abaixo:
+para retornar à tela inicial, conforme abaixo:
 
 ![Access key ativa na aba Security credentials do usuário, com o ID censurado](/images/iam-10.webp)
 
@@ -104,7 +104,7 @@ você tem boas práticas para o gerenciamento de AWS access keys na AWS.
 
 ## Instalação AWS CLI 
 
-Agora vamos fazer a instalação do aws cli para podemos configurar o
+Agora vamos fazer a instalação do AWS CLI para podermos configurar o
 **Access key** e o **Secret access key** gerados no passo anterior.
 Abaixo os comandos para instalação. Para mais informações consultar esse
 [link](https://docs.aws.amazon.com/pt_br/cli/latest/userguide/getting-started-install.html).
@@ -115,7 +115,7 @@ unzip awscliv2.zip
 sudo ./aws/install
 ```
 
-Para verificar se a instalação ocorreu com sucesso excutar o comando
+Para verificar se a instalação ocorreu com sucesso, execute o comando
 abaixo:
 
 ![Saída do comando aws --version mostrando o AWS CLI 2.13.34](/images/iam-11.webp)
@@ -124,7 +124,7 @@ abaixo:
 
 Agora vamos fazer a configuração do seu Access key e do seu Secret
 access key no seu computador. Você deve executar o comando aws
-configure conforme abaixo. No meu caso vou inserir a flag --profile para
+configure conforme abaixo. No meu caso vou inserir a flag --profile para
 gerar um novo profile dentro do arquivo .aws/credentials
 
 ![Comando aws configure --profile blog com a access key e a secret censuradas e a região sa-east-1](/images/iam-12.webp)
@@ -142,8 +142,9 @@ Deverá retornar o seguinte resultado abaixo:
 
 ![Saída do aws s3 ls --profile blog listando o bucket teste-blog](/images/iam-13.png)
 
-Lembrando que esse Access key e Secret access key tem acesso somente ao
-S3. Caso tente executar o comando **aws ec2 describe-availability-zones
+Lembrando que esse Access key e esse Secret access key têm acesso
+somente ao S3. Caso tente executar o comando **aws ec2
+describe-availability-zones
 --profile blog** deverá retornar o seguinte erro abaixo por falta de
 permissão:
 
@@ -157,6 +158,6 @@ O objetivo desse artigo foi a criação de um tutorial para a criação e
 configuração de um usuário IAM usando o Access key e o Secret access key
 para interagir via CLI com a sua conta AWS.
 
-Lembrando que o Access key e o Secret access key não estará disponivel
-para uso. Você deve gerar os seus próprios valores na sua conta caso
-queira seguir com esse artigo.
+Lembrando que o Access key e o Secret access key deste post não existem
+mais. Gere os seus próprios valores na sua conta se quiser seguir o
+artigo.

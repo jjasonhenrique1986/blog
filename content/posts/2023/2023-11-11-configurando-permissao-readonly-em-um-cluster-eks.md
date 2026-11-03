@@ -23,13 +23,12 @@ uma determinada role da AWS tenha permissão de somente leitura dentro de
 um cluster EKS usando o kubectl que é um utilitário para administrar o
 Kubernetes através de linha de comando.
 
-## Pré Requisitos 
+## Pré-requisitos 
 
-Para conseguir seguir com essa demosntração será necessário os seguintes
-pré requisitos abaixo:
+Para seguir esta demonstração, são necessários os seguintes pré-requisitos:
 
 -   Conta na AWS.
--   Um cluster eks já criado. Para fazer a criação de um cluster EKS
+-   Um cluster EKS já criado. Para fazer a criação de um cluster EKS
     você pode usar esse
     [artigo](/posts/2022/2023-09-07-usando-eksctl-para-criacao-e-gerenciamento-de-um-cluster-eks/)
     que falei sobre o eksctl.
@@ -42,12 +41,11 @@ pré requisitos abaixo:
 
 ## Criação de user e role AWS 
 
-Primeiramente devemos criar um usuário iam aws sem nenhuma permissão
-conforme esse
+Primeiramente, devemos criar um usuário IAM sem nenhuma permissão, conforme esse
 [link](https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/id_users_create.html)
 lembrando que esse usuário deve ter acesso via CLI.
 
-Antes da criação da role é necessário a criação de uma policy que tenha
+Antes de criar a role, é necessário criar uma policy que tenha
 apenas permissão de list e read no EKS conforme abaixo:
 
 ``` bash
@@ -85,8 +83,8 @@ apenas permissão de list e read no EKS conforme abaixo:
 
 Agora vamos criar uma role com a policy acima anexada. Outro ponto de
 atenção é que devemos criar uma relação de confiança para que o usuário
-iam criado anteriormente possa fazer o assume role. Abaixo segue como
-deverá ser configurado essa relação de confiança:
+IAM criado anteriormente possa assumir a role. Abaixo, como deve ser
+configurada essa relação de confiança:
 
 ``` bash
 {
@@ -104,7 +102,7 @@ deverá ser configurado essa relação de confiança:
 }
 ```
 
-Onde **id-conta** é a a informação da sua conta.
+Onde **id-conta** é o ID da sua conta.
 
 Para mais informações sobre essas configurações acessar esse
 [link](https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/id_roles_create_for-user.html).
@@ -112,16 +110,16 @@ Para mais informações sobre essas configurações acessar esse
 ## Alteração arquivo aws-auth 
 
 O primeiro passo que devemos fazer é a inclusão da role AWS no configmap
-aws-auth dentro do cluster EKS. Para isso vamos usar uma role com
-permissões administrativas. Para isso vamos executar o seguinte comando
-para edição desse configmap:
+aws-auth dentro do cluster EKS. Para isso, usando uma role com
+permissões administrativas, vamos executar o seguinte comando para
+editar esse configmap:
 
 ``` bash
 eksctl create iamidentitymapping --cluster nome-cluster --region=us-east-1 \
     --arn arn:aws:iam::id-conta:role/eks --username {{SessionName}} --group system:masters
 ```
 
-Para verificacao podemos executar o comando abaixo:
+Para verificação podemos executar o comando abaixo:
 
 ``` bash
 eksctl get iamidentitymapping --cluster nome-cluster --region=us-east-1
@@ -133,11 +131,11 @@ nesse
 
 ## Configuração de Profile AWS 
 
-Nesse passo vamos fazer a configuração das credenciais do usuário iam,
+Nesse passo vamos fazer a configuração das credenciais do usuário IAM,
 criação de um novo profile referenciando a role criada e acertar a
 configuração do kubeconfig.
 
-Primeiramente vamos configurar o usuário iam criado usando o comando
+Primeiramente, vamos configurar o usuário IAM criado usando o comando
 abaixo onde será solicitado o access key, secret access key, region e
 output format:
 
@@ -145,8 +143,8 @@ output format:
 aws configure
 ```
 
-Essas informações pode ser consultadas acessando o arquivo
-.aws/credentials. Será exibido uma saída similar a abaixo:
+Essas informações podem ser consultadas no arquivo .aws/credentials, com
+um conteúdo similar ao abaixo:
 
 ``` bash
 [default]
@@ -165,8 +163,9 @@ source_profile = default
 Onde **source_profile** deverá ser informado o nome cadastrado no
 arquivo .aws/credentials
 
-Agora vamos acertar o kubeconfig referenciado o profile criado. A seção
-de users do arquivo kubeconfig deve ser incluido o argumento --profile
+Agora vamos acertar o kubeconfig referenciando o profile criado. Na
+seção users do arquivo kubeconfig, deve ser incluído o argumento
+--profile
 eks conforme abaixo:
 
 ``` bash
@@ -195,13 +194,13 @@ users:
 
 ## Configuração de permissão somente leitura no Kubernetes 
 
-Após a configuração do item anterior foi verificado que mesmo usando um
-role AWS com perfil apenas de leitura ainda era possível alteração de
-recursos usando kubectl.
+Após a configuração do item anterior foi verificado que, mesmo usando
+uma role AWS com perfil apenas de leitura, ainda era possível alterar
+recursos usando o kubectl.
 
-Foi necessário a criação de um clusterrole, clusterrolebinding e um
-group com permissões de list, get e watch em todos os recursos do
-kubernetes conforme abaxio:
+Foi necessário criar um ClusterRole, um ClusterRoleBinding e um group
+com permissões de list, get e watch em todos os recursos do
+Kubernetes, conforme abaixo:
 
 ``` bash
 kind: ClusterRole
@@ -234,7 +233,7 @@ executar o comando abaixo:
 kubectl apply -f readonly.yaml
 ```
 
-Após isso se faz necessário a remoção da entrada abaixo no configmap
+Após isso, é necessário remover a entrada abaixo no configmap
 aws-auth:
 
 ``` bash
@@ -273,7 +272,7 @@ sucesso conforme imagem abaixo:
 
 ![Listagem dos pods do cluster funcionando com a role somente leitura](/images/eks-3.webp)
 
-Com isso garantimos que o acesso está somente leitura aos objectos do
+Com isso garantimos que o acesso está somente leitura aos objetos do
 Kubernetes.
 
 Um cuidado: como o ClusterRole acima libera `get` e `list` em todos os
@@ -329,11 +328,11 @@ Mais detalhes na
 
 ## Conclusão 
 
-O objectivo desse artigo foi demonstar como conceder permissão somente
+O objetivo desse artigo foi demonstrar como conceder permissão somente
 leitura aos recursos do Kubernetes vinculando com uma role AWS.
 
-Outro ponto que para conceder permissão somente leitura podemos
-implementar uma solução de interface gráfica que mostre todos os
-recursos do cluster EKS como por o Kubernetes Dashboard (que foi
+Outra forma de conceder acesso somente leitura é usar uma interface
+gráfica que mostre todos os recursos do cluster EKS, como o Kubernetes
+Dashboard (que foi
 arquivado; hoje o [Headlamp](https://github.com/kubernetes-sigs/headlamp)
 é uma alternativa mantida).

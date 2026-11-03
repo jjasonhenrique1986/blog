@@ -22,7 +22,7 @@ Para os testes vamos usar um cluster local com o kind. Se ainda não tem
 um, você pode seguir esse
 [link](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/).
 
-## Pré Requisitos
+## Pré-requisitos
 
 -   Ter um cluster kubernetes, no nosso caso utilizaremos o kind.
 -   Ter o kubectl instalado.

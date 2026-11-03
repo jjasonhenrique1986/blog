@@ -22,17 +22,17 @@ ferramenta kubecost que ajuda no gerenciamento e monitoramento do custo
 de um ambiente kubernetes e também do custo do cloud provider (AWS,
 Azure e GCP) que você utiliza.
 
-## Pré-Requisitos
+## Pré-requisitos
 
-Como pré-requisito é necessário já ter feito a instalação do kubecost
-para fazer a instalação basta seguir
+Como pré-requisito, é necessário já ter feito a instalação do Kubecost.
+Para fazer a instalação, basta seguir
 esse [link](/posts/2023/2023-01-04-instalando-a-ferramenta-kubecost/) com
-as intruções.
+as instruções.
 
 ## Overview da console do Kubecost 
 
 Nas seções abaixo irei apresentar um pequeno overview da console de
-adminstração do kubecost.
+administração do kubecost.
 
 ### Seção Overview 
 
@@ -45,13 +45,13 @@ Abaixo alguns prints da seção overview:
 As seguintes informações estão disponíveis:
 
 - Custo total do Kubernetes nos últimos 7 dias;
-- Custo total da Cloud nos últimos 7 dias (é necessário a integração
-    com o cloud provider mais informações
-    nesse [link](https://docs.kubecost.com/install-and-configure/install/cloud-integration/multi-cloud));
+- Custo total da Cloud nos últimos 7 dias (é necessária a integração com
+  o cloud provider; mais informações
+  nesse [link](https://docs.kubecost.com/install-and-configure/install/cloud-integration/multi-cloud));
 - Custo total dos últimos 7 dias;
 - Possible Savings são recomendações que podem ser aplicadas ao
     ambiente;
-- Efficiency é um calculo feito baseado na utilização de CPU e Memória
+- Efficiency é um cálculo feito baseado na utilização de CPU e Memória
     durante determinado tempo;
 - Quantidade de nós e pods por cluster;
 - Namespaces com maior gasto;
@@ -64,8 +64,8 @@ Abaixo alguns prints da seção Savings:
 
 ![Recomendação do Kubecost para redimensionar discos locais com baixa utilização](/images/kubecost-9.webp)
 
-Na seção savings são feitas recomendações para o ambiente que irá gerar
-economia para o ambiente kubernetes e para cloud:
+Na seção Savings são feitas recomendações que geram economia para o
+ambiente kubernetes e para cloud:
 
 - Recomendação de Request/Limit para CPU e Memória;
 - Mostra os recursos não utilizados na Cloud;
@@ -80,8 +80,8 @@ Abaixo alguns prints da seção Allocations:
 
 ![Detalhe do namespace kubecost na seção Allocations, com custo por recurso, eficiência de CPU e RAM e economia sugerida](/images/kubecost-11.webp)
 
-Na seção Allocations são mostrados informações de custo separado por
-CPU, RAM, Network e LoadBalance separado por namespace.
+Na seção Allocations são mostradas informações de custo de CPU, RAM,
+rede e load balancer, separadas por namespace.
 
 Prints da seção Assets:
 
@@ -89,7 +89,7 @@ Prints da seção Assets:
 
 ![Seção Assets do Kubecost detalhando o custo dos discos do cluster](/images/kubecost-13.webp)
 
-Na seção Assets mostra as seguintes informações:
+A seção Assets mostra as seguintes informações:
 
 - Mostra os custos baseados nos recursos por exemplo Node, Disk,
     Network;
@@ -112,18 +112,18 @@ confiabilidade e performance. Nesse checklist é feito um score de 0 a
 - Se existem pods com status CrashLoopBackOff;
 - Se existem pods com status pending;
 - Pods com baixo uso de cpu;
-- Memoria e Disco Pressure;
+- Memory Pressure e Disk Pressure;
 - Custo do Cluster aumentou mais de 10%;
 - Evento de Out Of Memory;
 
 ### Seção Alerts e Reports 
 
-Na seção reports permite você criar relatórios baseado na seção Asset e
+A seção Reports permite criar relatórios baseados nas seções Asset e
 Allocation conforme imagem abaixo:
 
 ![Seção Reports do Kubecost com os relatórios salvos de alocação por namespace e de assets por tipo](/images/kubecost-16.webp)
 
-Na seção Alerts possui a funcionalidade de enviar alertas para um canal
+A seção Alerts permite enviar alertas para um canal
 do slack. Segue abaixo imagem:
 
 ![Seção Alerts do Kubecost com a configuração de alertas de saúde e do webhook do Slack](/images/kubecost-17.webp)

@@ -21,7 +21,7 @@ e depois como
 uma forma mais segura de acesso. O Identity Center é o passo seguinte: some o
 usuário IAM e, com ele, a access key.
 
-## Pré Requisitos
+## Pré-requisitos
 
 -   Uma conta AWS e acesso ao usuário root.
 -   O AWS CLI v2 instalado.

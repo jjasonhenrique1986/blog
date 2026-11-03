@@ -11,18 +11,17 @@ showTableOfContents: true
 
 ![Guia Prático: Configurando Taint, Toleration e NodeAffinity no Kubernetes](/images/kubernetes.png)
 
-O objetivo desse post é demonstrar como configurar que os pods da sua
-aplicação executem em um determinado nó usando o kind. Essa configuração
-também é valida para quando você utiliza um Kubernetes em algum cloud
-provider por exemplo o EKS da AWS.
+O objetivo desse post é demonstrar como fazer os pods da sua aplicação
+executarem em um determinado nó, usando o kind. Essa configuração também
+vale para um Kubernetes em algum cloud provider, como o EKS da AWS.
 
-## Pré Requisitos
+## Pré-requisitos
 
-Para conseguir fazer as demonstrações desse post é necessário os
-seguintes pré requisitos abaixo:
+Para fazer as demonstrações desse post, são necessários os seguintes
+pré-requisitos:
 
 -   Ter o kubectl instalado.
--   Ter um cluster local usando o kind para isso pode seguir esse
+-   Ter um cluster local usando o kind. Para isso, siga esse
     [post](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/).
 
 ## Conceitos 
@@ -38,24 +37,22 @@ bloquear ou repelir que determinados pods executem ou sejam schedulados
 para determinado nó. Dentro do taint temos dois principais tipos de
 efeitos:
 
--   **NoSchedule** -- apartir do momento da configuração de um taint
-    mais nenhum pod será schedulado para esse nó porém se esse nó já
-    tiver pods os mesmos continuaram executando nesse nó.
+-   **NoSchedule** -- a partir da configuração do taint, nenhum pod novo
+    será alocado nesse nó, mas os pods que já estiverem nele continuarão
+    executando.
 
-<!-- -->
 
--   **NoExecute** -- apartir do momento da configuração de um taint mais
-    nenhum pod será executado naquele nó inclusive os pods que estiverem
-    executando nesse nó serão terminados e vão ser schedulados em outro
-    nó sem esse taint.
+
+-   **NoExecute** -- a partir da configuração do taint, nenhum pod será
+    executado naquele nó: inclusive os pods que já estiverem nele serão
+    terminados e alocados em outro nó sem esse taint.
 
 Além das duas opções acima temos outra opção de effect chamada
 **PreferNoSchedule** que tem como principal função ser um efeito mais
-soft ou preferencial. Com esse efeito aplicado em um taint o
-ControlPlane do kubernetes tentará não schedular um pod no nó com esse
-taint porém não é garantido que não será schedulado.
+soft ou preferencial. Com esse efeito, o scheduler do Kubernetes tenta
+não alocar pods no nó com esse taint, mas não é garantido.
 
-Abaixo segue a sintaxe utilizada para configurar um taint em um nó:
+Abaixo, a sintaxe utilizada para configurar um taint em um nó:
 
 ```bash
 kubectl taint node name-node key=value:effect
@@ -81,9 +78,9 @@ kubectl describe node name-node
 ### Toleration 
 
 O conceito de toleration dentro do Kubernetes tem como principal função
-permitir que determinados pods de um deploy sejam schedulados e
-executados em nó que tenha um taint configurado. Abaixo segue um exemplo
-de configuração que deve ser inserido no arquivo de manifesto do seu
+permitir que determinados pods de um deploy sejam alocados e executados
+em um nó que tenha um taint configurado. Abaixo, um exemplo de
+configuração que deve ser inserida no arquivo de manifesto do seu
 deploy para configurar um toleration:
 
 ```bash
@@ -97,8 +94,8 @@ tolerations:
 ### NodeAffinity
 
 O conceito de nodeAffinity dentro do Kubernetes tem a função de garantir
-que um determinado pod vá para um determinado nó. Abaixo segue um
-exemplo de configuração que deve ser inserido no arquivo de manifesto do
+que um determinado pod vá para um determinado nó. Abaixo, um exemplo de
+configuração que deve ser inserida no arquivo de manifesto do
 seu deploy para configurar um nodeAffinity:
 
 ```bash
@@ -119,8 +116,8 @@ label para o node ou usar uma label que já exista.
 
 ## Criação de deploy 
 
-Agora vamos partir para parte prática para isso é necessário que você
-crie um cluster local usando kind. Para verificar se o cluster está
+Agora vamos para a parte prática. Para isso, é necessário que você crie
+um cluster local usando kind. Para verificar se o cluster está
 operacional executar o comando abaixo:
 
 ```bash
@@ -134,9 +131,9 @@ comando abaixo:
 kubectl create namespace app
 ```
 
-Agora vamos criar um deploy do nginx nesse namespace com 15 replicas e
-vamos ver como ele se distribui entre os nós dentro do nosso cluster
-para isso vamos usar o arquivo de manifesto abaixo:
+Agora vamos criar um deploy do nginx nesse namespace com 15 réplicas e
+ver como ele se distribui entre os nós do cluster. Para isso, vamos usar
+o arquivo de manifesto abaixo:
 
 ```bash
 apiVersion: apps/v1
@@ -184,14 +181,14 @@ Deverá apresentar uma saída conforme imagem abaixo:
 
 ![Pods do deployment nginx distribuídos entre os nodes cluster-jason-worker e cluster-jason-worker2](/images/taint-2.png)
 
-Podemos perceber que os pods foram distribuidos entre os nós
+Podemos perceber que os pods foram distribuídos entre os nós
 **cluster-jason-worker** e **cluster-jason-worker2**.
 
 ## Configuração Taint e toleration 
 
-Agora vamos partir para o segundo passo que é fazer a confiuração do
-taint e após isso fazer a inclusão do toleration em nosso deploy. Abaixo
-segue o comando utilizado para configurar o taint no nó
+Agora vamos partir para o segundo passo que é fazer a configuração do
+taint e após isso fazer a inclusão do toleration em nosso deploy.
+Abaixo, o comando utilizado para configurar o taint no nó
 **cluster-jason-worker**:
 
 ```bash
@@ -247,7 +244,7 @@ a nova configuração:
 kubectl replace -f nginx.yaml
 ```
 
-Para validar se a configuração foi mesma aplicada no cluster executar o
+Para validar se a configuração foi mesmo aplicada no cluster, execute o
 comando abaixo para visualizar o arquivo de manifesto:
 
 ```bash
@@ -260,12 +257,13 @@ abaixo:
 ![Pods do nginx no namespace app rodando nos dois workers depois de aplicar o taint](/images/taint-4.webp)
 
 Podemos perceber que ainda há pods nos dois nós (cluster-jason-worker e
-cluster-jason-worker2). Com isso se faz necessário a utilização do
-conceito de nodeAffinity que vamos ver na sessão seguinte.
+cluster-jason-worker2). Isso acontece porque a toleration permite que o
+pod rode no nó com taint, mas não obriga. Para obrigar, usamos o
+nodeAffinity, que vamos ver na seção seguinte.
 
 ## Configurando um nodeAffinity 
 
-Como visto na sessão anterior mesmo usando taint e toleration ainda há
+Como visto na seção anterior, mesmo usando taint e toleration ainda há
 pods nos dois nós. Para fazer a configuração no nodeAffinity vamos usar
 a label já existente **kubernetes.io/hostname**. Para visualizar as
 labels já existentes nos seus nós executar o comando abaixo:
@@ -320,7 +318,7 @@ apenas no nó **cluster-jason-worker** conforme imagem abaixo:
 ![Pods do nginx no namespace app rodando apenas no node cluster-jason-worker](/images/taint-5.webp)
 
 Outro teste que podemos fazer para validar se a configuração está
-correta e escalar o número de pods para 20 e verificar se os pods se
+correta é escalar o número de pods para 20 e verificar se os pods se
 mantêm no mesmo nó executando o comando abaixo:
 
 ```bash
@@ -350,9 +348,9 @@ Comando acima usado para deletar o cluster .
 
 ## Conclusão 
 
-O objetivo desse post foi demonstrar como configurar que seus pods da
-sua aplicação irão para um determinado nó usando o kind. Essa mesma
-configuração serve para AWS usando o conceito de NodeGroup
+O objetivo desse post foi demonstrar como fazer os pods da sua aplicação
+irem para um determinado nó, usando o kind. A mesma configuração serve
+para o EKS, aplicando os taints e labels nos nós de um node group.
 
 ## Referências 
 

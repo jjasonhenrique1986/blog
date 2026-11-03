@@ -22,7 +22,7 @@ precisam ser rotacionadas. Com o Pod Identity o pod recebe credenciais
 **temporárias** de uma role IAM, e quem define qual role cada aplicação
 usa é a associação com a ServiceAccount do Kubernetes.
 
-## Pré Requisitos
+## Pré-requisitos
 
 -   Um cluster EKS. Se precisar criar um, veja o artigo sobre o
     [eksctl](/posts/2022/2023-09-07-usando-eksctl-para-criacao-e-gerenciamento-de-um-cluster-eks/).

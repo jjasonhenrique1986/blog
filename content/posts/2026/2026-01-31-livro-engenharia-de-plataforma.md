@@ -11,7 +11,10 @@ showTableOfContents: true
 
 ![Resenha do livro Engenharia de Plataforma](/images/eng-plataforma.jpg)
 
-Recentemente li o engenharia de plataforma conforme esse [link](https://www.amazon.com.br/Engenharia-Plataforma-l%C3%ADderes-t%C3%A9cnicos-produtos/dp/8575229419) e resolvi escrever uma resenha sobre o livro.
+Recentemente li o livro [Engenharia de
+Plataforma](https://www.amazon.com.br/Engenharia-Plataforma-l%C3%ADderes-t%C3%A9cnicos-produtos/dp/8575229419),
+de Camille Fournier e Ian Nowland, e resolvi escrever uma resenha sobre
+ele.
 
 Se você trabalha com tecnologia há alguns anos, provavelmente já sentiu isso: times cada vez mais rápidos, sistemas cada vez mais complexos e uma sensação constante de que estamos gastando mais energia fazendo o básico funcionar do que criando valor de verdade.
 
@@ -101,9 +104,15 @@ Usar essa ferramenta evita um erro comum em iniciativas de plataforma: **constru
 
 ## As 5 vitórias e os 2 desafios da engenharia de plataforma
 
-O livro também apresenta um modelo muito didático ao falar das **5 vitórias** que uma boa plataforma entrega, ao mesmo tempo em que reconhece **2 grandes desafios** inevitáveis.O modelo das 5 vitórias e 2 desafios não é uma checklist técnica. Ele é um framework de comunicação e alinhamento.
+O livro também apresenta um modelo muito didático ao falar das **5
+vitórias** que uma boa plataforma entrega, ao mesmo tempo em que
+reconhece **2 grandes desafios** inevitáveis. O modelo das 5 vitórias e
+2 desafios não é uma checklist técnica. Ele é um framework de
+comunicação e alinhamento.
 
-A ideia central é simples: A engenharia de plataforma só se sustenta se gera valor visível para múltiplos públicos, ao mesmo tempo em que reconhece tensões inevitáveis. Abaixo segue um exemplo desse framework:
+A ideia central é simples: a engenharia de plataforma só se sustenta se
+gera valor visível para múltiplos públicos, ao mesmo tempo em que
+reconhece tensões inevitáveis. Abaixo segue um exemplo desse framework:
 
 ### As 5 vitórias
 

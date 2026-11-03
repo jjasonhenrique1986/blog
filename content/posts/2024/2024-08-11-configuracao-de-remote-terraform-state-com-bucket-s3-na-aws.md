@@ -13,18 +13,18 @@ showTableOfContents: true
 
 O objetivo desse post é fazer a configuração de um remote terraform
 state usando um bucket s3 em vez de deixar seu terraform state
-localmente. E também criar algum recurso na aws para testar o
-funcionamento do terraform.
+localmente, e também criar um recurso na AWS para testar o funcionamento
+do Terraform.
 
-## Pré-Requisitos 
+## Pré-requisitos 
 
 Para continuar a configuração do seu remote terraform state serão
-necessários os seguintes pré-requitios abaixo:
+necessários os seguintes pré-requisitos abaixo:
 
 -   Uma conta na AWS
 -   Um Usuário IAM
 -   AWS CLI instalado.
--   Uma conta no github
+-   Uma conta no GitHub
 -   Um bucket S3
 -   CLI do terraform instalado
 
@@ -35,29 +35,29 @@ nos arquivos de configurações do terraform.
 
 Para fazer a criação do usuário IAM seguir esse outro
 [artigo](/posts/2024/2024-01-07-criando-e-configurando-um-usuario-iam/)
-que escrevi há um tempo atrás.
+que escrevi há algum tempo.
 
-Para a nossa configuração vamos anexar a policy **AdmistratorAccess** no
+Para a nossa configuração vamos anexar a policy **AdministratorAccess** no
 nosso usuário **blog** conforme imagem abaixo:
 
 ![Console do IAM com a policy AdministratorAccess anexada ao usuário blog](/images/terraform-2.webp)
 
-Foi anexada essa policy pois é apenas um lab para ambientes produtivos
-devem ser colocadas as devidas permissões.
+Anexei essa policy porque é apenas um lab. Em ambientes produtivos,
+devem ser dadas apenas as permissões necessárias.
 
 ## Criação bucket S3 
 
 Nesse próximo passo vamos criar o nosso bucket S3 que terá a função de
 armazenar o nosso terraform state. Para isso devemos ir na console de
 administração da AWS procurar pelo serviço S3 e clicar em **Create
-Bucket** deve ser apresentado a tela abaixo:
+Bucket**. Deve ser apresentada a tela abaixo:
 
 ![Tela Create bucket no console do S3](/images/terraform-3.webp)
 
 No meu caso vou colocar o nome do bucket de terraform-blog-jason e outro
 detalhe é que esse bucket será criado na região us-east-1.
 
-Devemos deixar habilitado a opção **Block all public access** conforme
+Devemos deixar habilitada a opção **Block all public access** conforme
 imagem abaixo:
 
 ![Opção Block all public access habilitada na criação do bucket S3](/images/terraform-4.webp)
@@ -67,9 +67,9 @@ Com isso o nosso bucket será criado conforme imagem abaixo:
 
 ![Bucket terraform-blog-jason criado no console do S3](/images/terraform-5.webp)
 
-## Criação repositório Github 
+## Criação repositório GitHub 
 
-Agora vamos criar um repositório no Github para armazenar os nossos
+Agora vamos criar um repositório no GitHub para armazenar os nossos
 arquivos de configurações do terraform conforme abaixo:
 
 ![Criação do repositório no GitHub com o template de .gitignore do Terraform](/images/terraform-6.webp)
@@ -156,7 +156,7 @@ Lembrando que para a criação de um cluster ECS na AWS existem mais
 configurações a serem feitas. É apenas um teste para validar o
 funcionamento do remote terraform state.
 
-Após a criação dos arquivos você deve commitar eles excutando os
+Após a criação dos arquivos, faça o commit executando os
 comandos abaixo:
 
 ```bash
@@ -245,7 +245,7 @@ Mais detalhes na
 
 ## Conclusão 
 
-O Objetivo desse artigo foi demonstar como deve ser feito a configuração
+O objetivo desse artigo foi demonstrar como deve ser feita a configuração
 de um remote terraform state usando um bucket S3 na AWS.
 
 Para o próximo passo com Terraform, veja

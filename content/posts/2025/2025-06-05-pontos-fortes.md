@@ -24,7 +24,13 @@ Nesse post, compartilho como cada um desses pontos tem aparecido (e feito difere
 
 ## Disciplina
 
-Gosto de rotina, clareza e ordem. No começo da minha carreira, isso parecia uma “mania de organização”, mas no universo DevOps, descobri que disciplina é uma grande aliada. Manter padrões em scripts, documentar processos, automatizar tarefas recorrentes e estruturar ambientes de forma previsível são atitudes que melhoram a confiança dos times e a estabilidade dos sistemas. Outro ponto também é em relação aos estudos para certificações esse talento me ajudo muito nisso. 
+Gosto de rotina, clareza e ordem. No começo da minha carreira, isso
+parecia uma “mania de organização”, mas no universo DevOps, descobri que
+disciplina é uma grande aliada. Manter padrões em scripts, documentar
+processos, automatizar tarefas recorrentes e estruturar ambientes de
+forma previsível são atitudes que melhoram a confiança dos times e a
+estabilidade dos sistemas. Esse talento também me ajudou muito nos
+estudos para certificações.
 
 ## Estudioso
 
@@ -36,7 +42,12 @@ Acredito que regras claras e consistência ajudam a construir ambientes mais col
 
 ## Prudência
 
-Sou naturalmente cauteloso, e isso se reflete em como tomo decisões técnicas. Antes de subir uma mudança para produção, penso em riscos, planejo rollback, testo hipóteses. Já vi que isso, em ambientes críticos, é uma força valiosa. Ser deliberado não é ser lento — é ser estratégico. Sempre penso no pior cenário possível, isso me ajuda a prever incidentes no ambiente.
+Sou naturalmente cauteloso, e isso se reflete em como tomo decisões
+técnicas. Antes de subir uma mudança para produção, penso em riscos,
+planejo rollback, testo hipóteses. Já vi que isso, em ambientes
+críticos, é uma força valiosa. Ser deliberado não é ser lento — é ser
+estratégico. Sempre penso no pior cenário possível; isso me ajuda a
+prever incidentes no ambiente.
 
 
 ## Intelecção
@@ -47,4 +58,5 @@ Gosto de refletir. Pensar sobre como algo poderia ser feito melhor, por que um i
 
 Fazer o CliftonStrengths foi mais do que um exercício de autoconhecimento — foi uma forma de validar coisas que já estavam presentes no meu jeito de trabalhar. E mais importante: me ajudou a planejar como usar esses pontos de forma mais intencional na minha vida profissional e pessoal.
 
-Para fazer o teste você precisa comprar o livro nesse [link](https://www.amazon.com.br/Descubra-seus-pontos-fortes-2-0/dp/854310775X/ref=asc_df_854310775X?mcid=65a3df23907a3267a52ee4d45c796b0b&tag=googleshopp00-20&linkCode=df0&hvadid=709969437044&hvpos=&hvnetw=g&hvrand=13009188182237541764&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9100338&hvtargid=pla-809970215186&psc=1&language=pt_BR&gad_source=1)
+Para fazer o teste você precisa comprar o livro nesse
+[link](https://www.amazon.com.br/Descubra-seus-pontos-fortes-2-0/dp/854310775X).

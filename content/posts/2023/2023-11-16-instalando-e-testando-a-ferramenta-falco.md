@@ -11,16 +11,14 @@ showTableOfContents: true
 
 ![Instalando e Testando a ferramenta Falco](/images/falco.png)
 
-O falco é uma ferramenta desenvolvida pela empresa sysdig e tem a função
+O Falco é uma ferramenta desenvolvida pela empresa Sysdig e tem a função
 de detectar ameaças em near real time na cloud, em workloads executando
-no kubernetes e containers.
+no Kubernetes e em containers.
 
-O falco pode monitorar eventos de várias origens como por exemplo o
-kernel do Linux, Kubernetes API, containers e outros. O falco permite
-você fazer intregação com ferrramentas de mensagens como slack e teams
-como também permite você integrar com o prometheus para isso é
-necessário a utilização de um daemon do falco que se chama
-falcosidekick.
+O Falco pode monitorar eventos de várias origens, como o kernel do
+Linux, a API do Kubernetes e containers. Ele também se integra com
+ferramentas de mensagens, como Slack e Teams, e com o Prometheus. Para
+isso, é necessário usar um daemon do Falco chamado falcosidekick.
 
 Para mais informações do falco consultar os links abaixo:
 
@@ -28,14 +26,14 @@ Para mais informações do falco consultar os links abaixo:
 -   <https://falco.org/docs/>
 
 O falco também é um dos tópicos abordados no exame de certificação CKS
-(Certified Kubernetes Security Specialist) para quem pretende tirar.
+(Certified Kubernetes Security Specialist).
 
-## Pré Requisitos 
+## Pré-requisitos 
 
-Nessa demostração do funcionamento do falco vamos necessitar os
-seguintes pré requitios:
+Nessa demonstração do funcionamento do falco vamos precisar dos
+seguintes pré-requisitos:
 
--   Cluster kubernetes local pode ser criado através do kind. Mais
+-   Cluster Kubernetes local, que pode ser criado com o kind. Mais
     informações nesse
     [link](https://kind.sigs.k8s.io/docs/user/quick-start/). Também criei esse
     [artigo](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/)
@@ -78,22 +76,22 @@ Deverá apresentar uma saída conforme a imagem abaixo:
 
 ![Saída do kubectl get pods com os três pods do Falco em execução](/images/falco-2.webp)
 
-Será criado um daemonset do falco com isso será executado um pod em cada
-node do seu cluster no meu caso há 3 pods do falco. Para verificar
+Será criado um DaemonSet do Falco, que executa um pod em cada node do
+cluster. No meu caso, há 3 pods do Falco. Para verificar
 executar o comando abaixo:
 
 ``` bash
 kubectl get daemonset -n falco
 ```
 
-Agora vamos verificar os logs do pods do falco para isso vamos executar
+Agora vamos verificar os logs dos pods do Falco executando
 o comando abaixo:
 
 ``` bash
 kubectl logs -f daemonset/falco -n falco
 ```
 
-Deverá aparecer uma saída similar a abaixo:
+Deverá aparecer uma saída similar à abaixo:
 
 ![Logs do pod do Falco mostrando a versão 0.36.2 e o carregamento das regras](/images/falco-3.webp)
 
@@ -114,7 +112,7 @@ Agora vamos conectar no pod criado usando o comando abaixo:
 kubectl exec -it alpine -- sh
 ```
 
-Verificando os logs do falco terá uma saída simlar com a abaixo:
+Verificando os logs do Falco, haverá uma saída similar à abaixo:
 
 ``` bash
 15:27:42.692441989: Notice A shell was spawned in a container with an attached terminal (evt_type=execve user=root user_uid=0 user_loginuid=-1 process=sh proc_exepath=/bin/busybox parent=runc command=sh terminal=34816 exe_flags=EXE_WRITABLE container_id=cf009dcc3814 container_image=<NA> container_image_tag=<NA> container_name=<NA> k8s_ns=<NA> k8s_pod_name=<NA>)

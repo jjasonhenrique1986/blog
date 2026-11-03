@@ -17,7 +17,7 @@ aprovação.
 
 ## Sobre a prova
 
-A prova é constituída 65 perguntas de múltipla escolha ou com várias
+A prova é composta de 65 perguntas de múltipla escolha ou com várias
 respostas certas em um tempo de 130 minutos para a prova em português
 (não recomendo). No meu caso eu fiz a prova em inglês e tive um
 acréscimo de mais 30 minutos por não ter o inglês como língua nativa.
@@ -26,7 +26,7 @@ A prova custa USD 150 ou caso já seja certificado AWS você ganha 50% de
 desconto na próxima certificação. Atualmente a prova pode ser realizada
 pela Pearson VUE e PSI presencialmente ou remotamente.
 
-Abaixo segue os domínios que são exigidos na prova:
+Abaixo seguem os domínios que são exigidos na prova:
 
 ![Tabela com os domínios do exame AWS Developer Associate e o peso de cada um: Implantação 22%, Segurança 26%, Desenvolvimento 30%, Refatoração 10% e Monitoramento 12%](/images/conteudo-dca.webp)
 
@@ -48,19 +48,19 @@ Alguns pontos que vale destacar:
 -   Entender os diferentes tipos de Kinesis e quando utilizar cada um;
 -   Formas de utilizar ElastiCache;
 
-Apesar de ser um prova focada nos serviços de desenvolvimento da AWS
-como por exemplo Lambda, API Gateway e DynamoDB e outros ainda é cobrado
-alguns serviços do exame SysOps como por exemplo S3, IAM, Paramater
-Store, Secret Manager e KMS.
+Apesar de ser uma prova focada nos serviços de desenvolvimento da AWS,
+como Lambda, API Gateway e DynamoDB, ainda são cobrados alguns serviços
+do exame SysOps, como S3, IAM, Parameter
+Store, Secrets Manager e KMS.
 
 No final dos meus estudos também fiz dois cursos AWS Skill Builder que
-também me ajudaram bastante vou colocar os links na seção de
+também me ajudaram bastante. Vou colocar os links na seção de
 referências.
 
 ## Simulados
 
-O principal simulado que utilizei foi da Whizlabs que na minha opinião é
-o simulado mais parecido com a prova mas também utilizei dois outros
+O principal simulado que utilizei foi o da Whizlabs, que na minha
+opinião é o mais parecido com a prova, mas também utilizei dois outros
 simulados que comprei na Udemy. Abaixo coloquei os simulados que utilizei:
 
 - [Whizlabs](https://www.whizlabs.com/learn/course/aws-developer-associate/)
@@ -70,19 +70,20 @@ simulados que comprei na Udemy. Abaixo coloquei os simulados que utilizei:
 ## Conclusão
 
 Essa certificação foi a quarta certificação AWS que tirei e até o
-momento foi a prova mais divertida e a que mais aprendi durante minha
-preparação por ter um background de infraestrutura tive que aprender e
+momento foi a prova mais divertida e a que mais me ensinou durante a
+preparação. Por ter um background de infraestrutura, tive que aprender e
 me aprofundar em alguns serviços da AWS como Lambda, API Gateway e
 DynamoDB.
 
 ## Referências
 
-Segue abaixo algumas referências que utilizei para escrever esse post e também na minha preparação:
+Seguem abaixo algumas referências que utilizei para escrever esse post e
+também na minha preparação:
 
 - [Documentação
     Oficial](https://aws.amazon.com/pt/certification/certified-developer-associate/?ch=tile&tile=getstarted)
-- [Exame
-    Guide](https://d1.awsstatic.com/pt_BR/training-and-certification/docs-dev-associate/AWS-Certified-Developer-Associate_Exam-Guide.pdf)
+- [Exam
+  Guide](https://d1.awsstatic.com/pt_BR/training-and-certification/docs-dev-associate/AWS-Certified-Developer-Associate_Exam-Guide.pdf)
 - [Curso
     Udemy](https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/)
 - [Cursos AWS Skill

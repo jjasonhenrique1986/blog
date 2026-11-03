@@ -20,7 +20,7 @@ Para os testes vamos usar um cluster local com o kind. Se precisar, veja
 como criar um nesse
 [link](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/).
 
-## Pré Requisitos
+## Pré-requisitos
 
 -   Ter um cluster kubernetes, no nosso caso utilizaremos o kind.
 -   Ter o kubectl instalado.
@@ -107,8 +107,9 @@ Secrets em YAML no Git** sem algum tipo de criptografia.
 
 ## Usando no pod
 
-Crie um arquivo chamado pod.yaml. Nele usamos o ConfigMap de três
-formas: todas as chaves como variáveis (`envFrom`), uma chave específica
+Crie um arquivo chamado pod.yaml. Nele usamos o ConfigMap e o Secret de
+três formas: todas as chaves como variáveis (`envFrom`), uma chave
+específica
 do Secret como variável (`secretKeyRef`) e o arquivo `app.properties`
 montado em um volume:
 

@@ -17,19 +17,18 @@ showTableOfContents: true
 > ferramenta não recebe mais atualizações nem correções de segurança, então
 > não a use em projetos novos. O post fica como registro.
 
-Nesse artigo vou demonstar a utilização da ferramenta AWS Copilot CLI
-para a criação de uma forma simplificada uma aplicação conteinerizada
-executando no ECS. Com o AWS Copilot CLI também é possível gerenciar
-toda a infraestrutura da aplicação como por exemplo a Infraestrutura
-como Código, Armazenamento e os segredos armazenados além da pipeline da
-aplicação tudo via linha de comando.
+Nesse artigo vou demonstrar como usar a ferramenta AWS Copilot CLI para
+criar, de forma simplificada, uma aplicação conteinerizada executando no
+ECS. Com o AWS Copilot CLI também é possível gerenciar
+toda a infraestrutura da aplicação, como a infraestrutura como código, o
+armazenamento, os segredos e a pipeline, tudo via linha de comando.
 
 Para mais informações sobre o AWS Copilot CLI acessar esse
 [link](https://aws.github.io/copilot-cli/docs/overview/).
 
-## Pré Requisitos 
+## Pré-requisitos 
 
-Abaixo os pré requisitos para seguir com esse tutorial:
+Abaixo os pré-requisitos para seguir com esse tutorial:
 
 -   Ter uma conta AWS
 -   AWS Copilot CLI instalado no seu computador
@@ -37,8 +36,7 @@ Abaixo os pré requisitos para seguir com esse tutorial:
 
 ## Instalação 
 
-Para efetuar a instalação do AWS Copilot deve ser executado os seguintes
-comandos abaixo:
+Para instalar o AWS Copilot, execute os comandos abaixo:
 
 ``` bash
 sudo curl -Lo /usr/local/bin/copilot https://github.com/aws/copilot-cli/releases/latest/download/copilot-linux \
@@ -46,22 +44,21 @@ sudo curl -Lo /usr/local/bin/copilot https://github.com/aws/copilot-cli/releases
    && copilot --help
 ```
 
-Deve ser apresentado uma tela similar a abaixo:
+Deve ser apresentada uma tela similar à abaixo:
 
 ![Saída do copilot -h com os comandos disponíveis do Copilot CLI](/images/copilot-2.webp)
 
-No meu caso eu utilizei um computador executando linux. Para outros
+No meu caso, utilizei um computador com Linux. Para outros
 sistemas operacionais consultar esse
 [link](https://aws.github.io/copilot-cli/docs/getting-started/install/).
 
 ## Configuração usuário AWS IAM 
 
-Como pré requisito para utilização do AWS Copilot CLI é necessário a
-configuração de usuário IAM no seu computador. Para fazer essa
+Como pré-requisito para usar o AWS Copilot CLI, é necessário configurar
+um usuário IAM no seu computador. Para fazer essa
 configuração pode seguir esse
 [artigo](/posts/2024/2024-01-07-criando-e-configurando-um-usuario-iam/).
 
-\
 Para esse teste vou usar a policy **AdministratorAccess**. Caso utilize
 um profile diferente do default no arquivo .aws/credentials será
 necessário exportar a variável de ambiente **AWS_PROFILE** ou inserir
@@ -80,24 +77,24 @@ echo $AWS_PROFILE
 
 ## Deploy da Aplicação 
 
-Para testar o AWS copilot CLI vamos fazer o deploy da aplicação que está
+Para testar o AWS Copilot CLI vamos fazer o deploy da aplicação que está
 nesse
 [repositório](https://github.com/aws-samples/amazon-ecs-cli-sample-app.git).
-Primeiro passo que necessitamos fazer é o git clone desse repositório
+O primeiro passo é fazer o git clone desse repositório
 usando o comando abaixo:
 
 ``` bash
 git clone https://github.com/aws-samples/amazon-ecs-cli-sample-app.git example 
 ```
 
-Depois vamos acessar a pasta example e vamos executar o comando
-**copilot init** será apresentado a tela abaixo:
+Depois, acesse a pasta example e execute o comando **copilot init**.
+Será apresentada a tela abaixo:
 
 ![Comando copilot init perguntando o nome da aplicação, preenchido com teste-app-blog](/images/copilot-3.webp)
 
 Você deve inserir o nome da aplicação. No meu caso será teste-app-blog.
 
-Na próxima tela será solicitado a escolha do tipo de workload da sua
+Na próxima tela, será solicitada a escolha do tipo de workload da sua
 aplicação. Para essa demonstração iremos utilizar a opção **Load
 Balanced Web Service** mas existem outras opções conforme abaixo:
 
@@ -108,39 +105,38 @@ teste-app-blog-svc conforme abaixo:
 
 ![Copilot perguntando o nome do serviço, preenchido com teste-app-blog-svc](/images/copilot-5.webp)
 
-Agora será solicitado a localização do arquivo Dockerfile ou a
+Agora será solicitada a localização do arquivo Dockerfile ou a
 localização de uma imagem da aplicação. Vamos utilizar o arquivo
 Dockerfile que está na raiz do repositório.
 
 ![Copilot perguntando qual Dockerfile usar, com ./Dockerfile selecionado](/images/copilot-6.webp)
 
-Nesse próximo passo será criado todas as roles de infraestrutura
+Nesse próximo passo, serão criadas todas as roles de infraestrutura
 necessárias para o funcionamento da nossa aplicação. Após essa criação
 será perguntado se você gostaria de fazer deploy da sua aplicação
 conforme imagem abaixo:
 
 ![Copilot criando as roles de infraestrutura da aplicação e o manifest do serviço, e perguntando se deve fazer deploy de um environment](/images/copilot-7.webp)
 
-Na próxima tela será solicitado a criação de um environment. Esse
+Na próxima tela, será solicitada a criação de um environment. Esse
 environment terá o nome de dev conforme imagem abaixo:
 
 ![Copilot perguntando o nome do environment, preenchido com dev](/images/copilot-8.webp)
 
-Na próxima tela será criado toda a parte de infraestrutura como por
-exemplo repositório do ECR, um bucket S3, toda parte de network e o seu
-cluster ECS.
+Na próxima tela, será criada toda a infraestrutura, como o repositório
+do ECR, um bucket S3, a parte de rede e o cluster ECS.
 
 ![Copilot criando o environment dev em sa-east-1 com VPC, subnets, Internet Gateway e cluster ECS](/images/copilot-9.webp)
 
-Na próxima tela o AWS copilot CLI irá fazer o build da imagem da nossa
+Na próxima tela, o AWS Copilot CLI vai fazer o build da imagem da nossa
 aplicação e fazer o push para o repositório ECR criado anteriormente
 conforme abaixo:
 
 ![Build da imagem Docker do serviço e push para o repositório no ECR](/images/copilot-10.webp)
 
 Na próxima tela a aplicação será configurada dentro do cluster ECS, será
-feito o deploy e será disponibilizado a URL da nossa aplicação conforme
-image abaixo:
+feito o deploy e será disponibilizada a URL da aplicação, conforme a
+imagem abaixo:
 
 ![Copilot criando o load balancer, a task definition e o serviço ECS e exibindo a URL do serviço](/images/copilot-11.webp)
 
@@ -151,7 +147,7 @@ Acessando a URL da aplicação deve retornar uma página similar a abaixo:
 ## Interagindo com AWS Copilot CLI 
 
 Com a aplicação já deployada no seu cluster ECS podemos usar o AWS
-Copilot CLI para consultar informações da nossa aplicação. Abaixo segue
+Copilot CLI para consultar informações da nossa aplicação. Abaixo,
 alguns exemplos:
 
 ``` bash
@@ -172,8 +168,7 @@ copilot app show
 
 ![Saída do copilot app show com a aplicação teste-app-blog, o environment dev em sa-east-1 e o serviço](/images/copilot-15.webp)
 
-Existem muitas outras opções que você pode utilizar com o AWS copilot
-CLI.
+Existem muitas outras opções que você pode utilizar com o AWS Copilot CLI.
 
 ## Deletando sua aplicação 
 
@@ -183,14 +178,14 @@ Agora vamos deletar a aplicação criada usando o comando abaixo:
 copilot app delete
 ```
 
-Será solicitado uma confirmação e depois será feito processo de exclusão
-de todos os recursos criados pelo AWS copilot CLI conforme imagem
+Será solicitada uma confirmação e depois será feita a exclusão de todos
+os recursos criados pelo AWS Copilot CLI, conforme imagem
 abaixo:
 
 ![Saída do copilot app delete removendo o serviço, o environment e os recursos da aplicação](/images/copilot-16.webp)
 
 ## Conclusão 
 
-O Objetivo desse artigo foi demonstrar a utilização da ferramenta AWS
+O objetivo desse artigo foi demonstrar a utilização da ferramenta AWS
 Copilot CLI implementando toda a infraestrutura e uma aplicação de
 teste.
