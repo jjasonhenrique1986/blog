@@ -97,12 +97,13 @@ Agora vamos acessar a console do ArgoCD fazendo um port-forward
 apontando para o service do ArgoCD usando o comando abaixo:
 
 ```bash
-kubectl port-forward service/argocd-server -n argocd 8080:443 -n argocd
+kubectl port-forward service/argocd-server -n argocd 8080:443
 ```
 
 Através de qualquer navegador de Internet acessar o endereço
-[http://127.0.0.1:8080](http://127.0.0.1:8080) deverá
-apresentar um erro de certificado mas pode ignorar esse erro. Deverá ser
+[https://127.0.0.1:8080](https://127.0.0.1:8080) (com **https**, porque o
+port-forward aponta para a porta 443 do ArgoCD). O navegador deve
+apresentar um erro de certificado, que pode ser ignorado nesse teste. Deverá ser
 apresentada a tela abaixo:
 
 ![Tela de login do ArgoCD](/images/argo-4.webp)
@@ -187,13 +188,12 @@ Em **General** temos as seguintes configurações abaixo:
     colocar no projeto **Default** que já vem criado.
 -   **Sync Policy** vamos alterar para **Automatic** e habilitar as duas
     opções abaixo:
-    -   **Prune Resources** essa opção quando habilitada faz com que o
-        ArgoCD delete qualquer recurso que não esteja declarado no git
-        por exemplo se alterar a quantidade de replicas de um deploy
-        usando o comando kubectl scale.
-    -   **Self Heal** essa opção quando habilitada força que o estado do
-        seu deploy seja igual ao que está definido no seu repositório
-        git.
+    -   **Prune Resources**: quando habilitada, o ArgoCD apaga do
+        cluster os recursos que foram removidos do repositório git. Sem
+        ela, um recurso apagado do git continua rodando no cluster.
+    -   **Self Heal**: quando habilitada, o ArgoCD desfaz alterações
+        feitas direto no cluster, como um `kubectl scale` que muda a
+        quantidade de réplicas, e volta ao estado definido no git.
 -   **Auto-Create Namespace** caso o namespace não exista o mesmo será
     criado no seu cluster kubernetes.
 

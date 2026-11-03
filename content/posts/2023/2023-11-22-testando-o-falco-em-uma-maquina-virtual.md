@@ -107,7 +107,7 @@ alterar o output da regra Read sensitive file untrusted de Sensitive
 file opened for reading by non-trusted program para ACESSO INDEVIDO.
 
 Primeiramente vamos copiar o conteudo abaixo da linha 396 ate 431 para o
-arquivo /etc/falco_rule.local.yaml. É uma boa prática colocar as regras
+arquivo /etc/falco/falco_rules.local.yaml, que o Falco carrega depois das regras padrão. É uma boa prática colocar as regras
 customizadas nesse arquivo.
 
 ![Regra Read sensitive file untrusted no arquivo de regras do Falco, com condição, output e prioridade](/images/falco-7.webp)
@@ -116,7 +116,7 @@ A seção output deve ser alterada conforme abaixo:
 
 ![Linha output da regra alterada para exibir a mensagem ACESSO INDEVIDO](/images/falco-8.webp)
 
-Depois devemos salavar o arquivo **/etc/falco_rule.local.yaml**, parar e
+Depois devemos salavar o arquivo **/etc/falco/falco_rules.local.yaml**, parar e
 iniciar o serviço do falco usando os comandos abaixo:
 
 ``` bash

@@ -83,7 +83,7 @@ Na próxima tela vamos configurar o nome do serviço, utilização de CPU e
 memória, configuração de Autoscaling, configuração de Health Check e
 outros. Para mais informações sobre essas configurações consultar o
 primeiro artigo sobre o AWS App Runner nesse
-[link](https://jjasonhenrique.me/2023/12/02/usando-o-aws-app-runner-para-subir-uma-aplicacao/).
+[link](/posts/2023/2023-12-02-usando-o-aws-app-runner-para-subir-uma-aplicacao/).
 
 ![Configuração do serviço API-Python com 0,25 vCPU e 0,5 GB de memória](/images/apprunner-19.webp)
 

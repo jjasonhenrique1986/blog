@@ -129,7 +129,7 @@ gerar um novo profile dentro do arquivo .aws/credentials
 
 ![Comando aws configure --profile blog com a access key e a secret censuradas e a região sa-east-1](/images/iam-12.webp)
 
-## Testando o seu access Key {#testando-o-seu-access-key .wp-block-heading .has-x-large-font-size}
+## Testando o seu access Key
 
 Agora vamos testar o acesso via CLI tentando listar os buckets S3 na sua
 conta executando o comando abaixo:
