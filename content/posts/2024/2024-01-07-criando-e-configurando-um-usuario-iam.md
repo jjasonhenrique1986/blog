@@ -40,7 +40,7 @@ Como primeiro passo você deve acessar sua conta AWS e acessar o serviço
 **IAM** e ir na opção **Users** e depois clicar na opção **Create User**
 será apresentado a seguinte tela abaixo:
 
-![iam-2](/images/iam-2.jpg)
+![Tela Specify user details da criação do usuário IAM blog, sem acesso ao console](/images/iam-2.jpg)
 
 Não deve ser habiltado a opção **Provide user access to the AWS
 Management Console** pois será habilitado acesso a console de
@@ -52,19 +52,19 @@ Na próxima tela vamos inserir as permissões para esse usuário IAM. No
 meu caso vou inserir uma policy com permissão total no S3 conforme tela
 abaixo:
 
-![iam-3](/images/iam-3.jpg)
+![Tela Set permissions com a policy AmazonS3FullAccess anexada diretamente ao usuário](/images/iam-3.jpg)
 
 Lembrando que você pode customizar essa policy.
 
 Depois disso vamos clicar em Next e será apresentado um Review da
 criação do seu usuário conforme abaixo:
 
-![iam-4](/images/iam-4.jpg)
+![Tela Review and create do usuário blog com a policy AmazonS3FullAccess](/images/iam-4.jpg)
 
 Depois disso clicar na opção **Create User** e seu usuário será
 criado.Seu usuário deve ser apresentado conforme tela abaixo:
 
-![iam-5](/images/iam-5.jpg)
+![Mensagem de usuário criado com sucesso e o usuário blog na lista do IAM](/images/iam-5.jpg)
 
 ## Criando a Acess Key do seu usuário 
 
@@ -72,31 +72,31 @@ Agora vamos criar clicando sobre seu usuário IAM indo na opção Security
 credentials e depois clicando em Create access key conforme imagem
 abaixo:
 
-![iam-6](/images/iam-6.jpg)
+![Aba Security credentials do usuário com a seção Access keys ainda vazia](/images/iam-6.jpg)
 
 Depois da tela você deve escolher a primeira opção **Command Line
 Interface (CLI)** e habilitar a opção **I understand the above
 recommendation and want to proceed to create an access key** e clicar em
 Next conforme imagem abaixo:
 
-![iam-7](/images/iam-7.jpg)
+![Tela Access key best practices & alternatives com o caso de uso Command Line Interface (CLI) selecionado](/images/iam-7.jpg)
 
 Na próxima tela você pode configurar uma descrição para sua access key e
 depois clicar em **Create access key** conforme imagem abaixo:
 
-![iam-8](/images/iam-8.jpg)
+![Tag de descrição da access key preenchida com Para post no blog](/images/iam-8.jpg)
 
 Apos clicar no botão **Create access key** será gerado o **Acces key** e
 o **Secret access key** conforme imagem abaixo:
 
-![iam-9](/images/iam-9.jpg)
+![Tela Retrieve access keys com a access key criada, com o ID censurado](/images/iam-9.png)
 
 Lembrando que o **Secret access key** só estará disponivel nesse
 momento. É recomendavel fazer o download do arquivo cvs com os valores
 do **Access key** e do **Secret access key** e depois clicar em **Done**
 e retornará para a tela inicial conforme abaixo:
 
-![iam-10](/images/iam-10.jpg)
+![Access key ativa na aba Security credentials do usuário, com o ID censurado](/images/iam-10.png)
 
 Nesse
 [link](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#securing_access-keys)
@@ -118,7 +118,7 @@ sudo ./aws/install
 Para verificar se a instalação ocorreu com sucesso excutar o comando
 abaixo:
 
-![iam-11](/images/iam-11.jpg)
+![Saída do comando aws --version mostrando o AWS CLI 2.13.34](/images/iam-11.jpg)
 
 ## Configurando o seu Access Key 
 
@@ -127,7 +127,7 @@ access key no seu computador. Você deve executar o comando aws
 configure conforme abaixo. No meu caso vou inserir a flag --profile para
 gerar um novo profile dentro do arquivo .aws/credentials
 
-![iam-12](/images/iam-12.jpg)
+![Comando aws configure --profile blog com a access key e a secret censuradas e a região sa-east-1](/images/iam-12.png)
 
 ## Testando o seu access Key {#testando-o-seu-access-key .wp-block-heading .has-x-large-font-size}
 
@@ -140,7 +140,7 @@ aws s3 ls --profile blog
 
 Deverá retornar o seguinte resultado abaixo:
 
-![iam-13](/images/iam-13.jpg)
+![Saída do aws s3 ls --profile blog listando o bucket teste-blog](/images/iam-13.jpg)
 
 Lembrando que esse Access key e Secret access key tem acesso somente ao
 S3. Caso tente executar o comando **aws ec2 describe-availability-zones

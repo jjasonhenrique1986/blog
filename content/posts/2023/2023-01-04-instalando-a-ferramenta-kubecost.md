@@ -66,11 +66,11 @@ kubectl apply -f https://raw.githubusercontent.com/kubecost/cost-analyzer-helm-c
 
 Será deployado os seguintes objetos conforme imagem abaixo:
 
-![kubecost-2](/images/kubecost-2.jpg)
+![Saída do kubectl apply criando os objetos do Kubecost no namespace kubecost](/images/kubecost-2.jpg)
 
 Abaixo overview dos objetos deployados pelo kubecost
 
-![kubecost-3](/images/kubecost-3.jpg)
+![Saída do kubectl get all no namespace kubecost com pods, services, daemonset e deployments em execução](/images/kubecost-3.jpg)
 
 Na instalação default é efetuado a instalação de um deploy do
 prometheus-server que será responsável por coletar as informações do
@@ -88,9 +88,9 @@ port-forward para testar localmente. Segue abaixo comando:
 
 Abaixo alguns prints da console do kubecost
 
-![kubecost-4](/images/kubecost-4.jpg)
+![Tela Overview do Kubecost com custos do cluster, economia possível e gráfico de tendência de custo](/images/kubecost-4.jpg)
 
-![kubecost-5](/images/kubecost-5.jpg)
+![Tela Overview do Kubecost com o custo por namespace e a seção Cloud Costs Breakdown](/images/kubecost-5.jpg)
 
 ## Conclusão 
 

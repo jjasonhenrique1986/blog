@@ -67,7 +67,7 @@ apt-get install -y falco
 
 Deve ser escolhido a opção eBPF conforme abaixo:
 
-![falco-4](/images/falco-4.jpg)
+![Tela de instalação do Falco para escolher o driver, com a opção eBPF selecionada](/images/falco-4.jpg)
 
 Para verificar se o falco foi instalado com sucesso deve ser executado o
 comando abaixo:
@@ -78,7 +78,7 @@ systemctl status falco-bpf
 
 Deve apresentar uma saída conforme tela abaixo:
 
-![falco-5](/images/falco-5.jpg)
+![Saída do systemctl status com o serviço falco-bpf ativo na máquina virtual](/images/falco-5.jpg)
 
 ## Demonstração 
 
@@ -97,7 +97,7 @@ grep Sensitive /var/log/syslog
 
 Deve apresentar a seguinte saída:
 
-![falco-6](/images/falco-6.jpg)
+![Alertas do Falco de arquivo sensível /etc/shadow aberto por um programa não confiável](/images/falco-6.jpg)
 
 ## Alteração regra do Falco 
 
@@ -110,11 +110,11 @@ Primeiramente vamos copiar o conteudo abaixo da linha 396 ate 431 para o
 arquivo /etc/falco_rule.local.yaml. É uma boa prática colocar as regras
 customizadas nesse arquivo.
 
-![falco-7](/images/falco-7.jpg)
+![Regra Read sensitive file untrusted no arquivo de regras do Falco, com condição, output e prioridade](/images/falco-7.jpg)
 
 A seção output deve ser alterada conforme abaixo:
 
-![falco-8](/images/falco-8.jpg)
+![Linha output da regra alterada para exibir a mensagem ACESSO INDEVIDO](/images/falco-8.jpg)
 
 Depois devemos salavar o arquivo **/etc/falco_rule.local.yaml**, parar e
 iniciar o serviço do falco usando os comandos abaixo:
@@ -139,7 +139,7 @@ grep ACESSO /var/log/syslog
 
 Por fim deve apresentar uma saída conforme abaixo:
 
-![falco-9](/images/falco-9.jpg)
+![Alertas do Falco com a nova mensagem ACESSO INDEVIDO ao ler o /etc/shadow](/images/falco-9.jpg)
 </figure>
 
 ## Conclusão 

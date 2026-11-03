@@ -36,7 +36,7 @@ GitOps é um forma poderosa de gerenciar e automatizar a sua
 infraestrutura de forma declarativa usando um repositório git.
 
 
-![argo-2](/images/argo-2.jpg)
+![Diagrama do GitOps: o desenvolvedor faz commit no Git, o ArgoCD puxa as mudanças e sincroniza o estado no Kubernetes](/images/argo-2.jpg)
 
 Basicamente o desenvolvedor e/ou engenheiro devops vai ter todas as
 definições de infraestrutura em um repositório e o ArgoCD irá fazer
@@ -73,7 +73,7 @@ helm install argocd oci://ghcr.io/argoproj/argo-helm/argo-cd --version 7.1.3 -n 
 Será iniciado a instalação e caso tenha sucesso será apresentado uma
 tela conforme abaixo:
 
-![argo-3](/images/argo-3.jpg)
+![Saída da instalação do ArgoCD com Helm e as instruções para acessar a interface e pegar a senha inicial do admin](/images/argo-3.jpg)
 
 Para verificar se os pods subiram corretamente podemos executar o
 seguinte comando:
@@ -105,13 +105,13 @@ Através de qualquer navegador de Internet acessar o endereço
 apresentar um erro de certificado mas pode ignorar esse erro. Deverá ser
 apresentada a tela abaixo:
 
-![argo-4](/images/argo-4.jpg)
+![Tela de login do ArgoCD](/images/argo-4.jpg)
 
 Agora você deve usar o usuário admin e a senha recuperada através do
 secret feito no passo anterior para acessar a console do ArgoCD. Deverá
 aparecer uma tela igual a abaixo:
 
-![argo-5](/images/argo-5.jpg)
+![Tela inicial do ArgoCD ainda sem aplicações](/images/argo-5.jpg)
 
 ## Criando um repositório git 
 
@@ -152,19 +152,19 @@ repositório criado no passo anterior. Para isso vamos na opção
 **Settings** do lado esquerdo e depois em **Repositories** e clicar em
 **Connect Repo** e depois será apresentado a tela abaixo:
 
-![argo-6](/images/argo-6.jpg)
+![Tela de conexão de repositório do ArgoCD com o método via SSH](/images/argo-6.jpg)
 
 Nessa opção você consegue adicionar tanto um repositório do git como um
 repositório de helm chart.
 
 Para o nosso caso deve ser configurado conforme abaixo:
 
-![argo-7](/images/argo-7.jpg)
+![Conexão do repositório nginx-example no ArgoCD via HTTPS](/images/argo-7.jpg)
 
 Depois você deve clicar no botão **Connect** e será apresentado a
 conexão com o repositório do github conforme abaixo:
 
-![argo-8](/images/argo-8.jpg)
+![Repositório nginx-example conectado no ArgoCD com status Successful](/images/argo-8.jpg)
 
 ## Criação da App usando a console do ArgoCD
 
@@ -172,12 +172,12 @@ Para fazer a criação da nossa aplicação usando o argoCD será necssário
 ir no menu **Applications** e depois clicar na opção **New App**
 conforme imagem abaixo:
 
-![argo-9](/images/argo-9.jpg)
+![Formulário de nova aplicação no ArgoCD com as seções General e Sync Policy](/images/argo-9.jpg)
 
 Agora vamos fazer as configurações da nossa aplicação. Abaixo segue
 imagem das primeiras configurações:
 
-![argo-10](/images/argo-10.jpg)
+![Aplicação nginx no projeto default com sync automático, prune, self heal e auto create namespace](/images/argo-10.jpg)
 
 Em **General** temos as seguintes configurações abaixo:
 
@@ -200,7 +200,7 @@ Em **General** temos as seguintes configurações abaixo:
 Agora vamos partir pra segunda parte das configurações conforme imagem
 abaixo:
 
-![argo-11](/images/argo-11.jpg)
+![Origem da aplicação apontando para o repositório nginx-example, path deploy, e destino no namespace nginx do próprio cluster](/images/argo-11.jpg)
 
 Em **Source** temos as seguintes configurações abaixo:
 
@@ -222,12 +222,12 @@ Em **Destination** temos as seguintes configurações abaixo:
 Agora basta clicar no botão **Create** e será apresentado a nossa
 aplicação conforme abaixo:
 
-![argo-12](/images/argo-12.jpg)
+![Aplicação nginx no ArgoCD com status Healthy e Synced](/images/argo-12.jpg)
 
 Clicando sobre o quadro da nossa aplicação você terá uma visão de todos
 os objectos criados no kubernetes para esse deploy conforme abaixo:
 
-![argo-13](/images/argo-13.jpg)
+![Árvore da aplicação nginx no ArgoCD com o deployment, o replicaset e os pods, todos saudáveis](/images/argo-13.jpg)
 
 ## Criação da aplicação via linha de comando
 
@@ -273,7 +273,7 @@ kubectl get apps -n argocd
 
 Deve ser apresentado uma tela similar a abaixo:
 
-![argo-14](/images/argo-14.jpg)
+![Saída do kubectl mostrando a aplicação nginx com status Synced e Healthy](/images/argo-14.jpg)
 
 ## Validação
 
@@ -290,7 +290,7 @@ ficará apenas 2 pods como Running conforme está configurado na definição
 que está no git. Isso é o conceito de reconcile do ArgoCD. Abaixo você
 pode ver uma imagem com os pods sendo terminados:
 
-![argo-15](/images/argo-15.jpg)
+![Pods do nginx sendo encerrados depois que o número de réplicas foi reduzido no repositório](/images/argo-15.jpg)
 
 Você também pode verificar os eventos do kubernetes usando o comando
 abaixo:

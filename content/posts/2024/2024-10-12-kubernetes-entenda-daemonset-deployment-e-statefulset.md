@@ -102,13 +102,13 @@ kubectl get pods -n app
 
 Deverá retornar uma saída similar a imagem abaixo:
 
-![deploy-2](/images/deploy-2.jpg)
+![Pods do DaemonSet fluent-bit em execução](/images/deploy-2.jpg)
 
 Como temos apenas dois nós que executam como DataPlane foram criados
 apenas dois pods do fluent-bit. Para retornar o nome dos nós que os pods
 estão executando adicionar a flag -o wide conforme imagem abaixo:
 
-![deploy-3](/images/deploy-3.jpg)
+![Pods do fluent-bit distribuídos, um em cada node worker](/images/deploy-3.jpg)
 
 O comando abaixo mostra quantos daemonsets estão executando no cluster:
 
@@ -116,7 +116,7 @@ O comando abaixo mostra quantos daemonsets estão executando no cluster:
 kubectl get daemonset -n app
 ```
 
-![deploy-4](/images/deploy-4.jpg)
+![Saída do kubectl get ds mostrando o DaemonSet fluent-bit com 2 pods prontos](/images/deploy-4.jpg)
 
 ## Deployment 
 
@@ -177,12 +177,12 @@ Para verificar a execução dos pods executar o comando abaixo:
 kubectl get pods -n app
 ```
 
-![deploy-5](/images/deploy-5.jpg)
+![Dez pods do deployment nginx em execução no namespace app](/images/deploy-5.jpg)
 
 Na configuração default do kubernetes podemos verificar que os pods se
 distribuem entre os nós conforme imagem abaixo:
 
-![deploy-6](/images/deploy-6.jpg)
+![Pods do deployment nginx distribuídos entre os nodes cluster-jason-worker e cluster-jason-worker2](/images/deploy-6.jpg)
 
 O comando abaixo mostra informações do deployment:
 
@@ -190,7 +190,7 @@ O comando abaixo mostra informações do deployment:
 kubectl get deployment -n app
 ```
 
-![deploy-7](/images/deploy-7.jpg)
+![Saída do kubectl get deployment com o nginx em 10 de 10 réplicas prontas](/images/deploy-7.jpg)
 
 ## StatefulSet 
 
@@ -258,7 +258,7 @@ Para verificar a execução dos pods executar o comando abaixo:
 kubectl get pods -n app
 ```
 
-![deploy-8](/images/deploy-8.jpg)
+![Pods web-0, web-1 e web-2 do StatefulSet criados em ordem](/images/deploy-8.jpg)
 
 Outro ponto que podemos verificar é a sequência lógica na subida dos
 pods sendo que o primeiro pods foi o web-0, o segundo web-1 e o terceiro
@@ -281,7 +281,7 @@ verificar o replicaset:
 kubectl get replicaset -n app
 ```
 
-![deploy-9](/images/deploy-9.jpg)
+![Saída do kubectl get rs com o replicaset do nginx e 10 réplicas](/images/deploy-9.jpg)
 
 Outro ponto do replicaset é que sempre que é feito um novo deploy sempre
 será criado um novo replicaset e as replicas estarão disponiveis no novo
@@ -295,7 +295,7 @@ kubectl set image deploy/nginx nginx=nginx:1.19 -n app
 Na imagem abaixo podemos perceber que foi criado um novo replicaset e os
 pods do deployment foram transferidos para esse novo replicaset.
 
-![deploy-10](/images/deploy-10.jpg)
+![Dois replicasets do nginx depois da atualização: o novo com 10 réplicas e o antigo com 0](/images/deploy-10.jpg)
 
 ## Conclusão 
 
