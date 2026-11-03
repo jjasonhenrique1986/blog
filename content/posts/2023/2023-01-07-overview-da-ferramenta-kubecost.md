@@ -1,7 +1,7 @@
 ---
 title: "Overview da ferramenta kubecost"
 description: "Um overview da console do Kubecost para monitorar e gerenciar o custo do Kubernetes e do cloud provider (AWS, Azure e GCP)."
-image: "/images/kubecost.jpg"
+image: "/images/kubecost.png"
 author: Jason
 date: 2023-01-07
 tags: [ "AWS", "FinOps", "Kubernetes" ]
@@ -9,7 +9,7 @@ type: post
 showTableOfContents: true
 ---
 
-![Overview da ferramenta kubecost](/images/kubecost.jpg)
+![Overview da ferramenta kubecost](/images/kubecost.png)
 
 > **Atualização (novembro de 2026):** o Kubecost foi comprado pela IBM em
 > 2024. A documentação oficial agora fica no
@@ -38,9 +38,9 @@ adminstração do kubecost.
 
 Abaixo alguns prints da seção overview:
 
-![Seção Overview do Kubecost com os custos do Kubernetes, custos de cloud, economia possível e eficiência do cluster](/images/kubecost-6.jpg)
+![Seção Overview do Kubecost com os custos do Kubernetes, custos de cloud, economia possível e eficiência do cluster](/images/kubecost-6.webp)
 
-![Seção Overview do Kubecost com o detalhamento de custo por namespace e o gráfico de tendência por namespace](/images/kubecost-7.jpg)
+![Seção Overview do Kubecost com o detalhamento de custo por namespace e o gráfico de tendência por namespace](/images/kubecost-7.webp)
 
 As seguintes informações estão disponíveis:
 
@@ -60,9 +60,9 @@ As seguintes informações estão disponíveis:
 
 Abaixo alguns prints da seção Savings:
 
-![Seção Savings do Kubecost com a economia mensal estimada e as recomendações, como ajustar requests de containers e redimensionar discos](/images/kubecost-8.jpg)
+![Seção Savings do Kubecost com a economia mensal estimada e as recomendações, como ajustar requests de containers e redimensionar discos](/images/kubecost-8.webp)
 
-![Recomendação do Kubecost para redimensionar discos locais com baixa utilização](/images/kubecost-9.jpg)
+![Recomendação do Kubecost para redimensionar discos locais com baixa utilização](/images/kubecost-9.webp)
 
 Na seção savings são feitas recomendações para o ambiente que irá gerar
 economia para o ambiente kubernetes e para cloud:
@@ -76,18 +76,18 @@ economia para o ambiente kubernetes e para cloud:
 
 Abaixo alguns prints da seção Allocations:
 
-![Seção Allocations do Kubecost com o custo acumulado por namespace em gráfico e tabela](/images/kubecost-10.jpg)
+![Seção Allocations do Kubecost com o custo acumulado por namespace em gráfico e tabela](/images/kubecost-10.webp)
 
-![Detalhe do namespace kubecost na seção Allocations, com custo por recurso, eficiência de CPU e RAM e economia sugerida](/images/kubecost-11.jpg)
+![Detalhe do namespace kubecost na seção Allocations, com custo por recurso, eficiência de CPU e RAM e economia sugerida](/images/kubecost-11.webp)
 
 Na seção Allocations são mostrados informações de custo separado por
 CPU, RAM, Network e LoadBalance separado por namespace.
 
 Prints da seção Assets:
 
-![Seção Assets do Kubecost com o custo dos últimos 7 dias agrupado por tipo de recurso](/images/kubecost-12.jpg)
+![Seção Assets do Kubecost com o custo dos últimos 7 dias agrupado por tipo de recurso](/images/kubecost-12.webp)
 
-![Seção Assets do Kubecost detalhando o custo dos discos do cluster](/images/kubecost-13.jpg)
+![Seção Assets do Kubecost detalhando o custo dos discos do cluster](/images/kubecost-13.webp)
 
 Na seção Assets mostra as seguintes informações:
 
@@ -101,9 +101,9 @@ Na seção Assets mostra as seguintes informações:
 
 Abaixo prints da seção Health:
 
-![Seção Health do Kubecost com nota de saúde 94 e a lista de verificações do cluster](/images/kubecost-14.jpg)
+![Seção Health do Kubecost com nota de saúde 94 e a lista de verificações do cluster](/images/kubecost-14.webp)
 
-![Continuação da seção Health do Kubecost com as verificações de confiabilidade, armazenamento e rede e suas severidades](/images/kubecost-15.jpg)
+![Continuação da seção Health do Kubecost com as verificações de confiabilidade, armazenamento e rede e suas severidades](/images/kubecost-15.webp)
 
 Na seção Health é feito um checklist com boas práticas baseado em
 confiabilidade e performance. Nesse checklist é feito um score de 0 a
@@ -121,16 +121,16 @@ confiabilidade e performance. Nesse checklist é feito um score de 0 a
 Na seção reports permite você criar relatórios baseado na seção Asset e
 Allocation conforme imagem abaixo:
 
-![Seção Reports do Kubecost com os relatórios salvos de alocação por namespace e de assets por tipo](/images/kubecost-16.jpg)
+![Seção Reports do Kubecost com os relatórios salvos de alocação por namespace e de assets por tipo](/images/kubecost-16.webp)
 
 Na seção Alerts possui a funcionalidade de enviar alertas para um canal
 do slack. Segue abaixo imagem:
 
-![Seção Alerts do Kubecost com a configuração de alertas de saúde e do webhook do Slack](/images/kubecost-17.jpg)
+![Seção Alerts do Kubecost com a configuração de alertas de saúde e do webhook do Slack](/images/kubecost-17.webp)
 
 Abaixo tipos de alertas que podem ser criados:
 
-![Lista de tipos de alerta do Kubecost: Allocation Budget, Allocation Efficiency, Allocation Recurring Update, Allocation Spend Change, Asset Budget e Cloud Report](/images/kubecost-18.jpg)
+![Lista de tipos de alerta do Kubecost: Allocation Budget, Allocation Efficiency, Allocation Recurring Update, Allocation Spend Change, Asset Budget e Cloud Report](/images/kubecost-18.webp)
 
 ## Conclusão 
 

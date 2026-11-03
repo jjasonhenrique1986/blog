@@ -1,7 +1,7 @@
 ---
 title: Criando um cluster local de kubernetes com o kind
 description: "Passo a passo para criar um cluster Kubernetes local com o kind para testes e estudos."
-image: "/images/kind.jpg"
+image: "/images/kind.png"
 author: Jason
 date: 2023-11-15
 tags: [ "Kubernetes", "Containers" ]
@@ -9,7 +9,7 @@ type: post
 showTableOfContents: true
 ---
 
-![Criando um cluster local de kubernetes com o kind](/images/kind.jpg)
+![Criando um cluster local de kubernetes com o kind](/images/kind.png)
 
 O objetivo desse artigo é fazer um passo-a-passo de como subir um
 cluster kubernetes localmente com o kind para que você possa fazer algum
@@ -96,7 +96,7 @@ kind create cluster --config create_cluster.yaml
 
 Deve aparecer uma saída conforme abaixo:
 
-![Saída do kind create cluster criando o cluster cluster-jason e configurando o contexto do kubectl](/images/kind-2.jpg)
+![Saída do kind create cluster criando o cluster cluster-jason e configurando o contexto do kubectl](/images/kind-2.webp)
 
 Para verificar se o cluster foi criado corretamente executar os comandos
 abaixo:

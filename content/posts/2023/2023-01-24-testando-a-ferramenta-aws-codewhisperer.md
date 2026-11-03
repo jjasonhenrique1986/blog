@@ -51,14 +51,14 @@ pré-requisitos:
     [link](https://code.visualstudio.com/download).
 -   Instalar a extensão AWS Toolkit no VS Code conforme imagem abaixo:
 
-![Extensão AWS Toolkit no marketplace do VS Code](/images/codewhisperer-2.jpg)
+![Extensão AWS Toolkit no marketplace do VS Code](/images/codewhisperer-2.webp)
 
 ## Instalação e Configuração 
 
 Apos a instalação da extensão da AWS Toolkit irá aparecer um ícone da
 aws no lado esquerdo similar a imagem abaixo:
 
-![Painel Developer Tools do AWS Toolkit conectado com AWS Builder ID e as opções do CodeWhisperer](/images/codewhisperer-3.jpg)
+![Painel Developer Tools do AWS Toolkit conectado com AWS Builder ID e as opções do CodeWhisperer](/images/codewhisperer-3.png)
 
 Para ativar a utilização do serviço AWS CodeWhisperer será necessário
 configurar a conexão com a AWS.
@@ -67,7 +67,7 @@ Eu utilizei a opção **"Use a personal email to sign up and sign in with
 AWS Builder ID "** assim que clicar nessa opção você será redirecionada
 para uma página web para efetuar a criação do seu AWS Builder ID.
 
-![Opções de conexão do AWS Toolkit: AWS Builder ID, IAM Identity Center ou credenciais IAM](/images/codewhisperer-4.jpg)
+![Opções de conexão do AWS Toolkit: AWS Builder ID, IAM Identity Center ou credenciais IAM](/images/codewhisperer-4.png)
 
 ## Demonstração 
 
@@ -76,11 +76,11 @@ um comentário sobre o que gostaria de criar por exemplo "Create simple
 API with fastAPI" com isso ele vai dando sugestões de código conforme
 imagem abaixo:
 
-![VS Code com o CodeWhisperer sugerindo o código de uma API FastAPI a partir de um comentário](/images/codewhisperer-5.jpg)
+![VS Code com o CodeWhisperer sugerindo o código de uma API FastAPI a partir de um comentário](/images/codewhisperer-5.webp)
 
 Esse foi o resultado final apresentado pelo AWS CodeWhisperer
 
-![Código de uma API FastAPI com as rotas / e /about gerado com as sugestões do CodeWhisperer](/images/codewhisperer-6.jpg)
+![Código de uma API FastAPI com as rotas / e /about gerado com as sugestões do CodeWhisperer](/images/codewhisperer-6.png)
 
 ## Conclusão 
 

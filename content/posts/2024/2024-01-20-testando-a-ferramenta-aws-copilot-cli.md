@@ -1,7 +1,7 @@
 ---
 title: "Testando a ferramenta AWS Copilot CLI"
 description: "Testando o AWS Copilot CLI para criar de forma simplificada uma aplicação conteinerizada executando no ECS."
-image: "/images/copilot.jpg"
+image: "/images/copilot.png"
 author: Jason
 date: 2024-01-20
 tags: [ "AWS", "Containers", "ECS" ]
@@ -9,7 +9,7 @@ type: post
 showTableOfContents: true
 ---
 
-![Testando a ferramenta AWS Copilot CLI](/images/copilot.jpg)
+![Testando a ferramenta AWS Copilot CLI](/images/copilot.png)
 
 > **Atualização (novembro de 2026):** a AWS encerrou o suporte ao Copilot
 > CLI em 12 de junho de 2026, e o
@@ -48,7 +48,7 @@ sudo curl -Lo /usr/local/bin/copilot https://github.com/aws/copilot-cli/releases
 
 Deve ser apresentado uma tela similar a abaixo:
 
-![Saída do copilot -h com os comandos disponíveis do Copilot CLI](/images/copilot-2.jpg)
+![Saída do copilot -h com os comandos disponíveis do Copilot CLI](/images/copilot-2.webp)
 
 No meu caso eu utilizei um computador executando linux. Para outros
 sistemas operacionais consultar esse
@@ -93,7 +93,7 @@ git clone https://github.com/aws-samples/amazon-ecs-cli-sample-app.git example
 Depois vamos acessar a pasta example e vamos executar o comando
 **copilot init** será apresentado a tela abaixo:
 
-![Comando copilot init perguntando o nome da aplicação, preenchido com teste-app-blog](/images/copilot-3.jpg)
+![Comando copilot init perguntando o nome da aplicação, preenchido com teste-app-blog](/images/copilot-3.webp)
 
 Você deve inserir o nome da aplicação. No meu caso será teste-app-blog.
 
@@ -101,52 +101,52 @@ Na próxima tela será solicitado a escolha do tipo de workload da sua
 aplicação. Para essa demonstração iremos utilizar a opção **Load
 Balanced Web Service** mas existem outras opções conforme abaixo:
 
-![Lista de tipos de workload do Copilot, como Request-Driven Web Service, Load Balanced Web Service e Scheduled Job](/images/copilot-4.jpg)
+![Lista de tipos de workload do Copilot, como Request-Driven Web Service, Load Balanced Web Service e Scheduled Job](/images/copilot-4.webp)
 
 Agora você deve escolher um nome para seu serviço. No meu caso será
 teste-app-blog-svc conforme abaixo:
 
-![Copilot perguntando o nome do serviço, preenchido com teste-app-blog-svc](/images/copilot-5.jpg)
+![Copilot perguntando o nome do serviço, preenchido com teste-app-blog-svc](/images/copilot-5.webp)
 
 Agora será solicitado a localização do arquivo Dockerfile ou a
 localização de uma imagem da aplicação. Vamos utilizar o arquivo
 Dockerfile que está na raiz do repositório.
 
-![Copilot perguntando qual Dockerfile usar, com ./Dockerfile selecionado](/images/copilot-6.jpg)
+![Copilot perguntando qual Dockerfile usar, com ./Dockerfile selecionado](/images/copilot-6.webp)
 
 Nesse próximo passo será criado todas as roles de infraestrutura
 necessárias para o funcionamento da nossa aplicação. Após essa criação
 será perguntado se você gostaria de fazer deploy da sua aplicação
 conforme imagem abaixo:
 
-![Copilot criando as roles de infraestrutura da aplicação e o manifest do serviço, e perguntando se deve fazer deploy de um environment](/images/copilot-7.jpg)
+![Copilot criando as roles de infraestrutura da aplicação e o manifest do serviço, e perguntando se deve fazer deploy de um environment](/images/copilot-7.webp)
 
 Na próxima tela será solicitado a criação de um environment. Esse
 environment terá o nome de dev conforme imagem abaixo:
 
-![Copilot perguntando o nome do environment, preenchido com dev](/images/copilot-8.jpg)
+![Copilot perguntando o nome do environment, preenchido com dev](/images/copilot-8.webp)
 
 Na próxima tela será criado toda a parte de infraestrutura como por
 exemplo repositório do ECR, um bucket S3, toda parte de network e o seu
 cluster ECS.
 
-![Copilot criando o environment dev em sa-east-1 com VPC, subnets, Internet Gateway e cluster ECS](/images/copilot-9.jpg)
+![Copilot criando o environment dev em sa-east-1 com VPC, subnets, Internet Gateway e cluster ECS](/images/copilot-9.webp)
 
 Na próxima tela o AWS copilot CLI irá fazer o build da imagem da nossa
 aplicação e fazer o push para o repositório ECR criado anteriormente
 conforme abaixo:
 
-![Build da imagem Docker do serviço e push para o repositório no ECR](/images/copilot-10.jpg)
+![Build da imagem Docker do serviço e push para o repositório no ECR](/images/copilot-10.webp)
 
 Na próxima tela a aplicação será configurada dentro do cluster ECS, será
 feito o deploy e será disponibilizado a URL da nossa aplicação conforme
 image abaixo:
 
-![Copilot criando o load balancer, a task definition e o serviço ECS e exibindo a URL do serviço](/images/copilot-11.jpg)
+![Copilot criando o load balancer, a task definition e o serviço ECS e exibindo a URL do serviço](/images/copilot-11.webp)
 
 Acessando a URL da aplicação deve retornar uma página similar a abaixo:
 
-![Navegador acessando a URL do load balancer e exibindo a página com o logo do AWS Copilot](/images/copilot-12.jpg)
+![Navegador acessando a URL do load balancer e exibindo a página com o logo do AWS Copilot](/images/copilot-12.webp)
 
 ## Interagindo com AWS Copilot CLI 
 
@@ -158,19 +158,19 @@ alguns exemplos:
 copilot svc status
 ```
 
-![Saída do copilot svc status com a task em execução e os health checks saudáveis](/images/copilot-13.jpg)
+![Saída do copilot svc status com a task em execução e os health checks saudáveis](/images/copilot-13.webp)
 
 ``` bash
 copilot svc ls
 ```
 
-![Saída do copilot svc ls listando o serviço teste-app-blog-svc do tipo Load Balanced Web Service](/images/copilot-14.jpg)
+![Saída do copilot svc ls listando o serviço teste-app-blog-svc do tipo Load Balanced Web Service](/images/copilot-14.webp)
 
 ``` bash
 copilot app show
 ```
 
-![Saída do copilot app show com a aplicação teste-app-blog, o environment dev em sa-east-1 e o serviço](/images/copilot-15.jpg)
+![Saída do copilot app show com a aplicação teste-app-blog, o environment dev em sa-east-1 e o serviço](/images/copilot-15.webp)
 
 Existem muitas outras opções que você pode utilizar com o AWS copilot
 CLI.
@@ -187,7 +187,7 @@ Será solicitado uma confirmação e depois será feito processo de exclusão
 de todos os recursos criados pelo AWS copilot CLI conforme imagem
 abaixo:
 
-![Saída do copilot app delete removendo o serviço, o environment e os recursos da aplicação](/images/copilot-16.jpg)
+![Saída do copilot app delete removendo o serviço, o environment e os recursos da aplicação](/images/copilot-16.webp)
 
 ## Conclusão 
 

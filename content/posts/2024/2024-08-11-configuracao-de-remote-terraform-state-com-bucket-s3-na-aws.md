@@ -1,7 +1,7 @@
 ---
 title: "Configuração de Remote Terraform State com Bucket S3 na AWS"
 description: "Como configurar o Terraform state remoto em um bucket S3 na AWS em vez de mantê-lo localmente."
-image: "/images/terraform.jpg"
+image: "/images/terraform.png"
 author: Jason
 date: 2024-08-11
 tags: [ "IaC", "AWS", "Terraform" ]
@@ -9,7 +9,7 @@ type: post
 showTableOfContents: true
 ---
 
-![Configuração de Remote Terraform State com Bucket S3 na AWS](/images/terraform.jpg)
+![Configuração de Remote Terraform State com Bucket S3 na AWS](/images/terraform.png)
 
 O objetivo desse post é fazer a configuração de um remote terraform
 state usando um bucket s3 em vez de deixar seu terraform state
@@ -40,7 +40,7 @@ que escrevi há um tempo atrás.
 Para a nossa configuração vamos anexar a policy **AdmistratorAccess** no
 nosso usuário **blog** conforme imagem abaixo:
 
-![Console do IAM com a policy AdministratorAccess anexada ao usuário blog](/images/terraform-2.jpg)
+![Console do IAM com a policy AdministratorAccess anexada ao usuário blog](/images/terraform-2.webp)
 
 Foi anexada essa policy pois é apenas um lab para ambientes produtivos
 devem ser colocadas as devidas permissões.
@@ -52,7 +52,7 @@ armazenar o nosso terraform state. Para isso devemos ir na console de
 administração da AWS procurar pelo serviço S3 e clicar em **Create
 Bucket** deve ser apresentado a tela abaixo:
 
-![Tela Create bucket no console do S3](/images/terraform-3.jpg)
+![Tela Create bucket no console do S3](/images/terraform-3.webp)
 
 No meu caso vou colocar o nome do bucket de terraform-blog-jason e outro
 detalhe é que esse bucket será criado na região us-east-1.
@@ -60,19 +60,19 @@ detalhe é que esse bucket será criado na região us-east-1.
 Devemos deixar habilitado a opção **Block all public access** conforme
 imagem abaixo:
 
-![Opção Block all public access habilitada na criação do bucket S3](/images/terraform-4.jpg)
+![Opção Block all public access habilitada na criação do bucket S3](/images/terraform-4.webp)
 
 Depois disso vamos clicar no botão **Create bucket** no final da tela.
 Com isso o nosso bucket será criado conforme imagem abaixo:
 
-![Bucket terraform-blog-jason criado no console do S3](/images/terraform-5.jpg)
+![Bucket terraform-blog-jason criado no console do S3](/images/terraform-5.webp)
 
 ## Criação repositório Github 
 
 Agora vamos criar um repositório no Github para armazenar os nossos
 arquivos de configurações do terraform conforme abaixo:
 
-![Criação do repositório no GitHub com o template de .gitignore do Terraform](/images/terraform-6.jpg)
+![Criação do repositório no GitHub com o template de .gitignore do Terraform](/images/terraform-6.webp)
 
 Na opção Add .gitignore adicionar o template do Terraform. Segue o link
 do [repositório](https://github.com/jjasonhenrique/terraform-blog-jason)
@@ -177,12 +177,12 @@ terraform init
 
 A saída do comando deve ser similar a abaixo:
 
-![Saída do comando terraform init configurando o backend S3](/images/terraform-7.jpg)
+![Saída do comando terraform init configurando o backend S3](/images/terraform-7.webp)
 
 Agora vamos executar o comando terraform plan para validar o que será
 criado na AWS. A saída deve ser similar a abaixo:
 
-![Saída do comando terraform plan com o cluster ECS que será criado](/images/terraform-8.jpg)
+![Saída do comando terraform plan com o cluster ECS que será criado](/images/terraform-8.webp)
 
 Agora vamos executar o comando terraform apply -auto-approve para a
 criação do recurso na AWS.
@@ -190,12 +190,12 @@ criação do recurso na AWS.
 Para validar vamos no serviço ECS e verificar se o cluster ECS foi
 criado. Deve ter criado conforme imagem abaixo:
 
-![Cluster ECS teste-blog criado no console da AWS](/images/terraform-9.jpg)
+![Cluster ECS teste-blog criado no console da AWS](/images/terraform-9.webp)
 
 Também vamos validar se foi criado um arquivo terraform.tfstate no
 bucket conforme imagem abaixo:
 
-![Arquivo terraform.tfstate gravado no bucket S3](/images/terraform-10.jpg)
+![Arquivo terraform.tfstate gravado no bucket S3](/images/terraform-10.webp)
 
 Para destruir o recurso criado na AWS para esse teste executar o comando
 abaixo:

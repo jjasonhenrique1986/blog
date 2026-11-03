@@ -1,7 +1,7 @@
 ---
 title: "Instalando a ferramenta kubecost"
 description: "Passo a passo da instalação do Kubecost, ferramenta de monitoramento e gerenciamento de custos para Kubernetes e cloud."
-image: "/images/kubecost.jpg"
+image: "/images/kubecost.png"
 author: Jason
 date: 2023-01-04
 tags: [ "AWS", "FinOps", "Kubernetes" ]
@@ -9,7 +9,7 @@ type: post
 showTableOfContents: true
 ---
 
-![Instalando a ferramenta kubecost](/images/kubecost.jpg)
+![Instalando a ferramenta kubecost](/images/kubecost.png)
 
 > **Atualização (novembro de 2026):** o Kubecost foi comprado pela IBM em
 > 2024. A documentação oficial agora fica no
@@ -66,11 +66,11 @@ kubectl apply -f https://raw.githubusercontent.com/kubecost/cost-analyzer-helm-c
 
 Será deployado os seguintes objetos conforme imagem abaixo:
 
-![Saída do kubectl apply criando os objetos do Kubecost no namespace kubecost](/images/kubecost-2.jpg)
+![Saída do kubectl apply criando os objetos do Kubecost no namespace kubecost](/images/kubecost-2.webp)
 
 Abaixo overview dos objetos deployados pelo kubecost
 
-![Saída do kubectl get all no namespace kubecost com pods, services, daemonset e deployments em execução](/images/kubecost-3.jpg)
+![Saída do kubectl get all no namespace kubecost com pods, services, daemonset e deployments em execução](/images/kubecost-3.webp)
 
 Na instalação default é efetuado a instalação de um deploy do
 prometheus-server que será responsável por coletar as informações do
@@ -88,9 +88,9 @@ port-forward para testar localmente. Segue abaixo comando:
 
 Abaixo alguns prints da console do kubecost
 
-![Tela Overview do Kubecost com custos do cluster, economia possível e gráfico de tendência de custo](/images/kubecost-4.jpg)
+![Tela Overview do Kubecost com custos do cluster, economia possível e gráfico de tendência de custo](/images/kubecost-4.webp)
 
-![Tela Overview do Kubecost com o custo por namespace e a seção Cloud Costs Breakdown](/images/kubecost-5.jpg)
+![Tela Overview do Kubecost com o custo por namespace e a seção Cloud Costs Breakdown](/images/kubecost-5.webp)
 
 ## Conclusão 
 

@@ -1,7 +1,7 @@
 ---
 title: "Conhecendo um pouco sobre o kyverno"
 description: "Introdução ao Kyverno, dynamic admission controller do Kubernetes: instalação e criação de uma policy do tipo validation."
-image: "/images/kyverno.jpg"
+image: "/images/kyverno.png"
 author: Jason
 date: 2023-10-29
 tags: [ "Kubernetes", "Segurança", "Containers" ]
@@ -9,7 +9,7 @@ type: post
 showTableOfContents: true
 ---
 
-![Conhecendo um pouco sobre o kyverno](/images/kyverno.jpg)
+![Conhecendo um pouco sobre o kyverno](/images/kyverno.png)
 
 O Objectivo desse artigo é demonstrar a utilização da ferramenta kyverno
 dentro de um ambiente kubernetes. O kyverno é um dynamic admission
@@ -142,7 +142,7 @@ kubectl get clusterpolicy
 
 Deve apresentar uma saída similar com a imagem abaixo:
 
-![Saída do kubectl mostrando a policy require-labels em modo Audit e com status Ready](/images/kyverno-2.jpg)
+![Saída do kubectl mostrando a policy require-labels em modo Audit e com status Ready](/images/kyverno-2.png)
 
 Para testar vamos criar um arquivo de deployment sem as labels owner e
 environment conforme o arquivo abaixo:
@@ -190,7 +190,7 @@ kubectl get events -n app
 Onde **app** e o namespace onde o deployment foi aplicado. Nos eventos
 devera aparecer uma saída similar com a imagem abaixo:
 
-![Eventos PolicyViolation gerados pelo Kyverno porque o deployment e o pod não têm as labels owner e environment](/images/kyverno-3.jpg)
+![Eventos PolicyViolation gerados pelo Kyverno porque o deployment e o pod não têm as labels owner e environment](/images/kyverno-3.webp)
 
 Agora vamos alterar a clusterpolicy para que seja obrigatório a presença
 das labels owner e environment. Caso essas labels não estejam presentes
@@ -222,7 +222,7 @@ Após isso tentar aplicar o deployment novamente usando o comando
 kubectl. Deverá aparecer a seguinte mensagem de erro conforme imagem
 abaixo:
 
-![Erro do admission webhook do Kyverno bloqueando a criação do deployment sem as labels owner e environment](/images/kyverno-4.jpg)
+![Erro do admission webhook do Kyverno bloqueando a criação do deployment sem as labels owner e environment](/images/kyverno-4.webp)
 
 Para resolver essa mensagem de erro deve ser inserido as labels owner e
 environment conforme abaixo:

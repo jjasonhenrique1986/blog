@@ -1,7 +1,7 @@
 ---
 title: "Minha Jornada para certificação AWS SysOps Administrator"
 description: "Como me preparei em 1 mês para a certificação AWS Certified SysOps Administrator Associate (SOA-C02) e os materiais que usei."
-image: "/images/soa.jpg"
+image: "/images/soa.png"
 author: Jason
 date: 2024-05-03
 tags: [ "AWS", "Certificações" ]
@@ -9,7 +9,7 @@ type: post
 showTableOfContents: true
 ---
 
-![Minha Jornada para certificação AWS SysOps Administrator](/images/soa.jpg)
+![Minha Jornada para certificação AWS SysOps Administrator](/images/soa.png)
 
 No último dia 2 de Maio fui aprovado na certificação AWS Certified
 SysOps Administrator Associate (SOA-C02) e com isso resolvi compartilhar

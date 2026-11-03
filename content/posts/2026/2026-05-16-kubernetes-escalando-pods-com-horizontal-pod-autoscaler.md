@@ -1,7 +1,7 @@
 ---
 title: "Kubernetes: escalando pods automaticamente com o Horizontal Pod Autoscaler"
 description: "Como configurar o Horizontal Pod Autoscaler (HPA) no Kubernetes com o metrics-server, gerar carga e ver os pods escalando, usando um cluster local com kind."
-image: "/images/kubernetes.jpg"
+image: "/images/kubernetes.png"
 author: Jason
 date: 2026-05-16
 tags: [ "Kubernetes", "Containers" ]
@@ -9,7 +9,7 @@ type: post
 showTableOfContents: true
 ---
 
-![Kubernetes: escalando pods automaticamente com o Horizontal Pod Autoscaler](/images/kubernetes.jpg)
+![Kubernetes: escalando pods automaticamente com o Horizontal Pod Autoscaler](/images/kubernetes.png)
 
 O objetivo desse artigo é demonstrar como usar o **Horizontal Pod
 Autoscaler (HPA)** para aumentar e diminuir automaticamente a quantidade

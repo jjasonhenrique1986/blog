@@ -1,7 +1,7 @@
 ---
 title: "Testando o falco em uma máquina virtual"
 description: "Segundo artigo sobre o Falco: instalação em uma máquina virtual na AWS e alteração do output de uma regra."
-image: "/images/falco.jpg"
+image: "/images/falco.png"
 author: Jason
 date: 2023-11-22
 tags: [ "Kubernetes", "Segurança", "Containers", "AWS" ]
@@ -9,7 +9,7 @@ type: post
 showTableOfContents: true
 ---
 
-![Testando o falco em uma máquina virtual](/images/falco.jpg)
+![Testando o falco em uma máquina virtual](/images/falco.png)
 
 O objetivo deste segundo artigo falando sobre a ferramenta falco é
 demonstrar a utilização do falco instalando em uma máquina virtual na
@@ -67,7 +67,7 @@ apt-get install -y falco
 
 Deve ser escolhido a opção eBPF conforme abaixo:
 
-![Tela de instalação do Falco para escolher o driver, com a opção eBPF selecionada](/images/falco-4.jpg)
+![Tela de instalação do Falco para escolher o driver, com a opção eBPF selecionada](/images/falco-4.webp)
 
 Para verificar se o falco foi instalado com sucesso deve ser executado o
 comando abaixo:
@@ -78,7 +78,7 @@ systemctl status falco-bpf
 
 Deve apresentar uma saída conforme tela abaixo:
 
-![Saída do systemctl status com o serviço falco-bpf ativo na máquina virtual](/images/falco-5.jpg)
+![Saída do systemctl status com o serviço falco-bpf ativo na máquina virtual](/images/falco-5.webp)
 
 ## Demonstração 
 
@@ -97,7 +97,7 @@ grep Sensitive /var/log/syslog
 
 Deve apresentar a seguinte saída:
 
-![Alertas do Falco de arquivo sensível /etc/shadow aberto por um programa não confiável](/images/falco-6.jpg)
+![Alertas do Falco de arquivo sensível /etc/shadow aberto por um programa não confiável](/images/falco-6.webp)
 
 ## Alteração regra do Falco 
 
@@ -110,11 +110,11 @@ Primeiramente vamos copiar o conteudo abaixo da linha 396 ate 431 para o
 arquivo /etc/falco_rule.local.yaml. É uma boa prática colocar as regras
 customizadas nesse arquivo.
 
-![Regra Read sensitive file untrusted no arquivo de regras do Falco, com condição, output e prioridade](/images/falco-7.jpg)
+![Regra Read sensitive file untrusted no arquivo de regras do Falco, com condição, output e prioridade](/images/falco-7.webp)
 
 A seção output deve ser alterada conforme abaixo:
 
-![Linha output da regra alterada para exibir a mensagem ACESSO INDEVIDO](/images/falco-8.jpg)
+![Linha output da regra alterada para exibir a mensagem ACESSO INDEVIDO](/images/falco-8.webp)
 
 Depois devemos salavar o arquivo **/etc/falco_rule.local.yaml**, parar e
 iniciar o serviço do falco usando os comandos abaixo:
@@ -139,7 +139,7 @@ grep ACESSO /var/log/syslog
 
 Por fim deve apresentar uma saída conforme abaixo:
 
-![Alertas do Falco com a nova mensagem ACESSO INDEVIDO ao ler o /etc/shadow](/images/falco-9.jpg)
+![Alertas do Falco com a nova mensagem ACESSO INDEVIDO ao ler o /etc/shadow](/images/falco-9.webp)
 
 ## Conclusão 
 
