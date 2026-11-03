@@ -140,7 +140,6 @@ grep ACESSO /var/log/syslog
 Por fim deve apresentar uma saída conforme abaixo:
 
 ![Alertas do Falco com a nova mensagem ACESSO INDEVIDO ao ler o /etc/shadow](/images/falco-9.jpg)
-</figure>
 
 ## Conclusão 
 

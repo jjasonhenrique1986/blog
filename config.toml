@@ -1,5 +1,5 @@
 baseURL = 'https://blog.jjasonhenrique.com.br/'
-languageCode = 'pt-BR'
+locale = 'pt-BR'
 defaultContentLanguage = 'pt'
 title = 'Jason Henrique'
 theme = 'gokarna'
