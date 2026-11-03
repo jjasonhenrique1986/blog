@@ -19,8 +19,8 @@ problemas bem comuns: aplicação travada que nunca é reiniciada e
 aplicação recebendo requisições antes de estar pronta.
 
 Para os testes vamos usar um cluster local com o kind. Se ainda não tem
-um, você pode seguir esse
-[link](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/).
+um, veja [como criar um cluster local com o
+kind](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/).
 
 ## Pré-requisitos
 

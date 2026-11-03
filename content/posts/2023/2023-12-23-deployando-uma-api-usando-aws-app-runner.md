@@ -13,12 +13,13 @@ showTableOfContents: true
 
 Nesse segundo artigo falando sobre o App Runner vou demonstrar a criação
 de uma API feita com FastAPI que retorna um Hello World. O código-fonte
-dessa API está no GitHub, no seguinte
-[repositório](https://github.com/jjasonhenrique/apprunner-example.git).
+dessa API está no repositório
+[apprunner-example](https://github.com/jjasonhenrique/apprunner-example.git),
+no GitHub.
 
-Para conferir meu primeiro artigo falando sobre o AWS App Runner basta
-acessar o seguinte
-[link](/posts/2023/2023-12-02-usando-o-aws-app-runner-para-subir-uma-aplicacao/).
+O primeiro artigo sobre o App Runner é o [Usando o AWS App Runner para
+subir uma
+aplicação](/posts/2023/2023-12-02-usando-o-aws-app-runner-para-subir-uma-aplicacao/).
 
 ## Pré-requisitos 
 
@@ -82,9 +83,9 @@ as opções de build conforme imagem abaixo:
 
 Na próxima tela vamos configurar o nome do serviço, utilização de CPU e
 memória, configuração de Autoscaling, configuração de Health Check e
-outros. Para mais informações sobre essas configurações consultar o
-primeiro artigo sobre o AWS App Runner nesse
-[link](/posts/2023/2023-12-02-usando-o-aws-app-runner-para-subir-uma-aplicacao/).
+outros. Para mais informações sobre essas configurações consulte o
+[primeiro artigo sobre o AWS App
+Runner](/posts/2023/2023-12-02-usando-o-aws-app-runner-para-subir-uma-aplicacao/).
 
 ![Configuração do serviço API-Python com 0,25 vCPU e 0,5 GB de memória](/images/apprunner-19.webp)
 

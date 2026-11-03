@@ -98,16 +98,16 @@ para retornar à tela inicial, conforme abaixo:
 
 ![Access key ativa na aba Security credentials do usuário, com o ID censurado](/images/iam-10.webp)
 
-Nesse
-[link](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#securing_access-keys)
-você tem boas práticas para o gerenciamento de AWS access keys na AWS.
+A AWS tem uma página com [boas práticas para o gerenciamento de access
+keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#securing_access-keys).
 
 ## Instalação AWS CLI 
 
 Agora vamos fazer a instalação do AWS CLI para podermos configurar o
 **Access key** e o **Secret access key** gerados no passo anterior.
-Abaixo os comandos para instalação. Para mais informações consultar esse
-[link](https://docs.aws.amazon.com/pt_br/cli/latest/userguide/getting-started-install.html).
+Abaixo os comandos para instalação. Para mais informações, consulte o
+[guia de instalação do AWS
+CLI](https://docs.aws.amazon.com/pt_br/cli/latest/userguide/getting-started-install.html).
 
 ```bash
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"

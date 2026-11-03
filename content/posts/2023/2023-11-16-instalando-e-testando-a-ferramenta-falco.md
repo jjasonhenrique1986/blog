@@ -33,15 +33,13 @@ O falco também é um dos tópicos abordados no exame de certificação CKS
 Nessa demonstração do funcionamento do falco vamos precisar dos
 seguintes pré-requisitos:
 
--   Cluster Kubernetes local, que pode ser criado com o kind. Mais
-    informações nesse
-    [link](https://kind.sigs.k8s.io/docs/user/quick-start/). Também criei esse
-    [artigo](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/)
-    para ajudar no processo de criação de um cluster local.
--   Helm instalado. Mais informações nesse
-    [link](https://helm.sh/docs/intro/install/).
--   kubectl instalado. Mais informações nesse
-    [link](https://kubernetes.io/docs/tasks/tools/).
+-   Cluster Kubernetes local, que pode ser criado com o kind (veja o
+    [quick start do
+    kind](https://kind.sigs.k8s.io/docs/user/quick-start/) ou o meu
+    passo a passo [Criando um cluster local de kubernetes com o
+    kind](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/)).
+-   [Helm instalado](https://helm.sh/docs/intro/install/).
+-   [kubectl instalado](https://kubernetes.io/docs/tasks/tools/).
 
 ## Instalação 
 

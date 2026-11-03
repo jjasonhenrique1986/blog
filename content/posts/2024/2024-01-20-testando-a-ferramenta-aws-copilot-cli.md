@@ -23,8 +23,8 @@ ECS. Com o AWS Copilot CLI também é possível gerenciar
 toda a infraestrutura da aplicação, como a infraestrutura como código, o
 armazenamento, os segredos e a pipeline, tudo via linha de comando.
 
-Para mais informações sobre o AWS Copilot CLI acessar esse
-[link](https://aws.github.io/copilot-cli/docs/overview/).
+Para mais informações, veja a [documentação do AWS Copilot
+CLI](https://aws.github.io/copilot-cli/docs/overview/).
 
 ## Pré-requisitos 
 
@@ -48,16 +48,16 @@ Deve ser apresentada uma tela similar à abaixo:
 
 ![Saída do copilot -h com os comandos disponíveis do Copilot CLI](/images/copilot-2.webp)
 
-No meu caso, utilizei um computador com Linux. Para outros
-sistemas operacionais consultar esse
-[link](https://aws.github.io/copilot-cli/docs/getting-started/install/).
+No meu caso, utilizei um computador com Linux. Para outros sistemas
+operacionais, consulte o [guia de instalação do
+Copilot](https://aws.github.io/copilot-cli/docs/getting-started/install/).
 
 ## Configuração usuário AWS IAM 
 
 Como pré-requisito para usar o AWS Copilot CLI, é necessário configurar
-um usuário IAM no seu computador. Para fazer essa
-configuração pode seguir esse
-[artigo](/posts/2024/2024-01-07-criando-e-configurando-um-usuario-iam/).
+um usuário IAM no seu computador. Para isso, siga o post [Criando e
+configurando um usuário
+IAM](/posts/2024/2024-01-07-criando-e-configurando-um-usuario-iam/).
 
 Para esse teste vou usar a policy **AdministratorAccess**. Caso utilize
 um profile diferente do default no arquivo .aws/credentials será
@@ -77,9 +77,9 @@ echo $AWS_PROFILE
 
 ## Deploy da Aplicação 
 
-Para testar o AWS Copilot CLI vamos fazer o deploy da aplicação que está
-nesse
-[repositório](https://github.com/aws-samples/amazon-ecs-cli-sample-app.git).
+Para testar o AWS Copilot CLI vamos fazer o deploy da aplicação de
+exemplo
+[amazon-ecs-cli-sample-app](https://github.com/aws-samples/amazon-ecs-cli-sample-app.git).
 O primeiro passo é fazer o git clone desse repositório
 usando o comando abaixo:
 

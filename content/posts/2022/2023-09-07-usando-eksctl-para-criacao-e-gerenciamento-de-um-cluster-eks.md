@@ -76,7 +76,8 @@ Ou digitando apenas eksctl deve retornar a saída abaixo:
 
 ![Saída do comando eksctl sem argumentos, listando os subcomandos disponíveis](/images/eksctl-2.webp)
 
-Para mais detalhes sobre a instalação pode consultar esse [link](https://eksctl.io/introduction/#installation)
+Para mais detalhes, consulte a [documentação de instalação do
+eksctl](https://eksctl.io/introduction/#installation).
 
 ## Pré-requisitos 
 
@@ -85,13 +86,15 @@ Para mais detalhes sobre a instalação pode consultar esse [link](https://eksc
 ![Tabela com as permissões mínimas do eksctl por serviço: CloudFormation, EC2, EC2 Auto Scaling, EKS, IAM e Systems Manager](/images/eksctl-3.webp)
 
 Para mais informações sobre as permissões necessárias para o eksctl
-funcionar acesse
-esse [link](https://eksctl.io/usage/minimum-iam-policies/). Abaixo, como
+funcionar, veja as [políticas mínimas de IAM do
+eksctl](https://eksctl.io/usage/minimum-iam-policies/). Abaixo, como
 ficaram as minhas políticas no IAM:
 
 ![Console do IAM com as quatro policies anexadas ao usuário: AmazonEC2FullAccess, AWSCloudFormationFullAccess, IamLimitedAccess e EksAllAccess](/images/eksctl-4.webp)
 
-Para instruções de como criar um usuário na AWS consulte este [link](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html).
+Para criar um usuário na AWS, siga a [documentação de criação de
+usuários do
+IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html).
 
 - AWS CLI instalado. Segue abaixo procedimento para a instalação:
 
@@ -103,8 +106,8 @@ sudo ./aws/install
 
 Dependendo da distribuição Linux será necessário instalar o unzip.
 
-Para mais informações sobre a instalação do aws cli consulte
-esse [link](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
+Para mais informações, consulte o [guia de instalação do AWS
+CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
 - Kubectl instalado. Segue abaixo procedimento para a instalação:
 
@@ -112,7 +115,8 @@ esse [link](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-in
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"chmod +x ./kubectlmv ./kubectl /usr/local/bin/ 
 ```
 
-Para mais informações sobre a instalação do kubectl consulte esse [link](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/).
+Para mais informações, consulte o [guia de instalação do kubectl no
+Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/).
 
 ## Criando seu primeiro cluster EKS com eksctl 
 

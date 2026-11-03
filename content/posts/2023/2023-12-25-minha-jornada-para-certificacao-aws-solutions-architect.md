@@ -44,16 +44,16 @@ Abaixo seguem os domínios que são exigidos na prova:
 -   Domínio 4: Criação de arquiteturas com custo otimizado (20% do
     conteúdo pontuado)
 
-Para mais informações sobre a prova acessar esse
-[link](https://d1.awsstatic.com/pt_BR/training-and-certification/docs-sa-assoc/AWS-Certified-Solutions-Architect-Associate_Exam-Guide.pdf).
+Para mais informações, veja o [guia do exame SAA-C03
+(PDF)](https://d1.awsstatic.com/pt_BR/training-and-certification/docs-sa-assoc/AWS-Certified-Solutions-Architect-Associate_Exam-Guide.pdf).
 
 ## Minha Preparação 
 
 Minha principal fonte de estudo foi o curso da Udemy do Stephane Maarek
 onde procurei colocar em prática todos os exemplos de labs que o
-Stephane executa durante o curso. Nesse
-[link](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/)
-você encontra mais informações sobre o curso.
+Stephane executa durante o curso. Veja o [curso de Solutions Architect
+do Stephane Maarek na
+Udemy](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03/).
 
 Abaixo alguns tópicos e serviços que vale destacar que poderão ser
 cobrados no exame:
@@ -77,11 +77,13 @@ cobrados no exame:
 ## Simulados 
 
 O principal simulado que utilizei foi o da Whizlabs, que na minha opinião é
-o simulado mais parecido com o exame. Para mais informações acesse esse
-[link](https://www.whizlabs.com/learn/course/aws-solutions-architect-associate/153).
+o simulado mais parecido com o exame. Veja o [simulado de Solutions
+Architect da
+Whizlabs](https://www.whizlabs.com/learn/course/aws-solutions-architect-associate/153).
 
-Outro simulado que recomendo para a sua preparação é esse
-[simulado](https://www.udemy.com/course/practice-exams-aws-certified-solutions-architect-associate/).
+Outro simulado que recomendo para a sua preparação é o [simulado de
+Solutions Architect na
+Udemy](https://www.udemy.com/course/practice-exams-aws-certified-solutions-architect-associate/).
 
 ## Conclusão
 

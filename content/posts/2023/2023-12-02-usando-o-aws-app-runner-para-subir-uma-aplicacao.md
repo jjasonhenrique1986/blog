@@ -22,14 +22,13 @@ aplicações web e APIs sem precisar gerenciar a infraestrutura, como load
 balancer e autoscaling. Com ele, é possível subir uma aplicação
 rapidamente.
 
-Para mais informações sobre esse serviço da AWS consultar esse
-[link](https://aws.amazon.com/pt/apprunner/).
+Para mais informações, veja a [página do AWS App
+Runner](https://aws.amazon.com/pt/apprunner/).
 
 ## Aplicação usando um ECR Público 
 
-Vamos subir essa aplicação que está localizada em um ECR público
-conforme esse
-[link](https://gallery.ecr.aws/aws-containers/hello-app-runner).
+Vamos subir essa aplicação que está no ECR público: a imagem
+[hello-app-runner](https://gallery.ecr.aws/aws-containers/hello-app-runner).
 
 Acesse a sua conta da AWS, procure pelo serviço **AWS App Runner** e
 clique na opção **Create an App Runner Service**. Será apresentada a

@@ -24,8 +24,9 @@ necessários os seguintes pré-requisitos:
 -   Ter o helm instalado.
 -   Ter o kubectl instalado.
 -   Ter uma conta no GitHub.
--   Ter um cluster local usando kind. Mais informações nesse
-    [link](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/).
+-   Ter um cluster local usando o kind, como mostrei em [Criando um
+    cluster local de kubernetes com o
+    kind](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/).
 
 ## Conceitos 
 
@@ -58,9 +59,9 @@ conforme comando abaixo:
 kubectl create namespace argocd
 ```
 
-Vamos fazer a instalação do ArgoCD utilizando o Helm. Nesse
-[link](https://artifacthub.io/packages/helm/argo-cd-oci/argo-cd) você
-terá mais informações sobre esse helm chart.
+Vamos fazer a instalação do ArgoCD utilizando o Helm. Mais informações
+na [página do chart do ArgoCD no Artifact
+Hub](https://artifacthub.io/packages/helm/argo-cd-oci/argo-cd).
 
 Abaixo o comando utilizado para a instalação do ArgoCD:
 
@@ -141,8 +142,9 @@ spec:
         name: nginx
 ```
 
-Se quiser, pode usar o repositório que criei para esse artigo neste
-[link](https://github.com/jjasonhenrique/nginx-example).
+Se quiser, pode usar o repositório
+[nginx-example](https://github.com/jjasonhenrique/nginx-example), que
+criei para esse artigo.
 
 ## Criando a conexão entre um repositório git e o ArgoCD 
 

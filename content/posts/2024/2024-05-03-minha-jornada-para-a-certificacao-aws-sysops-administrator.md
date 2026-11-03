@@ -52,16 +52,16 @@ Abaixo seguem os domínios que são exigidos na prova:
 -   Domain 6: Cost and Performance Optimization (12% do conteúdo
     pontuado)
 
-Para mais informações sobre a prova acessar
-esse [link](https://d1.awsstatic.com/training-and-certification/docs-sysops-associate/AWS-Certified-SysOps-Administrator-Associate_Exam-Guide.pdf).
+Para mais informações, veja o [guia do exame SOA-C02
+(PDF)](https://d1.awsstatic.com/training-and-certification/docs-sysops-associate/AWS-Certified-SysOps-Administrator-Associate_Exam-Guide.pdf).
 
 ## Minha Preparação 
 
 Minha principal fonte de estudo foi o curso da Udemy do Stephane Maarek
 onde procurei colocar em prática todos os exemplos de labs que o
 Stephane executa durante o curso.
-Nesse [link](https://www.udemy.com/course/ultimate-aws-certified-sysops-administrator-associate) você
-encontra mais informações sobre o curso.
+Veja o [curso de SysOps do Stephane Maarek na
+Udemy](https://www.udemy.com/course/ultimate-aws-certified-sysops-administrator-associate).
 
 Abaixo alguns tópicos e serviços que vale destacar que poderão ser
 cobrados no exame:
@@ -93,11 +93,12 @@ cobrados no exame:
 ## Simulados 
 
 O principal simulado que utilizei foi o da Whizlabs, que na minha opinião é
-o simulado mais parecido com o exame. Para mais informações acesse
-esse [link](https://www.whizlabs.com/aws-sysops-administrator-associate/).
+o simulado mais parecido com o exame. Veja o [simulado de SysOps da
+Whizlabs](https://www.whizlabs.com/aws-sysops-administrator-associate/).
 
-Outro simulado que recomendo para a sua preparação é
-esse [simulado](https://www.udemy.com/course/aws-certified-sysops-administrator-associate-practice-exams-soa-c02/).
+Outro simulado que recomendo para a sua preparação é o [simulado de
+SysOps na
+Udemy](https://www.udemy.com/course/aws-certified-sysops-administrator-associate-practice-exams-soa-c02/).
 
 ## Conclusão 
 

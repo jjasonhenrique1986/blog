@@ -25,9 +25,8 @@ Azure e GCP) que você utiliza.
 ## Pré-requisitos
 
 Como pré-requisito, é necessário já ter feito a instalação do Kubecost.
-Para fazer a instalação, basta seguir
-esse [link](/posts/2023/2023-01-04-instalando-a-ferramenta-kubecost/) com
-as instruções.
+Para fazer a instalação, siga o post [Instalando a ferramenta
+kubecost](/posts/2023/2023-01-04-instalando-a-ferramenta-kubecost/).
 
 ## Overview da console do Kubecost 
 
@@ -46,8 +45,8 @@ As seguintes informações estão disponíveis:
 
 - Custo total do Kubernetes nos últimos 7 dias;
 - Custo total da Cloud nos últimos 7 dias (é necessária a integração com
-  o cloud provider; mais informações
-  nesse [link](https://docs.kubecost.com/install-and-configure/install/cloud-integration/multi-cloud));
+  o cloud provider; veja a [documentação de integração com cloud do
+  Kubecost](https://docs.kubecost.com/install-and-configure/install/cloud-integration/multi-cloud));
 - Custo total dos últimos 7 dias;
 - Possible Savings são recomendações que podem ser aplicadas ao
     ambiente;
@@ -135,6 +134,5 @@ Abaixo tipos de alertas que podem ser criados:
 ## Conclusão 
 
 O intuito desse post foi fazer um overview sobre a console de
-administração do kubecost. Para mais informações do kubecost pode
-consultar a documentação através
-desse [link](https://docs.kubecost.com/).
+administração do kubecost. Para mais informações, consulte a
+[documentação do Kubecost](https://docs.kubecost.com/).

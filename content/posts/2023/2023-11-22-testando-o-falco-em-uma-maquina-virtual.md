@@ -15,8 +15,8 @@ O objetivo deste segundo artigo falando sobre a ferramenta falco é
 demonstrar a utilização do falco instalando em uma máquina virtual na
 AWS e fazer uma alteração no output de uma regra do falco.
 
-Para ler meu primeiro artigo sobre o falco basta acessar esse
-[link](/posts/2023/2023-11-16-instalando-e-testando-a-ferramenta-falco/).
+O primeiro artigo é o [Instalando e testando a ferramenta
+Falco](/posts/2023/2023-11-16-instalando-e-testando-a-ferramenta-falco/).
 Nesse artigo eu instalei o falco no Kubernetes.
 
 ## Pré-requisitos 
@@ -145,5 +145,5 @@ Por fim deve apresentar uma saída conforme abaixo:
 O objetivo desse artigo era fazer a instalação do falco em uma máquina
 virtual e também a alteração de uma regra do falco.
 
-Para mais informações sobre as regras padrão do Falco, acesse esse
-[link](https://falco.org/docs/rules/).
+Para mais informações, veja a [documentação de regras do
+Falco](https://falco.org/docs/rules/).

@@ -18,8 +18,8 @@ na aplicação e acompanhar o HPA criando novos pods e, depois, removendo
 os pods quando a carga acaba.
 
 Para os testes vamos usar um cluster local com o kind. Se precisar, veja
-como criar um nesse
-[link](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/).
+[como criar um cluster local com o
+kind](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/).
 
 ## Pré-requisitos
 

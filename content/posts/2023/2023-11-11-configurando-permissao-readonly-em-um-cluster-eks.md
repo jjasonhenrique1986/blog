@@ -29,21 +29,22 @@ Para seguir esta demonstração, são necessários os seguintes pré-requisitos:
 
 -   Conta na AWS.
 -   Um cluster EKS já criado. Para fazer a criação de um cluster EKS
-    você pode usar esse
-    [artigo](/posts/2022/2023-09-07-usando-eksctl-para-criacao-e-gerenciamento-de-um-cluster-eks/)
-    que falei sobre o eksctl.
--   Kubectl instalado. Mais informações nesse
-    [link](https://kubernetes.io/pt-br/docs/tasks/tools/install-kubectl-linux/).
--   AWS CLI instalado. Mais informações nesse
-    [link](https://docs.aws.amazon.com/pt_br/cli/latest/userguide/getting-started-install.html).
+    você pode seguir o post [Usando eksctl para criação e gerenciamento
+    de um cluster
+    EKS](/posts/2022/2023-09-07-usando-eksctl-para-criacao-e-gerenciamento-de-um-cluster-eks/).
+-   [Kubectl
+    instalado](https://kubernetes.io/pt-br/docs/tasks/tools/install-kubectl-linux/).
+-   [AWS CLI
+    instalado](https://docs.aws.amazon.com/pt_br/cli/latest/userguide/getting-started-install.html).
 
 **Lembrando que essa demonstração terá custo na AWS.**
 
 ## Criação de user e role AWS 
 
-Primeiramente, devemos criar um usuário IAM sem nenhuma permissão, conforme esse
-[link](https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/id_users_create.html)
-lembrando que esse usuário deve ter acesso via CLI.
+Primeiramente, devemos criar um usuário IAM sem nenhuma permissão,
+conforme a [documentação de criação de usuários do
+IAM](https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/id_users_create.html).
+Esse usuário deve ter acesso via CLI.
 
 Antes de criar a role, é necessário criar uma policy que tenha
 apenas permissão de list e read no EKS conforme abaixo:
@@ -104,8 +105,8 @@ configurada essa relação de confiança:
 
 Onde **id-conta** é o ID da sua conta.
 
-Para mais informações sobre essas configurações acessar esse
-[link](https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/id_roles_create_for-user.html).
+Para mais informações, veja a [documentação sobre roles para usuários do
+IAM](https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/id_roles_create_for-user.html).
 
 ## Alteração arquivo aws-auth 
 
@@ -125,9 +126,9 @@ Para verificação podemos executar o comando abaixo:
 eksctl get iamidentitymapping --cluster nome-cluster --region=us-east-1
 ```
 
-Essa configuração também pode ser feita manualmente conforme informado
-nesse
-[link](https://docs.aws.amazon.com/pt_br/eks/latest/userguide/add-user-role.html).
+Essa configuração também pode ser feita manualmente, conforme a
+[documentação do EKS sobre o
+aws-auth](https://docs.aws.amazon.com/pt_br/eks/latest/userguide/add-user-role.html).
 
 ## Configuração de Profile AWS 
 

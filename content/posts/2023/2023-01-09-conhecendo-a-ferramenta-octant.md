@@ -41,9 +41,8 @@ ferramenta coleta informações desse arquivo conforme imagem abaixo:
 
 ![Tela de preferências do Octant mostrando o caminho do kubeconfig em uso](/images/octant-2.webp)
 
-Para mais informações sobre a configuração do arquivo kubeconfig
-consultar
-esse [link](https://kubernetes.io/pt-br/docs/concepts/configuration/organize-cluster-access-kubeconfig/).
+Para mais informações, veja a [documentação do
+kubeconfig](https://kubernetes.io/pt-br/docs/concepts/configuration/organize-cluster-access-kubeconfig/).
 
 ## Instalação 
 
