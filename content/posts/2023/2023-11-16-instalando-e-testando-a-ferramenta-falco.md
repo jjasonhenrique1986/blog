@@ -4,12 +4,12 @@ description: "Instalando e testando o Falco, ferramenta da Sysdig que detecta am
 image: "/images/falco.jpg"
 author: Jason
 date: 2023-11-16
-tags: [ "Kubernetes", "Security", "Containers" ]
+tags: [ "Kubernetes", "Segurança", "Containers" ]
 type: post
 showTableOfContents: true
 ---
 
-![falco](/images/falco.jpg)
+![Instalando e Testando a ferramenta Falco](/images/falco.jpg)
 
 O falco é uma ferramenta desenvolvida pela empresa sysdig e tem a função
 de detectar ameaças em near real time na cloud, em workloads executando
@@ -129,4 +129,5 @@ O objetivo desse artigo foi fazer a instalação e a demonstração da
 ferramenta falco usando um cluster local do kubernetes.
 
 O falco também pode ser instalado em uma máquina virtual executando
-Linux pretendo fazer essa demonstração em um próximo artigo.
+Linux, como mostrei no artigo seguinte:
+[Testando o falco em uma máquina virtual](/posts/2023/2023-11-22-testando-o-falco-em-uma-maquina-virtual/).

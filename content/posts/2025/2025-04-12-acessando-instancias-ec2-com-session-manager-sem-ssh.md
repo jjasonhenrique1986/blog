@@ -1,9 +1,10 @@
 ---
 title: "Acessando instâncias EC2 com o Session Manager, sem SSH"
 description: "Como acessar instâncias EC2 com o AWS Systems Manager Session Manager, sem abrir a porta 22 e sem chave SSH, incluindo port forwarding."
+image: "/images/capa-session-manager.png"
 author: Jason
 date: 2025-04-12
-tags: [ "Cloud", "AWS", "Security" ]
+tags: [ "AWS", "Segurança" ]
 type: post
 showTableOfContents: true
 ---

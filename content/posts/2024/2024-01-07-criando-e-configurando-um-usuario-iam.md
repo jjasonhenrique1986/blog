@@ -4,12 +4,21 @@ description: "Tutorial para criar e configurar um usuário IAM com Access Key e 
 image: "/images/iam.jpg"
 author: Jason
 date: 2024-01-07
-tags: [ "Cloud", "AWS", "Security" ]
+tags: [ "AWS", "Segurança" ]
 type: post
 showTableOfContents: true
 ---
 
-![iam](/images/iam.jpg)
+![Criando e Configurando um usuário IAM](/images/iam.jpg)
+
+> **Atualização (novembro de 2026):** usuário IAM com access key fixa não
+> é mais a forma recomendada de acessar a AWS pela linha de comando, porque
+> a chave não expira e pode vazar. Para pessoas, prefira o IAM Identity
+> Center, que entrega credenciais temporárias com MFA: veja
+> [Acesso à AWS sem access keys com o IAM Identity Center](/posts/2026/2026-10-31-acesso-a-aws-sem-access-keys-com-iam-identity-center/).
+> Para pipelines, use OpenID Connect, como em
+> [GitHub Actions com OpenID Connect na AWS, sem access keys](/posts/2026/2026-08-22-github-actions-com-oidc-na-aws-sem-access-keys/).
+> O passo a passo abaixo continua válido para entender o IAM.
 
 O objetivo desse artigo é criar um tutorial demonstrando como criar e
 configurar um usuário IAM na AWS para que você possa interagir de forma

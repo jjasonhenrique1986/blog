@@ -4,11 +4,16 @@ description: "Como usar o eksctl, ferramenta de linha de comando da Weaveworks, 
 image: "/images/eksctl.jpg"
 author: Jason
 date: 2022-09-07
-tags: [ "Cloud", "AWS", "EKS", "Kubernetes" ]
+tags: [ "AWS", "EKS", "Kubernetes" ]
 type: post
 showTableOfContents: true
 ---
-![eksctl](/images/eksctl.jpg)
+![Usando eksctl para criação e gerenciamento de um cluster EKS](/images/eksctl.jpg)
+
+> **Atualização (novembro de 2026):** a Weaveworks encerrou as atividades
+> em 2024 e o eksctl passou a ser mantido pela AWS, no repositório
+> [eksctl-io/eksctl](https://github.com/eksctl-io/eksctl). O comando de
+> instalação no Linux foi atualizado para o que está na documentação atual.
 
 Nesse artigo irei demostrar a utilização da ferramenta de linha de
 comando chamada eksctl feita em Golang e criada pela empresa Weaveworks
@@ -30,7 +35,16 @@ MAC ou também ser executado através do Docker.
 ### Para Linux
 
 ``` bash
-curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmpsudo mv /tmp/eksctl /usr/local/bin
+ARCH=$(uname -m | sed 's/x86_64/amd64/' | sed 's/aarch64/arm64/')
+PLATFORM=$(uname -s)_$ARCH
+
+curl -sLO "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_$PLATFORM.tar.gz"
+
+# (Opcional) Verificar o checksum
+curl -sL "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_checksums.txt" | grep $PLATFORM | sha256sum --check
+
+tar -xzf eksctl_$PLATFORM.tar.gz -C /tmp && rm eksctl_$PLATFORM.tar.gz
+sudo install -m 0755 /tmp/eksctl /usr/local/bin && rm /tmp/eksctl
 ```
 
 ### Para MAC
@@ -210,7 +224,7 @@ eksctl delete cluster -f eksctl.yml
 
 ## Referências 
 
-- [Github eksctl](https://github.com/weaveworks/eksctl)
+- [Github eksctl](https://github.com/eksctl-io/eksctl)
 - [Documentação Oficial](https://eksctl.io/)
 - [Documentação Oficial EKS](https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html)
-- [Exemplos de utilização do eksctl](https://github.com/weaveworks/eksctl/tree/main/examples)
+- [Exemplos de utilização do eksctl](https://github.com/eksctl-io/eksctl/tree/main/examples)

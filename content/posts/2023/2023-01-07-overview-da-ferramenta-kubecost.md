@@ -4,12 +4,18 @@ description: "Um overview da console do Kubecost para monitorar e gerenciar o cu
 image: "/images/kubecost.jpg"
 author: Jason
 date: 2023-01-07
-tags: [ "Cloud", "AWS", "FinOps", "Kubernetes" ]
+tags: [ "AWS", "FinOps", "Kubernetes" ]
 type: post
 showTableOfContents: true
 ---
 
-![kubecost](/images/kubecost.jpg)
+![Overview da ferramenta kubecost](/images/kubecost.jpg)
+
+> **Atualização (novembro de 2026):** o Kubecost foi comprado pela IBM em
+> 2024. A documentação oficial agora fica no
+> [IBM Docs](https://www.ibm.com/docs/en/kubecost/self-hosted/3.x) e o chart
+> está no repositório [kubecost/kubecost](https://github.com/kubecost/kubecost),
+> já na versão 3.x. Telas e comandos deste post são da versão da época.
 
 O objetivo desse post é fazer um overview da console de administração da
 ferramenta kubecost que ajuda no gerenciamento e monitoramento do custo

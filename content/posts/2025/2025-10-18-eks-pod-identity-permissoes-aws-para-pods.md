@@ -4,13 +4,13 @@ description: "Como usar o EKS Pod Identity para dar permissões do IAM a pods no
 image: "/images/eks.jpg"
 author: Jason
 date: 2025-10-18
-tags: [ "Cloud", "AWS", "EKS", "Kubernetes", "Security" ]
+tags: [ "AWS", "EKS", "Kubernetes", "Segurança" ]
 type: post
 showTableOfContents: true
 featured: true
 ---
 
-![eks](/images/eks.jpg)
+![EKS Pod Identity: permissões da AWS para pods sem access keys](/images/eks.jpg)
 
 O objetivo desse artigo é demonstrar como usar o **EKS Pod Identity**
 para que um pod rodando no Amazon EKS acesse serviços da AWS, como o S3,

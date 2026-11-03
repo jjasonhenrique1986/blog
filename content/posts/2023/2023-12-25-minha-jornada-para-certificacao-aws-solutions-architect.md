@@ -4,12 +4,12 @@ description: "Como me preparei em 1 mês para a certificação AWS Certified Sol
 image: "/images/saa.jpg"
 author: Jason
 date: 2023-12-25
-tags: [ "Cloud", "AWS", "Certificações" ]
+tags: [ "AWS", "Certificações" ]
 type: post
 showTableOfContents: true
 ---
 
-![saa](/images/saa.jpg)
+![Minha Jornada para certificação AWS Solutions Architect](/images/saa.jpg)
 
 No último dia 13 de dezembro de 2023 fui aprovado na certificação AWS Certified
 Solutions Architect Associate (SAA-C03) e com isso resolvi compartilhar

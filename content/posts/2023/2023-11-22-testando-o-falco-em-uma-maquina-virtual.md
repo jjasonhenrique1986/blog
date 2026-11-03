@@ -4,12 +4,12 @@ description: "Segundo artigo sobre o Falco: instalação em uma máquina virtual
 image: "/images/falco.jpg"
 author: Jason
 date: 2023-11-22
-tags: [ "Kubernetes", "Security", "Containers", "AWS" ]
+tags: [ "Kubernetes", "Segurança", "Containers", "AWS" ]
 type: post
 showTableOfContents: true
 ---
 
-![falco](/images/falco.jpg)
+![Testando o falco em uma máquina virtual](/images/falco.jpg)
 
 O objetivo deste segundo artigo falando sobre a ferramenta falco é
 demonstrar a utilização do falco instalando em uma máquina virtual na

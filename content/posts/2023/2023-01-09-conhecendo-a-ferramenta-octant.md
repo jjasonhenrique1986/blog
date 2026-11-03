@@ -4,12 +4,19 @@ description: "Conheça o Octant, projeto open source que permite visualizar e ge
 image: "/images/octant.jpg"
 author: Jason
 date: 2023-01-09
-tags: [ "Kubernetes", "Observability", "Containers" ]
+tags: [ "Kubernetes", "Observabilidade", "Containers" ]
 type: post
 showTableOfContents: true
 ---
 
-![octant](/images/octant.jpg)
+![Conhecendo a ferramenta Octant](/images/octant.jpg)
+
+> **Atualização (novembro de 2026):** o Octant foi descontinuado e o
+> repositório foi arquivado em janeiro de 2023 (hoje em
+> [vmware-archive/octant](https://github.com/vmware-archive/octant)), então
+> não recebe mais correções. Para uma interface gráfica do Kubernetes, veja
+> o [Headlamp](https://github.com/kubernetes-sigs/headlamp), projeto do
+> kubernetes-sigs, ou o [k9s](https://github.com/derailed/k9s), no terminal.
 
 A ferramenta Octant é um projeto Open Source que permite a visulização
 via interface gráfica do seu cluster Kubernetes podendo assim fazer todo
@@ -28,7 +35,7 @@ Para testar essa ferramenta é necessário ter um cluster kubernetes
 local. Pode ser usado o kind ou o rancher desktop para teste. Abaixo
 segue links com mais informações:
 
-- https://kind.sigs.k8s.io/
+- https://kind.sigs.k8s.io/ (veja também [como criar um cluster local com o kind](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/))
 - https://rancherdesktop.io/
 
 Também é necessário que o kubeconfig esteja configurado pois a
