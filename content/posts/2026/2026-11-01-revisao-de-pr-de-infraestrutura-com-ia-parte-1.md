@@ -1,6 +1,7 @@
 ---
 title: "Revisão de PR de infraestrutura com IA, parte 1: arquitetura e acesso ao Bedrock"
 description: "Primeira parte da série sobre como revisar Pull Requests de Terraform e Kubernetes com IA no Amazon Bedrock (Claude ou gpt-oss): a arquitetura do projeto, o acesso aos modelos e a role IAM com OIDC, sem access keys."
+image: "/images/capa-revisao-pr-ia.png"
 author: Jason
 date: 2026-11-01
 tags: [ "AWS", "CI/CD", "IA", "Terraform", "Kubernetes" ]
@@ -203,7 +204,7 @@ IAM Identity Center com as mesmas permissões, como mostrei no post
 
 ## Próximo passo
 
-Com a role pronta, na **parte 2** vamos ver o script em Python: como montar o
+Com a role pronta, na **[parte 2](/posts/2026/2026-11-02-revisao-de-pr-de-infraestrutura-com-ia-parte-2/)** vamos ver o script em Python: como montar o
 prompt, receber a resposta em um formato garantido e o que fazer quando o
 modelo recusa.
 

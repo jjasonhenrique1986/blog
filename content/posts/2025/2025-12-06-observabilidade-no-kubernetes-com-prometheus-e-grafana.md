@@ -4,12 +4,12 @@ description: "Como instalar o kube-prometheus-stack com Helm para monitorar um c
 image: "/images/kubernetes.jpg"
 author: Jason
 date: 2025-12-06
-tags: [ "Kubernetes", "Observability", "Containers" ]
+tags: [ "Kubernetes", "Observabilidade", "Containers" ]
 type: post
 showTableOfContents: true
 ---
 
-![kubernetes](/images/kubernetes.jpg)
+![Observabilidade no Kubernetes com Prometheus e Grafana](/images/kubernetes.jpg)
 
 O objetivo desse artigo é montar uma stack de monitoramento para um
 cluster Kubernetes usando o **kube-prometheus-stack**, um Helm chart da

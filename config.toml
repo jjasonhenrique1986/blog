@@ -5,6 +5,10 @@ title = 'Jason Henrique'
 theme = 'gokarna'
 enableRobotsTXT = true
 
+# index-about.md é lido pela home (readFile) e projects.md não tem conteúdo:
+# não geram páginas próprias nem entram no sitemap.
+ignoreFiles = ['index-about\.md$', 'projects\.md$']
+
 author = "Jason Henrique Martins Rodrigues"
 
 [params]
@@ -39,11 +43,21 @@ author = "Jason Henrique Martins Rodrigues"
   weight     = 2
 
 [[menu.main]]
-  name       = "Projects"
-  url        = "https://github.com/jjasonhenrique1986?tab=repositories"
+  name       = "Sobre"
+  url        = "/sobre/"
   weight     = 3
 
 [[menu.main]]
-  name       = "Certifications"
-  url        = "https://www.credly.com/users/jason-henrique/"
+  name       = "Projetos"
+  url        = "https://github.com/jjasonhenrique1986?tab=repositories"
   weight     = 4
+
+[[menu.main]]
+  name       = "Certificações"
+  url        = "https://www.credly.com/users/jason-henrique/"
+  weight     = 5
+
+[[menu.main]]
+  name       = "RSS"
+  url        = "/index.xml"
+  weight     = 6

@@ -4,12 +4,18 @@ description: "Testando o AWS Copilot CLI para criar de forma simplificada uma ap
 image: "/images/copilot.jpg"
 author: Jason
 date: 2024-01-20
-tags: [ "Cloud", "AWS", "Containers", "ECS" ]
+tags: [ "AWS", "Containers", "ECS" ]
 type: post
 showTableOfContents: true
 ---
 
-![copilot](/images/copilot.jpg)
+![Testando a ferramenta AWS Copilot CLI](/images/copilot.jpg)
+
+> **Atualização (novembro de 2026):** a AWS encerrou o suporte ao Copilot
+> CLI em 12 de junho de 2026, e o
+> [repositório](https://github.com/aws/copilot-cli) foi arquivado. A
+> ferramenta não recebe mais atualizações nem correções de segurança, então
+> não a use em projetos novos. O post fica como registro.
 
 Nesse artigo vou demonstar a utilização da ferramenta AWS Copilot CLI
 para a criação de uma forma simplificada uma aplicação conteinerizada

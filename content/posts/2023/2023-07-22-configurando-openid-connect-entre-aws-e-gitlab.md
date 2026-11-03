@@ -4,12 +4,12 @@ description: "Como configurar OpenID Connect entre a AWS e o GitLab para executa
 image: "/images/gitlab.jpg"
 author: Jason
 date: 2023-07-22
-tags: [ "Cloud", "AWS", "CI/CD" ]
+tags: [ "AWS", "CI/CD" ]
 type: post
 showTableOfContents: true
 ---
 
-![gitlab](/images/gitlab.jpg)
+![Configurando OpenID Connect entre AWS e GitLab](/images/gitlab.jpg)
 
 O objetivo desse post é demonstrar como configurar o OpenID Connect
 entre a sua conta AWS e sua conta do GitLab para executar uma pipeline
@@ -168,4 +168,6 @@ conta AWS.
 O Objetivo desse post foi demonstrar a configuração do OpenID Connect
 entre AWS e GitLab. Esse mesmo procedimento pode ser efetuado usando
 github conforme esse
-[link](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services).
+[link](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services),
+e mostrei o passo a passo em
+[GitHub Actions com OpenID Connect na AWS, sem access keys](/posts/2026/2026-08-22-github-actions-com-oidc-na-aws-sem-access-keys/).

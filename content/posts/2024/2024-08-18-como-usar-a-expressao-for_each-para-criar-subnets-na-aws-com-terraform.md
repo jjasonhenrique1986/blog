@@ -4,12 +4,12 @@ description: "Como usar a expressão for_each no Terraform para reduzir código 
 image: "/images/terraform.jpg"
 author: Jason
 date: 2024-08-18
-tags: [ "IaC", "Cloud", "AWS" ]
+tags: [ "IaC", "AWS", "Terraform" ]
 type: post
 showTableOfContents: true
 ---
 
-![terraform](/images/terraform.jpg)
+![Como usar a expressão for_each para criar subnets na aws com terraform](/images/terraform.jpg)
 
 O Objetivo desse artigo é demonstrar a utilizacão da expressão for_each
 com o intuito de reduzir a quantidade de código para a criacão de sua
@@ -150,3 +150,6 @@ for_each:
 O objetivo desse artigo foi demonstrar a utilização do for_each na
 criação de subnets porém pode ser usado para a criação de outros
 recursos na AWS.
+
+Para guardar o state desse código em um bucket S3, com state locking,
+veja [Configuração de Remote Terraform State com Bucket S3 na AWS](/posts/2024/2024-08-11-configuracao-de-remote-terraform-state-com-bucket-s3-na-aws/).

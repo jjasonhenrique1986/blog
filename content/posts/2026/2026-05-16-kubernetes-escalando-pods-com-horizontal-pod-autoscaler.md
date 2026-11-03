@@ -9,7 +9,7 @@ type: post
 showTableOfContents: true
 ---
 
-![kubernetes](/images/kubernetes.jpg)
+![Kubernetes: escalando pods automaticamente com o Horizontal Pod Autoscaler](/images/kubernetes.jpg)
 
 O objetivo desse artigo é demonstrar como usar o **Horizontal Pod
 Autoscaler (HPA)** para aumentar e diminuir automaticamente a quantidade

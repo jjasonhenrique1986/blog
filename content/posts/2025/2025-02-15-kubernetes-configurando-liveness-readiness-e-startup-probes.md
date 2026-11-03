@@ -9,7 +9,7 @@ type: post
 showTableOfContents: true
 ---
 
-![kubernetes](/images/kubernetes.jpg)
+![Kubernetes: configurando Liveness, Readiness e Startup Probes](/images/kubernetes.jpg)
 
 O objetivo desse artigo é explicar e demonstrar as **probes** do
 Kubernetes: Liveness, Readiness e Startup. Elas são a forma que o

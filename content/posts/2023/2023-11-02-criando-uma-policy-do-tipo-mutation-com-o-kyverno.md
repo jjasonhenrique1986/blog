@@ -4,12 +4,12 @@ description: "Continuação da série sobre Kyverno: como criar uma policy do ti
 image: "/images/kyverno.jpg"
 author: Jason
 date: 2023-11-02
-tags: [ "Kubernetes", "Security", "Containers" ]
+tags: [ "Kubernetes", "Segurança", "Containers" ]
 type: post
 showTableOfContents: true
 ---
 
-![kyverno](/images/kyverno.jpg)
+![Criando uma policy do tipo Mutation com o kyverno](/images/kyverno.jpg)
 
 O objectivo dese artigo e a criação de um policy do tipo Mutation no
 kyverno. Esse artigo é uma continuação do primeiro artigo onde falei

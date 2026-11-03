@@ -9,7 +9,7 @@ type: post
 showTableOfContents: true
 ---
 
-![eng-plataforma](/images/eng-plataforma.jpg)
+![Resenha do livro Engenharia de Plataforma](/images/eng-plataforma.jpg)
 
 Recentemente li o engenharia de plataforma conforme esse [link](https://www.amazon.com.br/Engenharia-Plataforma-l%C3%ADderes-t%C3%A9cnicos-produtos/dp/8575229419) e resolvi escrever uma resenha sobre o livro.
 

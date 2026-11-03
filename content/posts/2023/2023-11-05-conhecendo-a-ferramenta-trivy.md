@@ -4,12 +4,12 @@ description: "Conheça o Trivy, scanner de segurança da Aqua Security e tópico
 image: "/images/trivy.jpg"
 author: Jason
 date: 2023-11-05
-tags: [ "Kubernetes", "Security", "Containers", "CI/CD" ]
+tags: [ "Kubernetes", "Segurança", "Containers", "CI/CD" ]
 type: post
 showTableOfContents: true
 ---
 
-![trivy](/images/trivy.jpg)
+![Conhecendo a ferramenta trivy](/images/trivy.jpg)
 
 O trivy é uma ferramenta desenvolvido pela empresa Aqua security e
 tambem é um dos topicos cobrados no exame da CKS (Certified Kubernetes
@@ -132,3 +132,8 @@ integrações consultar esse
 
 O objetivo desse artigo foi demonstrar um pouco da utilização do trivy
 para efetuar scan de vulnerabilidades.
+
+Para análise estática de código de infraestrutura, veja o post sobre o
+[kics](/posts/2022/2022-09-10-conhecendo-a-ferramenta-de-analise-estatica-kics/). E para ver o Trivy rodando junto com outros
+scanners e uma revisão com IA em Pull Requests, veja
+[Revisão de PR de infraestrutura com IA, parte 3](/posts/2026/2026-11-03-revisao-de-pr-de-infraestrutura-com-ia-parte-3/).

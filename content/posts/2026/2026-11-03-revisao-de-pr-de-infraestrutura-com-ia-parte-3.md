@@ -1,9 +1,10 @@
 ---
 title: "Revisão de PR de infraestrutura com IA, parte 3: a action e a segurança"
 description: "Última parte da série: a action reutilizável do GitHub que roda checkov, Trivy, kube-linter e kubeconform, chama a IA no Amazon Bedrock e comenta no Pull Request, o resultado num PR real e os cuidados com forks, prompt injection e custo."
+image: "/images/capa-revisao-pr-ia.png"
 author: Jason
 date: 2026-11-03
-tags: [ "AWS", "CI/CD", "IA", "Security" ]
+tags: [ "AWS", "CI/CD", "IA", "Segurança" ]
 type: post
 showTableOfContents: true
 draft: false

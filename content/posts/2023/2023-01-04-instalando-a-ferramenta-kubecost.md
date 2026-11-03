@@ -4,12 +4,20 @@ description: "Passo a passo da instalação do Kubecost, ferramenta de monitoram
 image: "/images/kubecost.jpg"
 author: Jason
 date: 2023-01-04
-tags: [ "Cloud", "AWS", "FinOps", "Kubernetes" ]
+tags: [ "AWS", "FinOps", "Kubernetes" ]
 type: post
 showTableOfContents: true
 ---
 
-![kubecost](/images/kubecost.jpg)
+![Instalando a ferramenta kubecost](/images/kubecost.jpg)
+
+> **Atualização (novembro de 2026):** o Kubecost foi comprado pela IBM em
+> 2024. A documentação oficial agora fica no
+> [IBM Docs](https://www.ibm.com/docs/en/kubecost/self-hosted/3.x) e o chart
+> está no repositório [kubecost/kubecost](https://github.com/kubecost/kubecost),
+> já na versão 3.x. O manifesto `kubecost.yaml` usado na instalação abaixo
+> não está mais disponível: siga a instalação com Helm da documentação
+> oficial. Telas e comandos deste post são da versão da época.
 
 O intuito deste post é demostrar a instalação do kubecost uma ferramenta
 de monitoramento e gerenciamento de custos para um ambiente kubernetes e
@@ -32,7 +40,8 @@ ou o rancher desktop.
 
 Para mais informações sobre a instalação e criação de um cluster usando
 kind utilizar
-esse [link](https://kind.sigs.k8s.io/).
+esse [link](https://kind.sigs.k8s.io/) ou o meu passo a passo de
+[como criar um cluster local com o kind](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/).
 
 Para informações sobre o rancher desktop acesse
 esse [link](https://rancherdesktop.io/).
@@ -87,4 +96,4 @@ Abaixo alguns prints da console do kubecost
 
 O intuito desse post foi demonstrar a instalação do kubecost. No próximo
 post estarei mostrando as principais funcionalidades da console do
-kubecost.
+kubecost: [Overview da ferramenta kubecost](/posts/2023/2023-01-07-overview-da-ferramenta-kubecost/).

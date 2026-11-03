@@ -10,7 +10,7 @@ showTableOfContents: true
 featured: true
 ---
 
-![argo](/images/argo.jpg)
+![Gerenciamento de Infraestrutura com GitOps e ArgoCD](/images/argo.jpg)
 
 O objetivo desse artigo é criar um tutorial de como instalar o ArgoCD no
 kubernetes usando kind e também vamos subir uma aplicação (o nosso

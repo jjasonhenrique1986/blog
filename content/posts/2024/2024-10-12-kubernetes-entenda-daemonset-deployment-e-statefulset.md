@@ -9,7 +9,7 @@ type: post
 showTableOfContents: true
 ---
 
-![kubernetes](/images/kubernetes.jpg)
+![Kubernetes: Entenda DaemonSet, Deployment e StatefulSet](/images/kubernetes.jpg)
 
 O objetivo desse artigo é explicar e demonstrar sobre os objectos
 DaemonSet, Deployment e StatefulSet no Kubernetes, a principal

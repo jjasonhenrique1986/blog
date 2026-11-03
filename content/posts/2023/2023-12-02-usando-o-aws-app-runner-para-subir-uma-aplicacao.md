@@ -4,12 +4,12 @@ description: "Como usar o AWS App Runner para subir uma aplicação a partir de 
 image: "/images/apprunner.jpg"
 author: Jason
 date: 2023-12-02
-tags: [ "Cloud", "AWS", "Containers" ]
+tags: [ "AWS", "Containers" ]
 type: post
 showTableOfContents: true
 ---
 
-![apprunner](/images/apprunner.jpg)
+![Usando o AWS App Runner para subir uma aplicação](/images/apprunner.jpg)
 
 O objetivo desse artigo é demonstrar a utilização do serviço AWS App
 Runner. Vamos subir uma aplicação usando uma imagem publica do ECR para
@@ -87,5 +87,6 @@ Deve aparecer uma imagem conforme abaixo:
 
 O objetivo desse artigo foi demonstrar a utilização do AWS App Runner
 usando o metódo de Container Registry.fazendo o deploy de uma aplicação
-em um ECR público. Em um próximo artigo pretendo demonstrar a utilização
-do AWS App Runner usando uma API localizada no Github.
+em um ECR público. No artigo seguinte demonstrei a utilização do AWS App
+Runner usando uma API localizada no Github:
+[Deployando uma API usando AWS App Runner](/posts/2023/2023-12-23-deployando-uma-api-usando-aws-app-runner/).

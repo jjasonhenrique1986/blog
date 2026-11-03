@@ -4,12 +4,12 @@ description: "Como me preparei em 1 mês para a certificação AWS Certified Sys
 image: "/images/soa.jpg"
 author: Jason
 date: 2024-05-03
-tags: [ "Cloud", "AWS", "Certificações" ]
+tags: [ "AWS", "Certificações" ]
 type: post
 showTableOfContents: true
 ---
 
-![soa](/images/soa.jpg)
+![Minha Jornada para certificação AWS SysOps Administrator](/images/soa.jpg)
 
 No último dia 2 de Maio fui aprovado na certificação AWS Certified
 SysOps Administrator Associate (SOA-C02) e com isso resolvi compartilhar

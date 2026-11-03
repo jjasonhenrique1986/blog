@@ -4,12 +4,19 @@ description: "Como configurar uma role da AWS com permissão somente leitura em 
 image: "/images/eks.jpg"
 author: Jason
 date: 2023-11-11
-tags: [ "Kubernetes", "Cloud", "AWS", "Containers", "EKS" ]
+tags: [ "Kubernetes", "AWS", "Containers", "EKS" ]
 type: post
 showTableOfContents: true
 ---
 
-![eks](/images/eks.jpg)
+![Configurando permissão somente leitura em um cluster EKS](/images/eks.jpg)
+
+> **Atualização (novembro de 2026):** este post usa o ConfigMap `aws-auth`,
+> que a AWS considera obsoleto. Hoje o caminho recomendado são as **EKS
+> access entries**, que dispensam editar o ConfigMap. Veja a seção
+> [Alternativa atual: EKS access entries](#alternativa-atual-eks-access-entries)
+> no fim do post. Para permissões de pods (e não de pessoas), veja
+> [EKS Pod Identity](/posts/2025/2025-10-18-eks-pod-identity-permissoes-aws-para-pods/).
 
 O objetivo desse post é demonstrar como fazer a configuração para que
 uma determinada role da AWS tenha permissão de somente leitura dentro de
@@ -259,15 +266,66 @@ kubectl create secret generic teste --from-literal=user=jason
 
 Deve ser apresentado o seguinte erro conforme imagem abaixo:
 
-![eks-2](/images/eks-2.jpg)
+![Erro de permissão ao tentar criar um secret usando a role somente leitura](/images/eks-2.jpg)
 
 Depois tentamos listar todos os pods executando no cluster e obtivemos
 sucesso conforme imagem abaixo:
 
-![eks-3](/images/eks-3.jpg)
+![Listagem dos pods do cluster funcionando com a role somente leitura](/images/eks-3.jpg)
 
 Com isso garantimos que o acesso está somente leitura aos objectos do
 Kubernetes.
+
+Um cuidado: como o ClusterRole acima libera `get` e `list` em todos os
+recursos (`resources: ["*"]`), essa role também consegue ler os
+**Secrets** do cluster. Se isso não for desejado, liste explicitamente os
+recursos em vez de usar `*`. Para entender melhor Roles, ClusterRoles e
+bindings, veja o post sobre
+[RBAC no Kubernetes](/posts/2024/2024-11-15-gerenciando-acesso-no-kubernetes-com-rbac/).
+
+## Alternativa atual: EKS access entries
+
+Com as access entries, o acesso ao cluster é configurado pela API do EKS,
+sem editar o `aws-auth`. Primeiro, o modo de autenticação do cluster
+precisa aceitar a API. O modo `API_AND_CONFIG_MAP` mantém o `aws-auth`
+funcionando durante a migração:
+
+``` bash
+aws eks update-cluster-config --name nome-cluster --region us-east-1 \
+    --access-config authenticationMode=API_AND_CONFIG_MAP
+```
+
+Depois, crie uma access entry para a role:
+
+``` bash
+aws eks create-access-entry --cluster-name nome-cluster --region us-east-1 \
+    --principal-arn arn:aws:iam::id-conta:role/eks --type STANDARD
+```
+
+E associe a ela a access policy gerenciada de leitura,
+**AmazonEKSViewPolicy**, no escopo do cluster inteiro:
+
+``` bash
+aws eks associate-access-policy --cluster-name nome-cluster --region us-east-1 \
+    --principal-arn arn:aws:iam::id-conta:role/eks \
+    --policy-arn arn:aws:eks::aws:cluster-access-policy/AmazonEKSViewPolicy \
+    --access-scope type=cluster
+```
+
+Para limitar a alguns namespaces, use
+`--access-scope type=namespace,namespaces=app1,app2`. Para conferir o que
+está associado à role:
+
+``` bash
+aws eks list-associated-access-policies --cluster-name nome-cluster --region us-east-1 \
+    --principal-arn arn:aws:iam::id-conta:role/eks
+```
+
+Com isso não é preciso criar o ClusterRole e o ClusterRoleBinding da seção
+anterior. Se preferir manter um ClusterRole próprio, crie a access entry
+com `--kubernetes-groups developers-readonly` e não associe access policy.
+Mais detalhes na
+[documentação de access entries](https://docs.aws.amazon.com/eks/latest/userguide/access-entries.html).
 
 ## Conclusão 
 
@@ -276,4 +334,6 @@ leitura aos recursos do Kubernetes vinculando com uma role AWS.
 
 Outro ponto que para conceder permissão somente leitura podemos
 implementar uma solução de interface gráfica que mostre todos os
-recursos do cluster EKS como por o Kubernetes Dashboard.
+recursos do cluster EKS como por o Kubernetes Dashboard (que foi
+arquivado; hoje o [Headlamp](https://github.com/kubernetes-sigs/headlamp)
+é uma alternativa mantida).

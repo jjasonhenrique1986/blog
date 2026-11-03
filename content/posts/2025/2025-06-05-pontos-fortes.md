@@ -4,7 +4,7 @@ description: "O que aprendi com o teste CliftonStrengths do Gallup e como meus p
 image: "/images/pontos_fortes.jpg"
 author: Jason
 date: 2025-06-05
-tags: ["DevOps", "Carreira", "Gallup", "Autoconhecimento"]
+tags: [ "DevOps", "Carreira" ]
 type: post
 showTableOfContents: true
 ---

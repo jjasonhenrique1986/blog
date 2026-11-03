@@ -4,7 +4,7 @@ description: "Como me preparei em 4 meses para a certificação AWS Certified De
 image: "/images/dca.jpg"
 author: Jason
 date: 2022-09-03
-tags: [ "Cloud", "AWS", "Certificações" ]
+tags: [ "AWS", "Certificações" ]
 type: post
 showTableOfContents: true
 ---

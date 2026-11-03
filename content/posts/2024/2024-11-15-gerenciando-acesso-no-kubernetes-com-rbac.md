@@ -4,13 +4,13 @@ description: "Como gerenciar o controle de acesso no Kubernetes com RBAC: Roles,
 image: "/images/kubernetes.jpg"
 author: Jason
 date: 2024-11-15
-tags: [ "Kubernetes", "Security", "Containers" ]
+tags: [ "Kubernetes", "Segurança", "Containers" ]
 type: post
 showTableOfContents: true
 featured: true
 ---
 
-![kubernetes](/images/kubernetes.jpg)
+![Gerenciando acesso no Kubernetes com RBAC](/images/kubernetes.jpg)
 
 No Kubernetes, a segurança e o controle de acesso são aspectos críticos
 para garantir que apenas as pessoas e processos corretos tenham as
@@ -27,7 +27,8 @@ de acesso.
 Para conseguir acompanhar esse artigo será necessário os seguintes pré
 requisitos abaixo:
 
--   Ter um cluster kubernetes no nosso caso utilizaremos o kind.
+-   Ter um cluster kubernetes no nosso caso utilizaremos o kind. Para
+    criar um, veja [como criar um cluster local com o kind](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/).
 -   Ter o kubectl instalado.
 
 Para os exemplos iremos criar um namespace onde serão feitos nossos
@@ -383,6 +384,12 @@ O Objetivo desse post foi demonstrar a utilização do RBAC no seu
 cluster, garantindo que os usuários e processos tenham acesso controlado
 e seguro aos recursos de que precisam, ajudando a prevenir acessos
 indesejados e falhas de segurança.
+
+No EKS, o RBAC também é usado para dar a uma role da AWS acesso somente
+leitura ao cluster, como mostrei em
+[Configurando permissão somente leitura em um cluster EKS](/posts/2023/2023-11-11-configurando-permissao-readonly-em-um-cluster-eks/).
+E para restringir quem pode ler Secrets, veja
+[ConfigMaps e Secrets na prática](/posts/2025/2025-08-16-kubernetes-configmaps-e-secrets-na-pratica/).
 
 Abaixo alguns links da documentação do kubernetes falando sobre RBAC:
 

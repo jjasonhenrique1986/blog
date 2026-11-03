@@ -9,7 +9,7 @@ type: post
 showTableOfContents: true
 ---
 
-![hardeneks](/images/hardeneks.jpg)
+![Testando a ferramenta HardenEKS](/images/hardeneks.jpg)
 
 HardenEKS é uma ferramenta de linha de comando desenvolvido por [Doruk
 Ozturk](https://github.com/dorukozturk) que atualmente trabalha na AWS. Essa ferramenta tem o

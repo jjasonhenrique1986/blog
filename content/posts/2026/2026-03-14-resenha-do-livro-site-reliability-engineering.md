@@ -1,9 +1,10 @@
 ---
 title: "Resenha do livro Site Reliability Engineering (SRE) do Google"
 description: "Resenha do livro Site Reliability Engineering do Google: SLOs, error budget, toil, monitoramento, on-call e postmortems sem culpados."
+image: "/images/capa-livro-sre.png"
 author: Jason
 date: 2026-03-14
-tags: [ "SRE", "DevOps", "Livros", "Observability" ]
+tags: [ "SRE", "DevOps", "Livros", "Observabilidade" ]
 type: post
 showTableOfContents: true
 ---

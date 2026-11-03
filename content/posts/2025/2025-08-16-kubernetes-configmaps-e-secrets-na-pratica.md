@@ -4,12 +4,12 @@ description: "Como separar configuração do código no Kubernetes usando Config
 image: "/images/kubernetes.jpg"
 author: Jason
 date: 2025-08-16
-tags: [ "Kubernetes", "Containers", "Security" ]
+tags: [ "Kubernetes", "Containers", "Segurança" ]
 type: post
 showTableOfContents: true
 ---
 
-![kubernetes](/images/kubernetes.jpg)
+![Kubernetes: ConfigMaps e Secrets na prática](/images/kubernetes.jpg)
 
 O objetivo desse artigo é demonstrar como usar **ConfigMaps** e
 **Secrets** no Kubernetes. Eles permitem separar a configuração da

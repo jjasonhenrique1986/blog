@@ -4,12 +4,12 @@ description: "Como criar um Synthetics Canary no CloudWatch para checar periodic
 image: "/images/synthetic.jpg"
 author: Jason
 date: 2023-02-06
-tags: [ "Cloud", "AWS", "Observability" ]
+tags: [ "AWS", "Observabilidade" ]
 type: post
 showTableOfContents: true
 ---
 
-![synthetic](/images/synthetic.jpg)
+![Testando o recurso Synthetics Canaries do Cloudwatch](/images/synthetic.jpg)
 
 O objetivo desse post é demonstrar a criação de um synthetic canary na
 AWS. É um recurso que está dentro do serviços oferecidos dentro do

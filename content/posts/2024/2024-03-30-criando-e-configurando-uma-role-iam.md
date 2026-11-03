@@ -4,12 +4,12 @@ description: "Tutorial para criar e configurar uma role IAM na AWS, uma forma ma
 image: "/images/iam.jpg"
 author: Jason
 date: 2024-03-30
-tags: [ "Cloud", "AWS", "Security" ]
+tags: [ "AWS", "Segurança" ]
 type: post
 showTableOfContents: true
 ---
 
-![iam](/images/iam.jpg)
+![Criando e Configurando uma role IAM](/images/iam.jpg)
 
 O objetivo desse artigo é criar um tutorial demonstrando como criar e
 configurar uma role IAM na AWS para que você possa interagir de forma
@@ -239,3 +239,9 @@ demonstrei a utilização de uma role usando apenas uma conta AWS porém é
 possível utilizar multiplas contas conforme essa
 [documentação](https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html)
 da AWS.
+
+Para ir além das roles assumidas a partir de um usuário IAM, veja como
+acessar a AWS com credenciais temporárias e MFA em
+[Acesso à AWS sem access keys com o IAM Identity Center](/posts/2026/2026-10-31-acesso-a-aws-sem-access-keys-com-iam-identity-center/),
+ou como acessar instâncias EC2 sem chave SSH em
+[Acessando instâncias EC2 com o Session Manager, sem SSH](/posts/2025/2025-04-12-acessando-instancias-ec2-com-session-manager-sem-ssh/).

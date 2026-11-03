@@ -4,12 +4,16 @@ description: "Testando o AWS CodeWhisperer, ferramenta da AWS que sugere código
 image: "/images/codewhisperer.jpg"
 author: Jason
 date: 2023-01-24
-tags: [ "Cloud", "AWS", "CodeReview", "Security" ]
+tags: [ "AWS", "Segurança", "IA" ]
 type: post
 showTableOfContents: true
 ---
 
-![codewhisperer](/images/codewhisperer.jpg)
+![Testando a ferramenta AWS CodeWhisperer](/images/codewhisperer.jpg)
+
+> **Atualização (novembro de 2026):** em abril de 2024 o CodeWhisperer foi
+> incorporado ao **Amazon Q Developer**, e o nome CodeWhisperer deixou de
+> ser usado. As listas de linguagens e IDEs abaixo são as da época do post.
 
 O objetivo desse post é demonstrar a utilização do serviço AWS
 CodeWhisperer que é uma ferramenta que sugere códigos para um

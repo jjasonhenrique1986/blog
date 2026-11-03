@@ -4,12 +4,12 @@ description: "Introdução ao Kyverno, dynamic admission controller do Kubernete
 image: "/images/kyverno.jpg"
 author: Jason
 date: 2023-10-29
-tags: [ "Kubernetes", "Security", "Containers" ]
+tags: [ "Kubernetes", "Segurança", "Containers" ]
 type: post
 showTableOfContents: true
 ---
 
-![kyverno](/images/kyverno.jpg)
+![Conhecendo um pouco sobre o kyverno](/images/kyverno.jpg)
 
 O Objectivo desse artigo é demonstrar a utilização da ferramenta kyverno
 dentro de um ambiente kubernetes. O kyverno é um dynamic admission
@@ -26,7 +26,7 @@ Nos links abaixo você pode ter mais informaçõoes dessa ferramenta:
 Para testar o kyverno segue abaixo os pré requisitos:
 
 -   Ter um cluster kubernetes para isso você pode usar o
-    [kind](https://kind.sigs.k8s.io/) ou [rancher
+    [kind](/posts/2023/2023-11-15-criando-um-cluster-local-de-kubernetes-com-o-kind/) ou [rancher
     desktop](https://rancherdesktop.io/).
 -   Ter o kubectl instalado mais informações nesse
     [link](https://kubernetes.io/docs/tasks/tools/).
@@ -240,7 +240,8 @@ environment conforme abaixo:
 
 O Objetivo desse artigo foi demonstar a utilização da ferramenta
 Kyverno. No proximo artigo vou demonstar a utilização do kyverno usando
-uma policy do tipo Mutation.
+uma policy do tipo Mutation:
+[Criando uma policy do tipo Mutation com o kyverno](/posts/2023/2023-11-02-criando-uma-policy-do-tipo-mutation-com-o-kyverno/).
 
 Caso queira se aprofundar na ferramenta os links abaixo podem te ajudar:
 

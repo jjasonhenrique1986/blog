@@ -4,11 +4,11 @@ description: "Como usar o KICS para fazer análise estática de código de Infra
 image: "/images/kics.jpg"
 author: Jason
 date: 2022-09-10
-tags: [ "CI/CD", "CodeReview", "Security" ]
+tags: [ "CI/CD", "Segurança", "IaC" ]
 type: post
 showTableOfContents: true
 ---
-![kics](/images/kics.jpg)
+![Conhecendo a ferramenta de analise estática kics](/images/kics.jpg)
 
 Nesse artigo irei demonstrar a utilização de um ferramenta
 chamada **kics** ou **keeping infrastructure as code secure** tem a
@@ -88,6 +88,9 @@ Com o kics você consegue integrar com várias ferramentas de CI/CD e
 também existe um plugin para vscode.
 Nesse [link](https://docs.kics.io/latest/integrations/) você consegue verificar todas as integrações
 disponíveis.
+
+Para scan de vulnerabilidades em imagens de container, que complementa a
+análise de IaC, veja o post sobre o [Trivy](/posts/2023/2023-11-05-conhecendo-a-ferramenta-trivy/).
 
 ## Referências 
 
