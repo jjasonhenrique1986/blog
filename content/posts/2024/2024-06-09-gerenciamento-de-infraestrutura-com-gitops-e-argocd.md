@@ -6,7 +6,6 @@ author: Jason
 date: 2024-06-09
 tags: [ "Containers", "Kubernetes", "GitOps", "IaC" ]
 type: post
-showTableOfContents: true
 featured: true
 ---
 

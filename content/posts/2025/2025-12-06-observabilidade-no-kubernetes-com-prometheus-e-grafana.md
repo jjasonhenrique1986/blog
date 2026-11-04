@@ -6,7 +6,6 @@ author: Jason
 date: 2025-12-06
 tags: [ "Kubernetes", "Observabilidade", "Containers" ]
 type: post
-showTableOfContents: true
 ---
 
 O objetivo desse artigo é montar uma stack de monitoramento para um

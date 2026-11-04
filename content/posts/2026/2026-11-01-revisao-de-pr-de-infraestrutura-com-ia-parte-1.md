@@ -6,7 +6,6 @@ author: Jason
 date: 2026-11-01
 tags: [ "AWS", "CI/CD", "IA", "Terraform", "Kubernetes" ]
 type: post
-showTableOfContents: true
 draft: false
 ---
 

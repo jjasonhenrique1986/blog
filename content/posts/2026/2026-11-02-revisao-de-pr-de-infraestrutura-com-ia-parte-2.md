@@ -6,7 +6,6 @@ author: Jason
 date: 2026-11-02
 tags: [ "AWS", "CI/CD", "IA", "Python" ]
 type: post
-showTableOfContents: true
 draft: false
 ---
 

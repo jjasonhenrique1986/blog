@@ -6,7 +6,6 @@ author: Jason
 date: 2026-11-14
 tags: [ "AWS", "EKS", "Kubernetes", "Segurança" ]
 type: post
-showTableOfContents: true
 ---
 
 Durante muito tempo, a única forma de dar a uma role ou usuário do IAM

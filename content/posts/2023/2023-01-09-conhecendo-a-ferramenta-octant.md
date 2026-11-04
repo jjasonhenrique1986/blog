@@ -6,7 +6,6 @@ author: Jason
 date: 2023-01-09
 tags: [ "Kubernetes", "Observabilidade", "Containers" ]
 type: post
-showTableOfContents: true
 ---
 
 > **Atualização (novembro de 2026):** o Octant foi descontinuado e o

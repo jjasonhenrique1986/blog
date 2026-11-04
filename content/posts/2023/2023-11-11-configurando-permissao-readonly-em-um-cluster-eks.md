@@ -6,7 +6,6 @@ author: Jason
 date: 2023-11-11
 tags: [ "Kubernetes", "AWS", "Containers", "EKS" ]
 type: post
-showTableOfContents: true
 ---
 
 > **Atualização (novembro de 2026):** este post usa o ConfigMap `aws-auth`,

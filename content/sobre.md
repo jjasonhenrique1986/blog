@@ -11,4 +11,3 @@ type: page
 - [GitHub](https://github.com/jjasonhenrique1986)
 - [LinkedIn](https://www.linkedin.com/in/jasonhenrique/)
 - [Certificações no Credly](https://www.credly.com/users/jason-henrique/)
-- [RSS do blog](/index.xml), para acompanhar os posts novos no seu leitor de feeds

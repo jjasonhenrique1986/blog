@@ -6,7 +6,6 @@ author: Jason
 date: 2023-01-14
 tags: [ "AWS", "Kubernetes", "EKS", "Containers" ]
 type: post
-showTableOfContents: true
 ---
 
 HardenEKS é uma ferramenta de linha de comando desenvolvida por [Doruk

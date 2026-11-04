@@ -6,7 +6,6 @@ author: Jason
 date: 2025-10-18
 tags: [ "AWS", "EKS", "Kubernetes", "Segurança" ]
 type: post
-showTableOfContents: true
 featured: true
 ---
 

@@ -6,7 +6,6 @@ author: Jason
 date: 2026-05-16
 tags: [ "Kubernetes", "Containers" ]
 type: post
-showTableOfContents: true
 ---
 
 O objetivo desse artigo é demonstrar como usar o **Horizontal Pod

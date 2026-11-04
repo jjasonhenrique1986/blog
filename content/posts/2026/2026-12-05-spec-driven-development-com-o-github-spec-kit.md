@@ -6,7 +6,6 @@ author: Jason
 date: 2026-12-05
 tags: [ "IA", "DevOps" ]
 type: post
-showTableOfContents: true
 ---
 
 Quando comecei a usar agentes de IA para escrever código, o fluxo era

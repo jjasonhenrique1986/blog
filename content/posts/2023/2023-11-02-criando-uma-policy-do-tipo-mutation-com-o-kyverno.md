@@ -6,7 +6,6 @@ author: Jason
 date: 2023-11-02
 tags: [ "Kubernetes", "Segurança", "Containers" ]
 type: post
-showTableOfContents: true
 ---
 
 O objetivo deste artigo é a criação de uma policy do tipo Mutation no

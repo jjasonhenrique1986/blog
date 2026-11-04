@@ -6,7 +6,6 @@ author: Jason
 date: 2022-09-10
 tags: [ "CI/CD", "Segurança", "IaC" ]
 type: post
-showTableOfContents: true
 ---
 Nesse artigo irei demonstrar a utilização de uma ferramenta chamada
 **kics** (**keeping infrastructure as code secure**), que executa uma

@@ -6,7 +6,6 @@ author: Jason
 date: 2024-10-12
 tags: [ "Kubernetes", "EKS", "Containers" ]
 type: post
-showTableOfContents: true
 ---
 
 O objetivo desse artigo é explicar e demonstrar os objetos

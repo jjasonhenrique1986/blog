@@ -6,7 +6,6 @@ author: Jason
 date: 2022-09-07
 tags: [ "AWS", "EKS", "Kubernetes" ]
 type: post
-showTableOfContents: true
 ---
 > **Atualização (novembro de 2026):** a Weaveworks encerrou as atividades
 > em 2024 e o eksctl passou a ser mantido pela AWS, no repositório

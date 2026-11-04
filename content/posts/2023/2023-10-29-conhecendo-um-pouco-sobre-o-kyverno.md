@@ -6,7 +6,6 @@ author: Jason
 date: 2023-10-29
 tags: [ "Kubernetes", "Segurança", "Containers" ]
 type: post
-showTableOfContents: true
 ---
 
 O Objectivo desse artigo é demonstrar a utilização da ferramenta kyverno

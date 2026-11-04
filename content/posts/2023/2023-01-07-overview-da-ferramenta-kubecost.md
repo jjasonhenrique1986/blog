@@ -6,7 +6,6 @@ author: Jason
 date: 2023-01-07
 tags: [ "AWS", "FinOps", "Kubernetes" ]
 type: post
-showTableOfContents: true
 ---
 
 > **Atualização (novembro de 2026):** o Kubecost foi comprado pela IBM em

@@ -6,7 +6,6 @@ author: Jason
 date: 2023-01-24
 tags: [ "AWS", "Segurança", "IA" ]
 type: post
-showTableOfContents: true
 ---
 
 > **Atualização (novembro de 2026):** em abril de 2024 o CodeWhisperer foi

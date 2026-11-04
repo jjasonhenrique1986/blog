@@ -6,7 +6,6 @@ author: Jason
 date: 2023-02-06
 tags: [ "AWS", "Observabilidade" ]
 type: post
-showTableOfContents: true
 ---
 
 O objetivo desse post é demonstrar a criação de um synthetic canary na

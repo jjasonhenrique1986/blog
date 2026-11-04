@@ -6,7 +6,6 @@ author: Jason
 date: 2023-11-15
 tags: [ "Kubernetes", "Containers" ]
 type: post
-showTableOfContents: true
 ---
 
 O objetivo desse artigo é fazer um passo a passo de como subir um

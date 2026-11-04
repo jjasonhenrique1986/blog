@@ -6,7 +6,6 @@ author: Jason
 date: 2024-03-30
 tags: [ "AWS", "Segurança" ]
 type: post
-showTableOfContents: true
 ---
 
 O objetivo desse artigo é criar um tutorial demonstrando como criar e

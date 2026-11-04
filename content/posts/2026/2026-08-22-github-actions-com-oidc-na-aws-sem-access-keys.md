@@ -6,7 +6,6 @@ author: Jason
 date: 2026-08-22
 tags: [ "AWS", "CI/CD", "Segurança" ]
 type: post
-showTableOfContents: true
 ---
 
 O objetivo desse artigo é demonstrar como configurar o **OpenID Connect

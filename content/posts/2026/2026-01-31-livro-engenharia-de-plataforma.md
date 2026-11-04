@@ -6,7 +6,6 @@ author: Jason
 date: 2026-01-31
 tags: [ "Engenharia de Plataforma", "DevOps", "Livros" ]
 type: post
-showTableOfContents: true
 ---
 ![Capa do livro Platform Engineering, de Camille Fournier e Ian Nowland](/images/eng-plataforma.jpg)
 
