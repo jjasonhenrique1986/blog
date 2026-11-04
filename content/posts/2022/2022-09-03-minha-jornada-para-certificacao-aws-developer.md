@@ -6,7 +6,6 @@ author: Jason
 date: 2022-09-03
 tags: [ "AWS", "Certificações" ]
 type: post
-showTableOfContents: true
 ---
 ![Selo da certificação AWS Certified Developer – Associate](/images/dca.jpg)
 

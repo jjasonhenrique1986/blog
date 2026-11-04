@@ -6,7 +6,6 @@ author: Jason
 date: 2026-11-03
 tags: [ "AWS", "CI/CD", "IA", "Segurança" ]
 type: post
-showTableOfContents: true
 draft: false
 ---
 

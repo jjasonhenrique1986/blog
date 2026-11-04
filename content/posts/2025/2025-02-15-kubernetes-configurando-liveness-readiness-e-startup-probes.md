@@ -6,7 +6,6 @@ author: Jason
 date: 2025-02-15
 tags: [ "Kubernetes", "Containers" ]
 type: post
-showTableOfContents: true
 ---
 
 O objetivo desse artigo é explicar e demonstrar as **probes** do

@@ -6,7 +6,6 @@ author: Jason
 date: 2023-12-23
 tags: [ "AWS", "Containers" ]
 type: post
-showTableOfContents: true
 ---
 
 Nesse segundo artigo falando sobre o App Runner vou demonstrar a criação

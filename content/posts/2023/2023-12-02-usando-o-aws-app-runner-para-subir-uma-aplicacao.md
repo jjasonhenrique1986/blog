@@ -6,7 +6,6 @@ author: Jason
 date: 2023-12-02
 tags: [ "AWS", "Containers" ]
 type: post
-showTableOfContents: true
 ---
 
 O objetivo desse artigo é demonstrar a utilização do serviço AWS App

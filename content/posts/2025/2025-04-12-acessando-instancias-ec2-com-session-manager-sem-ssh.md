@@ -6,7 +6,6 @@ author: Jason
 date: 2025-04-12
 tags: [ "AWS", "Segurança" ]
 type: post
-showTableOfContents: true
 ---
 
 O objetivo desse artigo é demonstrar como acessar uma instância EC2

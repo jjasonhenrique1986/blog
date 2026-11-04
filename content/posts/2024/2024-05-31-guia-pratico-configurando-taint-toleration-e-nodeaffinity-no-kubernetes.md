@@ -6,7 +6,6 @@ author: Jason
 date: 2024-05-31
 tags: [ "Containers", "Kubernetes", "EKS" ]
 type: post
-showTableOfContents: true
 ---
 
 O objetivo desse post é demonstrar como fazer os pods da sua aplicação

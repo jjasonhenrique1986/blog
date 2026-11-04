@@ -6,7 +6,6 @@ author: Jason
 date: 2023-11-05
 tags: [ "Kubernetes", "Segurança", "Containers", "CI/CD" ]
 type: post
-showTableOfContents: true
 ---
 
 O Trivy é uma ferramenta desenvolvida pela empresa Aqua Security e

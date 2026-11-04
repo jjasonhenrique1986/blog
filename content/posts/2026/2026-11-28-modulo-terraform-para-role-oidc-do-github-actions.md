@@ -6,7 +6,6 @@ author: Jason
 date: 2026-11-28
 tags: [ "Terraform", "IaC", "AWS", "CI/CD", "Segurança" ]
 type: post
-showTableOfContents: true
 ---
 
 No post

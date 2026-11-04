@@ -6,7 +6,6 @@ author: Jason
 date: 2024-01-20
 tags: [ "AWS", "Containers", "ECS" ]
 type: post
-showTableOfContents: true
 ---
 
 > **Atualização (novembro de 2026):** a AWS encerrou o suporte ao Copilot

@@ -6,7 +6,6 @@ author: Jason
 date: 2024-08-11
 tags: [ "IaC", "AWS", "Terraform" ]
 type: post
-showTableOfContents: true
 ---
 
 O objetivo desse post é fazer a configuração de um remote terraform

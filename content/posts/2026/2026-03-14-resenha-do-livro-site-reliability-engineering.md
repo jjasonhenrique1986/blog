@@ -6,7 +6,6 @@ author: Jason
 date: 2026-03-14
 tags: [ "SRE", "DevOps", "Livros", "Observabilidade" ]
 type: post
-showTableOfContents: true
 ---
 
 Depois da resenha do livro de

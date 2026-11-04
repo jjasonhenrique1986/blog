@@ -6,7 +6,6 @@ author: Jason
 date: 2024-01-07
 tags: [ "AWS", "Segurança" ]
 type: post
-showTableOfContents: true
 ---
 
 > **Atualização (novembro de 2026):** usuário IAM com access key fixa não

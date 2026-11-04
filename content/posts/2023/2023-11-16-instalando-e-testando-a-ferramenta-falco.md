@@ -6,7 +6,6 @@ author: Jason
 date: 2023-11-16
 tags: [ "Kubernetes", "Segurança", "Containers" ]
 type: post
-showTableOfContents: true
 ---
 
 O Falco é uma ferramenta desenvolvida pela empresa Sysdig e tem a função

@@ -6,7 +6,6 @@ author: Jason
 date: 2023-11-22
 tags: [ "Kubernetes", "Segurança", "Containers", "AWS" ]
 type: post
-showTableOfContents: true
 ---
 
 O objetivo deste segundo artigo falando sobre a ferramenta falco é

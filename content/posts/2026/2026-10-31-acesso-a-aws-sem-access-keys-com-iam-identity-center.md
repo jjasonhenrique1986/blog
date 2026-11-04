@@ -6,7 +6,6 @@ date: 2026-10-31
 images: ["/images/capa-identity-center.png"]
 tags: [ "AWS", "Segurança" ]
 type: post
-showTableOfContents: true
 ---
 
 O objetivo desse artigo é demonstrar como trocar o acesso à AWS por **usuário

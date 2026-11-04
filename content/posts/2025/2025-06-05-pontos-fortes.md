@@ -6,7 +6,6 @@ author: Jason
 date: 2025-06-05
 tags: [ "DevOps", "Carreira" ]
 type: post
-showTableOfContents: true
 ---
 ![Capa do livro Descubra seus pontos fortes 2.0](/images/pontos_fortes.jpg)
 

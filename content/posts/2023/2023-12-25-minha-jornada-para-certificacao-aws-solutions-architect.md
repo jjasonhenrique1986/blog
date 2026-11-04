@@ -6,7 +6,6 @@ author: Jason
 date: 2023-12-25
 tags: [ "AWS", "Certificações" ]
 type: post
-showTableOfContents: true
 ---
 ![Selo da certificação AWS Certified Solutions Architect – Associate](/images/saa.png)
 

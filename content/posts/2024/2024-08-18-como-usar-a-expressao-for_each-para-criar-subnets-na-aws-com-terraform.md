@@ -6,7 +6,6 @@ author: Jason
 date: 2024-08-18
 tags: [ "IaC", "AWS", "Terraform" ]
 type: post
-showTableOfContents: true
 ---
 
 O objetivo desse artigo é demonstrar a utilização da expressão for_each
