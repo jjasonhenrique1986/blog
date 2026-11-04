@@ -3,7 +3,7 @@ title: "Spec-Driven Development na prática com o GitHub Spec Kit"
 description: "Como uso o GitHub Spec Kit com um agente de IA: constituição do projeto, spec, plano, tarefas e implementação, com exemplos reais do revisor de PR de infraestrutura."
 images: ["/images/capa-spec-kit.png"]
 author: Jason
-date: 2026-12-05
+date: 2026-11-14
 tags: [ "IA", "DevOps" ]
 type: post
 ---

@@ -3,7 +3,7 @@ title: "Um módulo Terraform para a role OIDC do GitHub Actions"
 description: "Como transformar a role IAM do GitHub Actions com OIDC em um módulo Terraform reutilizável, com validações que bloqueiam curingas e AdministratorAccess, testes com terraform test e versionamento por tag."
 images: ["/images/capa-modulo-terraform-oidc.png"]
 author: Jason
-date: 2026-11-28
+date: 2026-11-11
 tags: [ "Terraform", "IaC", "AWS", "CI/CD", "Segurança" ]
 type: post
 ---
@@ -397,7 +397,7 @@ proteções continuam lá, e a tag no `source` deixa cada projeto atualizar o
 módulo no próprio ritmo.
 
 O state desses recursos fica num bucket S3 com lock nativo, como mostrei em
-[Terraform: state locking nativo no S3, sem DynamoDB](/posts/2026/2026-11-21-terraform-state-locking-nativo-no-s3-sem-dynamodb/).
+[Terraform: state locking nativo no S3, sem DynamoDB](/posts/2026/2026-11-07-terraform-state-locking-nativo-no-s3-sem-dynamodb/).
 
 ## Referências
 
