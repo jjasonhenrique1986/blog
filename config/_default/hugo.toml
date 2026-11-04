@@ -5,6 +5,10 @@ theme = "blowfish"
 defaultContentLanguage = "pt-br"
 enableRobotsTXT = true
 
+# Datas sem hora nos posts valem pelo horário de Brasília (posts agendados
+# saem no deploy diário das 6h do dia marcado, não às 21h do dia anterior).
+timeZone = "America/Sao_Paulo"
+
 # index-about.md é lido pela página Sobre (shortcode "sobre") e projects.md não
 # tem conteúdo: nenhum dos dois gera página própria nem entra no sitemap.
 ignoreFiles = ['index-about\.md$', 'projects\.md$']

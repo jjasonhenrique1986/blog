@@ -3,7 +3,7 @@ title: "Terraform: state locking nativo no S3, sem DynamoDB"
 description: "Como funciona o state locking nativo do backend S3 do Terraform com use_lockfile, as permissões do IAM necessárias e como migrar do lock com DynamoDB, que está obsoleto."
 images: ["/images/capa-terraform-lock-s3.png"]
 author: Jason
-date: 2026-11-21
+date: 2026-11-07
 tags: [ "Terraform", "IaC", "AWS" ]
 type: post
 ---

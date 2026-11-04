@@ -3,7 +3,7 @@ title: "EKS access entries: acesso ao cluster sem editar o aws-auth"
 description: "Como dar acesso ao Kubernetes no Amazon EKS com access entries e access policies, pela AWS CLI e pelo Terraform, e como migrar as entradas do ConfigMap aws-auth."
 images: ["/images/capa-eks-access-entries.png"]
 author: Jason
-date: 2026-11-14
+date: 2026-11-05
 tags: [ "AWS", "EKS", "Kubernetes", "Segurança" ]
 type: post
 ---
