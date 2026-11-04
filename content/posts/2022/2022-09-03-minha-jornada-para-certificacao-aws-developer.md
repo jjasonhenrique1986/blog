@@ -1,14 +1,14 @@
 ---
 title: "Minha Jornada para certificação AWS Developer"
 description: "Como me preparei em 4 meses para a certificação AWS Certified Developer Associate e os materiais de estudo que usei até a aprovação."
-image: "/images/dca.jpg"
+images: ["/images/capa-minha-jornada-para-certificacao-aws-developer.png"]
 author: Jason
 date: 2022-09-03
 tags: [ "AWS", "Certificações" ]
 type: post
 showTableOfContents: true
 ---
-![image-1](/images/dca.jpg)
+![Selo da certificação AWS Certified Developer – Associate](/images/dca.jpg)
 
 Recentemente tirei a certificação **AWS Certified Developer Associate**
 (DVA-C01) e resolvi compartilhar sobre minha jornada de estudos e os

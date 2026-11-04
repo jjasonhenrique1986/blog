@@ -1,7 +1,7 @@
 ---
 title: "GitHub Actions com OpenID Connect na AWS, sem access keys"
 description: "Como configurar o OpenID Connect entre o GitHub Actions e a AWS para que os workflows assumam uma role IAM com credenciais temporárias, sem guardar access keys."
-image: "/images/capa-github-actions-oidc.png"
+images: ["/images/capa-github-actions-oidc.png"]
 author: Jason
 date: 2026-08-22
 tags: [ "AWS", "CI/CD", "Segurança" ]

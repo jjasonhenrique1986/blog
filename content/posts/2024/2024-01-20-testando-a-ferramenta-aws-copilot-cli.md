@@ -1,15 +1,13 @@
 ---
 title: "Testando a ferramenta AWS Copilot CLI"
 description: "Testando o AWS Copilot CLI para criar de forma simplificada uma aplicação conteinerizada executando no ECS."
-image: "/images/copilot.png"
+images: ["/images/capa-testando-a-ferramenta-aws-copilot-cli.png"]
 author: Jason
 date: 2024-01-20
 tags: [ "AWS", "Containers", "ECS" ]
 type: post
 showTableOfContents: true
 ---
-
-![Testando a ferramenta AWS Copilot CLI](/images/copilot.png)
 
 > **Atualização (novembro de 2026):** a AWS encerrou o suporte ao Copilot
 > CLI em 12 de junho de 2026, e o

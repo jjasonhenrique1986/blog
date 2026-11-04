@@ -1,0 +1,20 @@
+locale = "pt-BR"
+label = "Português"
+weight = 1
+title = "Jason Henrique"
+
+[params]
+  displayName = "PT"
+  isoCode = "pt-BR"
+  dateFormat = "2 de January de 2006"
+  description = "Um blog onde compartilho sobre tecnologia principalmente sobre kubernetes e AWS."
+
+[params.author]
+  name = "Jason Henrique"
+  image = "images/jason.jpg"
+  headline = "DevOps Engineer · AWS, Kubernetes e Terraform"
+  bio = "DevOps Engineer em Campinas. Escrevo sobre AWS, Kubernetes, Terraform e práticas DevOps."
+  links = [
+    { github = "https://github.com/jjasonhenrique1986" },
+    { linkedin = "https://www.linkedin.com/in/jasonhenrique/" },
+  ]

@@ -1,15 +1,13 @@
 ---
 title: "Configurando permissão somente leitura em um cluster EKS"
 description: "Como configurar uma role da AWS com permissão somente leitura em um cluster EKS usando o kubectl."
-image: "/images/eks.png"
+images: ["/images/capa-configurando-permissao-readonly-em-um-cluster-eks.png"]
 author: Jason
 date: 2023-11-11
 tags: [ "Kubernetes", "AWS", "Containers", "EKS" ]
 type: post
 showTableOfContents: true
 ---
-
-![Configurando permissão somente leitura em um cluster EKS](/images/eks.png)
 
 > **Atualização (novembro de 2026):** este post usa o ConfigMap `aws-auth`,
 > que a AWS considera obsoleto. Hoje o caminho recomendado são as **EKS

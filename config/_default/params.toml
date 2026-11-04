@@ -1,0 +1,43 @@
+# Só as opções que mudam algo em relação ao padrão do Blowfish.
+colorScheme = "ocean"
+defaultAppearance = "dark"
+autoSwitchAppearance = true    # segue o tema claro/escuro do sistema
+enableSearch = true
+enableCodeCopy = true
+mainSections = ["post"]        # os posts usam "type: post" no front matter
+showViews = false
+showLikes = false
+
+# Proporção das capas (1200x630): os cards mostram a capa inteira, sem cortar o texto.
+thumbnailAspectRatio = "1.905"
+
+[header]
+  layout = "basic"
+
+[homepage]
+  layout = "profile"
+  showRecent = true
+  showRecentItems = 6
+  showMoreLink = true
+  showMoreLinkDest = "/posts/"
+  cardView = true
+  cardViewScreenWidth = false
+
+[article]
+  showDate = true
+  showReadingTime = true
+  showWordCount = true
+  showTableOfContents = true
+  showHero = true
+  heroStyle = "big"
+  showAuthor = true
+  showRelatedContent = true
+  relatedContentLimit = 3
+  showPagination = true
+  showTaxonomies = true
+  showEdit = false
+
+[list]
+  showCards = true
+  cardView = true
+  groupByYear = true

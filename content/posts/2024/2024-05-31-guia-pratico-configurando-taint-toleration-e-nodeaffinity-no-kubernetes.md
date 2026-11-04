@@ -1,15 +1,13 @@
 ---
 title: "Guia Prático: Configurando Taint, Toleration e NodeAffinity no Kubernetes"
 description: "Guia prático de Taint, Toleration e NodeAffinity para controlar em quais nós os pods executam no Kubernetes, usando o kind."
-image: "/images/kubernetes.png"
+images: ["/images/capa-guia-pratico-configurando-taint-toleration-e-nodeaffinity-no.png"]
 author: Jason
 date: 2024-05-31
 tags: [ "Containers", "Kubernetes", "EKS" ]
 type: post
 showTableOfContents: true
 ---
-
-![Guia Prático: Configurando Taint, Toleration e NodeAffinity no Kubernetes](/images/kubernetes.png)
 
 O objetivo desse post é demonstrar como fazer os pods da sua aplicação
 executarem em um determinado nó, usando o kind. Essa configuração também
@@ -41,8 +39,6 @@ efeitos:
 -   **NoSchedule** -- a partir da configuração do taint, nenhum pod novo
     será alocado nesse nó, mas os pods que já estiverem nele continuarão
     executando.
-
-
 
 -   **NoExecute** -- a partir da configuração do taint, nenhum pod será
     executado naquele nó: inclusive os pods que já estiverem nele serão

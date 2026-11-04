@@ -1,15 +1,13 @@
 ---
 title: Conhecendo a ferramenta trivy
 description: "Conheça o Trivy, scanner de segurança da Aqua Security e tópico cobrado no exame CKS (Certified Kubernetes Security Specialist)."
-image: "/images/trivy.png"
+images: ["/images/capa-conhecendo-a-ferramenta-trivy.png"]
 author: Jason
 date: 2023-11-05
 tags: [ "Kubernetes", "Segurança", "Containers", "CI/CD" ]
 type: post
 showTableOfContents: true
 ---
-
-![Conhecendo a ferramenta trivy](/images/trivy.png)
 
 O Trivy é uma ferramenta desenvolvida pela empresa Aqua Security e
 também é um dos tópicos cobrados no exame CKS (Certified Kubernetes

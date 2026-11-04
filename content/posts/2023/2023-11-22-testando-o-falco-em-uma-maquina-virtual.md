@@ -1,15 +1,13 @@
 ---
 title: "Testando o falco em uma máquina virtual"
 description: "Segundo artigo sobre o Falco: instalação em uma máquina virtual na AWS e alteração do output de uma regra."
-image: "/images/falco.png"
+images: ["/images/capa-testando-o-falco-em-uma-maquina-virtual.png"]
 author: Jason
 date: 2023-11-22
 tags: [ "Kubernetes", "Segurança", "Containers", "AWS" ]
 type: post
 showTableOfContents: true
 ---
-
-![Testando o falco em uma máquina virtual](/images/falco.png)
 
 O objetivo deste segundo artigo falando sobre a ferramenta falco é
 demonstrar a utilização do falco instalando em uma máquina virtual na

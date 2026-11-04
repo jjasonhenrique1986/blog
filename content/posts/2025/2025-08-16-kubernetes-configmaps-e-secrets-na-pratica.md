@@ -1,15 +1,13 @@
 ---
 title: "Kubernetes: ConfigMaps e Secrets na prática"
 description: "Como separar configuração do código no Kubernetes usando ConfigMaps e Secrets: criação, uso como variáveis de ambiente e volumes, e cuidados de segurança."
-image: "/images/kubernetes.png"
+images: ["/images/capa-kubernetes-configmaps-e-secrets-na-pratica.png"]
 author: Jason
 date: 2025-08-16
 tags: [ "Kubernetes", "Containers", "Segurança" ]
 type: post
 showTableOfContents: true
 ---
-
-![Kubernetes: ConfigMaps e Secrets na prática](/images/kubernetes.png)
 
 O objetivo desse artigo é demonstrar como usar **ConfigMaps** e
 **Secrets** no Kubernetes. Eles permitem separar a configuração da

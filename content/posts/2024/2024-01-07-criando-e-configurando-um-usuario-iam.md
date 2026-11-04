@@ -1,15 +1,13 @@
 ---
 title: "Criando e Configurando um usuário IAM"
 description: "Tutorial para criar e configurar um usuário IAM com Access Key e Secret Access Key e instalar o AWS CLI."
-image: "/images/iam.png"
+images: ["/images/capa-criando-e-configurando-um-usuario-iam.png"]
 author: Jason
 date: 2024-01-07
 tags: [ "AWS", "Segurança" ]
 type: post
 showTableOfContents: true
 ---
-
-![Criando e Configurando um usuário IAM](/images/iam.png)
 
 > **Atualização (novembro de 2026):** usuário IAM com access key fixa não
 > é mais a forma recomendada de acessar a AWS pela linha de comando, porque

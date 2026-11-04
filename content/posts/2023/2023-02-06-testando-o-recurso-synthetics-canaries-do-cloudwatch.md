@@ -1,15 +1,13 @@
 ---
 title: "Testando o recurso Synthetics Canaries do CloudWatch"
 description: "Como criar um Synthetics Canary no CloudWatch para checar periodicamente se uma URL ou API está respondendo com sucesso."
-image: "/images/synthetic.png"
+images: ["/images/capa-testando-o-recurso-synthetics-canaries-do-cloudwatch.png"]
 author: Jason
 date: 2023-02-06
 tags: [ "AWS", "Observabilidade" ]
 type: post
 showTableOfContents: true
 ---
-
-![Testando o recurso Synthetics Canaries do Cloudwatch](/images/synthetic.png)
 
 O objetivo desse post é demonstrar a criação de um synthetic canary na
 AWS. É um recurso do CloudWatch que tem como principal função de testar
@@ -144,7 +142,6 @@ Após a criação, será apresentado o dashboard abaixo:
 ![Mensagem de sucesso na criação do canary helloworld, ainda no estado Creating](/images/synthetic-12.webp)
 
 ![Canary helloworld executando com status Passed e 100% de sucesso](/images/synthetic-13.webp)
-
 
 Parei a execução da API para verificar se o canary alerta a falha,
 conforme imagem abaixo:

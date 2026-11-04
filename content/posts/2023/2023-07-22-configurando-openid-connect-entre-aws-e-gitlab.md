@@ -1,15 +1,13 @@
 ---
 title: "Configurando OpenID Connect entre AWS e GitLab"
 description: "Como configurar OpenID Connect entre a AWS e o GitLab para executar pipelines usando uma role IAM, sem chaves de acesso fixas."
-image: "/images/gitlab.png"
+images: ["/images/capa-configurando-openid-connect-entre-aws-e-gitlab.png"]
 author: Jason
 date: 2023-07-22
 tags: [ "AWS", "CI/CD" ]
 type: post
 showTableOfContents: true
 ---
-
-![Configurando OpenID Connect entre AWS e GitLab](/images/gitlab.png)
 
 O objetivo desse post é demonstrar como configurar o OpenID Connect
 entre a sua conta AWS e sua conta do GitLab para executar uma pipeline

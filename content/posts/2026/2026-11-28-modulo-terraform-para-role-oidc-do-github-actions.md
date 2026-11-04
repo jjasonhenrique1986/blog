@@ -1,7 +1,7 @@
 ---
 title: "Um módulo Terraform para a role OIDC do GitHub Actions"
 description: "Como transformar a role IAM do GitHub Actions com OIDC em um módulo Terraform reutilizável, com validações que bloqueiam curingas e AdministratorAccess, testes com terraform test e versionamento por tag."
-image: "/images/capa-modulo-terraform-oidc.png"
+images: ["/images/capa-modulo-terraform-oidc.png"]
 author: Jason
 date: 2026-11-28
 tags: [ "Terraform", "IaC", "AWS", "CI/CD", "Segurança" ]

@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 description: ""
-image: ""
+images: []
 author: Jason
 date: {{ .Date }}
 tags: []

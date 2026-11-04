@@ -3,7 +3,7 @@ title: "Acesso à AWS sem access keys com o IAM Identity Center"
 description: "Como trocar o usuário IAM com access key fixa pelo IAM Identity Center: Organizations, permission sets, MFA e login no AWS CLI com aws sso login."
 author: Jason
 date: 2026-10-31
-image: "/images/capa-identity-center.png"
+images: ["/images/capa-identity-center.png"]
 tags: [ "AWS", "Segurança" ]
 type: post
 showTableOfContents: true
