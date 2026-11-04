@@ -1,15 +1,13 @@
 ---
 title: "Testando a ferramenta HardenEKS"
 description: "Testando o HardenEKS, ferramenta de linha de comando que verifica um cluster Kubernetes com base no guia de boas práticas de EKS da AWS."
-image: "/images/hardeneks.png"
+images: ["/images/capa-testando-a-ferramenta-hardeneks.png"]
 author: Jason
 date: 2023-01-14
 tags: [ "AWS", "Kubernetes", "EKS", "Containers" ]
 type: post
 showTableOfContents: true
 ---
-
-![Testando a ferramenta HardenEKS](/images/hardeneks.png)
 
 HardenEKS é uma ferramenta de linha de comando desenvolvida por [Doruk
 Ozturk](https://github.com/dorukozturk) que atualmente trabalha na AWS. Essa ferramenta tem o

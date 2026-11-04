@@ -1,0 +1,13 @@
+{{/* Igual ao do Blowfish, mas usa a primeira imagem de `images` (o campo que o
+   Hugo também usa para og:image) quando o post não define `featureimage`.
+   Assim cada post declara a capa uma vez só. */}}
+{{ $featureImage := .Params.featureimage }}
+{{ if not $featureImage }}
+  {{ range .Translations }}
+    {{ with .Params.featureimage }}{{ $featureImage = . }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ if not $featureImage }}
+  {{ with .Params.images }}{{ $featureImage = strings.TrimPrefix "/" (index . 0) }}{{ end }}
+{{ end }}
+{{ return $featureImage }}

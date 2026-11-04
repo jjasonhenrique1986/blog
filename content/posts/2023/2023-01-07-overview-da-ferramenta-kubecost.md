@@ -1,15 +1,13 @@
 ---
 title: "Overview da ferramenta kubecost"
 description: "Um overview da console do Kubecost para monitorar e gerenciar o custo do Kubernetes e do cloud provider (AWS, Azure e GCP)."
-image: "/images/kubecost.png"
+images: ["/images/capa-overview-da-ferramenta-kubecost.png"]
 author: Jason
 date: 2023-01-07
 tags: [ "AWS", "FinOps", "Kubernetes" ]
 type: post
 showTableOfContents: true
 ---
-
-![Overview da ferramenta kubecost](/images/kubecost.png)
 
 > **Atualização (novembro de 2026):** o Kubecost foi comprado pela IBM em
 > 2024. A documentação oficial agora fica no

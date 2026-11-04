@@ -1,15 +1,13 @@
 ---
 title: "Kubernetes: Entenda DaemonSet, Deployment e StatefulSet"
 description: "Entenda as diferenças entre DaemonSet, Deployment e StatefulSet no Kubernetes, com exemplos em um cluster local com kind."
-image: "/images/kubernetes.png"
+images: ["/images/capa-kubernetes-entenda-daemonset-deployment-e-statefulset.png"]
 author: Jason
 date: 2024-10-12
 tags: [ "Kubernetes", "EKS", "Containers" ]
 type: post
 showTableOfContents: true
 ---
-
-![Kubernetes: Entenda DaemonSet, Deployment e StatefulSet](/images/kubernetes.png)
 
 O objetivo desse artigo é explicar e demonstrar os objetos
 DaemonSet, Deployment e StatefulSet no Kubernetes, a principal

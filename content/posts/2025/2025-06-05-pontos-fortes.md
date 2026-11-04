@@ -1,14 +1,14 @@
 ---
 title: "Descobrindo meus pontos fortes e como eles me ajudam na minha carreira em Tecnologia"
 description: "O que aprendi com o teste CliftonStrengths do Gallup e como meus pontos fortes me ajudam na carreira como DevOps Engineer."
-image: "/images/pontos_fortes.jpg"
+images: ["/images/capa-pontos-fortes.png"]
 author: Jason
 date: 2025-06-05
 tags: [ "DevOps", "Carreira" ]
 type: post
 showTableOfContents: true
 ---
-![talentos](/images/pontos_fortes.jpg)
+![Capa do livro Descubra seus pontos fortes 2.0](/images/pontos_fortes.jpg)
 
 Recentemente fiz o teste de pontos fortes do Instituto Gallup — o CliftonStrengths. A ideia era entender melhor onde concentro meus pontos fortes e como isso me ajuda com meu dia a dia como DevOps Engineer. O resultado me surpreendeu pela precisão e me ajudou a enxergar com mais clareza o porquê de certas decisões, preferências e estilos de trabalho e de vida.
 
@@ -48,7 +48,6 @@ planejo rollback, testo hipóteses. Já vi que isso, em ambientes
 críticos, é uma força valiosa. Ser deliberado não é ser lento — é ser
 estratégico. Sempre penso no pior cenário possível; isso me ajuda a
 prever incidentes no ambiente.
-
 
 ## Intelecção
 

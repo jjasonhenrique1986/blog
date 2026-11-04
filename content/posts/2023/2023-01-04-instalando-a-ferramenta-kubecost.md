@@ -1,15 +1,13 @@
 ---
 title: "Instalando a ferramenta kubecost"
 description: "Passo a passo da instalação do Kubecost, ferramenta de monitoramento e gerenciamento de custos para Kubernetes e cloud."
-image: "/images/kubecost.png"
+images: ["/images/capa-instalando-a-ferramenta-kubecost.png"]
 author: Jason
 date: 2023-01-04
 tags: [ "AWS", "FinOps", "Kubernetes" ]
 type: post
 showTableOfContents: true
 ---
-
-![Instalando a ferramenta kubecost](/images/kubecost.png)
 
 > **Atualização (novembro de 2026):** o Kubecost foi comprado pela IBM em
 > 2024. A documentação oficial agora fica no

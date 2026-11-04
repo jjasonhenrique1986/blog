@@ -1,7 +1,7 @@
 ---
 title: "Revisão de PR de infraestrutura com IA, parte 2: o script em Python"
 description: "Segunda parte da série: o script em Python que envia o diff de Terraform e Kubernetes para o Claude ou o gpt-oss no Amazon Bedrock e recebe uma revisão em JSON validado com Pydantic, e um bug real que apareceu nos testes."
-image: "/images/capa-revisao-pr-ia.png"
+images: ["/images/capa-revisao-pr-ia.png"]
 author: Jason
 date: 2026-11-02
 tags: [ "AWS", "CI/CD", "IA", "Python" ]

@@ -1,15 +1,13 @@
 ---
 title: "Testando a ferramenta AWS CodeWhisperer"
 description: "Testando o AWS CodeWhisperer, ferramenta da AWS que sugere código usando Machine Learning, similar ao GitHub Copilot."
-image: "/images/codewhisperer.jpg"
+images: ["/images/capa-testando-a-ferramenta-aws-codewhisperer.png"]
 author: Jason
 date: 2023-01-24
 tags: [ "AWS", "Segurança", "IA" ]
 type: post
 showTableOfContents: true
 ---
-
-![Testando a ferramenta AWS CodeWhisperer](/images/codewhisperer.jpg)
 
 > **Atualização (novembro de 2026):** em abril de 2024 o CodeWhisperer foi
 > incorporado ao **Amazon Q Developer**, e o nome CodeWhisperer deixou de

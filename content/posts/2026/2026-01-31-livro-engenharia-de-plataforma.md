@@ -1,15 +1,14 @@
 ---
 title: "Resenha do livro Engenharia de Plataforma"
 description: "Resenha do livro Engenharia de Plataforma: por que tratar a plataforma interna como um produto e os principais aprendizados."
-image: "/images/eng-plataforma.jpg"
+images: ["/images/capa-livro-engenharia-de-plataforma.png"]
 author: Jason
 date: 2026-01-31
 tags: [ "Engenharia de Plataforma", "DevOps", "Livros" ]
 type: post
 showTableOfContents: true
 ---
-
-![Resenha do livro Engenharia de Plataforma](/images/eng-plataforma.jpg)
+![Capa do livro Platform Engineering, de Camille Fournier e Ian Nowland](/images/eng-plataforma.jpg)
 
 Recentemente li o livro [Engenharia de
 Plataforma](https://www.amazon.com.br/Engenharia-Plataforma-l%C3%ADderes-t%C3%A9cnicos-produtos/dp/8575229419),

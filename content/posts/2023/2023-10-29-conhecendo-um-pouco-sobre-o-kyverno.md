@@ -1,15 +1,13 @@
 ---
 title: "Conhecendo um pouco sobre o kyverno"
 description: "Introdução ao Kyverno, dynamic admission controller do Kubernetes: instalação e criação de uma policy do tipo validation."
-image: "/images/kyverno.png"
+images: ["/images/capa-conhecendo-um-pouco-sobre-o-kyverno.png"]
 author: Jason
 date: 2023-10-29
 tags: [ "Kubernetes", "Segurança", "Containers" ]
 type: post
 showTableOfContents: true
 ---
-
-![Conhecendo um pouco sobre o kyverno](/images/kyverno.png)
 
 O Objectivo desse artigo é demonstrar a utilização da ferramenta kyverno
 dentro de um ambiente kubernetes. O Kyverno é um dynamic admission

@@ -1,7 +1,7 @@
 ---
 title: Gerenciando acesso no Kubernetes com RBAC 
 description: "Como gerenciar o controle de acesso no Kubernetes com RBAC: Roles, ClusterRoles e seus bindings."
-image: "/images/kubernetes.png"
+images: ["/images/capa-gerenciando-acesso-no-kubernetes-com-rbac.png"]
 author: Jason
 date: 2024-11-15
 tags: [ "Kubernetes", "Segurança", "Containers" ]
@@ -9,8 +9,6 @@ type: post
 showTableOfContents: true
 featured: true
 ---
-
-![Gerenciando acesso no Kubernetes com RBAC](/images/kubernetes.png)
 
 No Kubernetes, a segurança e o controle de acesso são aspectos críticos
 para garantir que apenas as pessoas e processos corretos tenham as
@@ -254,7 +252,6 @@ Para visualizar mais informações executar o comando abaixo:
 kubectl describe rolebinding -n app
 ```
 
-
 ## ClusterRoleBinding 
 
 Semelhante ao RoleBinding, o **ClusterRoleBinding** associa uma
@@ -375,7 +372,6 @@ comando abaixo:
 ``` bash
 kubectl get deploy -n app -o yaml | grep serviceAccount
 ```
-
 
 ## Conclusão 
 

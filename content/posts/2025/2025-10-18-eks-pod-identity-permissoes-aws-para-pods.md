@@ -1,7 +1,7 @@
 ---
 title: "EKS Pod Identity: permissões da AWS para pods sem access keys"
 description: "Como usar o EKS Pod Identity para dar permissões do IAM a pods no Amazon EKS sem access keys, e a diferença para o IRSA."
-image: "/images/eks.png"
+images: ["/images/capa-eks-pod-identity-permissoes-aws-para-pods.png"]
 author: Jason
 date: 2025-10-18
 tags: [ "AWS", "EKS", "Kubernetes", "Segurança" ]
@@ -9,8 +9,6 @@ type: post
 showTableOfContents: true
 featured: true
 ---
-
-![EKS Pod Identity: permissões da AWS para pods sem access keys](/images/eks.png)
 
 O objetivo desse artigo é demonstrar como usar o **EKS Pod Identity**
 para que um pod rodando no Amazon EKS acesse serviços da AWS, como o S3,

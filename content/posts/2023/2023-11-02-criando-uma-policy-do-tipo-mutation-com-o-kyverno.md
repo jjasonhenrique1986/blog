@@ -1,15 +1,13 @@
 ---
 title: "Criando uma policy do tipo Mutation com o kyverno"
 description: "Continuação da série sobre Kyverno: como criar uma policy do tipo Mutation em um cluster Kubernetes."
-image: "/images/kyverno.png"
+images: ["/images/capa-criando-uma-policy-do-tipo-mutation-com-o-kyverno.png"]
 author: Jason
 date: 2023-11-02
 tags: [ "Kubernetes", "Segurança", "Containers" ]
 type: post
 showTableOfContents: true
 ---
-
-![Criando uma policy do tipo Mutation com o kyverno](/images/kyverno.png)
 
 O objetivo deste artigo é a criação de uma policy do tipo Mutation no
 Kyverno. Esse artigo é uma continuação do primeiro artigo onde falei

@@ -1,15 +1,13 @@
 ---
 title: "Observabilidade no Kubernetes com Prometheus e Grafana"
 description: "Como instalar o kube-prometheus-stack com Helm para monitorar um cluster Kubernetes com Prometheus, Grafana e Alertmanager, com exemplos de PromQL e alertas."
-image: "/images/kubernetes.png"
+images: ["/images/capa-observabilidade-no-kubernetes-com-prometheus-e-grafana.png"]
 author: Jason
 date: 2025-12-06
 tags: [ "Kubernetes", "Observabilidade", "Containers" ]
 type: post
 showTableOfContents: true
 ---
-
-![Observabilidade no Kubernetes com Prometheus e Grafana](/images/kubernetes.png)
 
 O objetivo desse artigo é montar uma stack de monitoramento para um
 cluster Kubernetes usando o **kube-prometheus-stack**, um Helm chart da

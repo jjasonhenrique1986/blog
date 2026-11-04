@@ -1,15 +1,13 @@
 ---
 title: "Como usar a expressão for_each para criar subnets na AWS com Terraform"
 description: "Como usar a expressão for_each no Terraform para reduzir código ao criar subnets na AWS."
-image: "/images/terraform.png"
+images: ["/images/capa-como-usar-a-expressao-for_each-para-criar-subnets-na-aws-com.png"]
 author: Jason
 date: 2024-08-18
 tags: [ "IaC", "AWS", "Terraform" ]
 type: post
 showTableOfContents: true
 ---
-
-![Como usar a expressão for_each para criar subnets na aws com terraform](/images/terraform.png)
 
 O objetivo desse artigo é demonstrar a utilização da expressão for_each
 com o intuito de reduzir a quantidade de código para a criação de sua

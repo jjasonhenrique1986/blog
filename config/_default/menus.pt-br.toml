@@ -1,0 +1,35 @@
+[[main]]
+  name = "Posts"
+  pageRef = "posts"
+  weight = 10
+
+[[main]]
+  name = "Tags"
+  pageRef = "tags"
+  weight = 20
+
+[[main]]
+  name = "Sobre"
+  pageRef = "sobre"
+  weight = 30
+
+[[main]]
+  name = "Projetos"
+  url = "https://github.com/jjasonhenrique1986?tab=repositories"
+  weight = 40
+  [main.params]
+    target = "_blank"
+
+[[main]]
+  name = "Certificações"
+  url = "https://www.credly.com/users/jason-henrique/"
+  weight = 50
+  [main.params]
+    target = "_blank"
+
+# Botão de busca (atalho Ctrl K)
+[[main]]
+  identifier = "search"
+  weight = 99
+  [main.params]
+    action = "search"

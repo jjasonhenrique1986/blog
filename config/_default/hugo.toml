@@ -1,0 +1,31 @@
+# Configuração do blog com o tema Blowfish.
+# Documentação das opções: https://blowfish.page/docs/configuration/
+baseURL = "https://blog.jjasonhenrique.com.br/"
+theme = "blowfish"
+defaultContentLanguage = "pt-br"
+enableRobotsTXT = true
+
+# index-about.md é lido pela página Sobre (shortcode "sobre") e projects.md não
+# tem conteúdo: nenhum dos dois gera página própria nem entra no sitemap.
+ignoreFiles = ['index-about\.md$', 'projects\.md$']
+
+[pagination]
+  pagerSize = 12
+
+# JSON na home alimenta a busca do tema.
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+# As imagens ficam em static/images (URLs /images/...). Montá-las também como
+# assets permite ao Blowfish gerar versões otimizadas das capas.
+[module]
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "static/images"
+    target = "assets/images"

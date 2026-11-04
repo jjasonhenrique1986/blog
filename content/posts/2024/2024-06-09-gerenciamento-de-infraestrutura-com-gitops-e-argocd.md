@@ -1,7 +1,7 @@
 ---
 title: "Gerenciamento de Infraestrutura com GitOps e ArgoCD"
 description: "Tutorial de GitOps: instalando o ArgoCD em um cluster Kubernetes com kind e fazendo o deploy de uma aplicação nginx."
-image: "/images/argo.png"
+images: ["/images/capa-gerenciamento-de-infraestrutura-com-gitops-e-argocd.png"]
 author: Jason
 date: 2024-06-09
 tags: [ "Containers", "Kubernetes", "GitOps", "IaC" ]
@@ -9,8 +9,6 @@ type: post
 showTableOfContents: true
 featured: true
 ---
-
-![Gerenciamento de Infraestrutura com GitOps e ArgoCD](/images/argo.png)
 
 O objetivo desse artigo é criar um tutorial de como instalar o ArgoCD no
 kubernetes usando kind e também vamos subir uma aplicação (o nosso
@@ -35,7 +33,6 @@ entendermos sobre GitOps.
 
 GitOps é uma forma poderosa de gerenciar e automatizar a sua
 infraestrutura de forma declarativa usando um repositório git.
-
 
 ![Diagrama do GitOps: o desenvolvedor faz commit no Git, o ArgoCD puxa as mudanças e sincroniza o estado no Kubernetes](/images/argo-2.webp)
 

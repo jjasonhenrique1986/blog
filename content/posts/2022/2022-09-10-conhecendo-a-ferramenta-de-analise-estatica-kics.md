@@ -1,15 +1,13 @@
 ---
 title: "Conhecendo a ferramenta de análise estática kics"
 description: "Como usar o KICS para fazer análise estática de código de Infraestrutura como Código, como Terraform e CloudFormation."
-image: "/images/kics.png"
+images: ["/images/capa-conhecendo-a-ferramenta-de-analise-estatica-kics.png"]
 author: Jason
 date: 2022-09-10
 tags: [ "CI/CD", "Segurança", "IaC" ]
 type: post
 showTableOfContents: true
 ---
-![Conhecendo a ferramenta de analise estática kics](/images/kics.png)
-
 Nesse artigo irei demonstrar a utilização de uma ferramenta chamada
 **kics** (**keeping infrastructure as code secure**), que executa uma
 análise estática em códigos de Infraestrutura
