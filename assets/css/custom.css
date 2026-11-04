@@ -1,0 +1,16 @@
+/* Posts: cabeçalho, texto e rodapé numa coluna centralizada sob a capa.
+   48rem (~768px, ~80 caracteres por linha) em vez da largura padrão do tema
+   (~65 caracteres, alinhada à esquerda). Só afeta as páginas de post. */
+article #single_header,
+article .article-content,
+article > footer {
+  max-width: 48rem;
+  margin-inline: auto;
+}
+
+/* O wrapper do texto encolhe para o conteúdo; ocupa a largura toda para a
+   coluna poder centralizar. */
+article #single_header ~ section > div.min-w-0 {
+  width: 100%;
+  max-width: 100%;
+}

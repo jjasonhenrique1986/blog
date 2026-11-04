@@ -29,3 +29,6 @@ ignoreFiles = ['index-about\.md$', 'projects\.md$']
   [[module.mounts]]
     source = "static/images"
     target = "assets/images"
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
