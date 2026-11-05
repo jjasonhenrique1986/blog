@@ -4,14 +4,21 @@ description: "Segundo artigo sobre o AWS App Runner: deploy de uma API Hello Wor
 images: ["/images/capa-deployando-uma-api-usando-aws-app-runner.png"]
 author: Jason
 date: 2023-12-23
+lastmod: 2026-11-04
 tags: [ "AWS", "Containers" ]
 type: post
 ---
 
+> **Atualização (novembro de 2026):** o AWS App Runner
+> [não aceita mais novos clientes](https://docs.aws.amazon.com/apprunner/latest/dg/apprunner-availability-change.html).
+> Quem já usa pode continuar, inclusive criando novos serviços, mas a AWS
+> não planeja novos recursos e recomenda o Amazon ECS Express Mode para
+> migrar. O post fica como registro.
+
 Nesse segundo artigo falando sobre o App Runner vou demonstrar a criação
 de uma API feita com FastAPI que retorna um Hello World. O código-fonte
 dessa API está no repositório
-[apprunner-example](https://github.com/jjasonhenrique/apprunner-example.git),
+[apprunner-example](https://github.com/jjasonhenrique1986/apprunner-example.git),
 no GitHub.
 
 O primeiro artigo sobre o App Runner é o [Usando o AWS App Runner para

@@ -4,6 +4,7 @@ description: "Passo a passo da instalação do Kubecost, ferramenta de monitoram
 images: ["/images/capa-instalando-a-ferramenta-kubecost.png"]
 author: Jason
 date: 2023-01-04
+lastmod: 2026-11-03
 tags: [ "AWS", "FinOps", "Kubernetes" ]
 type: post
 ---

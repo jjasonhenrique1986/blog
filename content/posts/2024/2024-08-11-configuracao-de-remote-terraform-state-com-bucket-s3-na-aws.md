@@ -4,6 +4,7 @@ description: "Como configurar o Terraform state remoto em um bucket S3 na AWS em
 images: ["/images/capa-configuracao-de-remote-terraform-state-com-bucket-s3-na-aws.png"]
 author: Jason
 date: 2024-08-11
+lastmod: 2026-11-03
 tags: [ "IaC", "AWS", "Terraform" ]
 type: post
 ---

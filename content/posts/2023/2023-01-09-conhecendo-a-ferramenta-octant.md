@@ -4,6 +4,7 @@ description: "Conheça o Octant, projeto open source que permite visualizar e ge
 images: ["/images/capa-conhecendo-a-ferramenta-octant.png"]
 author: Jason
 date: 2023-01-09
+lastmod: 2026-11-04
 tags: [ "Kubernetes", "Observabilidade", "Containers" ]
 type: post
 ---
@@ -22,7 +23,7 @@ gerenciamento do cluster e das aplicações por meio dela.
 A ferramenta Octant era mantida pela VMware. Abaixo, links com mais informações:
 
 - https://octant.dev/
-- https://github.com/vmware-tanzu/octant
+- https://github.com/vmware-archive/octant
 
 ## Pré-requisitos 
 
@@ -48,7 +49,7 @@ que suporta Windows, Linux e Mac.
 
 Para fazer o download basta acessar o link abaixo:
 
--  https://github.com/vmware-tanzu/octant/releases/tag/v0.25.1
+-  https://github.com/vmware-archive/octant/releases/tag/v0.25.1
 
 No momento em que escrevo este post, essa é a última versão da ferramenta.
 
@@ -114,8 +115,11 @@ O objetivo desse post foi demonstrar a utilização da ferramenta Octant e
 como ela pode ajudar no gerenciamento de um cluster Kubernetes via
 interface gráfica, aumentando a sua produtividade.
 
-Existem ferramentas similares como o Kubernetes-Dashboard e o Lens.
-Abaixo links com mais informações:
+Existem ferramentas similares, como o Headlamp, o k9s (no terminal) e o
+Lens. O Kubernetes Dashboard, que eu citava aqui, também foi
+[arquivado](https://github.com/kubernetes-retired/dashboard). Abaixo, links
+com mais informações:
 
-- [Kubernetes Dashboard](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
+- [Headlamp](https://github.com/kubernetes-sigs/headlamp)
+- [k9s](https://github.com/derailed/k9s)
 - [Lens](https://k8slens.dev/)

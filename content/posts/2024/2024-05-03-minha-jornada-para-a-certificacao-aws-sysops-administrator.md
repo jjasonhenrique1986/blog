@@ -4,6 +4,7 @@ description: "Como me preparei em 1 mês para a certificação AWS Certified Sys
 images: ["/images/capa-minha-jornada-para-a-certificacao-aws-sysops-administrator.png"]
 author: Jason
 date: 2024-05-03
+lastmod: 2026-11-03
 tags: [ "AWS", "Certificações" ]
 type: post
 ---

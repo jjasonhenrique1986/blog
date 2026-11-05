@@ -1,3 +1,4 @@
+images = ["images/capa-blog.png"]
 # Só as opções que mudam algo em relação ao padrão do Blowfish.
 colorScheme = "ocean"
 defaultAppearance = "dark"

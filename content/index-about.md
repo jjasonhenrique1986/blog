@@ -1,6 +1,6 @@
-Olá! Seja bem vind@ Sou Jason Henrique moro em Campinas no interior de São Paulo, trabalho com Tecnologia desde 2007 e atualmente sou DevOps Engineer especializado em computação em nuvem principalmente AWS, Kubernetes, terraform e Linux. 
+Olá! Seja bem-vindo(a). Sou Jason Henrique, moro em Campinas no interior de São Paulo, trabalho com Tecnologia desde 2007 e atualmente sou DevOps Engineer especializado em computação em nuvem principalmente AWS, Kubernetes, Terraform e Linux. 
 
-Sou formado em Tecnólogo em Redes de Computadores e pós-graduado em **DevOps** e **Cloud Computing**. Além disso, possuo diversas certificações: 
+Sou tecnólogo em Redes de Computadores e pós-graduado em **DevOps** e **Cloud Computing**. Além disso, possuo diversas certificações: 
 
 - AWS Solutions Architect Associate
 - AWS SysOps Administrator Associate
@@ -12,4 +12,4 @@ Sou formado em Tecnólogo em Redes de Computadores e pós-graduado em **DevOps**
 
 Neste blog, compartilho insights e aprendizados sobre AWS, Kubernetes, infraestrutura e práticas DevOps, visando contribuir para a comunidade que tanto me ajudou a ser o profissional que sou hoje.
 
-Se você é entusiasta de tecnologia e deseja discutir sobre infraestrutura em nuvem e outros assuntos relacionados as práticas DevOps, sinta-se à vontade para acompanhar meus posts.
+Se você é entusiasta de tecnologia e deseja discutir sobre infraestrutura em nuvem e outros assuntos relacionados às práticas DevOps, sinta-se à vontade para acompanhar meus posts.
