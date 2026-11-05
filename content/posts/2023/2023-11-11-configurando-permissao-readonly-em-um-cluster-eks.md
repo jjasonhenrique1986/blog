@@ -4,6 +4,7 @@ description: "Como configurar uma role da AWS com permissão somente leitura em 
 images: ["/images/capa-configurando-permissao-readonly-em-um-cluster-eks.png"]
 author: Jason
 date: 2023-11-11
+lastmod: 2026-11-03
 tags: [ "Kubernetes", "AWS", "Containers", "EKS" ]
 type: post
 ---

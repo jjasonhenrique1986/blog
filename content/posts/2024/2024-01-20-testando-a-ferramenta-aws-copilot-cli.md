@@ -4,6 +4,7 @@ description: "Testando o AWS Copilot CLI para criar de forma simplificada uma ap
 images: ["/images/capa-testando-a-ferramenta-aws-copilot-cli.png"]
 author: Jason
 date: 2024-01-20
+lastmod: 2026-11-04
 tags: [ "AWS", "Containers", "ECS" ]
 type: post
 ---
@@ -12,7 +13,10 @@ type: post
 > CLI em 12 de junho de 2026, e o
 > [repositório](https://github.com/aws/copilot-cli) foi arquivado. A
 > ferramenta não recebe mais atualizações nem correções de segurança, então
-> não a use em projetos novos. O post fica como registro.
+> não a use em projetos novos. Como
+> [alternativa](https://aws.amazon.com/blogs/containers/announcing-the-end-of-support-for-the-aws-copilot-cli),
+> a AWS recomenda o Amazon ECS Express Mode ou o AWS CDK. O post fica como
+> registro.
 
 Nesse artigo vou demonstrar como usar a ferramenta AWS Copilot CLI para
 criar, de forma simplificada, uma aplicação conteinerizada executando no

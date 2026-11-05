@@ -21,8 +21,8 @@ da OpenAI, e foi com ele que fiz os testes desta série (explico o motivo abaixo
 A série tem três partes:
 
 1. **Arquitetura e acesso ao Bedrock** (este post)
-2. O script em Python que conversa com o modelo
-3. A action do GitHub e os cuidados de segurança
+2. [O script em Python que conversa com o modelo](/posts/2026/2026-11-02-revisao-de-pr-de-infraestrutura-com-ia-parte-2/)
+3. [A action do GitHub e os cuidados de segurança](/posts/2026/2026-11-03-revisao-de-pr-de-infraestrutura-com-ia-parte-3/)
 
 Tudo virou uma **action reutilizável**: para usar o revisor num repositório, basta
 criar um workflow que chama a action. O código completo está em

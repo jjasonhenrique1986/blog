@@ -4,6 +4,7 @@ description: "Tutorial para criar e configurar um usuário IAM com Access Key e 
 images: ["/images/capa-criando-e-configurando-um-usuario-iam.png"]
 author: Jason
 date: 2024-01-07
+lastmod: 2026-11-03
 tags: [ "AWS", "Segurança" ]
 type: post
 ---

@@ -4,6 +4,7 @@ description: "Testando o AWS CodeWhisperer, ferramenta da AWS que sugere código
 images: ["/images/capa-testando-a-ferramenta-aws-codewhisperer.png"]
 author: Jason
 date: 2023-01-24
+lastmod: 2026-11-03
 tags: [ "AWS", "Segurança", "IA" ]
 type: post
 ---

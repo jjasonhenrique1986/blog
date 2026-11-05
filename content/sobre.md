@@ -2,6 +2,12 @@
 title: "Sobre"
 description: "Quem é Jason Henrique: DevOps Engineer em Campinas, com foco em AWS, Kubernetes e Terraform, e as certificações que tenho."
 type: page
+showDate: false
+showDateUpdated: false
+showReadingTime: false
+showWordCount: false
+showViews: false
+showLikes: false
 ---
 
 {{< sobre >}}

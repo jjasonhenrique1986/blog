@@ -72,6 +72,12 @@ Pontos importantes:
   nem nos logs. A action também mascara o ID da conta.
 - **Uma role por repositório**: cada repositório que usa a action tem a sua
   própria role, presa ao `sub` dele, como na parte 1.
+- **Versão fixa por SHA**: `@v1` é uma tag que avança a cada versão nova da
+  action, então o código que roda pode mudar sem você mexer no workflow. Para
+  travar exatamente o que foi revisado, use o SHA do commit e deixe a versão
+  num comentário:
+  `uses: jjasonhenrique1986/github-actions/iac-ai-review@a49155e8d21ddaf1b68f7768733a3799c78c9369 # v1.1.0`.
+  O Dependabot entende esse formato e abre PR quando sai uma versão nova.
 
 ### Por dentro da action
 

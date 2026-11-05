@@ -4,6 +4,7 @@ description: "Como configurar o OpenID Connect entre o GitHub Actions e a AWS pa
 images: ["/images/capa-github-actions-oidc.png"]
 author: Jason
 date: 2026-08-22
+lastmod: 2026-11-03
 tags: [ "AWS", "CI/CD", "Segurança" ]
 type: post
 ---

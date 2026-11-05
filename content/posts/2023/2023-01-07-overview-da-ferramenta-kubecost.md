@@ -4,6 +4,7 @@ description: "Um overview da console do Kubecost para monitorar e gerenciar o cu
 images: ["/images/capa-overview-da-ferramenta-kubecost.png"]
 author: Jason
 date: 2023-01-07
+lastmod: 2026-11-03
 tags: [ "AWS", "FinOps", "Kubernetes" ]
 type: post
 ---
