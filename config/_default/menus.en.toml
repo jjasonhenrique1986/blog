@@ -1,0 +1,38 @@
+[[main]]
+  name = "Posts"
+  pageRef = "posts"
+  weight = 10
+
+[[main]]
+  name = "Tags"
+  pageRef = "tags"
+  weight = 20
+
+[[main]]
+  name = "About"
+  pageRef = "sobre"
+  weight = 30
+
+[[main]]
+  name = "Projects"
+  pageRef = "projetos"
+  weight = 40
+
+[[main]]
+  name = "Resume"
+  pageRef = "cv"
+  weight = 45
+
+[[main]]
+  name = "Certifications"
+  url = "https://www.credly.com/users/jason-henrique/"
+  weight = 50
+  [main.params]
+    target = "_blank"
+
+# Search button (Ctrl K)
+[[main]]
+  identifier = "search"
+  weight = 99
+  [main.params]
+    action = "search"

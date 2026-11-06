@@ -1,22 +1,23 @@
 {{/*
-  Seletor de idioma do currículo: uma bandeira por versão (inglês, espanhol e
-  português, nessa ordem). Uso: {{< cv-idiomas atual="pt" >}}
+  Seletor de idioma do currículo: uma bandeira para cada versão da página
+  (inglês primeiro, português por último). Uso: {{< cv-idiomas >}}
 */}}
-{{- $atual := .Get "atual" | default "pt" -}}
-{{- $idiomas := slice
-  (dict "id" "en" "nome" "English" "url" "/cv/en/" "lang" "en")
-  (dict "id" "es" "nome" "Español" "url" "/cv/es/" "lang" "es")
-  (dict "id" "pt" "nome" "Português" "url" "/cv/" "lang" "pt-BR")
--}}
-{{- $flags := dict "en" "flags/us.svg" "es" "flags/es.svg" "pt" "flags/br.svg" -}}
-<nav class="cv-idiomas not-prose" aria-label="Idioma do currículo / Resume language / Idioma del currículum">
-  {{- range $idiomas }}
-    {{- $svg := resources.Get (index $flags .id) }}
-    <a href="{{ .url }}" hreflang="{{ .lang }}" lang="{{ .lang }}"
-       class="cv-idioma{{ if eq .id $atual }} cv-idioma--atual{{ end }}"
-       {{ if eq .id $atual }}aria-current="page"{{ end }}>
-      <span class="cv-bandeira" aria-hidden="true">{{ $svg.Content | safeHTML }}</span>
-      <span>{{ .nome }}</span>
-    </a>
+{{- $bandeiras := dict "en" "flags/us.svg" "pt-br" "flags/br.svg" -}}
+{{- $ordem := slice "en" "pt-br" -}}
+{{- $atual := .Page.Language.Lang -}}
+{{- $paginas := dict -}}
+{{- range .Page.AllTranslations }}{{ $paginas = merge $paginas (dict .Language.Lang .) }}{{ end -}}
+<nav class="cv-idiomas not-prose" aria-label="{{ i18n "cvLanguage" }}">
+  {{- range $ordem }}
+    {{- with index $paginas . }}
+      {{- $svg := resources.Get (index $bandeiras .Language.Lang) }}
+      {{- $locale := .Language.Locale }}
+      <a href="{{ .RelPermalink }}" hreflang="{{ $locale }}" lang="{{ $locale }}"
+         class="cv-idioma{{ if eq .Language.Lang $atual }} cv-idioma--atual{{ end }}"
+         {{ if eq .Language.Lang $atual }}aria-current="page"{{ end }}>
+        <span class="cv-bandeira" aria-hidden="true">{{ $svg.Content | safeHTML }}</span>
+        <span>{{ .Language.Label }}</span>
+      </a>
+    {{- end }}
   {{- end }}
 </nav>

@@ -1,2 +1,6 @@
-{{/* Reaproveita o texto de content/index-about.md, que também aparece na home. */}}
-{{ readFile "index-about.md" | markdownify }}
+{{/* Reaproveita o texto de content/index-about.md (ou index-about.en.md na versão em inglês). */}}
+{{- $arquivo := "index-about.md" -}}
+{{- if ne .Page.Language.Lang "pt-br" -}}
+  {{- $arquivo = printf "index-about.%s.md" .Page.Language.Lang -}}
+{{- end -}}
+{{ readFile $arquivo | markdownify }}

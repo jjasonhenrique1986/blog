@@ -5,8 +5,8 @@
     titulo  nome exibido no card
     repo    nome do repositório em github.com/jjasonhenrique1986
     pasta   pasta dentro do repositório, quando o projeto é só ela (opcional)
-    tags    tecnologias separadas por vírgula (opcional)
     nota    texto curto em destaque, como "Arquivado" (opcional)
+    tags    tecnologias separadas por vírgula (opcional)
   O conteúdo entre as tags é Markdown: a descrição e, se houver, os links
   para os posts.
 */}}
@@ -36,6 +36,6 @@
       {{- range . }}<li>{{ . }}</li>{{ end -}}
     </ul>
     {{- end }}
-    <a class="projeto-link" href="{{ $url }}" target="_blank" rel="noopener">Ver no GitHub →</a>
+    <a class="projeto-link" href="{{ $url }}" target="_blank" rel="noopener">{{ i18n "projectViewOnGithub" }} →</a>
   </div>
 </div>

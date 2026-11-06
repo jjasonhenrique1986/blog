@@ -53,7 +53,7 @@ Crie um namespace chamado kubecost, onde a aplicação será implantada,
 com o comando abaixo:
 
 ``` bash
-kucebctl create ns kubecost
+kubectl create ns kubecost
 ```
 
 Execute o comando abaixo para a instalação:

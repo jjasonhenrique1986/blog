@@ -39,7 +39,8 @@ caso vou utilizar uma imagem docker.
 ### Docker 
 
 ``` bash
-docker pull checkmarx/kics:latestdocker run -t -v "{path_to_host_folder_to_scan}":/path checkmarx/kics scan -p "/path" -o "/path/"
+docker pull checkmarx/kics:latest
+docker run -t -v "{path_to_host_folder_to_scan}":/path checkmarx/kics scan -p "/path" -o "/path/"
 ```
 
 Para mais detalhes, consulte o [guia de instalação do

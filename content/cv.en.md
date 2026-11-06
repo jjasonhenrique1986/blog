@@ -1,7 +1,6 @@
 ---
 title: "Resume"
 description: "Resume of Jason Henrique, DevOps Engineer: experience with EKS, GitHub Actions, Terraform and observability at Hotmart, Itaú and CI&T, education and certifications."
-url: /cv/en/
 type: page
 showDate: false
 showDateUpdated: false
@@ -11,7 +10,7 @@ showViews: false
 showLikes: false
 ---
 
-{{< cv-idiomas atual="en" >}}
+{{< cv-idiomas >}}
 
 **DevOps Engineer** based in Campinas, Brazil. To get in touch, reach me on
 [LinkedIn](https://www.linkedin.com/in/jasonhenrique/).
@@ -101,4 +100,4 @@ showLikes: false
 The validity of each one is on my
 [Credly](https://www.credly.com/users/jason-henrique/) profile.
 
-My projects and course labs are on the [Projects](/projetos/) page (in Portuguese).
+My projects and course labs are on the [Projects]({{< relref "projetos" >}}) page.
