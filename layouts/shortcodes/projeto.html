@@ -4,6 +4,7 @@
   Parâmetros:
     titulo  nome exibido no card
     repo    nome do repositório em github.com/jjasonhenrique1986
+    pasta   pasta dentro do repositório, quando o projeto é só ela (opcional)
     tags    tecnologias separadas por vírgula (opcional)
     nota    texto curto em destaque, como "Arquivado" (opcional)
   O conteúdo entre as tags é Markdown: a descrição e, se houver, os links
@@ -11,14 +12,20 @@
 */}}
 {{- $titulo := .Get "titulo" -}}
 {{- $repo := .Get "repo" -}}
+{{- $pasta := .Get "pasta" -}}
 {{- $url := printf "https://github.com/jjasonhenrique1986/%s" $repo -}}
+{{- $nome := $repo -}}
+{{- with $pasta -}}
+  {{- $url = printf "%s/tree/main/%s" $url . -}}
+  {{- $nome = printf "%s/%s" $repo . -}}
+{{- end -}}
 {{- $tags := slice -}}
 {{- with .Get "tags" }}{{ range split . "," }}{{ $tags = $tags | append (strings.TrimSpace .) }}{{ end }}{{ end -}}
 <div class="projeto-card">
   <div class="projeto-cabecalho">
     <h4 class="projeto-titulo"><a href="{{ $url }}" target="_blank" rel="noopener">{{ $titulo }}</a></h4>
     {{ with .Get "nota" }}<span class="projeto-nota">{{ . }}</span>{{ end }}
-    <code class="projeto-repo">{{ $repo }}</code>
+    <code class="projeto-repo">{{ $nome }}</code>
   </div>
   <div class="projeto-descricao">
     {{ .InnerDeindent | strings.TrimSpace | .Page.RenderString (dict "display" "block") }}

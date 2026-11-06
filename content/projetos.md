@@ -19,20 +19,16 @@ blog, o link está no card.
 
 {{< projetos >}}
 
-{{< projeto titulo="Revisão de PR de infraestrutura com IA" repo="github-actions" tags="GitHub Actions, Amazon Bedrock, Terraform, Kubernetes, OIDC" >}}
-Actions reutilizáveis do GitHub. A principal, `iac-ai-review`, revisa o
-Terraform e o Kubernetes de um Pull Request com IA no Amazon Bedrock (Claude ou
-gpt-oss) e comenta no PR. Acesso à AWS só por OIDC, sem access keys.
+{{< projeto titulo="Revisão de PR de infraestrutura com IA" repo="github-actions" pasta="iac-ai-review" tags="GitHub Actions, Amazon Bedrock, Terraform, Kubernetes, OIDC" >}}
+Action que revisa as mudanças de Terraform e Kubernetes de um Pull Request com
+IA no Amazon Bedrock (Claude ou gpt-oss) e publica a revisão como comentário no
+PR. Roda checkov, Trivy, kube-linter e kubeconform antes da IA e acessa a AWS
+só por OIDC, sem access keys.
 
 Série no blog:
 [parte 1](/posts/2026/2026-11-01-revisao-de-pr-de-infraestrutura-com-ia-parte-1/),
 [parte 2](/posts/2026/2026-11-02-revisao-de-pr-de-infraestrutura-com-ia-parte-2/) e
 [parte 3](/posts/2026/2026-11-03-revisao-de-pr-de-infraestrutura-com-ia-parte-3/).
-{{< /projeto >}}
-
-{{< projeto titulo="iac-ai-reviewer" repo="iac-ai-reviewer" nota="Arquivado" tags="Python" >}}
-Onde o revisor de PR com IA nasceu. O código, com todo o histórico, mudou para
-a action `iac-ai-review` do repositório `github-actions`.
 {{< /projeto >}}
 
 {{< projeto titulo="Este blog" repo="jjasonhenrique1986.github.io" tags="Hugo, Blowfish, GitHub Pages, GitHub Actions" >}}
