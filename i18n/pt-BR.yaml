@@ -1,3 +1,10 @@
 # Textos dos shortcodes do blog (o tema traz os dele em themes/blowfish/i18n).
 projectViewOnGithub: "Ver no GitHub"
 cvLanguage: "Idioma do currículo"
+certIssued: "Emitida em"
+certValidUntil: "Válida até"
+certExpired: "Expirou em"
+certNoExpiry: "Sem data de validade"
+certVerify: "Verificar no Credly"
+certStatusValid: "Válida"
+certStatusExpired: "Expirada"
