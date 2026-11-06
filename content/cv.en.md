@@ -1,7 +1,6 @@
 ---
 title: "Resume"
 description: "Resume of Jason Henrique, DevOps Engineer: experience with EKS, GitHub Actions, Terraform and observability at Hotmart, Itaú and CI&T, education and certifications."
-aliases: ["/cv/en/"]
 type: page
 showDate: false
 showDateUpdated: false
