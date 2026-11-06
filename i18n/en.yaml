@@ -1,3 +1,10 @@
 # Texts used by the blog's own shortcodes (the theme ships its own in themes/blowfish/i18n).
 projectViewOnGithub: "View on GitHub"
 cvLanguage: "Resume language"
+certIssued: "Issued"
+certValidUntil: "Valid until"
+certExpired: "Expired on"
+certNoExpiry: "No expiration date"
+certVerify: "Verify on Credly"
+certStatusValid: "Valid"
+certStatusExpired: "Expired"

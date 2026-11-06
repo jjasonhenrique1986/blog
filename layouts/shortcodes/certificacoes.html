@@ -1,0 +1,49 @@
+{{/*
+  Cards das certificações, lidos de data/certificacoes.yaml.
+  Uso: {{< certificacoes tipo="certificacao" >}} ou tipo="treinamento".
+  O status (válida ou expirada) é calculado na data do build.
+*/}}
+{{- $tipo := .Get "tipo" | default "certificacao" -}}
+{{- $formato := site.Params.dateFormat | default "2 Jan 2006" -}}
+{{- $hoje := now -}}
+<div class="projetos-grid certificacoes-grid not-prose">
+  {{- range where hugo.Data.certificacoes "tipo" $tipo }}
+    {{- $url := printf "https://www.credly.com/badges/%s" .credly -}}
+    {{- $expirada := false -}}
+    {{- with .expira }}{{ $expirada = lt (time .) $hoje }}{{ end -}}
+    <div class="projeto-card cert-card">
+      <a class="cert-imagem" href="{{ $url }}" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+        {{- with resources.Get (printf "images/certificacoes/%s" .imagem) }}
+          {{- $img := .Resize "240x webp" }}
+          <img src="{{ $img.RelPermalink }}" width="{{ div $img.Width 2 }}" height="{{ div $img.Height 2 }}" alt="" loading="lazy">
+        {{- end }}
+      </a>
+      <div class="projeto-cabecalho">
+        <h4 class="projeto-titulo"><a href="{{ $url }}" target="_blank" rel="noopener">{{ .nome }}</a></h4>
+        <span class="projeto-repo">{{ .emissor }}</span>
+      </div>
+      <div class="projeto-descricao">
+        <p>{{ i18n "certIssued" }} {{ time.Format $formato (time .emitida) }}</p>
+        <p>
+          {{- with .expira -}}
+            {{- if $expirada -}}
+              {{ i18n "certExpired" }} {{ time.Format $formato (time .) }}
+            {{- else -}}
+              {{ i18n "certValidUntil" }} {{ time.Format $formato (time .) }}
+            {{- end -}}
+          {{- else -}}
+            {{ i18n "certNoExpiry" }}
+          {{- end -}}
+        </p>
+      </div>
+      <div class="projeto-rodape">
+        {{- if .expira }}
+        <ul class="projeto-tags">
+          <li class="{{ if $expirada }}cert-expirada{{ else }}cert-valida{{ end }}">{{ if $expirada }}{{ i18n "certStatusExpired" }}{{ else }}{{ i18n "certStatusValid" }}{{ end }}</li>
+        </ul>
+        {{- end }}
+        <a class="projeto-link" href="{{ $url }}" target="_blank" rel="noopener">{{ i18n "certVerify" }} →</a>
+      </div>
+    </div>
+  {{- end }}
+</div>

@@ -1,0 +1,87 @@
+# Certificações e badges do perfil público no Credly
+# (https://www.credly.com/users/jason-henrique/), conferidos em 2026-11-06.
+# Para atualizar: credly.com/users/jason-henrique/badges.json traz id, datas e imagem.
+# O status (válida/expirada) é calculado no build, que roda todo dia.
+#
+# Campos: nome, emissor, imagem (em static/images/certificacoes/), credly (id do
+# badge), emitida, expira (vazio = sem validade), tipo (certificacao ou treinamento).
+
+- nome: "AWS Certified Solutions Architect – Associate"
+  emissor: "Amazon Web Services"
+  imagem: aws-solutions-architect-associate.png
+  credly: 3df39af9-b070-4a4d-af24-2c21c91c9b7c
+  emitida: 2023-12-13
+  expira: 2026-12-13
+  tipo: certificacao
+
+- nome: "AWS Certified SysOps Administrator – Associate"
+  emissor: "Amazon Web Services"
+  imagem: aws-sysops-administrator-associate.png
+  credly: 5d57328f-56c5-44c9-b0db-9b09d09d2c20
+  emitida: 2021-05-20
+  expira: 2027-05-02
+  tipo: certificacao
+
+- nome: "AWS Certified Cloud Practitioner"
+  emissor: "Amazon Web Services"
+  imagem: aws-cloud-practitioner.png
+  credly: c88c28da-7915-41f7-9edc-3389c8080258
+  emitida: 2020-05-15
+  expira: 2027-05-02
+  tipo: certificacao
+
+- nome: "AWS Certified Developer – Associate"
+  emissor: "Amazon Web Services"
+  imagem: aws-developer-associate.png
+  credly: 3bb1d1ef-58aa-411d-87fa-fc47eb9698cf
+  emitida: 2022-08-21
+  expira: 2025-08-21
+  tipo: certificacao
+
+- nome: "CKA: Certified Kubernetes Administrator"
+  emissor: "The Linux Foundation"
+  imagem: cka.png
+  credly: b6e8ad28-8366-4c55-8e10-a041ae243492
+  emitida: 2021-11-03
+  expira: 2024-11-03
+  tipo: certificacao
+
+- nome: "Microsoft Certified: Azure Fundamentals"
+  emissor: "Microsoft"
+  imagem: azure-fundamentals.png
+  credly: 67534e20-d38b-4f82-b920-f47f69737ce6
+  emitida: 2020-02-04
+  expira:
+  tipo: certificacao
+
+- nome: "GitLab Certified Git Associate"
+  emissor: "GitLab"
+  imagem: gitlab-git-associate.png
+  credly: 209ae747-dcdc-461c-95e5-40dd5e95722c
+  emitida: 2021-05-05
+  expira:
+  tipo: certificacao
+
+- nome: "LPIC-1"
+  emissor: "Linux Professional Institute"
+  imagem: lpic-1.png
+  credly: c2da67a6-1079-46f3-9db4-5809150abbef
+  emitida: 2017-09-06
+  expira: 2022-09-06
+  tipo: certificacao
+
+- nome: "MCSA: Windows Server 2012"
+  emissor: "Microsoft"
+  imagem: mcsa-windows-server-2012.png
+  credly: 6a098559-95e2-4ec5-914e-8872bbce993f
+  emitida: 2013-04-10
+  expira:
+  tipo: certificacao
+
+- nome: "AWS Knowledge: Amazon EKS"
+  emissor: "Amazon Web Services"
+  imagem: aws-knowledge-eks.png
+  credly: 42651a7d-530e-42e7-9d66-2681fc66c4f9
+  emitida: 2024-03-09
+  expira:
+  tipo: treinamento

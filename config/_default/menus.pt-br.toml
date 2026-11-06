@@ -25,10 +25,8 @@
 
 [[main]]
   name = "Certificações"
-  url = "https://www.credly.com/users/jason-henrique/"
+  pageRef = "certificacoes"
   weight = 50
-  [main.params]
-    target = "_blank"
 
 # Botão de busca (atalho Ctrl K)
 [[main]]
