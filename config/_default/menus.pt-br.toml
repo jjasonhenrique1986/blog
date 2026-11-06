@@ -15,10 +15,13 @@
 
 [[main]]
   name = "Projetos"
-  url = "https://github.com/jjasonhenrique1986?tab=repositories"
+  pageRef = "projetos"
   weight = 40
-  [main.params]
-    target = "_blank"
+
+[[main]]
+  name = "Currículo"
+  pageRef = "cv"
+  weight = 45
 
 [[main]]
   name = "Certificações"

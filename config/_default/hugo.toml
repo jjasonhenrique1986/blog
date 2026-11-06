@@ -9,9 +9,9 @@ enableRobotsTXT = true
 # saem no deploy diário das 6h do dia marcado, não às 21h do dia anterior).
 timeZone = "America/Sao_Paulo"
 
-# index-about.md é lido pela página Sobre (shortcode "sobre") e projects.md não
-# tem conteúdo: nenhum dos dois gera página própria nem entra no sitemap.
-ignoreFiles = ['index-about\.md$', 'projects\.md$']
+# index-about.md é lido pela página Sobre (shortcode "sobre"): não gera página
+# própria nem entra no sitemap.
+ignoreFiles = ['index-about\.md$']
 
 [pagination]
   pagerSize = 12
