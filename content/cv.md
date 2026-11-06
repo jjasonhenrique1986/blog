@@ -10,6 +10,8 @@ showViews: false
 showLikes: false
 ---
 
+{{< cv-idiomas atual="pt" >}}
+
 **DevOps Engineer** em Campinas (SP). Para contato, me chame no
 [LinkedIn](https://www.linkedin.com/in/jasonhenrique/).
 

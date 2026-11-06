@@ -1,0 +1,34 @@
+{{/*
+  Card de um projeto, usado dentro de {{< projetos >}}.
+
+  Parâmetros:
+    titulo  nome exibido no card
+    repo    nome do repositório em github.com/jjasonhenrique1986
+    tags    tecnologias separadas por vírgula (opcional)
+    nota    texto curto em destaque, como "Arquivado" (opcional)
+  O conteúdo entre as tags é Markdown: a descrição e, se houver, os links
+  para os posts.
+*/}}
+{{- $titulo := .Get "titulo" -}}
+{{- $repo := .Get "repo" -}}
+{{- $url := printf "https://github.com/jjasonhenrique1986/%s" $repo -}}
+{{- $tags := slice -}}
+{{- with .Get "tags" }}{{ range split . "," }}{{ $tags = $tags | append (strings.TrimSpace .) }}{{ end }}{{ end -}}
+<div class="projeto-card">
+  <div class="projeto-cabecalho">
+    <h4 class="projeto-titulo"><a href="{{ $url }}" target="_blank" rel="noopener">{{ $titulo }}</a></h4>
+    {{ with .Get "nota" }}<span class="projeto-nota">{{ . }}</span>{{ end }}
+    <code class="projeto-repo">{{ $repo }}</code>
+  </div>
+  <div class="projeto-descricao">
+    {{ .InnerDeindent | strings.TrimSpace | .Page.RenderString (dict "display" "block") }}
+  </div>
+  <div class="projeto-rodape">
+    {{- with $tags }}
+    <ul class="projeto-tags">
+      {{- range . }}<li>{{ . }}</li>{{ end -}}
+    </ul>
+    {{- end }}
+    <a class="projeto-link" href="{{ $url }}" target="_blank" rel="noopener">Ver no GitHub →</a>
+  </div>
+</div>
