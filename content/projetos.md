@@ -1,6 +1,6 @@
 ---
 title: "Projetos"
-description: "Projetos que desenvolvo no GitHub, como a action de revisão de PR de infraestrutura com IA, e os repositórios dos cursos da LINUXtips: containers na AWS (ECS, EKS e multi-região), Helm e Python."
+description: "Projetos que desenvolvo no GitHub, como a action de revisão de PR de infraestrutura com IA, e os repositórios do curso de Arquitetura de Containers na AWS da LINUXtips (ECS, EKS e multi-região)."
 type: page
 showDate: false
 showDateUpdated: false
@@ -11,7 +11,7 @@ showLikes: false
 ---
 
 Aqui ficam os projetos que mantenho no [GitHub](https://github.com/jjasonhenrique1986)
-e os repositórios dos laboratórios que fiz nos cursos da
+e os repositórios dos laboratórios que fiz no curso de Arquitetura de Containers na AWS da
 [LINUXtips](https://linuxtips.io/). Quando um projeto tem post no blog, o link
 está junto.
 
@@ -65,12 +65,11 @@ troubleshooting, upgrade de cluster, JSONPath e dicas de Vim.
 - [nginx-example](https://github.com/jjasonhenrique1986/nginx-example): Deployment de um nginx no Kubernetes.
 - [learn-python](https://github.com/jjasonhenrique1986/learn-python): exercícios de estudo de Python.
 
-## Cursos da LINUXtips
+## Curso da LINUXtips
 
 ### Arquitetura de Containers na AWS
 
-O curso com mais repositórios: cada parte do laboratório tem o seu, quase
-todos com Terraform.
+Cada parte do laboratório tem o seu repositório, quase todos com Terraform.
 
 **Fundação e ECS**
 
@@ -95,11 +94,3 @@ todos com Terraform.
 - [curso-containers-linuxtips-aws-eks-networking](https://github.com/jjasonhenrique1986/curso-containers-linuxtips-aws-eks-networking): rede do cluster EKS (VPC, NAT Gateway, network ACLs e parâmetros no SSM).
 - [curso-containers-linuxtips-aws-eks-vanilla](https://github.com/jjasonhenrique1986/curso-containers-linuxtips-aws-eks-vanilla): cluster EKS com node groups (Graviton, Bottlerocket e Spot), access entries, Cluster Autoscaler, Metrics Server, kube-state-metrics e Node Termination Handler.
 - [curso-containers-linuxtips-aws-eks-warmup](https://github.com/jjasonhenrique1986/curso-containers-linuxtips-aws-eks-warmup): teste de carga com k6.
-
-### Helm
-
-- [curso-linuxtips-helm](https://github.com/jjasonhenrique1986/curso-linuxtips-helm): chart Helm do gerador de senhas (aplicação e Redis), com ConfigMaps de banco e de observabilidade.
-
-### Python Base
-
-- [python-base](https://github.com/jjasonhenrique1986/python-base): exercícios do curso Python Base.
