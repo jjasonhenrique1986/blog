@@ -2,6 +2,8 @@
 title: "Currículo"
 description: "Currículo de Jason Henrique, DevOps Engineer: experiência com EKS, GitHub Actions, Terraform e observabilidade na Hotmart, no Itaú e na CI&T, formação e certificações."
 type: page
+# /cv/es/ existiu por pouco tempo (versão em espanhol, removida).
+aliases: ["/cv/es/"]
 showDate: false
 showDateUpdated: false
 showReadingTime: false
@@ -10,7 +12,7 @@ showViews: false
 showLikes: false
 ---
 
-{{< cv-idiomas atual="pt" >}}
+{{< cv-idiomas >}}
 
 **DevOps Engineer** em Campinas (SP). Para contato, me chame no
 [LinkedIn](https://www.linkedin.com/in/jasonhenrique/).
@@ -99,4 +101,4 @@ showLikes: false
 A validade de cada uma está no meu perfil do
 [Credly](https://www.credly.com/users/jason-henrique/).
 
-Os projetos e os laboratórios dos cursos estão na página de [Projetos](/projetos/).
+Os projetos e os laboratórios dos cursos estão na página de [Projetos]({{< relref "projetos" >}}).

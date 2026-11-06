@@ -9,9 +9,12 @@ enableRobotsTXT = true
 # saem no deploy diário das 6h do dia marcado, não às 21h do dia anterior).
 timeZone = "America/Sao_Paulo"
 
-# index-about.md é lido pela página Sobre (shortcode "sobre"): não gera página
-# própria nem entra no sitemap.
-ignoreFiles = ['index-about\.md$']
+# Português na raiz (URLs de sempre) e inglês em /en/.
+defaultContentLanguageInSubdir = false
+
+# index-about.md e index-about.en.md são lidos pela página Sobre (shortcode
+# "sobre"): não geram página própria nem entram no sitemap.
+ignoreFiles = ['index-about(\.en)?\.md$']
 
 [pagination]
   pagerSize = 12
