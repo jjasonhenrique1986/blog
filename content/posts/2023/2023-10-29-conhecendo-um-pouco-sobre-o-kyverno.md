@@ -49,8 +49,11 @@ comandos abaixo:
 ``` bash
 helm repo add kyverno https://kyverno.github.io/kyverno/
 helm repo update
-helm install kyverno-policies kyverno/kyverno-policies -n kyverno
+helm install kyverno kyverno/kyverno -n kyverno
 ```
+
+O mesmo repositório também tem o chart `kyverno/kyverno-policies`, que
+instala um conjunto de políticas prontas sobre um Kyverno já instalado.
 
 ## Instalação usando kubectl 
 

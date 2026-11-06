@@ -110,7 +110,9 @@ CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.ht
 - Kubectl instalado. Segue abaixo procedimento para a instalação:
 
 ```bash
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"chmod +x ./kubectlmv ./kubectl /usr/local/bin/ 
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin/
 ```
 
 Para mais informações, consulte o [guia de instalação do kubectl no

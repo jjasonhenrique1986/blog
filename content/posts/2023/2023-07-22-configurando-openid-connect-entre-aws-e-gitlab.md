@@ -4,9 +4,16 @@ description: "Como configurar OpenID Connect entre a AWS e o GitLab para executa
 images: ["/images/capa-configurando-openid-connect-entre-aws-e-gitlab.png"]
 author: Jason
 date: 2023-07-22
+lastmod: 2026-11-06
 tags: [ "AWS", "CI/CD" ]
 type: post
 ---
+
+> **Atualização (novembro de 2026):** o GitLab removeu na versão 17.0 a
+> variável `CI_JOB_JWT_V2`, usada na pipeline abaixo. Hoje o token é pedido
+> com a palavra-chave `id_tokens`: veja a seção
+> [Versão atual da pipeline](#versão-atual-da-pipeline) no fim do post. A
+> configuração do lado da AWS continua a mesma.
 
 O objetivo desse post é demonstrar como configurar o OpenID Connect
 entre a sua conta AWS e sua conta do GitLab para executar uma pipeline
@@ -160,6 +167,37 @@ job_assume_role:
 
 Com isso, será executada uma pipeline simples que lista os buckets S3 da
 conta AWS.
+
+## Versão atual da pipeline
+
+A partir do GitLab 17.0 a variável `CI_JOB_JWT_V2` não existe mais. O job
+declara o token de que precisa com `id_tokens`, usando como `aud` o mesmo
+audience cadastrado no identity provider da AWS (`https://gitlab.com`):
+
+``` yaml
+job_assume_role:
+    stage: "assume-role"
+    id_tokens:
+      GITLAB_OIDC_TOKEN:
+        aud: https://gitlab.com
+    script:
+      - >
+        STS=($(aws sts assume-role-with-web-identity
+        --role-arn ${ROLE_ARN}
+        --role-session-name "GitLabRunner-${CI_PROJECT_ID}-${CI_PIPELINE_ID}"
+        --web-identity-token ${GITLAB_OIDC_TOKEN}
+        --duration-seconds 3600
+        --query 'Credentials.[AccessKeyId,SecretAccessKey,SessionToken]'
+        --output text))
+      - export AWS_ACCESS_KEY_ID="${STS[0]}"
+      - export AWS_SECRET_ACCESS_KEY="${STS[1]}"
+      - export AWS_SESSION_TOKEN="${STS[2]}"
+      - aws sts get-caller-identity
+      - aws s3 ls
+```
+
+Mais detalhes na
+[documentação do GitLab sobre OIDC com a AWS](https://docs.gitlab.com/ci/cloud_services/aws/).
 
 ## Conclusão
 
