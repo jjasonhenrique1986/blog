@@ -21,7 +21,7 @@ showLikes: false
 
 ### DevOps Engineer · Hotmart · 2025 até hoje
 
-- Administração e suporte de clusters EKS em vários ambientes.
+- Administração e suporte de mais de 6 clusters EKS em vários ambientes.
 - Participação no troubleshooting de incidentes em vários ambientes.
 - Administração e suporte da ferramenta de CI/CD (GitHub Actions).
 - Apoio aos times de desenvolvimento em problemas de EKS, pipelines, Terraform e outros.
@@ -29,13 +29,16 @@ showLikes: false
 
 ### DevOps Engineer · Itaú · 2022 a 2025
 
-- Administração e suporte de clusters EKS em vários ambientes.
+- Administração e suporte dos clusters EKS do iti, começando por um cluster de produção com mais de 400 aplicações.
 - Participação no troubleshooting de incidentes em vários ambientes.
-- Administração e suporte de ferramentas de CI/CD como AWS CodePipeline, GitLab CI e GitHub Actions.
-- Apoio aos times de desenvolvimento em problemas de EKS, pipelines, Terraform e outros.
+- Gerenciamento de workloads no Amazon ECS.
+- Provisionamento de infraestrutura com Terraform.
+- Testes de performance das aplicações.
+- Administração e suporte de mais de 400 pipelines em ferramentas de CI/CD como AWS CodePipeline, GitLab CI e GitHub Actions.
+- Apoio aos times de desenvolvimento do iti, uma operação com mais de 1.000 pessoas, em problemas de EKS, pipelines, Terraform e outros.
 - Plantão (on-call).
 
-### SRE · CI&T · 2020 a 2022
+### DevOps Engineer · CI&T · 2020 a 2022
 
 - Gestão de ferramentas de observabilidade como Dynatrace, Datadog e a stack do Prometheus.
 - Implantação e gestão de clusters Kubernetes.
@@ -73,18 +76,18 @@ showLikes: false
 | Kubernetes | Avançado |
 | Bash | Avançado |
 | Helm | Intermediário |
-| Ferramentas de CI/CD | Intermediário |
+| Ferramentas de CI/CD | Avançado |
 | Prometheus e Grafana | Intermediário |
 | Python | Básico |
-| Git | Básico |
+| Git | Intermediário |
 | Argo CD | Básico |
 | Datadog | Básico |
 | Dynatrace | Básico |
 
 ## Idiomas
 
-- Inglês: A2
-- Espanhol: B1
+- Inglês: profissional
+- Espanhol: básico
 
 ## Certificações
 

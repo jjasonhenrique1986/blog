@@ -19,7 +19,7 @@ showLikes: false
 
 ### DevOps Engineer · Hotmart · 2025 to present
 
-- Administration and support of EKS clusters in multiple environments.
+- Administration and support of more than 6 EKS clusters in multiple environments.
 - Troubleshooting incidents in multiple environments.
 - Administration and support of the CI/CD tool (GitHub Actions).
 - Supporting development teams with issues in EKS, pipelines, Terraform and others.
@@ -27,13 +27,16 @@ showLikes: false
 
 ### DevOps Engineer · Itaú · 2022 to 2025
 
-- Administration and support of EKS clusters in multiple environments.
+- Administration and support of the EKS clusters of iti, starting with one production cluster running more than 400 applications.
 - Troubleshooting incidents in multiple environments.
-- Administration and support of CI/CD tools such as AWS CodePipeline, GitLab CI and GitHub Actions.
-- Supporting development teams with issues in EKS, pipelines, Terraform and others.
+- Management of workloads on Amazon ECS.
+- Infrastructure provisioning with Terraform.
+- Performance testing of applications.
+- Administration and support of more than 400 pipelines on CI/CD tools such as AWS CodePipeline, GitLab CI and GitHub Actions.
+- Supporting the development teams of iti, an operation of more than 1,000 people, with issues in EKS, pipelines, Terraform and others.
 - On-call support.
 
-### SRE · CI&T · 2020 to 2022
+### DevOps Engineer · CI&T · 2020 to 2022
 
 - Managed observability tools such as Dynatrace, Datadog and the Prometheus stack.
 - Implemented and managed Kubernetes clusters.
@@ -71,10 +74,10 @@ showLikes: false
 | Kubernetes | Advanced |
 | Bash | Advanced |
 | Helm | Intermediate |
-| CI/CD tools | Intermediate |
+| CI/CD tools | Advanced |
 | Prometheus and Grafana | Intermediate |
 | Python | Basic |
-| Git | Basic |
+| Git | Intermediate |
 | Argo CD | Basic |
 | Datadog | Basic |
 | Dynatrace | Basic |
@@ -82,8 +85,8 @@ showLikes: false
 ## Languages
 
 - Portuguese: native
-- English: A2
-- Spanish: B1
+- English: professional working proficiency
+- Spanish: elementary
 
 ## Certifications
 
