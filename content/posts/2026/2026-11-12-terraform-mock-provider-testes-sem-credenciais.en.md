@@ -1,10 +1,10 @@
 ---
 title: "Terraform mock_provider: testing modules without credentials"
-slug: "2026-11-18-terraform-mock-provider-testing-without-credentials"
+slug: "2026-11-12-terraform-mock-provider-testing-without-credentials"
 description: "How to use the Terraform 1.7 mock_provider to run terraform test without credentials and without creating resources: generated values, mock_resource, mock_data, override_during, override blocks and .tfmock.hcl files."
 images: ["/images/capa-terraform-mock-provider.png"]
 author: Jason
-date: 2026-11-18
+date: 2026-11-12
 tags: [ "Terraform", "IaC", "AWS", "CI/CD" ]
 type: post
 ---

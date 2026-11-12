@@ -3,7 +3,7 @@ title: "Terraform mock_provider: testando módulos sem credenciais"
 description: "Como usar o mock_provider do Terraform 1.7 para rodar terraform test sem credenciais e sem criar recursos: valores gerados, mock_resource, mock_data, override_during, blocos override e arquivos .tfmock.hcl."
 images: ["/images/capa-terraform-mock-provider.png"]
 author: Jason
-date: 2026-11-18
+date: 2026-11-12
 tags: [ "Terraform", "IaC", "AWS", "CI/CD" ]
 type: post
 ---
